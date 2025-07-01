@@ -1,0 +1,25 @@
+---
+import { formatDate } from "@/utils";
+const { title, description, photos, date, category, href } = Astro.props;
+
+const url = "/" + category + "/" + href;
+const dateFormated = formatDate(date);
+---
+<artile class="relative group overflow-hidden rounded-lg">
+  <a href={url}>
+    <div class="absolute inset-0  bg-gradient-to-t from-zinc-800/90 via-zinc-600/60 to-zin-800/90 z-10" z-10"></div>
+    <img 
+        src={photos} 
+        alt={title}
+        class="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-500"
+        loading="lazy"
+    />
+    <div class="absolute bottom-0 left-0 right-0 z-20 p-6">
+        <h2 class="text-xl text-white">
+            {title}
+        </h2>
+        <p class="text-sm text-white/75 mt-2">{description}</p>
+        <time class="text-xs text-white/50 transition-colors duration-300 uppercase tracking-widest flex items-center">{dateFormated}</time>
+    </div>
+  </a>
+</article>

@@ -1,0 +1,52 @@
+---
+import "@/styles/strava.css";
+import { formatDateV2 } from "@/utils";
+const baseUrl = import.meta.env.PUBLIC_BASE_URL || 'http://localhost:4321';
+const res = await fetch(`${baseUrl}/api/strava`);
+const activity = await res.json();
+
+const encoded = activity?.map?.summary_polyline || '';
+const script = `<script>
+  const encoded = ${JSON.stringify(encoded)};
+  console.log(encoded);
+</script>`;
+---
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<div>
+  <div class="relative bg-black/6 p-8 mb-4 rounded-xl aspect-4/3 justify-center items-center overflow-hidden object-cover">
+    <label class="absolute z-10 top-6 left-6 rounded-full bg-white/75 text-black text-xs py-1 px-4">最近一次骑行</label>
+    <div id="map" class="absolute z-5 inset-0 absolute w-full aspect-4/3"></div>
+  </div>
+  <h2 class="text-xl font-semibold text-zinc-700">{activity.name}</h2>
+  <p class="text-sm text-zinc-400 mt-1 mb-4">{formatDateV2(activity.start_date_local)} | {(activity.distance / 1000).toFixed(2)} KM | {Math.floor(activity.moving_time / 60)} mins</p>
+  <div class="hidden" set:html={script}></div>
+</div>
+
+<script>
+  import L from "https://cdn.skypack.dev/leaflet";
+  import polyline from 'https://cdn.skypack.dev/@mapbox/polyline';
+
+  const coords = polyline.decode(encoded);
+
+  const map = L.map("map", {
+    zoomControl: false,
+  });
+
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="https://carto.com/attributions">CARTO</a>, &copy; OpenStreetMap contributors', 
+  }).addTo(map);
+
+  L.control.zoom({
+    position: 'bottomleft'
+  }).addTo(map);
+
+  const track = L.polyline(coords, {
+    color: "#e85f29",
+    weight: 3,
+    lineJoy: "round", 
+  }).addTo(map);
+
+  map.fitBounds(track.getBounds());
+</script>

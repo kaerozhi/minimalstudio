@@ -1,11 +1,11 @@
 export const byName: string[] = [
-  "Components",
-  "Blogs",
-  "Design to code",
-  "Landing pages",
-  "Website templates",
-  "Convert to Tailwind CSS",
-  "Convert to Astro",
+  "会议",
+  "婚礼",
+  "运动会",
+  "毕业照",
+  "团队活动",
+  "旅行跟拍",
+  "其他",
 
 ];
 

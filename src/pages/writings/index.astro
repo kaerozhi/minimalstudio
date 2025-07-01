@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate, formatChineseDate } from "@/utils";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPost from "@/components/entries/BlogPost.astro";
+
+const allBlogPosts = await getCollection('writings');
+allBlogPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+const latestPoems = allBlogPosts.filter(({ data }) => data.categories?.includes("诗词"));
+---
+<BaseLayout>
+    <section class="py-24 2xl:max-w-screen-xl mx-auto" id="gallery">
+        <div class="px-8 pb-8 max-w-7xl mx-auto">
+            <h2 class="w-full text-4xl tracking-tighter font-medium font-serif leading-normal">文字</h2>
+        </div>
+
+        <div class="px-8 pb-8 max-w-7xl mx-auto">
+        { latestPoems.slice(0, 1).map((post) =>
+            <article class="flex gap-6 px-8 pt-8 pb-10 bg-white/75 rounded-xl">
+                <div class="basis-1/3 flex flex-col h-auto md:h-108 justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mt-2">{post.data.title}</h2>
+                        <div class="text-sm text-zinc-500 mt-2">{post.data.description}</div>
+                    </div>
+                    <div class="text-sm text-zinc-500">作于<time>{formatChineseDate(post.data.date)}</time></div>
+                </div>
+                <div class="basis-2/3 text-2xl/10 md:text-6xl/18 font-serif tracking-tight text-zinc-700">{post.body}</div>
+            </article>
+        )}
+        {allBlogPosts.map((post: any) => 
+            <BlogPost title={post.data.title} href={post.slug} date={post.data.date} description={post.data.description} category="writings" />
+        )}
+        </div>
+    </section>
+</BaseLayout>

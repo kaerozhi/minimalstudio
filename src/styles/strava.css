@@ -1,0 +1,14 @@
+.leaflet-bar {
+  border: none !important;
+}
+
+.leaflet-bar a {
+  border-radius: 10% !important;
+  font-family: var(--font-sans);
+  color: var(--color-zinc-400) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: var(--color-zinc-700) !important;
+  color: white !important;
+}

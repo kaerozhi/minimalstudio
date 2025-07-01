@@ -7,7 +7,7 @@
         "title": {
           "type": "string"
         },
-        "pubDate": {
+        "date": {
           "anyOf": [
             {
               "type": "string",
@@ -57,7 +57,7 @@
       },
       "required": [
         "title",
-        "pubDate",
+        "date",
         "description",
         "author",
         "image",

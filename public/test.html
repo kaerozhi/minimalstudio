@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Strava 轨迹地图</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <style>
+      #map {
+        height: 500px;
+        max-width: 800px;
+        margin: 30px auto;
+        border: 1px solid #ccc;
+      }
+      body {
+        font-family: sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Strava 轨迹预览</h1>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- ✅ 内嵌 Polyline 解码函数 -->
+    <script>
+      function decodePolyline(str, precision) {
+        let index = 0,
+          lat = 0,
+          lng = 0,
+          coordinates = [],
+          shift = 0,
+          result = 0,
+          byte = null,
+          latitude_change,
+          longitude_change,
+          factor = Math.pow(10, precision || 5);
+
+        while (index < str.length) {
+          byte = null;
+          shift = 0;
+          result = 0;
+
+          do {
+            byte = str.charCodeAt(index++) - 63;
+            result |= (byte & 0x1f) << shift;
+            shift += 5;
+          } while (byte >= 0x20);
+
+          latitude_change = result & 1 ? ~(result >> 1) : result >> 1;
+
+          shift = result = 0;
+
+          do {
+            byte = str.charCodeAt(index++) - 63;
+            result |= (byte & 0x1f) << shift;
+            shift += 5;
+          } while (byte >= 0x20);
+
+          longitude_change = result & 1 ? ~(result >> 1) : result >> 1;
+
+          lat += latitude_change;
+          lng += longitude_change;
+
+          coordinates.push([lat / factor, lng / factor]);
+        }
+
+        return coordinates;
+      }
+    </script>
+
+    <!-- 轨迹绘制逻辑 -->
+    <script>
+      // ✅ 替换成你的实际 polyline 字符串
+      const encoded = "qmm~Dcia_VIDu@@gBXm@@]LSRKROt@[lE_AxLKZOH}CTkH|@qCPeCVmB\\uGn@eDb@qD\\qAF{Dd@mBd@s@C}CPeCBaDLq@EYFkABm@NeDJsBRgADiA@eBF{@KuAHg@X_@FoBHiB?}ANuJf@yDJsA?}CJ_AEaBDk@V_@FiDF{ETmBAyENu@GmAL_@@WN]FgCDuDPwENuACeFT}CV{@L{Bh@_@RoA~@kAbAgDtDoH|HmAbAcBdAgCdAqBd@aANcAH}BFyAGkAK}Ba@yG}B{Aq@_Cu@gDu@}@a@w@UeASoBi@sCm@iEgAuCq@]EmBg@{IkBmG{AyDiAuEgAgCy@sGcBeAUq@WuEmAcIcCu@[cGiB_@MmDiBgIkCeAk@kBm@u@g@YMk@KmAE{@WcAAaAQmO}EmL_E{Cw@wE}AuBu@_CeAsDeAaAOg@W}Aa@cEyAwAk@cEsAaCi@gB{@{A]eBg@eCy@wCoAKB[Kw@I]IyJaDmDmAeA[{Bg@wJaDkFyAiDu@eJsAo@SG?_@Na@Om@?_CMkBC_C@kEJwGj@eAD{HhAgAFeB^[Bg@AMBm@\\[FuXlDoD\\wDf@{Ef@ODEFDJMhA]xAIj@Uh@KFf@SPYh@oCHODCzCUvEo@xDq@dSiCrJmA`E_@vAQpAIlBSpGc@lCM`GCjADA?~D?`@H`@TbA?dBJbEf@jB\\|D|@tErAtDlAfB|@h@LbGjBnHjCvC~@~DhAbEpA|B`A|Cx@bA^zAn@~HdCdEhAzBv@fDpA`Ch@pCv@zJ`DnDrApD`AhNnEjEjAb@XfBj@fE`BlBz@jDjBNB\\?v@Mz@FlDlAbJlC`EpAjD~@tBr@jEhAtCx@XDlA`@|AZfBj@lAVr@T~A^l@RxDz@rNlDrH`Br@VhJpB~@NdDz@\\LlAFVFt@RlDnArAl@dF`BfAVrATfCRt@BtACbAGvB[fCo@|BeArAy@bBuAvKmL~AaB`@[x@k@j@WtBk@|@OlF_@dFQhAB|AQbDKrB?`BGv@H\\GdAG^QTAzFSfA@fBOtBIdB?vAEp@Fr@Ar@Gl@STCxBG~@@`DWJBj@CpBO`Kc@pAAtCKt@JzAI\\Qn@MhFUfA?`CIrBKjBS`EOnBAnEWJD~Bg@hFg@jPkBfBIhBS~C]bB_@jHs@xCc@P_AL]DSdAuMPkC@[LkAJSVOX?f@Jn@OjAM";
+
+      const coords = decodePolyline(encoded);
+
+      const map = L.map("map");
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors',
+      }).addTo(map);
+
+      const track = L.polyline(coords, {
+        color: "blue",
+        weight: 4,
+      }).addTo(map);
+
+      map.fitBounds(track.getBounds());
+    </script>
+  </body>
+</html>

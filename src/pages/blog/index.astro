@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPost from "@/components/entries/BlogPost.astro";
+import { config } from '@/site.config';
+
+const allBlogPosts = await getCollection('blog');
+allBlogPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+---
+<BaseLayout>
+    <section class="py-24 2xl:max-w-screen-xl mx-auto" id="gallery">
+        <div class="px-8 md:px-12 pb-8 max-w-4xl mx-auto">
+            <h2 class="w-full text-4xl tracking-tighter font-manrope leading-normal">Blog</h2>
+        </div>
+
+        <div class="px-8 md:px-12 pb-8 max-w-4xl mx-auto">
+          {allBlogPosts.map((post: any) => 
+              <BlogPost title={post.data.title} href={post.slug} date={post.data.date} description={post.data.description} category="blog" />
+          )}
+        </div>
+    </section>
+</BaseLayout>

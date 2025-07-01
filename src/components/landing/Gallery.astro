@@ -1,0 +1,22 @@
+---
+const matches = import.meta.glob('@/content/gallery/*.md', { eager: true });
+const posts = Object.values(matches);
+--- 
+ 
+ <section class="py-24 2xl:max-w-screen-xl mx-auto" id="gallery">
+    <div class="mx-auto max-w-7xl px-4 md:px-8">
+        <div class="px-8 md:px-12 pb-8 max-w-2xl mx-auto">
+            <h2 class="w-full text-4xl tracking-tighter font-manrope leading-normal">Gallery</h2>
+        </div>
+    </div>
+
+    <div class="columns-1 md:columns-3 gap-6 mx-auto max-w-7xl px-4 md:px-8">
+    {posts.slice(0, 9).map((post) => (
+      <div class="break-inside-avoid mb-6 overflow-hidden rounded-lg">
+        <a href={post.url}>
+          <img class="h-auto max-w-full grayscale hover:grayscale-0 hover:scale-110 duration-300" src={post.frontmatter.photos[0]} alt={post.frontmatter.title} />
+        </a>
+      </div>
+    ))}
+    </div>
+</section>
