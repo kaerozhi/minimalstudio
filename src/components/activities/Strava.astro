@@ -1,0 +1,87 @@
+---
+const baseUrl = import.meta.env.PUBLIC_BASE_URL || 'http://localhost:4321';
+const res = await fetch(`${baseUrl}/api/strava`);
+const activity = await res.json();
+const encoded = activity?.map?.summary_polyline || '';
+---
+<!-- <pre>{ JSON.stringify(encoded) }</pre> -->
+<div>
+  <div class="relative bg-black/6 p-8 mb-4 rounded-xl aspect-4/3 justify-center items-center overflow-hidden object-cover">
+    <label class="absolute z-10 top-6 left-6 rounded-full bg-white/75 text-black text-xs py-1 px-4">最近一次骑行</label>
+    <div id="map" class="absolute z-5 inset-0 absolute w-110 h-100"></div>
+  </div>
+  <h2 class="text-xl font-semibold text-zinc-700">{activity.name}</h2>
+  <p class="text-sm text-zinc-400 mt-1 mb-4 uppercase">{(activity.distance / 1000).toFixed(2)} km | {Math.floor(activity.moving_time / 60)} mins | </strong>{(activity.average_speed * 3.6).toFixed(1)} km/h</p>
+</div>
+
+<!-- ✅ 内嵌 Polyline 解码函数 -->
+<script type="module">
+  function decodePolyline(str, precision) {
+    let index = 0,
+      lat = 0,
+      lng = 0,
+      coordinates = [],
+      shift = 0,
+      result = 0,
+      byte = null,
+      latitude_change,
+      longitude_change,
+      factor = Math.pow(10, precision || 5);
+
+    while (index < str.length) {
+      byte = null;
+      shift = 0;
+      result = 0;
+
+      do {
+        byte = str.charCodeAt(index++) - 63;
+        result |= (byte & 0x1f) << shift;
+        shift += 5;
+      } while (byte >= 0x20);
+
+      latitude_change = result & 1 ? ~(result >> 1) : result >> 1;
+
+      shift = result = 0;
+
+      do {
+        byte = str.charCodeAt(index++) - 63;
+        result |= (byte & 0x1f) << shift;
+        shift += 5;
+      } while (byte >= 0x20);
+
+      longitude_change = result & 1 ? ~(result >> 1) : result >> 1;
+
+      lat += latitude_change;
+      lng += longitude_change;
+
+      coordinates.push([lat / factor, lng / factor]);
+    }
+
+    return coordinates;
+  }
+
+  import L from "https://cdn.skypack.dev/leaflet";
+
+  // ✅ 替换成你的实际 polyline 字符串
+  const encoded = "qmm~Dcia_VIDu@@gBXm@@]LSRKROt@[lE_AxLKZOH}CTkH|@qCPeCVmB\\uGn@eDb@qD\\qAF{Dd@mBd@s@C}CPeCBaDLq@EYFkABm@NeDJsBRgADiA@eBF{@KuAHg@X_@FoBHiB?}ANuJf@yDJsA?}CJ_AEaBDk@V_@FiDF{ETmBAyENu@GmAL_@@WN]FgCDuDPwENuACeFT}CV{@L{Bh@_@RoA~@kAbAgDtDoH|HmAbAcBdAgCdAqBd@aANcAH}BFyAGkAK}Ba@yG}B{Aq@_Cu@gDu@}@a@w@UeASoBi@sCm@iEgAuCq@]EmBg@{IkBmG{AyDiAuEgAgCy@sGcBeAUq@WuEmAcIcCu@[cGiB_@MmDiBgIkCeAk@kBm@u@g@YMk@KmAE{@WcAAaAQmO}EmL_E{Cw@wE}AuBu@_CeAsDeAaAOg@W}Aa@cEyAwAk@cEsAaCi@gB{@{A]eBg@eCy@wCoAKB[Kw@I]IyJaDmDmAeA[{Bg@wJaDkFyAiDu@eJsAo@SG?_@Na@Om@?_CMkBC_C@kEJwGj@eAD{HhAgAFeB^[Bg@AMBm@\\[FuXlDoD\\wDf@{Ef@ODEFDJMhA]xAIj@Uh@KFf@SPYh@oCHODCzCUvEo@xDq@dSiCrJmA`E_@vAQpAIlBSpGc@lCM`GCjADA?~D?`@H`@TbA?dBJbEf@jB\\|D|@tErAtDlAfB|@h@LbGjBnHjCvC~@~DhAbEpA|B`A|Cx@bA^zAn@~HdCdEhAzBv@fDpA`Ch@pCv@zJ`DnDrApD`AhNnEjEjAb@XfBj@fE`BlBz@jDjBNB\\?v@Mz@FlDlAbJlC`EpAjD~@tBr@jEhAtCx@XDlA`@|AZfBj@lAVr@T~A^l@RxDz@rNlDrH`Br@VhJpB~@NdDz@\\LlAFVFt@RlDnArAl@dF`BfAVrATfCRt@BtACbAGvB[fCo@|BeArAy@bBuAvKmL~AaB`@[x@k@j@WtBk@|@OlF_@dFQhAB|AQbDKrB?`BGv@H\\GdAG^QTAzFSfA@fBOtBIdB?vAEp@Fr@Ar@Gl@STCxBG~@@`DWJBj@CpBO`Kc@pAAtCKt@JzAI\\Qn@MhFUfA?`CIrBKjBS`EOnBAnEWJD~Bg@hFg@jPkBfBIhBS~C]bB_@jHs@xCc@P_AL]DSdAuMPkC@[LkAJSVOX?f@Jn@OjAM";
+
+  const coords = decodePolyline(encoded);
+
+  const map = L.map('map', { zoomControl: false });
+
+  L.control.zoom({ position: 'bottomleft' }).addTo(map);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(map);
+
+  const track = L.polyline(coords, {
+    color: "#ff006c",
+    weight: 4,
+    opacity: 0.8,
+    lineJoin: "round"
+  }).addTo(map);
+
+  map.fitBounds(track.getBounds());
+</script>

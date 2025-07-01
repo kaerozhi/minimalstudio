@@ -1,0 +1,27 @@
+{
+  "templater-obsidian:create-_templater/_post.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ],
+  "templater-obsidian:create-_templater/_page.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "2"
+    }
+  ],
+  "obsidian-image-auto-upload-plugin:Upload all images": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "U"
+    }
+  ]
+}

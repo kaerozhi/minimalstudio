@@ -1,0 +1,60 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Strava from "@/components/activities/Strava.astro";
+import Douban from "@/components/activities/DoubanMovie.astro";
+import Spotify from "@/components/activities/Spotify.astro";
+import Podcast from "@/components/activities/Xiaoyuzhou.astro";
+---
+<BaseLayout>
+    <section class="py-24 2xl:max-w-screen-xl mx-auto" id="gallery">
+        <div class="mt-16 px-8 pb-8 max-w-4xl mx-auto">
+            <h2 class="text-8xl font-bold tracking-tighter uppercase">About</h2>
+        </div>
+
+        <article class="flex flex-col md:flex-row px-8 pb-8 max-w-4xl mx-auto">
+            <div class="basis-8/12 prose text-xl/8 font-serif font-normal">
+                <p>一个不务正业、兴趣广泛的视觉设计师，2022年从大厂离职，目前是自由职业，设计与摄影双修。</p>
+
+                <p>八零后，江西人，定居苏州。通称阿七，用过的 ID 包括 kaero、马鹿丸以及马鹿丸的一系列变体，包括但不限于马怒玩、马若顽，玛瑙丸等等。写作诗词时一般署名风愁予。</p>
+
+                <p>能力覆盖视觉设计 / 网页设计 / 网页前端开发 / 摄影 / 视频拍摄与剪辑，对游戏、电竞的相关设计有较深理解。熟悉 Wordpress、Hexo、Astro 等程序的主题定制。</p>
+
+                <h3 class="font-sans">关于本站</h3>
+
+                <p>如果从 Chinaren 的个人网页算起，那真是从混沌初开就在折腾个站了。尝试过 PJBlog / LifeType / Wordpress / Typecho / Hexo / Astro 等平台，网站目前基于 Astro 和 Tailwind 构建。一直以 kaero.org 作为主域名，2022 年开始启用 kaerozhi.com。</p>
+            </div>
+            <div class="basis-1/12"></div>
+            <aside class="basis-3/12 flex flex-col md:flex-col-reverse justify-between">
+                <div class="rounded-lg overflow-hidden mt-8"><img src="https://media.kaerozhi.com/2025/06/9f3f1f63984e9a784f1a50ccff7f6e57.webp" alt="kaero" loading="lazy" /></div>
+                <div class="mt-8 md:mt-0">
+                    <h3 class="text-xl font-semibold">深入了解</h3>
+                    <ul class="mt-4">
+                        <li class="my-4"><a href="#activities" class="text-md text-zinc-500 hover:text-black duration-300"><svg class="inline h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg> 最近活动</a></li>
+                        <li class="my-4"><a href="#resume" class="text-md text-zinc-500 hover:text-black duration-300"><svg class="inline h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg> 个人简历</a></li>
+                        <li class="my-4"><a href="#gears" class="text-md text-zinc-500 hover:text-black duration-300"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="inline h-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg> 摄影器材</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </article>
+    </section>
+        
+    <section id="activities" class="mt-12 px-8 pb-8 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-semibold uppercase">最近活动</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8">
+            <Strava />
+            <Douban />
+            <Spotify />
+            <Podcast />
+        </div>
+    </section>
+
+    <section id="resume" class="mt-12 px-8 pb-8 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-semibold uppercase flex justify-between items-end">个人简历 <span class="text-sm font-normal text-zinc-500"><a href="/assets/resume.pdf"><svg class="inline h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /><path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /><path d="M17 18h2" /><path d="M20 15h-3v6" /><path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" /></svg> 您也可以下载 PDF 版本</a></span></h3>
+
+    </section>
+
+    <section id="gears" class="mt-12 px-8 pb-8 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-semibold uppercase flex justify-between items-end">所持器材</h3>
+
+    </section>
+</BaseLayout>
