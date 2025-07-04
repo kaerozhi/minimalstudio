@@ -2,8 +2,11 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import MarkdownPostLayout from '@/layouts/MarkdownPostLayout.astro';
 
+<<<<<<< HEAD
 export const prerender = true;
 
+=======
+>>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
 export async function getStaticPaths() {
   const blogEntries = await getCollection("writings", ({ data }) => !data.draft);
   

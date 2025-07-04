@@ -1,9 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import MarkdownGalleryLayout from '../../layouts/MarkdownGalleryLayout.astro';
+<<<<<<< HEAD
 
 export const prerender = true;
 
+=======
+>>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
 export async function getStaticPaths() {
   const blogEntries = await getCollection('gallery');
   return blogEntries.map(entry => ({

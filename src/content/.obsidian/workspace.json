@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "35a00e65b3834fab",
+        "id": "5a5e9ed4774a0665",
         "type": "tabs",
         "children": [
           {
-            "id": "4ed24fbc225bba35",
+            "id": "930ede58fe034dc9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -50,7 +50,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -74,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 244.5
   },
   "right": {
     "id": "0838cf15b68b4c64",
@@ -136,21 +136,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 240.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,44 +162,45 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4ed24fbc225bba35",
+  "active": "930ede58fe034dc9",
   "lastOpenFiles": [
-    "blog/strava-on-astro.md",
-    "blog/douban-movie-on-astro.md",
-    "blog/strange-problem.md",
-    "blog/a-bad-weekend.md",
-    "travels/walk-around-the-ancient-gusu.md",
-    "travels/from-dongchong-to-xichong.md",
-    "travels/2019-japan.md",
-    "writings/my-father.md",
-    "travels/travel-scam.md",
-    "writings/luxun-and-tao.md",
+    "blog/show-your-latest-strava-activity-on-astro.md",
+    "blog/reading-luxuns-daily.md",
+    "blog/poems-by-zhengxiaoxu.md",
+    "blog/nursery-rhymes.md",
+    "blog/my-love-stories.md",
+    "blog/lost-2-domain.md",
+    "writings/阮大铖咏怀堂诗集.md",
+    "blog/character-and-conflict.md",
+    "blog/leech.md",
+    "blog/kelibudan.md",
+    "gallery/pj.md",
+    "blog/aeroom-based-on-lifetype.md",
+    "blog/bass-play-of-jingxi.md",
+    "blog/hexo-new-theme-based-on-acorn.md",
+    "blog/zoom-nikkor-43-86mm-f3.5.md",
+    "design/aic-2022.md",
+    "travels/_zhangyuan.md",
+    "blog/windows-live-writer-update.md",
+    "blog/zoundry-raven.md",
+    "blog/windows-live-writer-review.md",
+    "blog/scribefire-and-zoundry.md",
+    "blog/lifetype-or-wordpress.md",
+    "travels/2019-fiji.md",
+    "gallery/school-sports-day-of-kids.md",
+    "travels/2019-hulunbuir.md",
+    "travels/shanghai-museum.md",
+    "config.ts",
     "writings/周福清.jpg",
     "writings/Qiu_jin.jpg",
     "writings/129155182.jpg",
     "writings/5882b2b7d0a20cf4336aaae378094b36acaf9917.jpg",
-    "writings/at-2025-new-year.md",
-    "writings/something-hidden.md",
-    "writings/feimao-and-the-poem-creator.md",
-    "design/arena-of-valor-new-branding-2019.md",
     "design/Match-splash-0928-1380x776.png",
     "design/Match-BPphase-1008.png",
     "design/map2-1380x776.png",
     "design/magesbattle2.png",
     "design/logo-collections.png",
     "design/lines-1.png",
-    "design/hornor-of-kings-new-hero-yunying.md",
-    "design/aic-2022.md",
-    "design/mla-spokesperson-poster.md",
-    "design/shediao-mtbi-testing-h5.md",
-    "design/tft-2023-celebration.md",
-    "design/qqspeed-asiancup-2024-concept.md",
-    "design/watcher-of-realms-heroes-poster.md",
-    "travels/suzhou-1day-trip.md",
-    "travels/shanghai-museum.md",
-    "travels/2017-xiamen.md",
-    "travels/2019-fiji.md",
-    "travels/2019-hulunbuir.md",
     "travels/GPmpb3AbkAA3TJl-1.exif",
     "travels/GPmpb3AbkAA3TJl.exif",
     "travels/suzhou",

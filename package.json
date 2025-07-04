@@ -27,7 +27,10 @@
     "leaflet": "^1.9.4",
     "lodash.kebabcase": "^4.1.1",
     "react": "^19.1.0",
+<<<<<<< HEAD
     "rss-parser": "^3.13.0",
+=======
+>>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
     "simple-icons": "^15.3.0",
     "strava-oauth2": "^1.1.0",
     "strava-v3": "^2.2.1",

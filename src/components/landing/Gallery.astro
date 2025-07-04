@@ -14,7 +14,11 @@ const posts = Object.values(matches);
     {posts.slice(0, 9).map((post) => (
       <div class="break-inside-avoid mb-6 overflow-hidden rounded-lg">
         <a href={post.url}>
+<<<<<<< HEAD
           <img class="h-auto max-w-full grayscale hover:grayscale-0 hover:scale-110 duration-300" src={post.frontmatter.photos[0]} alt={post.frontmatter.title} />
+=======
+          <img class="h-auto max-w-full grayscale hover:grayscale-0 hover:scale-110 duration-500" src={post.frontmatter.photos[0]} alt={post.frontmatter.title} />
+>>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
         </a>
       </div>
     ))}
