@@ -25,3 +25,7 @@
   --color-base-900: oklch(23.48% 0.004 264.49);
   --color-base-950: oklch(16.89% 0.002 286.18);
 }
+
+.container-wide {
+  @apply 2xl:max-w-screen-xl mx-auto px-6;
+}

@@ -11,10 +11,14 @@
             "id": "4ed24fbc225bba35",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "blog/富士中画幅转接老镜头.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "富士中画幅转接老镜头"
             }
           }
         ]
@@ -165,10 +169,12 @@
   },
   "active": "4ed24fbc225bba35",
   "lastOpenFiles": [
+    "blog/a-bad-weekend.md",
+    "blog/富士中画幅转接老镜头.md",
+    "travels/_baimasi.md",
     "blog/strava-on-astro.md",
     "blog/douban-movie-on-astro.md",
     "blog/strange-problem.md",
-    "blog/a-bad-weekend.md",
     "travels/walk-around-the-ancient-gusu.md",
     "travels/from-dongchong-to-xichong.md",
     "travels/2019-japan.md",
@@ -199,8 +205,6 @@
     "travels/suzhou-1day-trip.md",
     "travels/shanghai-museum.md",
     "travels/2017-xiamen.md",
-    "travels/2019-fiji.md",
-    "travels/2019-hulunbuir.md",
     "travels/GPmpb3AbkAA3TJl-1.exif",
     "travels/GPmpb3AbkAA3TJl.exif",
     "travels/suzhou",

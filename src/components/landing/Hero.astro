@@ -1,12 +1,10 @@
 ---
 import { config } from '@/site.config'
+import Branding from "@/components/global/Branding.astro";
 ---
-<section class="relative 2xl:max-w-screen-xl mx-auto">
-  <svg class="lg:-mx-4 relative overflow-hidden" viewBox="0 0 1585 372" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text class="lowercase tracking-tighter font-bold font-[Gilroy]" x="790" y="330" font-size="452" fill="black" text-anchor="middle">{config.title.replace(/\s*/g,"")}</text>
-  </svg>
-    
- 
+<section class="relative container-wide">
+  <div class="mt-12 md:mt-0"></div>
+  <Branding></Branding>
 
   <div class="px-8 md:px-12 py-24 max-w-2xl mx-auto relative">
     <div>
