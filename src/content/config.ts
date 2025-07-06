@@ -35,6 +35,7 @@ const design = defineCollection({
     tags: z.array(z.string()).default([]), // 标签数组，默认为空数组
     categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
     draft: z.boolean().default(false), // 是否为草稿，默认为 false
+    featured: z.boolean().default(false), // 是否为精选，默认为 false
   }),
 });
 
@@ -49,6 +50,7 @@ const gallery = defineCollection({
     tags: z.array(z.string()).default([]), // 标签数组，默认为空数组
     categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
     draft: z.boolean().default(false), // 是否为草稿，默认为 false
+    featured: z.boolean().default(false), // 是否为精选，默认为 false
   }),
 });
 
@@ -62,9 +64,10 @@ const travels = defineCollection({
     photos: z.array(z.string()).optional(),
     tags: z.array(z.string()).default([]), // 标签数组，默认为空数组
     categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
-    draft: z.boolean().default(false), // 是否为草稿，默认为 false
     series: z.string().optional(),
+    draft: z.boolean().default(false), // 是否为草稿，默认为 false
     toc: z.boolean().default(false), // 是否打开目录，默认为 false
+    featured: z.boolean().default(false), // 是否为精选，默认为 false
   }),
 });
 
@@ -81,6 +84,7 @@ const writings = defineCollection({
     categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
     draft: z.boolean().default(false), // 是否为草稿，默认为 false
     toc: z.boolean().default(false), // 是否打开目录，默认为 false
+    featured: z.boolean().default(false), // 是否为精选，默认为 false
   }),
 });
 
