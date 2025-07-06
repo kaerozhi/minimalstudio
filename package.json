@@ -15,7 +15,6 @@
     "@astrolib/seo": "^1.0.0-beta.5",
     "@fontsource-variable/baskervville": "^5.2.1",
     "@fontsource-variable/inter": "^5.2.6",
-    "@fontsource-variable/lora": "^5.2.6",
     "@fontsource-variable/playfair-display": "^5.2.6",
     "@fontsource-variable/rokkitt": "^5.2.6",
     "@mapbox/polyline": "^1.2.1",

@@ -1,13 +1,13 @@
 ---
-import '@fontsource-variable/inter';
-import '@fontsource-variable/lora';
+import '@fontsource-variable/outfit';
+import '@fontsource-variable/playfair-display';
 import '@fontsource-variable/rokkitt';
 ---
 
 <style is:inline>
   :root {
-    --font-sans: 'InterVariable', 'Noto Sans SC', 'Source Han Sans', ui-sans-serif, system-ui, sans-serif;
-    --font-serif: 'Lora Variable', 'Noto Seirf SC', 'Source Han Serif', ui-serif, serif;
+    --font-sans: 'Outfit Variable', 'Noto Sans SC', 'Source Han Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Plarfair Display Variable', 'Noto Seirf SC', 'Source Han Serif', ui-serif, serif;
     --font-fantasy: 'Rokkitt Variable', STFangsong, Fangsong, FangSong_GB2312, fantasy, serif;
     --font-cursive: 'Rokkitt Variable', Kaiti, STKaiti, cursive, serif;
 
@@ -16,22 +16,23 @@ import '@fontsource-variable/rokkitt';
     --color-accent: rgb(60, 233, 184);
 
     --color-text-heading: rgb(0 0 0);
-    --color-text-default: rgb(16 16 16);
+    --color-text-default: rgb(52 50 48);
     --color-text-muted: rgb(16 16 16 / 66%);
-    --color-bg-page: rgb(255 255 255);
 
+    --color-bg-page: rgb(255 255 255);
     --color-bg-page-dark: rgb(3 6 32);
 
     ::selection {
-      background-color: rgb(0, 0, 0);
-      color: rgb(255 255 255);
+      background-color: var(--color-primary);
+      color: var(--color-bg-page);
     }
   }
 
   .dark {
-    --font-sans: 'InterVariable';
-    --font-serif: 'InterVariable';
-    --font-heading: 'InterVariable';
+    --font-sans: 'Outfit Variable', 'Noto Sans SC', 'Source Han Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Plarfair Display Variable', 'Noto Seirf SC', 'Source Han Serif', ui-serif, serif;
+    --font-fantasy: 'Rokkitt Variable', STFangsong, Fangsong, FangSong_GB2312, fantasy, serif;
+    --font-cursive: 'Rokkitt Variable', Kaiti, STKaiti, cursive, serif;
 
     --color-primary: rgb(0, 0, 0);
     --color-secondary: rgb(228, 53, 68);
