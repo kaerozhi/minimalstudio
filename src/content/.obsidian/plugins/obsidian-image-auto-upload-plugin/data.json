@@ -11,6 +11,7 @@
   "newWorkBlackDomains": "",
   "deleteSource": true,
   "imageDesc": "origin",
+<<<<<<< HEAD
   "remoteServerMode": false,
   "uploadedImages": [
     {
@@ -10634,4 +10635,7 @@
       "updatedAt": 1751352172705
     }
   ]
+=======
+  "remoteServerMode": false
+>>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
 }
