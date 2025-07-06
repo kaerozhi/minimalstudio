@@ -97,7 +97,7 @@ if ($('.local-search').resize() && !isMobile.any()) {
 
 再打开 `/themes/acorn/source/css/style.styl`，插入：
 
-```csss
+```css
 @import "_partial/search"
 ```
 

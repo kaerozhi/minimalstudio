@@ -2,7 +2,7 @@
 title: Arena of Valor 全球品牌刷新
 date: 2018-09-10T00:00:00.000Z
 color: orange
-brand: Arena of Valor
+client: Arena of Valor
 categories:
   - Branding
 tags:

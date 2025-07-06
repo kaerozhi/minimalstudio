@@ -1,9 +1,8 @@
 ---
 title: 潮汐守望者首发英雄海报
 date: 2024-07-21T10:22:00.000Z
-brand: Watcher of Realms
-color:
-  - orange
+client: Watcher of Realms
+color: orange
 categories:
   - Poster
 tags:

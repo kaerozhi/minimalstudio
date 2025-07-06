@@ -2,7 +2,7 @@
 title: 王者荣耀云缨系列海报
 date: 2021-07-03T00:00:00.000Z
 color: green
-brand: Hornor of Kings
+client: Hornor of Kings
 categories:
   - Poster
 tags:

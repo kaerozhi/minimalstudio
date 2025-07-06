@@ -2,7 +2,7 @@
 title: QQSpeed Asian Cup 2024 Concept
 date: 2024-04-19T10:10:00.000Z
 color: green
-brand: QQ Speed
+client: QQ Speed
 categories:
   - ESPORTS
 tags:
