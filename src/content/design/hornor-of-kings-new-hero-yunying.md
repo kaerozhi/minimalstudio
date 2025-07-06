@@ -1,14 +1,15 @@
 ---
-title: "王者荣耀云缨系列海报"
-date: "2021-07-03"
+title: 王者荣耀云缨系列海报
+date: 2021-07-03T00:00:00.000Z
 color: green
 brand: Hornor of Kings
-categories: 
+categories:
   - Poster
-tags: 
-  - "poster"
-  - "王者荣耀"
-photos: https://media.kaerozhi.com/2025/06/f8a23f0b261c2beeacd80b432ac610ab.webp
+tags:
+  - poster
+  - 王者荣耀
+photos:
+  - 'https://media.kaerozhi.com/2025/06/f8a23f0b261c2beeacd80b432ac610ab.webp'
 description: 新英雄云缨飒爽来临，角色海报。
 ---
 ![云缨 X 峨眉枪合作概念海报](https://media.kaerozhi.com/2025/06/5873eae6a146b256d08c54ecf08965f0.webp)

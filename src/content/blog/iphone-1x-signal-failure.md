@@ -1,13 +1,11 @@
 ---
-title: "iPhone 1x 信号故障"
-date: 2023-06-08 18:31:25
-categories: 
-  - "日常"
-tags: 
-  - "iPhone"
+title: iPhone 1x 信号故障
+date: 2023-06-08T18:31:25.000Z
+categories:
+  - 日常
+tags:
+  - iPhone
   - 信号故障
-coverImage: ""
-description: ""
 ---
 下午一点半，陶小婧出门，我则在家校书。
 

@@ -1,11 +1,11 @@
 ---
-title: "蚂蟥"
-date: "2020-06-01"
-categories: 
-  - "日常"
-tags: 
-  - "hometown"
-  - "my-childhood"
+title: 蚂蟥
+date: 2020-06-01T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - hometown
+  - my-childhood
 ---
 
 肥猫说他小时候，工业区和住宅区之间是大片的稻田和河流，他经常持着蜻蜓网，看见稻田里偶然也有白色的线虫在游泳。

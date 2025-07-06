@@ -1,15 +1,15 @@
 ---
-title: "Hexo 的安装与配置"
-date: "2023-05-27 20:33:19"
-categories: 
-  - "玩艺"
+title: Hexo 的安装与配置
+date: 2023-05-27T12:33:19.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
+tags:
   - Hexo
   - Synology
   - Obsidian
 photos:
-  - https://media.kaerozhi.com/2025/06/4c178a66234170aa24ca739d112b396c.webp
+  - 'https://media.kaerozhi.com/2025/06/4c178a66234170aa24ca739d112b396c.webp'
 ---
 最近计划把自己的[个人网站](https://kaero.org)转移到本地的 NAS 上，但 Wordpress 用了这么多年，确实越来越臃肿，最新的模块化编辑器确实很简单，但主题定制的成本也更高了。所以这次就琢磨着趁机改换门庭，试试其他博客平台。
 <!-- more -->

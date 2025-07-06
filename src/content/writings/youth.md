@@ -1,9 +1,9 @@
 ---
-title: "少年"
-date: "2008-03-20"
-categories: 
-  - "文字"
-  - "诗词"
+title: 少年
+date: 2008-03-20T00:00:00.000Z
+categories:
+  - 文字
+  - 诗词
 tags:
   - 五古
 ---

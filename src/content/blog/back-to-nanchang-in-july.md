@@ -1,8 +1,8 @@
 ---
-title: "七月南昌之行"
-date: "2007-08-05"
-categories: 
-  - "日常"
+title: 七月南昌之行
+date: 2007-08-05T00:00:00.000Z
+categories:
+  - 日常
 tags:
   - 葬礼
   - 照片

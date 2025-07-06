@@ -1,13 +1,13 @@
 ---
-title: "Blackberry Blog 客户端：BBMetaBlog"
-date: "2009-06-12"
-categories: 
-  - "玩艺"
+title: Blackberry Blog 客户端：BBMetaBlog
+date: 2009-06-12T00:00:00.000Z
+categories:
+  - 玩艺
   - 软件
-tags: 
-  - "blackberry"
-  - "blog-tools"
-  - "wordpress"
+tags:
+  - blackberry
+  - blog-tools
+  - wordpress
 ---
 
 **OTA 地址：**[http://www.opencod.org/opencod/ls2007party.nsf/BBMetaBlog122.jad](http://www.opencod.org/opencod/ls2007party.nsf/BBMetaBlog122.jad)  

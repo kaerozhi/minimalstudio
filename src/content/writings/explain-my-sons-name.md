@@ -1,9 +1,9 @@
 ---
-title: "释儿名"
-date: "2018-11-21"
-categories: 
-  - "文字"
-  - "诗词"
+title: 释儿名
+date: 2018-11-21T00:00:00.000Z
+categories:
+  - 文字
+  - 诗词
 tags:
   - 七绝
 description: 儿名景曦

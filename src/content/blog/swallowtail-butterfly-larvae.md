@@ -1,14 +1,12 @@
 ---
 title: 凤蝶幼虫
-date: 2025-05-12 10:27
-layout: 
+date: 2025-05-12T02:27:00.000Z
 categories:
   - 日常
 tags:
   - 昆虫
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/3e11f42008a961632cdd47bf864693fd.webp
+  - 'https://media.kaerozhi.com/2025/06/3e11f42008a961632cdd47bf864693fd.webp'
 ---
 昨天早上在院子里浇花，忽然发现一片金桔树叶裹着一只肥大的青虫，纹丝不动。这片叶子倒是完整，但旁边的几片嫩叶已被啃得坑坑洼洼，岳父说赶紧扔掉，否则叶子要被啃完了。
 

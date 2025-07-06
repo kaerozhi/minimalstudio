@@ -1,12 +1,12 @@
 ---
-title: "Wordpress 主题资源"
-date: "2008-04-13"
-categories: 
-  - "玩艺"
-tags: 
-  - "wordpress"
-  - "wordpress-theme"
-coverImage: "image-thumb.png"
+title: Wordpress 主题资源
+date: 2008-04-13T00:00:00.000Z
+categories:
+  - 玩艺
+tags:
+  - wordpress
+  - wordpress-theme
+coverImage: image-thumb.png
 ---
 
 官方的 [Wordpress Theme Viewer](http://themes.wordpress.net/)。不知道我的网站配置是否有问题，Test Run 只能看到默认主题。另外搜索功能也不是很管用，每次搜索 1 Column 总出不来想要的结果。

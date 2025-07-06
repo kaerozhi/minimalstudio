@@ -1,11 +1,11 @@
 ---
-title: "iNewS Tags Manager V4.8 for Dreamweaver"
-date: "2006-08-15"
-categories: 
-  - "案例"
-tags: 
-  - "dreamweaver扩展"
-  - "inews"
+title: iNewS Tags Manager V4.8 for Dreamweaver
+date: 2006-08-15T00:00:00.000Z
+categories:
+  - 案例
+tags:
+  - dreamweaver扩展
+  - inews
 ---
 
 其实只做了一点小修改，但成果还不是没有：错误少了，功能多了，嘿嘿，而且比阿桂的 iNewS 4.8 要发布得早那么一点点。为了和 iNews 版本同步，所以插件的版本号之后就保持一致了，这样下载插件的时候就不用为版本号烦恼。

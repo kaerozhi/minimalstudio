@@ -1,15 +1,13 @@
 ---
-title: "Cinema 4D 导入 .ai 文件"
-date: "2019-03-13 21:00:53"
-layout: 
-categories: 
-  - "玩艺"
+title: Cinema 4D 导入 .ai 文件
+date: 2019-03-13T13:00:53.000Z
+categories:
+  - 玩艺
   - 软件
-tags: 
+tags:
   - cinema 4D
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/1d63cc3b071384afdc51f541f9bf0e30.webp
+  - 'https://media.kaerozhi.com/2025/06/1d63cc3b071384afdc51f541f9bf0e30.webp'
 ---
 ## 导入之前的准备工作
 

@@ -1,8 +1,8 @@
 ---
-title: "黑莓模拟器试用主题"
-date: "2008-04-20"
-categories: 
-  - "玩艺"
+title: 黑莓模拟器试用主题
+date: 2008-04-20T00:00:00.000Z
+categories:
+  - 玩艺
   - 软件
 tags:
   - 黑莓

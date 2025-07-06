@@ -1,12 +1,12 @@
 ---
-title: "关于 WordPress 收费主题的一些想法"
-date: "2010-05-09"
-categories: 
-  - "玩艺"
+title: 关于 WordPress 收费主题的一些想法
+date: 2010-05-09T00:00:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
-  - "twitter"
-  - "wordpress"
+tags:
+  - twitter
+  - wordpress
   - theme
 description: 既然是面向个人用户，那价格天花板就已经被限定了。
 ---

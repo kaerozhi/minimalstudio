@@ -1,11 +1,11 @@
 ---
-title: "此日七月初八"
-date: "2007-08-20"
-categories: 
-  - "文字"
-  - "诗词"
-tags: 
-  - "七绝"
+title: 此日七月初八
+date: 2007-08-20T00:00:00.000Z
+categories:
+  - 文字
+  - 诗词
+tags:
+  - 七绝
 ---
 <span class="foreword">云衣索诗，得此。</span>
 

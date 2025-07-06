@@ -1,12 +1,12 @@
 ---
-title: "呼伦贝尔行记"
-date: "2019-06-15"
-categories: 
-  - "游历"
-tags: 
-  - "呼伦贝尔"
-  - "travel-notes"
-  - "self-driving-tour"
+title: 呼伦贝尔行记
+date: 2019-06-15T00:00:00.000Z
+categories:
+  - 游历
+tags:
+  - 呼伦贝尔
+  - travel-notes
+  - self-driving-tour
 ---
 
 六月七日，早起，自宝安飞抵哈尔滨太平机场，与俊俊等一行四人会合。

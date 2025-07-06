@@ -1,7 +1,6 @@
 ---
 title: 轧神仙
-date: 2025-05-10 11:08
-layout: 
+date: 2025-05-10T03:08:00.000Z
 categories:
   - 游历
 tags:
@@ -10,7 +9,7 @@ tags:
   - 苏州
 description: 轧神仙是苏州老传统，在文旅振兴的当下仍尽显没落之势。
 photos:
-  - https://media.kaerozhi.com/2025/06/849a56bd5ca6ee33bcd244fd5031bb55.webp
+  - 'https://media.kaerozhi.com/2025/06/849a56bd5ca6ee33bcd244fd5031bb55.webp'
 ---
 清代的顾禄著有《清嘉录》，专门记载三吴风土民俗，其中卷四记四月事，有云：
 

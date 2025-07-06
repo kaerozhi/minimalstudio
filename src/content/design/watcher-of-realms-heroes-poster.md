@@ -1,6 +1,6 @@
 ---
 title: 潮汐守望者首发英雄海报
-date: 2024-07-21 18:22
+date: 2024-07-21T10:22:00.000Z
 brand: Watcher of Realms
 color:
   - orange
@@ -9,9 +9,9 @@ categories:
 tags:
   - 角色海报
   - 游戏
-description: "史诗故事，此刻由你书写"
+description: 史诗故事，此刻由你书写
 photos:
-  - https://media.kaerozhi.com/2025/06/ed5bc7b8ee4311ca6f60c7ad8db22773.webp
+  - 'https://media.kaerozhi.com/2025/06/ed5bc7b8ee4311ca6f60c7ad8db22773.webp'
 ---
 ![](https://media.kaerozhi.com/2025/06/90b152f24106c2ea0688ddeb46d8b004.webp)
 

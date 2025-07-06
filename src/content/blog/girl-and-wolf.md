@@ -1,11 +1,11 @@
 ---
-title: "采蘑菇的小姑娘"
-date: "2008-11-11"
-categories: 
-  - "玩艺"
+title: 采蘑菇的小姑娘
+date: 2008-11-11T00:00:00.000Z
+categories:
+  - 玩艺
   - 涂画
-tags: 
-  - "插画"
+tags:
+  - 插画
 ---
 
 ![采蘑菇的小姑娘](https://media.kaerozhi.com/2025/06/62baa1a6087159cd9b949910603971f6.webp)

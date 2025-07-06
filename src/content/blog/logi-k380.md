@@ -1,9 +1,9 @@
 ---
-title: "罗技 K380 蓝牙键盘"
-date: "2017-12-16"
-categories: 
+title: 罗技 K380 蓝牙键盘
+date: 2017-12-16T00:00:00.000Z
+categories:
   - 玩艺
-  - "器用"
+  - 器用
 tags:
   - keyboard
   - bluetooth

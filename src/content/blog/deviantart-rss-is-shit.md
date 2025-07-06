@@ -1,11 +1,11 @@
 ---
-title: "deviantART 的订阅真是令人遗憾……"
-date: "2008-04-23"
-categories: 
-  - "日常"
+title: deviantART 的订阅真是令人遗憾……
+date: 2008-04-23T00:00:00.000Z
+categories:
+  - 日常
   - 碎碎念
-tags: 
-  - "devaintart"
+tags:
+  - devaintart
   - rss
 ---
 

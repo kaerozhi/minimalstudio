@@ -1,8 +1,8 @@
 ---
-title: "Something Hidden"
-date: "2022-05-10"
-categories: 
-  - "文字"
+title: Something Hidden
+date: 2022-05-10T00:00:00.000Z
+categories:
+  - 文字
 tags:
   - 新诗
 ---

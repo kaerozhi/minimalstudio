@@ -1,12 +1,12 @@
 ---
-title: "Google Chrome"
-date: "2008-09-03"
-categories: 
-  - "日常"
-tags: 
-  - "browser"
-  - "google"
-  - "google-chrome"
+title: Google Chrome
+date: 2008-09-03T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - browser
+  - google
+  - google-chrome
 ---
 Google Chrome 正式发布了。第一时间试了试，页面的加载速度真快啊，绝对比 Firefox 快1倍以上。WebKit 核心，印象中自称最快的 Apple Safari 也是基于这个开发的吧，也难怪这么快了。不过功能真是相当地少简洁，普通浏览之外的特色功能，只有一个快捷方式值得一提吧。Javascript 调试器还是挺不错的，源代码查看就简陋多了：不分行，代码上色也相当糟糕。
 

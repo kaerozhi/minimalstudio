@@ -1,8 +1,8 @@
 ---
-title: "Twitter"
-date: "2008-08-01"
-categories: 
-  - "日常"
+title: Twitter
+date: 2008-08-01T00:00:00.000Z
+categories:
+  - 日常
 tags:
   - twitter
   - 饭否

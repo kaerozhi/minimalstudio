@@ -1,11 +1,11 @@
 ---
-title: "SWFObject.js 插入透明 SWF 文件"
-date: "2006-12-13"
-categories: 
-  - "日常"
-tags: 
-  - "javascript"
-  - "网页开发"
+title: SWFObject.js 插入透明 SWF 文件
+date: 2006-12-13T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - javascript
+  - 网页开发
 ---
 
 使用 SWFObject.js 非常方便，不过貌似也有一个缺点，就是不能插入透明的文件——在源文件里面搜索不到 wmode，所以应该是这样子的。但是没有关系，我们可以修改一下，让它支持透明：

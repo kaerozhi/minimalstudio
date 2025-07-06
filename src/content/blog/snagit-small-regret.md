@@ -1,8 +1,8 @@
 ---
-title: "SnagIt 的小缺憾"
-date: "2008-04-21"
-categories: 
-  - "玩艺"
+title: SnagIt 的小缺憾
+date: 2008-04-21T00:00:00.000Z
+categories:
+  - 玩艺
   - 软件
 tags:
   - SnagIt

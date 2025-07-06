@@ -1,8 +1,4 @@
 ---
-title: ""
-date: 2025-06-25 07:20
-layout: 
-photos:
-  -
-description: ""
+date: 2025-06-24T23:20:00.000Z
 ---
+

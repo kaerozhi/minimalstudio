@@ -1,13 +1,13 @@
 ---
-title: "裸照"
-date: "2009-04-11"
-categories: 
-  - "日常"
-tags: 
-  - "thinkpad"
+title: 裸照
+date: 2009-04-11T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - thinkpad
   - 笔记本
   - 电脑故障
-  - "t42p"
+  - t42p
 ---
 
 没错，真的是裸照。速进。

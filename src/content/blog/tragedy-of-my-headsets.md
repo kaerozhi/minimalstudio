@@ -1,11 +1,11 @@
 ---
-title: "耳机们悲惨的命运交响曲"
-date: "2008-11-28"
-categories: 
-  - "日常"
-tags: 
-  - "for-fun"
-  - "headset"
+title: 耳机们悲惨的命运交响曲
+date: 2008-11-28T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - for-fun
+  - headset
 ---
 
 抬脚，踏步，PIA~

@@ -1,12 +1,12 @@
 ---
-title: "游戏排位系统的设计思路"
-date: "2022-06-09"
-categories: 
-  - "观点"
-tags: 
-  - "排位赛系统"
-  - "段位图标"
-  - "game"
+title: 游戏排位系统的设计思路
+date: 2022-06-09T00:00:00.000Z
+categories:
+  - 观点
+tags:
+  - 排位赛系统
+  - 段位图标
+  - game
 ---
 <div class="foreword">
 

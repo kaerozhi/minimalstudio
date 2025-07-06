@@ -1,10 +1,10 @@
 ---
-title: "心理医生"
-date: "2016-11-12"
-categories: 
-  - "文字"
-tags: 
-  - "电影脚本"
+title: 心理医生
+date: 2016-11-12T00:00:00.000Z
+categories:
+  - 文字
+tags:
+  - 电影脚本
   - 短片
 ---
 

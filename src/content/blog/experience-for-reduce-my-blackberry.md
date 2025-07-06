@@ -1,10 +1,10 @@
 ---
-title: "给黑莓瘦身得出来的经验"
-date: "2008-07-14"
-categories: 
-  - "日常"
-tags: 
-  - "blackberry"
+title: 给黑莓瘦身得出来的经验
+date: 2008-07-14T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - blackberry
 ---
 
 默认主题删不得也能删……除了**Dimension Zen**，哈哈～

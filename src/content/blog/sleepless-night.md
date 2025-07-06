@@ -1,11 +1,11 @@
 ---
-title: "失眠"
-date: "2009-04-02"
-categories: 
-  - "日常"
-tags: 
-  - "sleepless"
-  - "加班"
+title: 失眠
+date: 2009-04-02T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - sleepless
+  - 加班
 ---
 
 最近仍然总是失眠。

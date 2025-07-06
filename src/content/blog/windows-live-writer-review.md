@@ -1,12 +1,12 @@
 ---
-title: "Windows Live Writer 初上手体验"
-date: "2007-08-04"
-categories: 
-  - "玩艺"
+title: Windows Live Writer 初上手体验
+date: 2007-08-04T00:00:00.000Z
+categories:
+  - 玩艺
   - 软件
-tags: 
-  - "Blog Tools"
-  - "Windows Live Writer"
+tags:
+  - Blog Tools
+  - Windows Live Writer
 ---
 ![Windows Live Writer](https://media.kaerozhi.com/2025/06/3014079694e3fd44f378055dd9107165.webp)
 

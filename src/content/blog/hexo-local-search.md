@@ -1,14 +1,14 @@
 ---
-title: "给 Hexo 添加搜索模块"
-date: 2023-07-17 10:04
-categories: 
-  - "玩艺"
+title: 给 Hexo 添加搜索模块
+date: 2023-07-17T02:04:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
-  - "Hexo"
-description: "即便是静态博客，站内搜索功能也是必须的。"
+tags:
+  - Hexo
+description: 即便是静态博客，站内搜索功能也是必须的。
 photos:
-  - https://media.kaerozhi.com/2025/06/3aebd3c625e5eeee7f2447b6af41cbd2.webp
+  - 'https://media.kaerozhi.com/2025/06/3aebd3c625e5eeee7f2447b6af41cbd2.webp'
 ---
 咳咳，作为受益无穷的免费用户，我不是在抱怨，但除了一个合适的框架以外，Acorn 的功能确实过于简略。这几天先后搞定了 Github 同步以及评论系统，但仔细想来，网站亟需完善的功能和模块还有以下几个：
 

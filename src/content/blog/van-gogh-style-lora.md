@@ -1,17 +1,16 @@
 ---
-title: "LORA 日推：梵高风格"
-date: 2023-07-04 21:52:31
-categories: 
-  - "玩艺"
-  - "Stable Diffusion"
-tags: 
-  - "stable-diffusion"
-  - "van-gogh"
+title: LORA 日推：梵高风格
+date: 2023-07-04T21:52:31.000Z
+categories:
+  - 玩艺
+  - Stable Diffusion
+tags:
+  - stable-diffusion
+  - van-gogh
   - AIGC
   - LORA
 photos:
-  - https://media.kaerozhi.com/2025/06/793fcf3bb1209d47dce993181005977f.webp
-description: ""
+  - 'https://media.kaerozhi.com/2025/06/793fcf3bb1209d47dce993181005977f.webp'
 ---
 
 今天推荐的 Lora 是 [Van Gogh Style](https://civitai.com/models/100873/van-gogh-style)，还原度极高。以 `a young beautiful girl` 常规起手，底模选用 [DreamShaper](https://civitai.com/models/4384/dreamshaper)，Prompts 如下；

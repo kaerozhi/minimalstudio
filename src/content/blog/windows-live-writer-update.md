@@ -1,13 +1,13 @@
 ---
-title: "Windows Live Writer 更新"
-date: "2007-08-04"
-categories: 
-  - "玩艺"
-  - "软件"
+title: Windows Live Writer 更新
+date: 2007-08-04T00:00:00.000Z
+categories:
+  - 玩艺
+  - 软件
 tags:
-  - "Windows Live Writer"
-  - "Blog Tools"
-  - "Software"
+  - Windows Live Writer
+  - Blog Tools
+  - Software
 ---
 
 在使用过程中，又发现 Windows Live Writer 的更多新功能。

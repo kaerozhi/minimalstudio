@@ -1,10 +1,10 @@
 ---
-title: "依稀图画里，往复梦魂中。"
-date: "2015-04-19"
-categories: 
-  - "日常"
-tags: 
-  - "my-father"
+title: 依稀图画里，往复梦魂中。
+date: 2015-04-19T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - my-father
 ---
 
 我常常想起一幅画。

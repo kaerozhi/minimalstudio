@@ -1,11 +1,11 @@
 ---
-title: "苏州游记"
-date: "2018-11-21"
-categories: 
-  - "游历"
-tags: 
-  - "苏州"
-  - "游记"
+title: 苏州游记
+date: 2018-11-21T00:00:00.000Z
+categories:
+  - 游历
+tags:
+  - 苏州
+  - 游记
   - 吴门人家
   - 拙政园
   - 寒山寺
@@ -20,7 +20,7 @@ tags:
   - 耦园
   - 北寺塔
 photos:
-  - https://media.kaerozhi.com/2025/06/54804e3dcbce5e9f3df48b18e680653a.webp
+  - 'https://media.kaerozhi.com/2025/06/54804e3dcbce5e9f3df48b18e680653a.webp'
 ---
 <div class="foreword">
 

@@ -1,12 +1,12 @@
 ---
-title: "吾乡方言残片"
-date: "2016-01-11"
-categories: 
-  - "文字"
-  - "考据"
-tags: 
-  - "hometown"
-  - "localism"
+title: 吾乡方言残片
+date: 2016-01-11T00:00:00.000Z
+categories:
+  - 文字
+  - 考据
+tags:
+  - hometown
+  - localism
 ---
 
 ## 其一

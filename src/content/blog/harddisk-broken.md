@@ -1,8 +1,8 @@
 ---
-title: "沉痛哀悼我的移动硬盘"
-date: "2008-04-25"
-categories: 
-  - "日常"
+title: 沉痛哀悼我的移动硬盘
+date: 2008-04-25T00:00:00.000Z
+categories:
+  - 日常
 ---
 
 ![P1080094](http://byfiles.storage.msn.com/y1pq_4dONDyMCK_83h1aXuUhUghhEimRZwO1MhUg-GKyqMQysAS_3esemNNuGbap7d41llPHnr7tfY?PARTNER=WRITER)

@@ -1,7 +1,6 @@
 ---
 title: 小巧油润的德产标准镜，ISCO-GOTTINGEN ISCOTAR 50mm F2.8
-date: 2025-06-02 08:49
-layout: 
+date: 2025-06-02T00:49:00.000Z
 categories:
   - 玩艺
   - 器用
@@ -10,9 +9,9 @@ tags:
   - M42卡口
   - 德国老镜头
   - 摄影器材
-description: "别有所长「駄目玉」"
+description: 别有所长「駄目玉」
 photos:
-  - "https://media.kaerozhi.com/2025/06/e3ff8b8ae073742ad9edbbe4a1a9fb53.png"
+  - 'https://media.kaerozhi.com/2025/06/e3ff8b8ae073742ad9edbbe4a1a9fb53.png'
 ---
 这是一只非常小巧的镜头，只有 155g，作为对比，柯尼卡的小剃刀是 138.5g。不但重量轻，而且口径小，只有 47mm，所以特别配微单，装在诡称为「微单」的巨单上反而不太协调。
 

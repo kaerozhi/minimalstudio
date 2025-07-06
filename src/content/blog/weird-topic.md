@@ -1,10 +1,10 @@
 ---
-title: "一个牛B的问题"
-date: "2008-12-13"
-categories: 
-  - "日常"
-tags: 
-  - "搞笑"
+title: 一个牛B的问题
+date: 2008-12-13T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - 搞笑
   - 陶小婧
 ---
 

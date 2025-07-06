@@ -1,16 +1,15 @@
 ---
-title: "贝斯表演：我的悲伤是水做的"
-date: 2024-08-18 10:56
-layout: 
-categories: 
-  - "日常"
-tags: 
+title: 贝斯表演：我的悲伤是水做的
+date: 2024-08-18T02:56:00.000Z
+categories:
+  - 日常
+tags:
   - 景曦
   - video
-description: ""
 photos:
   - image-20240818105959267.png
-video: "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3YvcyFBdmhuaEs4UGF3dnNucjlGbHZiNk9mTU5adkg2UXc_ZT1RWFp6OVQ.mp4"
+video: >-
+  https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3YvcyFBdmhuaEs4UGF3dnNucjlGbHZiNk9mTU5adkg2UXc_ZT1RWFp6OVQ.mp4
 ---
 小朋友学贝斯已经半年，还在南昌度暑假，听老师说学校组织了表演，居然打起精神要求提前回苏州，实属难得。到现场虽然指法生涩，但一点儿不怯场，这点可比我强多了。
 

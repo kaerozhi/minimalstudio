@@ -1,14 +1,14 @@
 ---
-title: "Eversunny"
-date: "2009-06-17"
-categories: 
-  - "日常"
-tags: 
-  - "one-piece"
-  - "photo"
-  - "friends"
+title: Eversunny
+date: 2009-06-17T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - one-piece
+  - photo
+  - friends
 photos:
-  - https://media.kaerozhi.com/2025/06/17dc34583e7e9f59d7dfef80042f2817.png
+  - 'https://media.kaerozhi.com/2025/06/17dc34583e7e9f59d7dfef80042f2817.png'
 ---
 
 永恒桑尼号，或者是芝芝说的阳光万里号，又或是神助君说的黄金狮子号，总之，就是它了。*（都怪字幕组太多！）*

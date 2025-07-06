@@ -1,15 +1,14 @@
 ---
-title: "拆装一支手动镜头"
-date: 2024-08-04 18:28
-layout: 
-categories: 
-  - "玩艺"
-  - "器用"
-tags: 
+title: 拆装一支手动镜头
+date: 2024-08-04T10:28:00.000Z
+categories:
+  - 玩艺
+  - 器用
+tags:
   - 镜头
-description: "事前不必犹豫，上手特别简单。"
+description: 事前不必犹豫，上手特别简单。
 photos:
-  - https://media.kaerozhi.com/2025/06/21669a7beb156754dc3518603769e69f.webp
+  - 'https://media.kaerozhi.com/2025/06/21669a7beb156754dc3518603769e69f.webp'
 ---
 2013年元旦前后，我买了自己的第一台正经相机，索尼的 NEX-7，还是在 [Chiphell](https://www.chiphell.com/) 论坛收的二手。彼时的佳能如日中天，只有尼康差堪匹敌，周围的朋友在泽森的影响之下纷纷入手了尼康 D90。手持 NEX-7 的我被调侃了很久，无他，虽然今日的大法引领风骚，但彼时还只是个不成气候的新玩家，被冠以「家电厂」的称号。我们用佳能用尼康，你用 SONY，难怪不专业，你没有资格拍这个照。
 

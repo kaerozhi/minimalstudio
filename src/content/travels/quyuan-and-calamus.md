@@ -1,15 +1,15 @@
 ---
-title: "曲园的菖蒲"
-date: "2023-06-04 15:31:52"
-categories: 
-  - "游历"
-tags: 
-  - "苏州"
-  - "园林"
+title: 曲园的菖蒲
+date: 2023-06-04T07:31:52.000Z
+categories:
+  - 游历
+tags:
+  - 苏州
+  - 园林
   - 曲园
   - 菖蒲
 photos:
-  - https://media.kaerozhi.com/2025/06/2c27817d4febeb8d1b05d89987819471.webp
+  - 'https://media.kaerozhi.com/2025/06/2c27817d4febeb8d1b05d89987819471.webp'
 ---
 曲园这周有个菖蒲展。失业在家，终日都是闲暇，就骑上小电驴载着陶小婧进了城。
 

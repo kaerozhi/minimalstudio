@@ -1,19 +1,18 @@
 ---
-title: "Hexo 新主题：基于 Acorn 定制"
-date: 2023-07-13 19:30
-layout: 
-categories: 
-  - "玩艺"
-  - "网站"
-tags: 
-  - "Hexo"
+title: Hexo 新主题：基于 Acorn 定制
+date: 2023-07-13T11:30:00.000Z
+categories:
+  - 玩艺
+  - 网站
+tags:
+  - Hexo
   - Theme
   - Acorn
-  - "Web Development"
-description: "更丰富的展示模块，更深度的细节定制。"
+  - Web Development
+description: 更丰富的展示模块，更深度的细节定制。
 toc: true
 photos:
-  - https://media.kaerozhi.com/2025/06/89af8961b5a74090bf343f7806531ad6.webp
+  - 'https://media.kaerozhi.com/2025/06/89af8961b5a74090bf343f7806531ad6.webp'
 ---
 <div class="foreword">
 

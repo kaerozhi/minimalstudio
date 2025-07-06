@@ -1,14 +1,11 @@
 ---
-title: ""
-date: 2015-01-25 17:20
-layout: 
-categories: 
-  - "日常"
-tags: 
-  - "人像"
+date: 2015-01-25T09:20:00.000Z
+categories:
+  - 日常
+tags:
+  - 人像
   - 剧照
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/a6c67f7d0938791375454dd4dcee5a90.jpg
+  - 'https://media.kaerozhi.com/2025/06/a6c67f7d0938791375454dd4dcee5a90.jpg'
 ---
 ![_DSC4616.jpg](https://media.kaerozhi.com/2025/06/a6c67f7d0938791375454dd4dcee5a90.jpg)

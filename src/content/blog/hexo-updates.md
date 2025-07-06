@@ -1,15 +1,15 @@
 ---
-title: "Hexo 后续补充"
-date: "2023-05-28 21:36:07"
+title: Hexo 后续补充
+date: 2023-05-28T13:36:07.000Z
 categories:
-  - "玩艺"
+  - 玩艺
   - 网站
 tags:
-  - "Hexo"
-  - "Hexo Plugins"
+  - Hexo
+  - Hexo Plugins
   - Markdown
 photos:
-  - https://media.kaerozhi.com/2025/06/08caf22b46ea32b42f97306d9331a4c8.webp
+  - 'https://media.kaerozhi.com/2025/06/08caf22b46ea32b42f97306d9331a4c8.webp'
 ---
 <div class="foreword">
 Hexo 用了两天，基本功能差不多弄清楚了。不过也发现一些问题，逐个记录，分享出来，没准能对 Hexo 的其他用户提供一些帮助。

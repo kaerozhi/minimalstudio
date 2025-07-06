@@ -1,11 +1,10 @@
 ---
-title: "Hexo Stylus 渲染的奇怪问题"
-date: 2023-07-21 18:40
-layout: 
-categories: 
-  - "玩艺"
+title: Hexo Stylus 渲染的奇怪问题
+date: 2023-07-21T10:40:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
+tags:
   - Hexo
   - Stylus
   - CSS

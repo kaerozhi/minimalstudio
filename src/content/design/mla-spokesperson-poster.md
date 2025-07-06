@@ -1,16 +1,16 @@
 ---
-title: "幻世与冒险代言人海报"
-date: 2023-09-30 19:40
-brand: "Mobile Legends Adventure"
+title: 幻世与冒险代言人海报
+date: 2023-09-30T11:40:00.000Z
+brand: Mobile Legends Adventure
 color: orange
-categories: 
+categories:
   - poster
-tags: 
+tags:
   - 平面设计
   - 游戏
-description: "异世界RPG - 一不注意就变强！"
+description: 异世界RPG - 一不注意就变强！
 photos:
-  - https://media.kaerozhi.com/2025/06/735ecebb7b324e2150daace92a3652ab.webp
+  - 'https://media.kaerozhi.com/2025/06/735ecebb7b324e2150daace92a3652ab.webp'
 ---
 ![](https://media.kaerozhi.com/2025/06/922320a5c96169c5e4bbe6ff0ce485c3.webp)
 

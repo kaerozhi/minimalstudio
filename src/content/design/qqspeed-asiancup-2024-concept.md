@@ -1,6 +1,6 @@
 ---
 title: QQSpeed Asian Cup 2024 Concept
-date: 2024-04-19 18:10
+date: 2024-04-19T10:10:00.000Z
 color: green
 brand: QQ Speed
 categories:
@@ -9,8 +9,8 @@ tags:
   - QQ飞车
   - 电竞赛事
 description: QQ 飞车2024亚洲杯赛事包装概念稿
-photos: 
-  - https://media.kaerozhi.com/2025/06/7cef48119db1f54c382cf07a02d54292.webp
+photos:
+  - 'https://media.kaerozhi.com/2025/06/7cef48119db1f54c382cf07a02d54292.webp'
 ---
 ![](https://media.kaerozhi.com/2025/06/7cef48119db1f54c382cf07a02d54292.webp)
 ![](https://media.kaerozhi.com/2025/06/a8f71ba063c7242baf4e03732765b1c5.webp)

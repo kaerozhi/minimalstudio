@@ -1,16 +1,15 @@
 ---
-title: "给 Hexo 增加 Gitalk 评论系统"
-date: 2023-07-16 18:42
-categories: 
-  - "玩艺"
+title: 给 Hexo 增加 Gitalk 评论系统
+date: 2023-07-16T10:42:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
-  - "Hexo"
+tags:
+  - Hexo
   - Gitalk
   - Github
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/ab63f898213b40e3f18fa22ae5e84ffe.webp
+  - 'https://media.kaerozhi.com/2025/06/ab63f898213b40e3f18fa22ae5e84ffe.webp'
 ---
 原来的 Minos 主题自带 Disqus 评论系统，换到 Acorn 以后，默认不带评论功能，所以打算研究一下如何自行配置。考虑到已经同步到 GitPage 了，不如就用 Gitment 或者 Gitalk，兼容性应该可以做到最好。
 

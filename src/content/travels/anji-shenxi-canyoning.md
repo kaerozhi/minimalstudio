@@ -1,16 +1,15 @@
 ---
-title: "安吉深溪峡谷漂流记"
-date: 2024-08-22 21:56
-layout: 
-categories: 
-  - "游历"
-tags: 
+title: 安吉深溪峡谷漂流记
+date: 2024-08-22T13:56:00.000Z
+categories:
+  - 游历
+tags:
   - 景曦
   - video
   - 漂流
-description: "每年一度的夏日漂流"
+description: 每年一度的夏日漂流
 photos:
-  - https://media.kaerozhi.com/2025/06/7daac563014812ec280ef9c2630d4c8b.webp
+  - 'https://media.kaerozhi.com/2025/06/7daac563014812ec280ef9c2630d4c8b.webp'
 ---
 去年去溧阳竹海漂流，带着三个小朋友，大失所望，盖因地势平缓，水质浑浊。苏省的自然禀赋全在平原鱼米之利，毕竟最高峰都只有625米，要想赏玩山水就指望不上了。今年换了思路，直取浙江，比较了几个漂流胜地，最后选的是安吉深溪峡谷，无他，路程近而已。在网上看了不少视频，将军关或许更刺激，但要多走40分钟的山路，留着明年再去。
 

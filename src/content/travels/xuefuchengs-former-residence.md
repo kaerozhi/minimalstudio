@@ -1,10 +1,8 @@
 ---
 title: 薛福成故居
-date: 2025-05-08 16:39
-layout: 
+date: 2025-05-08T08:39:00.000Z
 photos:
-  - https://media.kaerozhi.com/2025/06/87b8450baf4f8cc998f2cf451fae1537.webp
-description: ""
+  - 'https://media.kaerozhi.com/2025/06/87b8450baf4f8cc998f2cf451fae1537.webp'
 tags:
   - 无锡
   - 周边游

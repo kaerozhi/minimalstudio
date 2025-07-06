@@ -1,10 +1,10 @@
 ---
-title: "太白敬亭山诗"
-date: "2018-04-12"
-categories: 
-  - "文字"
-tags: 
-  - "诗话"
+title: 太白敬亭山诗
+date: 2018-04-12T00:00:00.000Z
+categories:
+  - 文字
+tags:
+  - 诗话
   - 李白
 ---
 

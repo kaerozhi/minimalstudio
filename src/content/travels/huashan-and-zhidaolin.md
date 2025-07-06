@@ -1,16 +1,15 @@
 ---
 title: 花山的支道林
-date: 2024-06-09 13:36
-layout: 
+date: 2024-06-09T05:36:00.000Z
 categories:
   - 游历
 tags:
   - 苏州
   - 花山
   - 支道林
-description: "静拱虚房，悟外身之真；登山采药，集岩水之娱。"
-photos: 
-  - https://media.kaerozhi.com/2025/06/42170046206c45ec8f5c6f3e9a33fb86.webp
+description: 静拱虚房，悟外身之真；登山采药，集岩水之娱。
+photos:
+  - 'https://media.kaerozhi.com/2025/06/42170046206c45ec8f5c6f3e9a33fb86.webp'
 ---
 昨天爬花山，特地去访了一趟支公洞。
 

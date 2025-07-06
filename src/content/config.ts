@@ -31,7 +31,7 @@ const design = defineCollection({
     date: z.date(),
     // photos 字段应为字符串数组，脚本已确保
     photos: z.array(z.string()).optional(), // 图片路径数组，可选
-    url: z.string().url().optional(), // 项目链接，可选且必须是有效的URL
+    visit: z.string().optional(), // 项目链接，可选且必须是有效的
     tags: z.array(z.string()).default([]), // 标签数组，默认为空数组
     categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
     draft: z.boolean().default(false), // 是否为草稿，默认为 false

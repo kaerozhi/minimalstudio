@@ -1,14 +1,14 @@
 ---
-title: "从 Firefox 到 Google Chrome"
-date: "2010-03-11"
-categories: 
-  - "日常"
-tags: 
-  - "browser"
-  - "chrome-extensions"
-  - "firefox"
-  - "firefox-扩展"
-  - "google-chrome"
+title: 从 Firefox 到 Google Chrome
+date: 2010-03-11T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - browser
+  - chrome-extensions
+  - firefox
+  - firefox-扩展
+  - google-chrome
 ---
 
 昨天为了找 [Google Calendar](http://calendar.google.com/) 的客户端，从搜索结果里面转到了 [Google Chrome Extensions](https://chrome.google.com/extensions/)，当时不由大吃一惊：早前虽然听说过 Chrome 开通扩展机制的消息，却没想过它已经达到了这样的规模。Firefox 上以前有 [Google Calendar Notifier](https://addons.mozilla.org/en-US/firefox/addon/2528)，非常好用，可惜老早便停止更新，印象里自从 Firefox 3 以后的版本就没有兼容过。Google Calendar 的用户数量应该也很多了，但是同类型的插件却始终没有，既然 Chrome 有相关的扩展，于是就开始捣鼓 Chrome 了。

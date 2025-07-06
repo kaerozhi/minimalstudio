@@ -1,16 +1,14 @@
 ---
 title: 桃子
-date: 2018-03-24 20:20
-layout: 
+date: 2018-03-24T12:20:00.000Z
 categories:
   - 日常
 tags:
   - 人像
   - 深圳
   - 汉服
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/5764bc7c5bf2b8fa744002f8ba22a4c2.jpg
+  - 'https://media.kaerozhi.com/2025/06/5764bc7c5bf2b8fa744002f8ba22a4c2.jpg'
 ---
 
 ## 正片

@@ -1,12 +1,12 @@
 ---
-title: "游戏官网进化论"
-date: "2014-11-03"
-categories: 
-  - "观点"
-tags: 
-  - "game-site"
-  - "big-data"
-  - "community"
+title: 游戏官网进化论
+date: 2014-11-03T00:00:00.000Z
+categories:
+  - 观点
+tags:
+  - game-site
+  - big-data
+  - community
 ---
 
 关键词：官网，进化，数据驱动，玩家体验，多终端，平台整合

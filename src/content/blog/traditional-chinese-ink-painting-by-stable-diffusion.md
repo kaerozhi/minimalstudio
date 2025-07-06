@@ -1,17 +1,16 @@
 ---
-title: "用 Stable Diffusion 尝试传统水墨画"
-date: 2023-07-06 13:25:07
-categories: 
-  - "玩艺"
-  - "Stable Diffusion"
-tags: 
+title: 用 Stable Diffusion 尝试传统水墨画
+date: 2023-07-06T13:25:07.000Z
+categories:
+  - 玩艺
+  - Stable Diffusion
+tags:
   - 竹子
   - 中国水墨画
   - AIGC
   - stable diffusion
-description: ""
-photos: 
-  - https://media.kaerozhi.com/2025/06/6656c56ee77584a3b2440bf915052c7a.webp
+photos:
+  - 'https://media.kaerozhi.com/2025/06/6656c56ee77584a3b2440bf915052c7a.webp'
 ---
 最近的项目与传统文化相关，主题又含有竹子元素，所以就想着如何用 Stable Diffusion 来输出合适的素材。作为传统的梅兰竹菊四君子之一，竹一直都是文人画里非常重要的元素，找一些相关的素材并不难，不过外面找的毕竟不如自己炼制来得好玩。
 

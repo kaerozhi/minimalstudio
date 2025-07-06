@@ -1,11 +1,11 @@
 ---
-title: "Adobe Contribute CS3 测试"
-date: "2007-08-02"
-categories: 
-  - "日常"
-tags: 
-  - "adobe-contribute"
-  - "blog-tools"
+title: Adobe Contribute CS3 测试
+date: 2007-08-02T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - adobe-contribute
+  - blog-tools
 ---
 
 在 Contribute 前面还标着 Macromedia 的时候，我对它非常陌生，当然，现在也非常陌生。

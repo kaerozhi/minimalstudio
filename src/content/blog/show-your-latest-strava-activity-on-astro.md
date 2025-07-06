@@ -1,7 +1,7 @@
 ---
-title: "在 Astro 上展示 Strava 最近一次骑行"
-date: "2025-06-30"
-categories: 
+title: 在 Astro 上展示 Strava 最近一次骑行
+date: 2025-06-30T00:00:00.000Z
+categories:
   - 技术
 tags:
   - Strava

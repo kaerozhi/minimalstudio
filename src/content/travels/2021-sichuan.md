@@ -1,16 +1,16 @@
 ---
-title: "四川游记"
-date: "2021-04-14"
+title: 四川游记
+date: 2021-04-14T00:00:00.000Z
 categories:
-  - "游历"
-tags: 
-  - "四川"
-  - "九寨沟"
-  - "黄龙"
-  - "青城山"
-  - "成都"
+  - 游历
+tags:
+  - 四川
+  - 九寨沟
+  - 黄龙
+  - 青城山
+  - 成都
 photos:
-  - https://media.kaerozhi.com/2025/06/018e5ec56537e45e73a445e713dc04f3.webp
+  - 'https://media.kaerozhi.com/2025/06/018e5ec56537e45e73a445e713dc04f3.webp'
 ---
 <div class="foreword">
 

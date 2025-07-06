@@ -1,16 +1,15 @@
 ---
-title: "Hexo 同步 Github Page"
-date: 2023-07-15 16:26
-layout: 
-categories: 
-  - "玩艺"
+title: Hexo 同步 Github Page
+date: 2023-07-15T08:26:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
+tags:
   - Hexo
   - Github
-description: "只求一键三连能成功！"
+description: 只求一键三连能成功！
 photos:
-  - https://media.kaerozhi.com/2025/06/dd7762e18e61a0b49ada020c98d334b5.webp
+  - 'https://media.kaerozhi.com/2025/06/dd7762e18e61a0b49ada020c98d334b5.webp'
 ---
 说起 Hexo，用户最熟悉的操作自然是 `hexo clean && hexo g && hexo d`，但很不幸的是，不知是哪里出了错，我的 `hexo d` 还从未操作成功过。
 

@@ -1,16 +1,15 @@
 ---
-title: "在 Hexo 中启用真正的高清视频"
-date: 2024-09-01 18:12
-layout: 
-categories: 
-  - "玩艺"
+title: 在 Hexo 中启用真正的高清视频
+date: 2024-09-01T10:12:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
+tags:
   - hexo
   - video
   - 快手
   - OneDrive
-description: "Bilibili 快走开，OneDrive 转过来。"
+description: Bilibili 快走开，OneDrive 转过来。
 ---
 之前发过一篇[在 Hexo 中分享 Bilibili 视频](/playground/web/share-bilibili-video-in-hexo/)，到今天为止，更新页已经有两篇文章显示视频封面了。但时间一久，这个破B站的视频却是叫人越看越不爽：360p 画质太差，还容易触发跳转。基本上除了拉进度条，所有的交互都会触发跳转，甚至在正常跳转以外，还会另外弹出一个 EDGE 窗口——不用说，就是强迫你用客户端，如果装了客户端就直接弹出客户端，像我这样没装客户端的 Firefox 用户，可不就只能跳 EDGE 了。资本家的吃相真是难看。
 

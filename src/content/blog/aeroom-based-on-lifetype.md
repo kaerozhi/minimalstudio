@@ -1,12 +1,13 @@
 ---
-title: "New aeroom, based on LifeType."
-date: "2006-12-17"
-categories: 
-  - "玩艺"
+title: 'New aeroom, based on LifeType.'
+date: 2006-12-17T00:00:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
-  - "网站更新"
-photos: banner-lifetype.png
+tags:
+  - 网站更新
+photos:
+  - banner-lifetype.png
 ---
 我大概是一个典型的双子座，在善变的方面。刚刚尝试了一下 Wordpress，然后就决定转向 LifeType 了。当然，这些尝试都是在本地做的，如果我的空间支持 MySQL，PJBlog 应该也早就被撤换了。不过它早就被冷落了，以至于皮肤始终处于半成品的状态。
 

@@ -1,7 +1,6 @@
 ---
 title: 乐益女子中学
-date: 2025-05-14 08:15
-layout: 
+date: 2025-05-14T00:15:00.000Z
 categories:
   - 游历
 tags:
@@ -9,9 +8,8 @@ tags:
   - 女子中学
   - 苏州
   - City-Walk
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/b534e2b8e0d1a6a292570e0109ef8d5d.webp
+  - 'https://media.kaerozhi.com/2025/06/b534e2b8e0d1a6a292570e0109ef8d5d.webp'
 ---
 陪陶小婧进城到章园看展。小电驴风驰电掣，没九点就先到了，章园铁门紧闭，尚未开启，只好在附近溜达一圈。
 

@@ -1,11 +1,11 @@
 ---
-title: "新手机：BlackBerry Pearl 8100"
-date: "2007-12-13"
-categories: 
-  - "日常"
-tags: 
-  - "blackberry"
-  - "geek"
+title: 新手机：BlackBerry Pearl 8100
+date: 2007-12-13T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - blackberry
+  - geek
 ---
 
 在我的 M65 坏掉「7」号键之后，它的状况便愈来愈糟糕了。除去电池续航能力差的老问题，屏幕也开始经常频繁出现故障，总是莫名其妙地花屏或者干脆白花花什么都看不见。

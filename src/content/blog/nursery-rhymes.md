@@ -1,11 +1,11 @@
 ---
-title: "故乡童谣"
-date: "2018-02-26"
-categories: 
-  - "日常"
-tags: 
-  - "hometown"
-  - "my-childhood"
+title: 故乡童谣
+date: 2018-02-26T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - hometown
+  - my-childhood
 ---
 
 小时间，夏夜饭毕，桌子厨房收拾齐了，便开始洒扫庭院。

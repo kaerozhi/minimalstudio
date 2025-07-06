@@ -1,16 +1,16 @@
 ---
-title: "New aeroom is up and running."
-date: "2010-04-18"
-categories: 
-  - "玩艺"
+title: "New aeroom is up and\_running."
+date: 2010-04-18T00:00:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
-  - "aeroom"
-  - "wordpress-theme"
-  - "site-log"
+tags:
+  - aeroom
+  - wordpress-theme
+  - site-log
 description: Readable & Magazine style
 photos:
-  - https://media.kaerozhi.com/2025/06/4bdc1b2b0233f5b2251c9852a077f14e.webp
+  - 'https://media.kaerozhi.com/2025/06/4bdc1b2b0233f5b2251c9852a077f14e.webp'
 ---
 因为非常重大的私人事务，在新版主题上线两周之后，我终于空出时间来写一篇日志，总结一下本次更新。
 

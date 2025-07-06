@@ -1,18 +1,18 @@
 ---
-title: "从东涌到西涌"
-date: "2015-04-07"
-categories: 
-  - "游历"
-tags: 
-  - "tgideas"
-  - "team"
+title: 从东涌到西涌
+date: 2015-04-07T00:00:00.000Z
+categories:
+  - 游历
+tags:
+  - tgideas
+  - team
   - 深圳
   - 东涌
   - 西涌
   - 大鹏半岛
   - 徒步
 photos:
-  - https://media.kaerozhi.com/2025/06/83a29bdf78ab16a43c8686151a6ad927.webp
+  - 'https://media.kaerozhi.com/2025/06/83a29bdf78ab16a43c8686151a6ad927.webp'
 ---
 
 出发以前，不止一位朋友警告过我：从东涌到西涌可不简单，要有心理准备。但在我的想象里，它仍然只是一段漫长的海岸线漫步而已——也许时间会久一点，五六个小时？

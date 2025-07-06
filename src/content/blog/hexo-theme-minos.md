@@ -1,18 +1,18 @@
 ---
-title: "Hexo 的主题定制"
-date: "2023-05-28 21:36:07"
+title: Hexo 的主题定制
+date: 2023-05-28T13:36:07.000Z
 categories:
-  - "玩艺"
+  - 玩艺
   - 网站
 tags:
-  - "Hexo"
-  - "Theme"
+  - Hexo
+  - Theme
   - minos
   - SCSS
-  - "Justified Gallery"
+  - Justified Gallery
   - 中文字体
 photos:
-  - https://media.kaerozhi.com/2025/06/da58218df67828b73fc106b7f7cfdfea.webp
+  - 'https://media.kaerozhi.com/2025/06/da58218df67828b73fc106b7f7cfdfea.webp'
 ---
 Hexo 的主题生态非常贫乏，官方的主题列表看起来有几十页，但其实都是极少数几个主题（如 [Next](https://theme-next.js.org/)）的变体，所以颇有些千篇一律。个人不太喜欢 Next 这种太典型的博客风格，让我一种梦回十几年前，博客大爆发时期的错觉。
 

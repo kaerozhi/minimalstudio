@@ -1,9 +1,9 @@
 ---
-title: "雨"
-date: "2008-05-08"
-categories: 
-  - "文字"
-  - "诗词"
+title: 雨
+date: 2008-05-08T00:00:00.000Z
+categories:
+  - 文字
+  - 诗词
 tags:
   - 雨
   - 五绝

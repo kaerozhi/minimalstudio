@@ -1,14 +1,14 @@
 ---
-title: "电竞赛事包装模式与流程"
-date: "2018-08-24"
-categories: 
-  - "观点"
-tags: 
-  - "branding"
-  - "esports"
+title: 电竞赛事包装模式与流程
+date: 2018-08-24T00:00:00.000Z
+categories:
+  - 观点
+tags:
+  - branding
+  - esports
   - 英雄联盟
   - design
-coverImage: "Worlds_2017_concept.jpg"
+coverImage: Worlds_2017_concept.jpg
 ---
 <div class="foreword">
 

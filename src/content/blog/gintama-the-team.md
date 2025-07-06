@@ -1,12 +1,12 @@
 ---
-title: "银魂四人组"
-date: "2008-11-17"
-categories: 
-  - "玩艺"
+title: 银魂四人组
+date: 2008-11-17T00:00:00.000Z
+categories:
+  - 玩艺
   - 涂画
-tags: 
-  - "插画"
-  - "银魂"
+tags:
+  - 插画
+  - 银魂
 ---
 ![gintama](https://media.kaerozhi.com/2025/06/92294131461b00b38f2db7a917b3197a.webp "gintama")
 银魂四人组！

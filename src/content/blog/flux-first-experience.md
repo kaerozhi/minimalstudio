@@ -1,7 +1,6 @@
 ---
 title: Flux 初体验
-date: 2024-10-28 10:08
-layout: 
+date: 2024-10-28T02:08:00.000Z
 categories:
   - 玩艺
   - AI
@@ -9,9 +8,8 @@ tags:
   - AI
   - Flux
   - ComfyUI
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/255a263dceccb80a6bfa357d4744a7d5.webp
+  - 'https://media.kaerozhi.com/2025/06/255a263dceccb80a6bfa357d4744a7d5.webp'
 ---
 下载好 Flux 三件套之后，分别放入对应的文件夹。启动 ComfyUI，打开官方提供的 FLUX-Dev 原版（fp16）标准工作流，默认 prompt 是 `A drone photo of a foggy black forest scenery`，直接执行队列！
 

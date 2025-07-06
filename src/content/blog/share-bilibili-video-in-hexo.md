@@ -1,14 +1,13 @@
 ---
-title: "在 Hexo 中分享 Bilibili 视频"
-date: 2024-08-18 11:21
-layout: 
-categories: 
-  - "玩艺"
+title: 在 Hexo 中分享 Bilibili 视频
+date: 2024-08-18T03:21:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
+tags:
   - hexo
   - bilibili
-description: "一些可以改善体验的细节"
+description: 一些可以改善体验的细节
 ---
 昨天拍了一条视频发在B站，见[贝斯表演：我的悲伤是水做的](/blog/bass-play-of-jingxi/)。分享时发现一些值得注意的地方，聊作记录，也希望能帮到有需要的 Hexo 用户。
 

@@ -1,15 +1,16 @@
 ---
-title: "Arena of Valor 全球品牌刷新"
-date: "2018-09-10"
+title: Arena of Valor 全球品牌刷新
+date: 2018-09-10T00:00:00.000Z
 color: orange
 brand: Arena of Valor
-categories: 
-  - "Branding"
+categories:
+  - Branding
 tags:
-  - "Arena of Valor"
+  - Arena of Valor
   - Game Branding
   - Visual System
-photos: https://media.kaerozhi.com/2025/06/63808de5cd37d5acc296faf0b9474ab1.webp
+photos:
+  - 'https://media.kaerozhi.com/2025/06/63808de5cd37d5acc296faf0b9474ab1.webp'
 ---
 
 2019 年夏天，Arena of Valor 上线了三年来改动最大的全新版本。在这个版本中，我们全方位地刷新了游戏的品牌形象和界面设计，力图以同样的设计逻辑覆盖游戏内和游戏外，形成独特而完整的视觉体验。

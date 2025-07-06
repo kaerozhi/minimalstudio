@@ -1,14 +1,14 @@
 ---
-title: "年会"
-date: "2008-12-20"
-categories: 
-  - "日常"
-tags: 
-  - "01media"
-  - "party"
-  - "photo"
-  - "video"
-  - "同事"
+title: 年会
+date: 2008-12-20T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - 01media
+  - party
+  - photo
+  - video
+  - 同事
 ---
 当当当当～最佳团队强势登场！！！
 

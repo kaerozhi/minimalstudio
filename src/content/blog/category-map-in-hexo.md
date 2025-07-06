@@ -1,13 +1,11 @@
 ---
-title: "Hexo 里面的 category_map"
-date: 2024-07-24 21:36
-layout: 
-categories: 
-  - "玩艺"
-  - "网站"
-tags: 
-  - "Hexo"
-description: ""
+title: Hexo 里面的 category_map
+date: 2024-07-24T13:36:00.000Z
+categories:
+  - 玩艺
+  - 网站
+tags:
+  - Hexo
 ---
 如诸君所见，本站的分类名，比如文字、游历、案例，都是中文。但我又有个需求，希望每个分类能有一些特别的小设计，最简单的当然是设置单独的 CSS class。代码如下：
 

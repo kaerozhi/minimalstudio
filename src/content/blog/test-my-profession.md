@@ -1,11 +1,11 @@
 ---
-title: "我的职业性格测试"
-date: "2008-03-20"
-categories: 
-  - "日常"
-tags: 
-  - "我"
-  - "测试"
+title: 我的职业性格测试
+date: 2008-03-20T00:00:00.000Z
+categories:
+  - 日常
+tags:
+  - 我
+  - 测试
 ---
 
 如果你也感兴趣，可以从这里开始：[http://www.psytopic.com/mag/post/mbti-career-personality-test-psytopic-special-edition.html](http://www.psytopic.com/mag/post/mbti-career-personality-test-psytopic-special-edition.html)

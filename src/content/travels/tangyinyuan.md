@@ -1,16 +1,14 @@
 ---
 title: 唐寅园
-date: 2025-05-12 14:12
-layout: 
+date: 2025-05-12T06:12:00.000Z
 categories:
   - 游历
 tags:
   - 园林
   - 名人墓地
   - 苏州
-description: 
 photos:
-  - https://media.kaerozhi.com/2025/06/5b2267512f9572252ca2fc76fc942624.webp
+  - 'https://media.kaerozhi.com/2025/06/5b2267512f9572252ca2fc76fc942624.webp'
 ---
 名为唐寅园，实即唐寅墓所在地。祝允明撰唐子畏墓志铭云：
 

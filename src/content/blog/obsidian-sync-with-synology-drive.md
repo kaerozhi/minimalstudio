@@ -1,15 +1,15 @@
 ---
-title: "用 Synology Drive 同步 Obsidian 仓库"
-date: "2023-05-31 19:36:27"
+title: 用 Synology Drive 同步 Obsidian 仓库
+date: 2023-05-31T11:36:27.000Z
 categories:
-  - "玩艺"
-  - "软件"
+  - 玩艺
+  - 软件
 tags:
-  - "Obsidian"
-  - "Synology Drive"
+  - Obsidian
+  - Synology Drive
   - NAS
 photos:
-  - https://media.kaerozhi.com/2025/06/41850176ac14f298242d68cdd2a443ad.webp
+  - 'https://media.kaerozhi.com/2025/06/41850176ac14f298242d68cdd2a443ad.webp'
 ---
 转用 Hexo 以后，在桌面端更新是没问题了，但如果出门在外，又希望分享一些东西，能否做到呢？
 

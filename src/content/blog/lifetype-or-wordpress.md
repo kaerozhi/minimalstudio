@@ -1,12 +1,12 @@
 ---
-title: "Lifetype 大危机！及非理性形式主义的自我批判"
-date: "2008-04-04"
-categories: 
-  - "玩艺"
+title: Lifetype 大危机！及非理性形式主义的自我批判
+date: 2008-04-04T00:00:00.000Z
+categories:
+  - 玩艺
   - 网站
-tags: 
-  - "lifetype"
-  - "Blog Tools"
+tags:
+  - lifetype
+  - Blog Tools
   - wordpress
   - Zoundry
 ---

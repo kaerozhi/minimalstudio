@@ -1,7 +1,6 @@
 ---
 title: 端午北山塘
-date: 2025-06-01 09:46
-layout: 
+date: 2025-06-01T01:46:00.000Z
 categories:
   - 日常
 tags:
@@ -9,9 +8,8 @@ tags:
   - 山塘街
   - 老街区
   - 端午节
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/6e8e641ca17e0b286fa30a72f8e3a5cc.png
+  - 'https://media.kaerozhi.com/2025/06/6e8e641ca17e0b286fa30a72f8e3a5cc.png'
 ---
 端午节下午，天气阴沉，气象局早几天就说暴雨即将来袭，吃完饭，看了看天色，查手机要三点才下雨，趁着还早，骑小电驴去山塘街北段溜了一圈。  
 

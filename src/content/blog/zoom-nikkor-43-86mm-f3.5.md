@@ -1,7 +1,6 @@
 ---
 title: 尼康第一款变焦镜头 ZOOM-NIKKOR 43-86mm F3.5
-date: 2025-05-18 19:43
-layout: 
+date: 2025-05-18T11:43:00.000Z
 categories:
   - 玩艺
   - 器用
@@ -9,9 +8,8 @@ tags:
   - 摄影设备
   - 镜头
   - 尼康
-description: ""
 photos:
-  - https://media.kaerozhi.com/2025/06/265493166cf4c903e413f15389e3c4f7.png
+  - 'https://media.kaerozhi.com/2025/06/265493166cf4c903e413f15389e3c4f7.png'
 ---
 这枚镜头于 1963 年推出，是尼康、也是日本制造的第一枚标准变焦镜头。如今这个规格久已失传，作为标准变焦，43-86mm 缺了广角端，未免不够方便，但拍拍人像倒也能用。
 

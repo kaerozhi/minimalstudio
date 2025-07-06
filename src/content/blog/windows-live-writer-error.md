@@ -1,13 +1,13 @@
 ---
-title: "怎样才能修复 Windows Live Writer？"
-date: "2009-06-30"
-categories: 
-  - "玩艺"
+title: 怎样才能修复 Windows Live Writer？
+date: 2009-06-30T00:00:00.000Z
+categories:
+  - 玩艺
   - 软件
-tags: 
-  - "blog-tools"
-  - "problem"
-  - "windows-live-writer"
+tags:
+  - blog-tools
+  - problem
+  - windows-live-writer
 ---
 ![](https://media.kaerozhi.com/2025/06/b1f0dbb33786cc06a12fc63b7d1b1cb9.webp)
 

@@ -1,14 +1,14 @@
 ---
-title: "FontLab Studio 个人经验"
-date: "2010-05-13"
-categories: 
-  - "玩艺"
-tags: 
+title: FontLab Studio 个人经验
+date: 2010-05-13T00:00:00.000Z
+categories:
+  - 玩艺
+tags:
   - adobe
   - illustrator
-  - "fontlab studio"
-  - "typography"
-  - "教程"
+  - fontlab studio
+  - typography
+  - 教程
 photos:
   - fontlab-studio-banner.png
 ---

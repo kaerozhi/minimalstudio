@@ -1,12 +1,13 @@
 ---
-title: "学车记"
-date: "2015-04-12"
-categories: 
-  - "日常"
+title: 学车记
+date: 2015-04-12T00:00:00.000Z
+categories:
+  - 日常
 tags:
   - 学车
   - 驾校
-photos: "DSC7212-1.jpg"
+photos:
+  - DSC7212-1.jpg
 ---
 
 “这次我不考了，我自己会取消考试预约。”

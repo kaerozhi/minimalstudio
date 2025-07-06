@@ -1,12 +1,12 @@
 ---
-title: "本地搭建 WordPress"
-date: "2006-11-21"
-categories: 
-  - "玩艺"
-tags: 
-  - "blog-tools"
-  - "wordpress-theme"
-  - "网站更新"
+title: 本地搭建 WordPress
+date: 2006-11-21T00:00:00.000Z
+categories:
+  - 玩艺
+tags:
+  - blog-tools
+  - wordpress-theme
+  - 网站更新
 ---
 
 捣鼓了好半天，终于把 WordPress 搭建起来了。因为数据引擎的空间没有提供 MySQL 的数据库（需要另行购买），所以也就只能在本地尝试。借助花生壳，你可以通过动态域名访问它：[http://aeroom.vicp.net/wordpress/](http://aeroom.vicp.net/wordpress/)。当然，打不开是正常现象，大概率是我关机了，囧rz
