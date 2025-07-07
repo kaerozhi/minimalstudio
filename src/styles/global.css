@@ -29,3 +29,7 @@
 .container-wide {
   @apply 2xl:max-w-screen-xl mx-auto px-6;
 }
+
+.container-wide > * > :where(:not(.alignfull):not(.alignleft):not(.alignright)) {
+  @apply max-w-2xl mx-auto;
+}

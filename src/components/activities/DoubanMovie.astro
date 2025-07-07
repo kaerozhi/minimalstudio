@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 const res = await fetch('http://localhost:4321/api/douban');
 
 const movie = await res.json();
@@ -11,15 +10,4 @@ const movie = await res.json();
   </div>
   <h2 class="text-xl font-semibold text-zinc-700"><a href={movie.link}>{movie.title}</a></h2>
   <p class="text-sm text-zinc-400 mt-1 mb-4">{movie.rating} | {movie.pubDate}</p>
-=======
-
----
-<div>
-  <div class="flex relative bg-black/6 p-8 mb-4 rounded-xl aspect-4/3 justify-center items-center">
-    <label class="absolute z-10 top-6 left-6 rounded-full bg-white/75 text-black text-xs py-1 px-4">最近看的电影</label>
-    <img class="w-1/2 drop-shadow-lg rounded-lg" src="https://cdn.prod.website-files.com/66245c2c8b72c9616045fa9b/6674d2dbdebd24a47d2a6335_about-img__dune.webp" />
-  </div>
-  <h2 class="text-2xl font-semibold text-zinc-700">Dune</h2>
-  <p class="text-sm text-zinc-400 mb-4">Song Exploder • Episode 222</p>
->>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
 </div>

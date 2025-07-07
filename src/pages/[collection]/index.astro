@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import { slugify } from '@/utils/slugify';
+
+// 从 site.config 加载网站相关设置
+import { config } from '@/site.config';
+const SITE_TITLE = config.title;
+const postsPerPage = config.content.postPerPage; // 每页文章数
+
+// 加载 UI 组件
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@/components/entries/BlogPost.astro';
+
+// 从 /src/content/config.ts 读取各版面设置
+import { collections } from '@/content/config';
+
+// Astro 需要在函数内部重新定义
+export async function getStaticPaths() {
+  const collectionNames = Object.keys(collections);
+
+  return collectionNames.map((collection) => ({
+    params: { collection },
+  }));
+}
+
+const { collection } = Astro.params;
+
+// 再定义一次（页面运行时才需要）
+const collectionNames = Object.keys(collections);
+
+if (!collectionNames.includes(collection)) {
+  throw new Error(`Collection "${collection}" 不存在于 content/config.ts`);
+}
+
+const allEntries = await getCollection(collection);
+
+allEntries.filter(entry => !entry.data.draft); // 不显示草稿
+allEntries.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)); // 按时间排序
+
+// 文章总数
+const totalEntries = allEntries.length;
+
+// 筛选置顶文章
+const featuredEntry = allEntries.find(entry => entry.data.featured === true);
+const regularEntries = allEntries.filter(entry => entry.data.featured !== true);
+
+if (featuredEntry) {
+  regularEntries.unshift(featuredEntry);
+}
+---
+
+<BaseLayout title={collection}>
+  <main class="container-wide">
+    <div class="mt-32"></div>
+    <div>
+      <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{totalEntries}</span></h1>
+    </div>
+    
+    <ul class="space-y-8">
+      {allEntries.map(post => (
+        <BlogPost
+          title={post.data.title}
+          href={`/${collection}/${post.slug}`}
+          date={post.data.date}
+          description={post.data.description}
+        />
+      ))}
+    </ul>
+  </main>
+</BaseLayout>
