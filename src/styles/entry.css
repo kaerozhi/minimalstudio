@@ -31,6 +31,10 @@
   font-family: var(--font-fantasy);
 }
 
+.entry figure img {
+  margin: auto;
+}
+
 .entry figure figcaption {
   margin-top: 0.5em;
 }
