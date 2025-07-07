@@ -1,67 +1,61 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { formatDate } from "@/utils/format";
+import { slugify } from "@/utils/slugify";
 import { config } from "@/site.config";
 const { frontmatter } = Astro.props;
 ---
-
 <BaseLayout title={frontmatter.title}>
-  <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 z-0 bg-[url(/assets/pattern-z.svg)] bg-repeat">
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 z-10"></div>
-            
-            <!-- High-resolution laptop image -->
-            {(frontmatter.photos) &&
-            <img 
-                src={frontmatter.photos[0]}
-                alt={frontmatter.title}
-                class="w-full h-full object-cover object-center"
-                loading="eager"
-            />
-            }
-        </div>
+  <link rel="stylesheet" href="/src/styles/entry.css">
 
-        <!-- Content -->
-        <div class="relative z-10 container max-w-7xl h-full px-8 mx-auto">
-            <div class="absolute z-10 bottom-px md:w-3/4">
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif first-line:font-sans text-white font-semibold mb-6 leading-tight">
-                    {frontmatter.title}
-                </h1>
-                <p class="text-lg md:text-xl mx-auto mb-10 text-white/75">
-                    {frontmatter.description}
-                </p>
-            </div>
-        </div>
-
-  </section>
-  <section class="container-wide">
-    <div>
-      <div class="lg:text-center">
-        <div class="flex flex-col md:flex-row mb-12 py-12 gap-2 border-b border-zinc-300 justify-between">
-          <p class="text-sm text-zinc-500">
-            {(frontmatter.author) ? frontmatter.author : config.author }
-             发表于 <time>{formatDate(frontmatter.date)}</time>
-          </p>
-          <div class="flex gap-3">
-            {
-              frontmatter.tags.map((tag) => (
-                <span class="inline-flex items-center uppercase text-sm text-zinc-500 hover:text-black duration-300">
-                  <a href={`/tags/${tag}`}>{tag}</a>
-                </span>
-              ))
-            }
-          </div>
-        </div>
+  <article class="container-wide mt-32">
+    <div class="lg:text-center">
+      <div class="text-text-muted uppercase text-sm">
+        <time>{formatDate(frontmatter.date)}</time> - 
+        {
+          frontmatter.categories.map((category) => (
+            <span class="text-text-default mr-1 font-semibold">
+              <a href={`/category/${slugify(category)}`}>{category}</a>
+            </span>
+          ))
+        }
       </div>
+      <h1 class="text-4xl/10 md:text-6xl/16 font-serif first-line:font-sans text-text-heading font-semibold my-4 tracking-tight">
+          {frontmatter.title}
+      </h1>
+      <p class="text-lg mx-auto mb-10 text-text-default/75">
+          {frontmatter.description}
+      </p>
 
-      <div class="mt-12 max-w-4xl mx-auto">
-        <div
-          class="entry text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-xl prose-img:rounded-2xl">
-          <slot />
-        </div>
+      { (frontmatter.photos) &&
+      <div class="alignfull aspect-16/9 overflow-hidden rounded-xl">
+        {(frontmatter.photos) &&
+        <img 
+            src={frontmatter.photos[0]}
+            alt={frontmatter.title}
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+        />
+        }
+      </div>
+      }
+    </div>
+
+    <div
+      class="entry mt-12 mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300">
+      <slot />
+    </div>
+      
+    <div>
+      <div class="flex gap-3 mt-12">
+        {
+          frontmatter.tags.map((tag) => (
+            <span class="inline-flex items-center uppercase text-sm text-text-default/75">
+              <a href={`/tags/${slugify(tag)}`}>{tag}</a>
+            </span>
+          ))
+        }
       </div>
     </div>
-  </section>
+  </article>
 </BaseLayout>

@@ -13,6 +13,10 @@
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);
 
+  --color-text-heading: var(--color-text-heading);
+  --color-text-default: var(--color-text-default);
+  --color-color-muted: var(--color-text-muted);
+
   --color-base-50: oklch(96.74% 0.001 286.38);
   --color-base-100: oklch(93.73% 0.001 286.37);
   --color-base-200: oklch(87.31% 0.004 271.36);
@@ -45,26 +49,4 @@
 .container-wide:not(:has(nav)) a:hover,
 .container-wide:not(:has(nav)) a:focus {
   background-size: 100% 1px;
-}
-
-.entry a {
-  text-decoration: none;
-}
-
-.entry i,
-.entry em {
-  font-style: normal;
-  font-family: var(--font-fantasy);
-  color: var(--color-text-muted);
-}
-
-.entry i {
-  text-decoration: underline 1px wavy;
-  text-underline-offset: 0.2em;
-  text-decoration-color: currentColor;
-}
-
-.entry del {
-  margin: auto 0.25em;
-  color: var(--color-text-muted);
 }

@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from "@astrojs/sitemap";
+import rehypeFigure from 'rehype-figure';
 // https://astro.build/config
 export default defineConfig({  
   output: 'server',
@@ -11,5 +12,10 @@ export default defineConfig({
   integrations: [ sitemap()],  
   image: {
     domains: ["media.kaerozhi.com"],
+  },
+  markdown: {
+    rehypePlugins: [
+      [rehypeFigure, { className: 'img-figure', figcaption: true }]
+    ]
   }
 });
