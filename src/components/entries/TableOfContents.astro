@@ -1,0 +1,49 @@
+---
+const { headings = [] } = Astro.props;
+---
+{headings.length > 0 && (
+  <aside class="hidden lg:block sticky top-24 self-start not-prose">
+    <nav class="toc">
+      <h3 class="mb-4 text-lg font-semibold">目录</h3>
+      <ul class="text-text-default/50 text-sm list-inside list-disc" id="toc">
+        {headings
+          .filter(h => h.depth === 2 || h.depth === 3)
+          .map(h => (
+            <li class={`pl-${(h.depth - 2) * 4} my-2`}>
+              <a href={`#${h.slug}`} class="text-text-default/50 hover:text-text-default [&.active]:font-bold">
+                {h.text}
+              </a>
+            </li>
+          ))}
+      </ul>
+    </nav>
+  </aside>
+)}
+
+<script type="module">
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = document.querySelector(`#toc a[data-id="${id}"]`);
+        if (link) {
+          if (entry.isIntersecting) {
+            // 移除所有 active class
+            document.querySelectorAll('#toc a').forEach(a => a.classList.remove('active'));
+            // 当前链接添加 active class
+            console.log(link)
+            link.classList.add('active');
+          }
+        }
+      });
+    },
+    {
+      rootMargin: '0px 0px -70% 0px', // 提前触发（越靠上越先触发）
+      threshold: 0.1
+    }
+  );
+
+  document.querySelectorAll('.entry h2, .entry h3').forEach(h => {
+    if (h.id) observer.observe(h);
+  });
+</script>

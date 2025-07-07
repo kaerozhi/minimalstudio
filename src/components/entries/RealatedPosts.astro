@@ -29,8 +29,8 @@ const relatedPosts = allPosts
 
 {relatedPosts.length > 0 && (
   <section class="related-posts mt-12 container-wide">
-    <h2 class="text-2xl font-bold mb-4 text-center">相关文章</h2>
-    <div class="grid grid-cols-4 gap-4 alignfull">
+    <h2 class="text-2xl font-bold mb-8 text-center">相关文章</h2>
+    <div class="flex gap-6 alignfull justify-center">
       {relatedPosts.map(post => {
         const cover = post.data.photos?.[0] || null;
         return (

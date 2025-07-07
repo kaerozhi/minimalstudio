@@ -3,16 +3,16 @@ import { formatDate } from "@/utils/format";
 const { post } = Astro.props;
 ---
 <article class="w-full bg-white group rounded-lg overflow-hidden hover:drop-shadow-2xl will-change-auto duration-300">
-  <a href={post.slug} class="items-center">
+  <a href={post.slug} class="items-center h-auto">
   {(post.data.photos) &&
-    <div class="m-2 rounded-lg aspect-16/9 overflow-hidden">
+    <div class="aspect-16/9 overflow-hidden">
       <img src={post.data.photos} class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500" />
     </div>
   }
     <div class="p-6">
-      <h2 class="text-xl/6 font-semibold text-text-heading tracking-tight mb-2">{post.data.title}</h2>
-      <time class="text-text-default/50 text-sm">{formatDate(post.data.date)}</time>
-      <div class="mt-4 text-text-default/75">{post.data.description}</div>
+      <h2 class="text-xl/7 font-semibold text-text-heading tracking-tight">{post.data.title}</h2>
+      <p class="my-2 text-text-default/75">{post.data.description}</p>
+      <time class="mt-4 text-text-default/50 text-sm">{formatDate(post.data.date)}</time>
     </div>
   </a>
 </article>

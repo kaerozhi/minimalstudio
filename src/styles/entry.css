@@ -3,9 +3,14 @@
 }
 
 .entry i,
-.entry em {
+.entry em,
+.entry blockquote {
   font-style: normal;
   font-family: var(--font-fantasy);
+}
+
+.entry i,
+.entry em {
   color: var(--color-text-muted);
 }
 

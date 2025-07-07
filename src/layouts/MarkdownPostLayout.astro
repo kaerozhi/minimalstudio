@@ -4,8 +4,9 @@ import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/slugify";
 import { config } from "@/site.config";
 import RelatedPosts from '@/components/entries/RealatedPosts.astro';
+import TableOfContents from "@/components/entries/TableOfContents.astro";
 
-const { entry, collection } = Astro.props;
+const { entry, collection, toc, headings } = Astro.props;
 ---
 <BaseLayout title={entry.data.title}>
   <link rel="stylesheet" href="/src/styles/entry.css">
@@ -43,10 +44,20 @@ const { entry, collection } = Astro.props;
       }
     </div>
 
-    <div
-      class="entry mt-12 mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
-      <slot />
-    </div>
+    { toc ? (
+      <div class="mt-12 max-w-2xl mx-auto grid gap-6 justify-center grid-cols-[minmax(var(--container-2xl),_1fr)_15em]">
+        <div
+          class="entry mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+          <slot />
+        </div>
+        <TableOfContents headings={headings} />
+      </div>
+    ) : (
+      <div
+        class="entry mt-12 mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+        <slot />
+      </div>
+    )}
       
     <div>
       <div class="flex gap-3 pb-4 mt-12 border-b border-zinc-300">

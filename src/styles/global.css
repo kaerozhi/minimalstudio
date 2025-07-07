@@ -31,7 +31,7 @@
 }
 
 .container-wide {
-  @apply 2xl:max-w-screen-xl mx-auto px-6;
+  @apply relative 2xl:max-w-screen-xl mx-auto px-6;
 }
 
 .container-wide > * > :where(:not(.alignfull):not(.alignleft):not(.alignright)) {

@@ -2,6 +2,7 @@
 import { getEntry, getCollection } from 'astro:content';
 import { collections } from '@/content/config';
 import MarkdownPostLayout from '@/layouts/MarkdownPostLayout.astro';
+import TableOfContents from '@/components/entries/TableOfContents.astro';
 
 export const prerender = true;
 
@@ -33,8 +34,10 @@ const { collection, slug } = Astro.props;
 const entry = await getEntry(collection, slug);
 if (!entry) throw new Error(`未找到 ${collection}/${slug}`);
 
-const { Content } = await entry.render();
+const toc = entry?.data.toc;
+
+const { Content, headings } = await entry.render();
 ---
-<MarkdownPostLayout entry={entry} collection={collection}>
+<MarkdownPostLayout entry={entry} collection={collection} toc={toc} headings={headings}>
   <Content />
 </MarkdownPostLayout>
