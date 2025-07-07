@@ -1,6 +1,6 @@
 ---
 import { config } from '@/site.config'
-import * as icons from 'simple-icons'
+import Branding from './Branding.astro'
 ---
 <footer>
   <div class="mt-24 container-wide">
@@ -62,8 +62,6 @@ import * as icons from 'simple-icons'
     </div>
   </div>
 
-  <svg class="2xl:max-w-screen-xl mt-24 -mb-4 lg:-mb-6 mx-auto" viewBox="0 0 1585 372" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text class="lowercase tracking-tighter font-bold font-[Gilroy]" x="790" y="372" font-size="452" fill="black" text-anchor="middle">{config.title.replace(/\s*/g,"")}</text>
-  </svg>
+  <Branding />
 
 </footer>
