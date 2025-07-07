@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import { slugify } from '@/utils/slugify';
+import { formatDate } from '@/utils/format';
+import Card from '@/components/entries/Card.astro';
+
+const { collection, slug } = Astro.props;
+
+// 获取所有文章
+const allPosts = await getCollection(collection);
+
+// 当前文章
+const currentEntry = allPosts.find(post => post.slug === slug);
+const currentTags = (currentEntry?.data.tags || []).map(slugify);
+const currentCategories = (currentEntry?.data.categories || []).map(slugify);
+
+// 相关文章筛选逻辑
+const relatedPosts = allPosts
+  .filter(post => post.slug !== slug)
+  .filter(post => {
+    const tags = (post.data.tags || []).map(slugify);
+//  const categories = (post.data.categories || []).map(slugify);
+
+    return tags.some(tag => currentTags.includes(tag));
+    // || categories.some(cat => currentCategories.includes(cat))
+  })
+  .slice(0, 4);
+---
+
+{relatedPosts.length > 0 && (
+  <section class="related-posts mt-12 container-wide">
+    <h2 class="text-2xl font-bold mb-4 text-center">相关文章</h2>
+    <div class="grid grid-cols-4 gap-4 alignfull">
+      {relatedPosts.map(post => {
+        const cover = post.data.photos?.[0] || null;
+        return (
+          <Card post={post} ratio="4/3" />
+        );
+      })}
+    </div>
+  </section>
+)}

@@ -35,6 +35,6 @@ if (!entry) throw new Error(`未找到 ${collection}/${slug}`);
 
 const { Content } = await entry.render();
 ---
-<MarkdownPostLayout frontmatter={entry.data}>
+<MarkdownPostLayout entry={entry} collection={collection}>
   <Content />
 </MarkdownPostLayout>

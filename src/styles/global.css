@@ -38,7 +38,7 @@
   @apply max-w-2xl mx-auto;
 }
 
-.container-wide:not(:has(nav)) a {
+a:where(:not(.border):not(:has(img))) {
   background: linear-gradient(to right, currentColor, currentColor);
   background-size: 0% 1px;
   background-position: 0 100%, 100% 100%;
@@ -46,7 +46,8 @@
   transition: background-size 300ms;
 }
 
-.container-wide:not(:has(nav)) a:hover,
-.container-wide:not(:has(nav)) a:focus {
+a:hover,
+a:focus {
+  text-decoration: none;
   background-size: 100% 1px;
 }

@@ -3,17 +3,19 @@ import BaseLayout from "./BaseLayout.astro";
 import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/slugify";
 import { config } from "@/site.config";
-const { frontmatter } = Astro.props;
+import RelatedPosts from '@/components/entries/RealatedPosts.astro';
+
+const { entry, collection } = Astro.props;
 ---
-<BaseLayout title={frontmatter.title}>
+<BaseLayout title={entry.data.title}>
   <link rel="stylesheet" href="/src/styles/entry.css">
 
   <article class="container-wide mt-32">
     <div class="lg:text-center">
       <div class="text-text-muted uppercase text-sm">
-        <time>{formatDate(frontmatter.date)}</time> - 
+        <time>{formatDate(entry.data.date)}</time> - 
         {
-          frontmatter.categories.map((category) => (
+          entry.data.categories.map((category) => (
             <span class="text-text-default mr-1 font-semibold">
               <a href={`/category/${slugify(category)}`}>{category}</a>
             </span>
@@ -21,18 +23,18 @@ const { frontmatter } = Astro.props;
         }
       </div>
       <h1 class="text-4xl/10 md:text-6xl/16 font-serif first-line:font-sans text-text-heading font-semibold my-4 tracking-tight">
-          {frontmatter.title}
+          {entry.data.title}
       </h1>
       <p class="text-lg mx-auto mb-10 text-text-default/75">
-          {frontmatter.description}
+          {entry.data.description}
       </p>
 
-      { (frontmatter.photos) &&
+      { (entry.data.photos) &&
       <div class="alignfull aspect-16/9 overflow-hidden rounded-xl">
-        {(frontmatter.photos) &&
+        {(entry.data.photos) &&
         <img 
-            src={frontmatter.photos[0]}
-            alt={frontmatter.title}
+            src={entry.data.photos[0]}
+            alt={entry.data.title}
             class="w-full h-full object-cover object-center"
             loading="eager"
         />
@@ -42,14 +44,14 @@ const { frontmatter } = Astro.props;
     </div>
 
     <div
-      class="entry mt-12 mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300">
+      class="entry mt-12 mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
       <slot />
     </div>
       
     <div>
-      <div class="flex gap-3 mt-12">
+      <div class="flex gap-3 pb-4 mt-12 border-b border-zinc-300">
         {
-          frontmatter.tags.map((tag) => (
+          entry.data.tags.map((tag) => (
             <span class="inline-flex items-center uppercase text-sm text-text-default/75">
               <a href={`/tags/${slugify(tag)}`}>{tag}</a>
             </span>
@@ -57,5 +59,8 @@ const { frontmatter } = Astro.props;
         }
       </div>
     </div>
+
+    <!-- 相关文章 -->
+    <RelatedPosts collection={collection} slug={entry.slug} />
   </article>
 </BaseLayout>

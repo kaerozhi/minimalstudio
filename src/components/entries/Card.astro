@@ -1,21 +1,18 @@
 ---
 import { formatDate } from "@/utils/format";
-const { title, description, photos, date, category, href } = Astro.props;
-
-const url = "/" + category + "/" + href;
-const dateFormated = formatDate(date);
+const { post } = Astro.props;
 ---
-<article class="bg-white relative group rounded-lg overflow-hidden">
-  <a href={url} class="items-center">
-  {(photos) &&
-    <div class="object-cover overflow-hidden">
-      <img src={photos} class="w-full aspect-2/1 object-cover object-center transform group-hover:scale-110 transition-transform duration-500" />
+<article class="w-full bg-white group rounded-lg overflow-hidden hover:drop-shadow-2xl will-change-auto duration-300">
+  <a href={post.slug} class="items-center">
+  {(post.data.photos) &&
+    <div class="m-2 rounded-lg aspect-16/9 overflow-hidden">
+      <img src={post.data.photos} class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500" />
     </div>
   }
-    <div class="p-8 aspect-16/9">
-      <h2 class="text-xl">{title}</h2>
-      <div class="text-zinc-500 text-sm mt-2">{description}</div>
-      <time class="text-zinc-500 text-sm absolute bottom-0 mb-8">{dateFormated}</time>
+    <div class="p-6">
+      <h2 class="text-xl/6 font-semibold text-text-heading tracking-tight mb-2">{post.data.title}</h2>
+      <time class="text-text-default/50 text-sm">{formatDate(post.data.date)}</time>
+      <div class="mt-4 text-text-default/75">{post.data.description}</div>
     </div>
   </a>
 </article>
