@@ -33,3 +33,38 @@
 .container-wide > * > :where(:not(.alignfull):not(.alignleft):not(.alignright)) {
   @apply max-w-2xl mx-auto;
 }
+
+.container-wide:not(:has(nav)) a {
+  background: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 300ms;
+}
+
+.container-wide:not(:has(nav)) a:hover,
+.container-wide:not(:has(nav)) a:focus {
+  background-size: 100% 1px;
+}
+
+.entry a {
+  text-decoration: none;
+}
+
+.entry i,
+.entry em {
+  font-style: normal;
+  font-family: var(--font-fantasy);
+  color: var(--color-text-muted);
+}
+
+.entry i {
+  text-decoration: underline 1px wavy;
+  text-underline-offset: 0.2em;
+  text-decoration-color: currentColor;
+}
+
+.entry del {
+  margin: auto 0.25em;
+  color: var(--color-text-muted);
+}
