@@ -34,7 +34,7 @@ const relatedPosts = allPosts
       {relatedPosts.map(post => {
         const cover = post.data.photos?.[0] || null;
         return (
-          <Card post={post} ratio="4/3" />
+          <Card post={post} ratio="16/9" />
         );
       })}
     </div>

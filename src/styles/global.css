@@ -38,7 +38,7 @@
   @apply max-w-2xl mx-auto;
 }
 
-a:where(:not(.border):not(:has(img))) {
+a:where(:not(.border):not(.ring):not(:has(img))) {
   background: linear-gradient(to right, currentColor, currentColor);
   background-size: 0% 1px;
   background-position: 0 100%, 100% 100%;
