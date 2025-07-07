@@ -3,66 +3,63 @@ import { config } from '@/site.config'
 import * as icons from 'simple-icons'
 ---
 <footer>
-  <div class="px-8 md:px-12 py-12 max-w-2xl mx-auto">
-    <div class="flex flex-col gap-4">
-      <div>
-        <h3 class="text-black text-base lg:text-xl">站内导航</h3>
-        <ul role="list" class="mt-4 text-xs flex flex-col gap-2 lg:flex-row text-zinc-500 uppercase">
-        {
-          config.header.menu.map((item) => (
-            <li>
-              <a
-                href={item.link}
-                class="hover:text-black"
-              >
-                {item.title}</a
-              >
-            </li>
-          ))          
-        }
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-black text-base lg:text-xl">欢迎关注</h3>
-        <ul role="list" class="mt-4 text-xs flex flex-col gap-2 lg:flex-row text-zinc-500 uppercase">
-        {
-          config.footer.social.map((item) => (
-            <li>
-              <a
-                href={item.link}
-                class="hover:text-black"
-              >
-                {item.title}</a
-              >
-            </li>
-          ))          
-        }
-        </ul>
-      </div>
+  <div class="mt-24 container-wide">
+    <div>
+      <h3 class="text-base lg:text-xl">站内导航</h3>
+      <ul role="list" class="mt-4 text-xs flex flex-col gap-2 lg:flex-row text-zinc-500 uppercase">
+      {
+        config.header.menu.map((item) => (
+          <li>
+            <a
+              href={item.link}
+              class="hover:text-black"
+            >
+              {item.title}</a
+            >
+          </li>
+        ))          
+      }
+      </ul>
     </div>
-  </div>
-  <div class="px-8 md:px-12 py-12 max-w-2xl mx-auto">
-    <nav class="flex flex-col lg:flex-row gap-8">
-      <p class="text-sm text-black">
-        © 2025 <a class="underline" href={config.website}>{config.author}</a>. All rights reserved
+
+    <div class="mt-8">
+      <h3 class="text-black text-base lg:text-xl">欢迎关注</h3>
+      <ul role="list" class="mt-4 text-xs flex flex-col gap-2 lg:flex-row text-zinc-500 uppercase">
+      {
+        config.footer.social.map((item) => (
+          <li>
+            <a
+              href={item.link}
+              class="hover:text-black"
+            >
+              {item.title}</a
+            >
+          </li>
+        ))          
+      }
+      </ul>
+    </div>
+
+    <nav class="mt-8">
+      <p class="text-sm text-text-default/75">
+        © 2025 <a href={config.website}>{config.author}</a>. All rights reserved
       </p>
     </nav>
-    <section class="gap-x-8 gap-y-6 mt-6">
-      <div>
-        <p class="text-sm text-zinc-500 lg:col-span-2">
-          本站基于
-          <a
-            href="https://michaelandreuzza.com/"
-            class="text-sm text-black hover:text-blue-300"
-            >Michael Andreuzza</a
-          > 设计的 <a
-            href="https://github.com/michael-andreuzza/minimalstudio"
-            class="text-sm text-black hover:text-blue-300"
-            >MinimalStudio</a
-          > 主题进一步定制，特此致谢。Base on Astro & Tailwind CSS.
-        </p>
-      </div>
-    </section>
+
+    <div class="mt-4 text-sm text-text-default/75">
+      <p>
+        本站以
+        <a
+          href="https://michaelandreuzza.com/"
+          >Michael Andreuzza</a
+        > 设计的 <a
+          href="https://github.com/michael-andreuzza/minimalstudio"
+          >MinimalStudio</a
+        > 主题为基础，特此致谢。
+        <br />
+        Base on Astro & Tailwind CSS.
+      </p>
+    </div>
   </div>
 
   <svg class="2xl:max-w-screen-xl mt-24 -mb-4 lg:-mb-6 mx-auto" viewBox="0 0 1585 372" fill="none" xmlns="http://www.w3.org/2000/svg">
