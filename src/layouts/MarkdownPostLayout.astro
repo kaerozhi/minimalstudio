@@ -45,7 +45,7 @@ const { entry, collection, toc, headings } = Astro.props;
     </div>
 
     { toc ? (
-      <div class="mt-0 md:mt-20 max-w-2xl mx-auto grid gap-6 justify-center grid-cols-1 md:grid-cols-[15em_minmax(_var(--container-2xl),_1fr)_15em]">
+      <div class="mt-0 md:mt-12 max-w-2xl mx-auto grid gap-6 justify-center grid-cols-1 md:grid-cols-[15em_minmax(_var(--container-2xl),_1fr)_15em]">
         <div></div>
         <div
           class="entry mx-auto w-full text-lg/7 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
@@ -55,7 +55,7 @@ const { entry, collection, toc, headings } = Astro.props;
       </div>
     ) : (
       <div
-        class="entry mt-20 mx-auto text-lg/6 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+        class="entry mt-12 mx-auto text-lg/7 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
         <slot />
       </div>
     )}

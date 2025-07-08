@@ -1,0 +1,81 @@
+---
+// ✅ 合法代码结构
+import { getCollection } from 'astro:content';
+import { collections } from '@/content/config';
+import { config } from '@/site.config';
+import { getCategories } from '@/utils/getCategories';
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@/components/entries/BlogPost.astro';
+import Pagination from '@/components/global/Pagination.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const collectionNames = Object.keys(collections); // ✅ 移动到函数内部
+  const paths = [];
+
+  for (const name of collectionNames) {
+    const allEntries = await getCollection(name);
+    const visibleEntries = allEntries
+      .filter((entry) => entry.data.draft !== true)
+      .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+    const perPage = config.content.postsPerPage || 10;
+    const totalPages = Math.ceil(visibleEntries.length / perPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+      paths.push({
+        params: {
+          collection: name,
+          page: i.toString(),
+        },
+        props: {
+          collection: name,
+          page: i,
+          totalPages,
+          posts: visibleEntries.slice((i - 1) * perPage, i * perPage),
+          counts: visibleEntries.length,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { collection, page = 1, posts = [], totalPages = 1, counts } = Astro.props;
+
+// 获取分类
+const currentCategories = await getCategories(collection);
+---
+<BaseLayout title={collection}>
+  <main class="container-wide">
+    <div class="mt-32"></div>
+    <div>
+      <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{counts}</span></h1>
+    </div>
+    <div>
+      <ul class="flex flex-row gap-2 flex-wrap">
+        {currentCategories.map(cat => (
+          <li>
+            <a href={`/category/${cat.slug}`} class="chip">{cat.label} <sup>{cat.count}</sup></a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
+    <div class="mt-8">
+      {posts.map(post => (
+        <BlogPost
+          title={post.data.title}
+          href={`/${collection}/${post.slug}`}
+          date={post.data.date}
+          description={post.data.description}
+        />
+      ))}
+
+      <Pagination collection={collection} page={page} totalPages={totalPages} />
+    </div>
+  </main>
+</BaseLayout>

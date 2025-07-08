@@ -1,0 +1,26 @@
+---
+export interface Props {
+  page: number;
+  totalPages: number;
+  collection?: string;
+}
+import { getPaginationRange } from "@/utils/getPaginationRange";
+
+const { page, totalPages, collection = "blog" } = Astro.props;
+const pages = getPaginationRange(page, totalPages);
+---
+
+<nav class="pagination flex gap-2 mt-12 justify-start">
+  {pages.map(p =>
+    typeof p === "number" ? (
+      <a
+        class={`px-3 py-1 rounded-xl duration-300 ${p === page ? 'bg-black text-white' : ' hover:bg-white'}`}
+        href={`/${collection}${p === 1 ? '' : `/page/${p}`}`}
+      >
+        {p}
+      </a>
+    ) : (
+      <span class="px-2 text-gray-400">…</span>
+    )
+  )}
+</nav>

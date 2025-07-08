@@ -1,14 +1,18 @@
 ---
 import { getCollection } from 'astro:content';
+import { config } from '@/site.config';
 import { getCategories } from '@/utils/getCategories';
 import { slugify } from '@/utils/slugify';
 
 // 加载 UI 组件
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/BlogPost.astro';
+import Pagination from '@/components/global/Pagination.astro';
 
 // 从 /src/content/config.ts 读取各版面设置
 import { collections } from '@/content/config';
+
+export const prerender = true;
 
 // Astro 需要在函数内部重新定义
 export async function getStaticPaths() {
@@ -19,7 +23,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { collection } = Astro.params;
+const collection = Astro.url.pathname.split('/')[1];
 
 // 再定义一次（页面运行时才需要）
 const collectionNames = Object.keys(collections);
@@ -28,17 +32,21 @@ if (!collectionNames.includes(collection)) {
   throw new Error(`Collection "${collection}" 不存在于 content/config.ts`);
 }
 
+// 所有文章
 const allEntries = await getCollection(collection);
-
-allEntries.filter(entry => !entry.data.draft); // 不显示草稿
-allEntries.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)); // 按时间排序
+const visibleEntries = allEntries
+  .filter((entry) => entry.data.draft !== true)
+  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
 // 文章总数
-const totalEntries = allEntries.length;
+const page = 1;
+const perPage = config.content.postsPerPage || 10;
+const totalPages = Math.ceil(visibleEntries.length / perPage);
+const posts = visibleEntries.slice(0, perPage);
 
 // 筛选置顶文章
-const featuredEntry = allEntries.find(entry => entry.data.featured === true);
-const regularEntries = allEntries.filter(entry => entry.data.featured !== true);
+const featuredEntry = posts.find(entry => entry.data.featured === true);
+const regularEntries = posts.filter(entry => entry.data.featured !== true);
 
 if (featuredEntry) {
   regularEntries.unshift(featuredEntry);
@@ -52,7 +60,7 @@ const currentCategories = await getCategories(collection);
   <main class="container-wide">
     <div class="mt-32"></div>
     <div>
-      <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{totalEntries}</span></h1>
+      <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{visibleEntries.length}</span></h1>
     </div>
     <div>
       <ul class="flex flex-row gap-2 flex-wrap">
@@ -64,8 +72,8 @@ const currentCategories = await getCategories(collection);
       </ul>
     </div>
     
-    <div>
-      {allEntries.map(post => (
+    <div class="mt-8">
+      {posts.map(post => (
         <BlogPost
           title={post.data.title}
           href={`/${collection}/${post.slug}`}
@@ -73,6 +81,7 @@ const currentCategories = await getCategories(collection);
           description={post.data.description}
         />
       ))}
-    </div>
+      <Pagination collection={collection} page={page} totalPages={totalPages} />
+    </div>    
   </main>
 </BaseLayout>
