@@ -2,7 +2,6 @@
 title: 十二月八日夜不寐
 date: 2008-12-08T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 五古

@@ -2,12 +2,11 @@
 title: 作诗机纪念专集
 date: 2022-05-23T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 作诗机
-  - 小集
-  - 诗
+  - 结集
+  - 七律
 ---
 
 <div class="foreword">

@@ -2,7 +2,6 @@
 title: 元旦戏笔
 date: 2025-01-01T10:15:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 七律

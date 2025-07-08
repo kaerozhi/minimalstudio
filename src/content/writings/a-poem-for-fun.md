@@ -2,7 +2,6 @@
 title: 小眉釘釘網婚戲賀
 date: 2008-12-08T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 七律

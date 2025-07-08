@@ -2,10 +2,10 @@
 title: 絕句
 date: 2008-04-26T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 七绝
+  - 组诗
   - Grace
 ---
 

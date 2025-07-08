@@ -2,7 +2,6 @@
 title: 去春一束
 date: 2008-04-07T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 结集

@@ -2,7 +2,6 @@
 title: 草阁光明顶之什
 date: 2007-08-10T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 少作

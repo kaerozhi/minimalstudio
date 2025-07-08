@@ -2,11 +2,9 @@
 title: 臨江仙·H君生日
 date: 2008-11-20T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
-  - 琦
-  - 生日
+  - Grace
   - 词
 ---
 

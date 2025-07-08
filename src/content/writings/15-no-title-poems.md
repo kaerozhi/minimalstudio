@@ -2,7 +2,6 @@
 title: 無題十五首
 date: 2002-06-06T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 七律

@@ -2,11 +2,10 @@
 title: 304号室、白死の桜
 date: 2017-06-19T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 五古
-  - 诗
+  - 歌词
   - Dir en Grey
   - 译作
 ---

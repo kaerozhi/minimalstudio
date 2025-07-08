@@ -2,7 +2,6 @@
 title: 天涯之什
 date: 2007-08-07T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 少作

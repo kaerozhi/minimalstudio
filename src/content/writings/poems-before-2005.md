@@ -2,8 +2,10 @@
 title: 乙酉以前少作
 date: 2007-12-31T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
+tags:
+  - 少作
+  - 结集
 ---
 <div class="foreword">
 

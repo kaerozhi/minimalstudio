@@ -2,7 +2,6 @@
 title: 亱坐
 date: 2008-11-25T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 七律

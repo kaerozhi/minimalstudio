@@ -2,7 +2,6 @@
 title: 肥猫与作诗机
 date: 2022-05-24T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 七律

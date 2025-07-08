@@ -2,7 +2,6 @@
 title: 浣溪沙
 date: 2018-11-19T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 小令

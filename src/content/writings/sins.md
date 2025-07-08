@@ -2,12 +2,9 @@
 title: 罪
 date: 2015-05-03T00:00:00.000Z
 categories:
-  - 文字
-tags:
   - 现代诗
+tags:
   - 陶小婧
-photos:
-  - DSC7424.jpg
 ---
 傲慢是罪，
 嫉妒是罪， 

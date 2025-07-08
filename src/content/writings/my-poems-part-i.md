@@ -2,7 +2,6 @@
 title: 少作
 date: 2007-08-09T00:00:00.000Z
 categories:
-  - 文字
   - 诗词
 tags:
   - 少作
