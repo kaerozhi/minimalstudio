@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import { collections } from '@/content/config';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@/components/entries/BlogPost.astro';
+import { slugify } from '@/utils/slugify';
+import { getAllEntries } from '@/utils/getAllEntries';
+import { getPathBySlug } from '@/utils/getPathBySlug';
+import { config } from '@/site.config';
+
+export const prerender = true;
+
+const collectionNames = Object.keys(collections);
+
+export async function getStaticPaths() {
+  const posts = await getAllEntries();
+
+  // 提取所有分类，去重
+  const categories = [...new Set(posts.flatMap(p => p.data.categories ?? []))];
+
+  return categories.map(category => ({
+    params: { category: slugify(category) }
+  }));
+}
+
+const { category } = Astro.params;
+
+// 验证参数
+if (!category) throw new Error('category 参数缺失');
+
+const allPosts = await getAllEntries();
+
+// 过滤当前分类的文章，假设用 slugify 标准化分类名
+const filteredPosts = allPosts.filter(post =>
+  post.data.categories?.some(cat => slugify(cat) === category)
+);
+
+filteredPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+const postsWithPaths = await Promise.all(
+  filteredPosts.map(async (post) => {
+    const href = await getPathBySlug(post.slug);
+    return { ...post, href };
+  })
+);
+---
+<BaseLayout title={`分类: ${category}`}>
+  <section class="container-wide">
+    <div class="mt-32"></div>
+    <div>
+      <h1 class="text-4xl md:text-8xl/24 font-serif first-line:font-sans font-medium first-line:font-bold mb-8 uppercase">
+        Category
+        <br>
+        {category} <sup class="align-super font-sans text-4xl" title={`共有 ${filteredPosts.length} 篇文章`}>{filteredPosts.length}</sup>
+      </h1>
+    </div>
+    
+    <div class="mt-8">
+      {postsWithPaths.map(post => (
+        <BlogPost
+          title={post.data.title}
+          href={post.href}
+          date={post.data.date}
+          description={post.data.description}
+        />
+      ))}
+    </div>
+    
+  </section>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import { getAllEntries } from '@/utils/getAllEntries';
+import { slugify } from '@/utils/slugify';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export const prerender = true;
+
+const allEntries = await getAllEntries();
+
+// 分类计数 + 最新封面图（photo）
+const categoryMap = new Map();
+
+for (const entry of allEntries) {
+  const categories = entry.data.categories || [];
+  for (const cat of categories) {
+    const slug = slugify(cat);
+    const existing = categoryMap.get(slug);
+
+    if (!existing) {
+      categoryMap.set(slug, {
+        label: cat,
+        slug,
+        count: 1,
+        cover: entry.data.photos?.[0] || null,
+      });
+    } else {
+      existing.count++;
+    }
+  }
+}
+
+const categories = Array.from(categoryMap.values()).sort((a, b) => b.count - a.count);
+---
+
+<BaseLayout title="所有分类">
+  <section class="container-wide">
+    <div class="mt-32"></div>
+    <div>
+      <h1 class="text-4xl md:text-8xl/24 font-serif first-line:font-sans font-medium first-line:font-bold mb-8 uppercase">
+        All
+        <br>
+        Categories <sup class="align-super font-sans text-4xl" title={`共有 ${categories.length} 个分类`}>{categories.length}</sup>
+      </h1>
+    </div>
+    
+    <div class="mt-12">
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-6 alignfull">
+        {categories.map(cat => (
+          <li class="bg-white rounded-xl aspect-square overflow-hidden relative group">
+            <a href={`/category/${cat.slug}`} class="border-0">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-black/0 z-10"></div>
+              {(cat.cover) ? (
+                <img src={cat.cover} alt={cat.label} loading="lazy" class="w-full aspect-square object-cover group-hover:scale-110 duration-300 will-change-auto" />
+              ) : (
+                <img src="/assets/z-in-black.svg" loading="lazy" class="w-full aspect-square object-cover opacity-15 group-hover:scale-110 duration-300 will-change-auto" />
+              )}
+              <div class="p-4 absolute z-10 w-full bottom-0 flex flex-cols justify-between text-white">
+                <h2 class="text-lg font-bold">{cat.label}</h2>
+                <p class="text-sm">{cat.count} 篇文章</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

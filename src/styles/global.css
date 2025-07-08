@@ -34,8 +34,20 @@
   @apply relative 2xl:max-w-screen-xl mx-auto px-6;
 }
 
+.container-wide > * {
+  @apply w-full mx-auto px-0;
+}
+
+.container-wide > .prose {
+  max-width: unset !important;
+}
+
 .container-wide > * > :where(:not(.alignfull):not(.alignleft):not(.alignright)) {
   @apply max-w-2xl mx-auto;
+}
+
+.container-wide > * > .alignfull {
+  @apply w-full mx-auto;
 }
 
 a:where(:not([class*="border-"]):not([class*="bg-"]):not(:has(img))) {

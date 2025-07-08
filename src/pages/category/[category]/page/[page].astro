@@ -1,0 +1,86 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@/components/entries/BlogPost.astro';
+import { slugify } from '@/utils/slugify';
+import { config } from '@/site.config';
+
+export const prerender = true;
+
+const perPage = config.content.postsPerPage || 10;
+const { category, page } = Astro.params;
+const currentPage = Number(page);
+
+// 先获取某个 collection，假设是 blog，可以改成动态或多个集合
+const collection = 'blog';
+const allPosts = await getCollection(collection);
+
+// 过滤出对应分类的文章
+const filteredPosts = allPosts.filter(post =>
+  post.data.categories?.some(cat => slugify(cat) === category)
+);
+
+filteredPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+// 分页
+const totalPages = Math.ceil(filteredPosts.length / perPage);
+const pagedPosts = filteredPosts.slice((currentPage - 1) * perPage, currentPage * perPage);
+
+// 校验页码范围
+if (currentPage < 1 || currentPage > totalPages) {
+  throw new Error(`无效的页码 ${currentPage}`);
+}
+
+export async function getStaticPaths() {
+  const collection = 'blog'; // 你需要支持的集合
+  const posts = await getCollection(collection);
+  const categories = [...new Set(posts.flatMap(p => p.data.categories ?? []))];
+  const paths = [];
+
+  for (const cat of categories) {
+    const slugCat = slugify(cat);
+    const catPosts = posts.filter(post =>
+      post.data.categories?.some(c => slugify(c) === slugCat)
+    );
+    const pages = Math.ceil(catPosts.length / perPage);
+
+    for (let i = 2; i <= pages; i++) {  // 2开始，因为第一页在index.astro
+      paths.push({
+        params: {
+          category: slugCat,
+          page: i.toString()
+        }
+      });
+    }
+  }
+  return paths;
+}
+---
+
+<BaseLayout title={`分类: ${category} - 第 ${currentPage} 页`}>
+  <h1>分类：{category} - 第 {currentPage} 页</h1>
+
+  <ul>
+    {pagedPosts.map(post => (
+      <BlogPost
+        title={post.data.title}
+        href={`/blog/${post.slug}`}
+        date={post.data.date}
+        description={post.data.description}
+      />
+    ))}
+  </ul>
+
+  <nav class="pagination">
+    {currentPage > 1 && (
+      <a href={`/category/${category}${currentPage === 2 ? '' : `/page/${currentPage - 1}`}`}>
+        ← 上一页
+      </a>
+    )}
+    {currentPage < totalPages && (
+      <a href={`/category/${category}/page/${currentPage + 1}`}>
+        下一页 →
+      </a>
+    )}
+  </nav>
+</BaseLayout>

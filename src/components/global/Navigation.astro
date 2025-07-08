@@ -1,5 +1,9 @@
 ---
-import { config } from '@/site.config'
+import { config } from '@/site.config';
+
+const currentPath = Astro.url.pathname;
+
+console.log(currentPath);
 ---
 <div class="fixed top-4 inset-x-0 z-50 mix-blend-difference">
   <div class="container-wide">
@@ -49,16 +53,19 @@ import { config } from '@/site.config'
             class="space-y-2 list-none text-xs md:space-y-0 font-medium md:ml-auto items-center md:flex justify-center text-center md:text-left gap-3"
           >
           {
-            config.header.menu.map((item) => (
-              <li>
-                <a
-                  href={item.link}
-                  class="text-white shrink-0 py-0.5"
-                >
-                  {item.title}</a
-                >
-              </li>
-            ))          
+            config.header.menu.map((item) => {
+              const isActive = currentPath.startsWith(item.link);
+              return (
+                <li>
+                  <a
+                    href={item.link}
+                    class={`text-white shrink-0 py-0.5 ${isActive ? 'border-b-2 border-white font-bold' : ''}`}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })
           }
           {
             config.header.button.map((item) => (

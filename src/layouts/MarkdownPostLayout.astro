@@ -23,10 +23,10 @@ const { entry, collection, toc, headings } = Astro.props;
           ))
         }
       </div>
-      <h1 class="md:w-3/4 text-4xl/10 md:text-6xl/16 font-serif first-line:font-sans first-line:font-semibold text-text-heading font-medium my-6 tracking-tight">
+      <h1 class="text-4xl md:text-6xl/16 font-serif first-line:font-sans first-line:font-semibold text-text-heading font-medium md:pr-16 my-6 tracking-tight">
           {entry.data.title}
       </h1>
-      <p class="md:w-3/4 text-lg mx-auto mb-10 text-text-default/60">
+      <p class="text-lg mx-auto mb-10 md:pr-16 text-text-default/60">
           {entry.data.description}
       </p>
 

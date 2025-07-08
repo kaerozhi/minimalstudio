@@ -61,7 +61,10 @@ const currentCategories = await getCategories(collection);
   <main class="container-wide">
     <div class="mt-32"></div>
     <div>
-      <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{visibleEntries.length}</span></h1>
+      <h1 class="text-4xl md:text-8xl/24 uppercase font-bold mb-8 tracking-tighter">
+        {collection} 
+        <span class="text-base align-top tracking-normal">{visibleEntries.length}</span>
+      </h1>
     </div>
     <div>
       <Categories collection={collection}></Categories>
@@ -77,6 +80,6 @@ const currentCategories = await getCategories(collection);
         />
       ))}
       <Pagination collection={collection} page={page} totalPages={totalPages} />
-    </div>    
+    </div>
   </main>
 </BaseLayout>
