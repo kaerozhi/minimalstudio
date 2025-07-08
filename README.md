@@ -2,6 +2,8 @@ Hello~
 
 这是 [Kaero Zhi](https://kaerozhi.com) 的个人网站，基于 Astro 及 Tailwind CSS 框架构建，设计以 Michael Andreuzza 的 MinimalStudio 主题为基础，并参考了许多其他网站，特此致谢。
 
+![Preview](https://media.kaerozhi.com/2025/07/d6fe4128a0121103e0bde742f1c63aaf.webp)
+
 你可以 Clone 并自行构建本项目，计划进度请参考 `/src/content/blog/astro-started.md`。
 
 ## 功能
