@@ -11,7 +11,8 @@ export async function getCategories(collectionName?: string) {
   const categoryMap = new Map<string, { label: string; count: number }>();
 
   for (const name of collectionNames) {
-    const entries = await getCollection(name);
+    const AllEntries = await getCollection(name);
+    const entries = AllEntries.filter((entry) => entry.data.draft !== true); // 不显示草稿
     for (const post of entries) {
       const categories = post.data.categories ?? [];
       for (const raw of categories) {
