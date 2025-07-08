@@ -63,12 +63,13 @@ export const config = {
     credits: true,
     /** Optional details about the social media accounts for this site. */
     social: [
-      { title: 'x', link: 'https://x.com/kaero', icon: 'simple-icons-x' },
-      { title: 'Bilibili', link: 'https://space.bilibili.com/9425491', icon: 'simple-icons-bilibili' },
-      { title: 'Youtube', link: 'https://youtube.com/@kaerozhi', icon: 'simple-icons-youtube' },
-      { title: '小红书', link: 'https://www.xiaohongshu.com/user/profile/645ea5c2000000000f006eb8', icon: 'simple-icons-xiaohongshu' },
-      { title: 'Instagram', link : 'https://instagram/kaero', icon: 'simple-icons-instagram' },
-      { title: '500px', link: 'https://500px.com.cn/kaero', icon: 'simple-icons-500px' }
+      { title: 'x', link: 'https://x.com/kaero' },
+      { title: 'Github', link: 'https://github.com/kaerozhi' },
+      { title: 'Bilibili', link: 'https://space.bilibili.com/9425491' },
+      { title: 'Youtube', link: 'https://youtube.com/@kaerozhi' },
+      { title: '小红书', link: 'https://www.xiaohongshu.com/user/profile/645ea5c2000000000f006eb8' },
+      { title: 'Instagram', link : 'https://instagram/kaero' },
+      { title: '500px', link: 'https://500px.com.cn/kaero' }
     ]
   },
 
