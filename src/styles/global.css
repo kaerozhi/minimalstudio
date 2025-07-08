@@ -38,7 +38,7 @@
   @apply max-w-2xl mx-auto;
 }
 
-a:not([class*="border-"]):not([class*="bg-"]):not(:has(img)) {
+a:where(:not([class*="border-"]):not([class*="bg-"]):not(:has(img))) {
   background: linear-gradient(to right, currentColor, currentColor);
   background-size: 0% 1px;
   background-position: 0 100%, 100% 100%;
@@ -46,8 +46,8 @@ a:not([class*="border-"]):not([class*="bg-"]):not(:has(img)) {
   transition: background-size 300ms;
 }
 
-a:hover,
-a:focus {
+a:where(:not([class*="border-"]):not([class*="bg-"]):not(:has(img))):hover,
+a:where(:not([class*="border-"]):not([class*="bg-"]):not(:has(img))):focus {
   text-decoration: none;
   background-size: 100% 1px;
 }

@@ -8,6 +8,7 @@ import { slugify } from '@/utils/slugify';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/BlogPost.astro';
 import Pagination from '@/components/global/Pagination.astro';
+import Categories from '@/components/entries/Categories.astro';
 
 // 从 /src/content/config.ts 读取各版面设置
 import { collections } from '@/content/config';
@@ -63,13 +64,7 @@ const currentCategories = await getCategories(collection);
       <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{visibleEntries.length}</span></h1>
     </div>
     <div>
-      <ul class="flex flex-row gap-2 flex-wrap">
-        {currentCategories.map(cat => (
-          <li>
-            <a href={`/category/${cat.slug}`} class="chip">{cat.label} <sup>{cat.count}</sup></a>
-          </li>
-        ))}
-      </ul>
+      <Categories collection={collection}></Categories>
     </div>
     
     <div class="mt-8">

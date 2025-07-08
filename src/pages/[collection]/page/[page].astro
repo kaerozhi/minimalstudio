@@ -8,6 +8,7 @@ import { getCategories } from '@/utils/getCategories';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/BlogPost.astro';
 import Pagination from '@/components/global/Pagination.astro';
+import Categories from '@/components/entries/Categories.astro';
 
 export const prerender = true;
 
@@ -45,9 +46,6 @@ export async function getStaticPaths() {
 }
 
 const { collection, page = 1, posts = [], totalPages = 1, counts } = Astro.props;
-
-// 获取分类
-const currentCategories = await getCategories(collection);
 ---
 <BaseLayout title={collection}>
   <main class="container-wide">
@@ -56,13 +54,7 @@ const currentCategories = await getCategories(collection);
       <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{counts}</span></h1>
     </div>
     <div>
-      <ul class="flex flex-row gap-2 flex-wrap">
-        {currentCategories.map(cat => (
-          <li>
-            <a href={`/category/${cat.slug}`} class="chip">{cat.label} <sup>{cat.count}</sup></a>
-          </li>
-        ))}
-      </ul>
+      <Categories collection={collection}></Categories>
     </div>
     
     <div class="mt-8">

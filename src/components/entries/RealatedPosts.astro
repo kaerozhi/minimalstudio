@@ -12,18 +12,16 @@ const allPosts = await getCollection(collection);
 // 当前文章
 const currentEntry = allPosts.find(post => post.slug === slug);
 const currentTags = (currentEntry?.data.tags || []).map(slugify);
-const currentCategories = (currentEntry?.data.categories || []).map(slugify);
 
 // 相关文章筛选逻辑
 const relatedPosts = allPosts
   .filter(post => post.slug !== slug)
   .filter(post => {
     const tags = (post.data.tags || []).map(slugify);
-//  const categories = (post.data.categories || []).map(slugify);
 
     return tags.some(tag => currentTags.includes(tag));
-    // || categories.some(cat => currentCategories.includes(cat))
   })
+  .filter((entry) => entry.data.draft !== true)
   .slice(0, 4);
 ---
 

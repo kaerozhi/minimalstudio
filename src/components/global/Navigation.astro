@@ -3,10 +3,10 @@ import { config } from '@/site.config'
 ---
 <div class="fixed top-4 inset-x-0 z-50 mix-blend-difference">
   <div class="container-wide">
-    <div class="w-full mx-auto">
+    <div>
       <div
         x-data="{ open: false }"
-        class="relative flex flex-col w-full mx-auto ring-1 uppercase rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row duration-300"
+        class="relative flex flex-col w-full alignfull mx-auto ring-1 uppercase rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row duration-300"
       >
         <div
           class="flex flex-row items-center justify-between md:justify-start"
@@ -53,10 +53,9 @@ import { config } from '@/site.config'
               <li>
                 <a
                   href={item.link}
-                  class="text-white shrink-0 py-0.5 relative group"
+                  class="text-white shrink-0 py-0.5"
                 >
-                  {item.title}
-                  <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a
+                  {item.title}</a
                 >
               </li>
             ))          

@@ -1,0 +1,15 @@
+---
+import { getCategories } from '@/utils/getCategories';
+
+const { collection } = Astro.props;
+
+// 获取分类
+const currentCategories = await getCategories(collection);
+---
+<ul class="flex flex-row gap-2 flex-wrap uppercase">
+  {currentCategories.map(cat => (
+    <li>
+      <a href={`/category/${cat.slug}`} class="chip">{cat.label} <sup>{cat.count}</sup></a>
+    </li>
+  ))}
+</ul>
