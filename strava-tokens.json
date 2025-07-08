@@ -1,19 +1,5 @@
 {
-<<<<<<< HEAD
-  "token_type": "Bearer",
-  "access_token": "e85f322ef387cae4817b079a78a02afa439913ad",
-  "expires_at": 1751694267,
-  "expires_in": 21600,
-  "refresh_token": "76ca0cf41a99080b37f7bbf08fddc81894d64412"
-=======
-<<<<<<< HEAD
-  "access_token": "00597e72d1fedcd564db9097a2312ef4017c2d7c",
+  "access_token": "a68c1aca3954dcc418fdaecea0ddb0bae24d6048",
   "refresh_token": "76ca0cf41a99080b37f7bbf08fddc81894d64412",
-  "expires_at": 1751370018
-=======
-  "access_token": "693c0d8183000e727d9f394af99b89e35f70479b",
-  "refresh_token": "76ca0cf41a99080b37f7bbf08fddc81894d64412",
-  "expires_at": 1751311901
->>>>>>> cec786b4b8a8a75c506e3ec9eec45d50b45a1315
->>>>>>> 24825da0a74812b51cc7f00f41a08e05687e51d5
+  "expires_at": 1751998468
 }

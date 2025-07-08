@@ -1,13 +1,28 @@
 ---
 const res = await fetch('http://localhost:4321/api/douban');
-
-const movie = await res.json();
+const json = await res.json();
+const movie = Array.isArray(json) ? json[0] : json;
 ---
-<div>
-  <div class="group flex relative bg-black/6 p-8 mb-4 rounded-xl aspect-4/3 justify-center items-center">
-    <label class="absolute z-10 top-6 left-6 rounded-full bg-white/75 text-black text-xs py-1 px-4">最近一部电影</label>
-    <a class="w-1/2 mx-auto" href={movie.link}><img class="drop-shadow-lg rounded-lg group-hover:scale-105 duration-300" src={`/api/proxy-img?url=${encodeURIComponent(movie.poster)}`} /></a>
+
+{movie ? (
+  <div>
+    <div class="group flex relative bg-black/6 p-8 mb-4 rounded-xl aspect-4/3 justify-center items-center">
+      <label class="absolute z-10 top-6 left-6 rounded-full bg-white/75 text-black text-xs py-1 px-4">最近一部电影</label>
+      <a class="w-1/2 mx-auto" href={movie.link}>
+        <img
+          class="drop-shadow-lg rounded-lg group-hover:scale-105 duration-300"
+          src={`/api/proxy-img?url=${encodeURIComponent(movie.poster)}`}
+          alt={movie.title}
+        />
+      </a>
+    </div>
+    <h2 class="text-lg font-semibold text-zinc-700">
+      <a href={movie.link}>{movie.title}</a>
+    </h2>
+    <p class="text-sm text-zinc-400 mt-1 mb-4">
+      {movie.rating} | {movie.pubDate}
+    </p>
   </div>
-  <h2 class="text-xl font-semibold text-zinc-700"><a href={movie.link}>{movie.title}</a></h2>
-  <p class="text-sm text-zinc-400 mt-1 mb-4">{movie.rating} | {movie.pubDate}</p>
-</div>
+) : (
+  <p>暂无观影数据</p>
+)}
