@@ -2,13 +2,17 @@
 import "@/styles/global.css";
 import { config } from "@/site.config";
 import CustomStyles from "./CustomStyles.astro";
+
+const { title } = Astro.props;
+const formattedTitle = title && title.toUpperCase();
+const currentTitle = (title) ? (`${formattedTitle} - ${config.title}`) : (`${config.title} - ${config.slogan}`);
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Basic Meta Tags -->
-<title>{config.title} - {config.slogan}</title>
+<title>{currentTitle}</title>
 <meta
   name="description"
   content={config.description}
