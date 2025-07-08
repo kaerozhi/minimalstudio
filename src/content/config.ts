@@ -17,6 +17,7 @@ const blog = defineCollection({
     draft: z.boolean().default(false), // 是否为草稿，默认为 false
     featured: z.boolean().default(false), // 是否为精选，默认为 false
     toc: z.boolean().default(false), // 是否打开目录，默认为 false
+    link: z.string().optional(), // 是否外链
   }),
 });
 
