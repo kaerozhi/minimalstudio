@@ -2,13 +2,10 @@
 title: 罗技 K380 蓝牙键盘
 date: 2017-12-16T00:00:00.000Z
 categories:
-  - 玩艺
-  - 器用
+  - 器材
 tags:
-  - keyboard
-  - bluetooth
-  - logitech
-  - gears
+  - 键盘
+  - Logitech
 ---
 
 儿子升小一，我的 iPad Mini 就奉献出来给他做作业用了。之后一直在纠结，到底是再买个平板电脑呢，还是直接买个笔记本。

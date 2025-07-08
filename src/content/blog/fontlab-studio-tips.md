@@ -2,15 +2,14 @@
 title: FontLab Studio 个人经验
 date: 2010-05-13T00:00:00.000Z
 categories:
-  - 玩艺
+  - 软件
 tags:
-  - adobe
-  - illustrator
+  - Adobe Illustrator
   - fontlab studio
-  - typography
+  - Type Design
   - 教程
 photos:
-  - fontlab-studio-banner.png
+  - https://media.kaerozhi.com/2025/07/197398a472608a18095951dec88a5f29.webp
 ---
 FontLab Studio 是一个 Windows 平台流行的字体设计软件。相比 Font Creator，它支持导入 `.ai` 或者 `.eps` 矢量格式，与 Adobe Illustrator 的配合可谓天衣无缝，你甚至可以从 AI 里复制字体形状，然后直接粘贴进 FontLab Studio 界面。
 

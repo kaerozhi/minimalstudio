@@ -2,12 +2,10 @@
 title: 小巧油润的德产标准镜，ISCO-GOTTINGEN ISCOTAR 50mm F2.8
 date: 2025-06-02T00:49:00.000Z
 categories:
-  - 玩艺
-  - 器用
+  - 摄影
+  - 器材
 tags:
   - 镜头
-  - M42卡口
-  - 德国老镜头
   - 摄影器材
 description: 别有所长「駄目玉」
 photos:

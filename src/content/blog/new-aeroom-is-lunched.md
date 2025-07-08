@@ -2,12 +2,10 @@
 title: "New aeroom is up and\_running."
 date: 2010-04-18T00:00:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
   - aeroom
-  - wordpress-theme
-  - site-log
+  - Wordpress
 description: Readable & Magazine style
 photos:
   - 'https://media.kaerozhi.com/2025/06/4bdc1b2b0233f5b2251c9852a077f14e.webp'

@@ -2,7 +2,7 @@
 title: 米粉
 date: 2021-02-20T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
   - 戏谑
   - 诗

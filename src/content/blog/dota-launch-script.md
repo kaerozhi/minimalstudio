@@ -2,7 +2,7 @@
 title: Dota 启动脚本
 date: 2009-05-08T00:00:00.000Z
 categories:
-  - 日常
+  - 游戏
 tags:
   - Dota
   - 游戏

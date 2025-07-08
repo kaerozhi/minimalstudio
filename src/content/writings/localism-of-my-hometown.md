@@ -2,11 +2,11 @@
 title: 吾乡方言残片
 date: 2016-01-11T00:00:00.000Z
 categories:
-  - 文字
   - 考据
 tags:
-  - hometown
-  - localism
+  - 故乡
+  - 方言
+  - 南昌话
 ---
 
 ## 其一

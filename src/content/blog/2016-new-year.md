@@ -2,7 +2,7 @@
 title: 新年
 date: 2016-01-03T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
   - 陶小婧
   - 新年

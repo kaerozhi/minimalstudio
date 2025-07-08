@@ -2,13 +2,10 @@
 title: 在白宫落成仪式上的总结致辞
 date: 2008-12-10T00:00:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
-  - plugin
-  - wordpress
-  - wordpress-theme
-  - 网站更新
+  - Wordpress
+  - Wordpress Theme
 ---
 
 经过上周六至本周一的努力施工，俺的博客终于改造完成了。这个新主题的设计稿其实很陈旧了，还是大半年前的工作，代码则是基于 [Sandbox](http://www.plaintxt.org/themes/sandbox/) 改写的。咳咳，最终效果得到了品味高雅的 [Winging](http://www.xwingx.com/blog) 同学的认可与赞赏，感激～同时也受到了某些无耻之徒如[困妞](http://hi.baidu.com/%B7%EF%CE%E5%CF%C8%C9%FA)和[天台](http://tiantai.blog.tianya.cn/)等人的强烈嫉妒和刻意贬低，愤慨～他们表示看上去完全不咋的，或者干脆说是简陋，尤其是百度空间资深用户困哉，在得知这博客使用的是传说全宇宙最强的 WordPress 程序之后，他更是痛心疾首地控诉：配上你这套烂皮，真可谓暴殄天物啊！然后就皱着眉头摇着脑袋非常不满地把自己的百度Mac模板拿出来对比了。

@@ -2,11 +2,11 @@
 title: Hexo 新主题：基于 Acorn 定制
 date: 2023-07-13T11:30:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
+  - Coding
 tags:
   - Hexo
-  - Theme
+  - Hexo Theme
   - Acorn
   - Web Development
 description: 更丰富的展示模块，更深度的细节定制。

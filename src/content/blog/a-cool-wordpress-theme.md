@@ -2,10 +2,10 @@
 title: 超酷的 Wordpress 主题
 date: 2008-04-14T00:00:00.000Z
 categories:
-  - 日常
+  - 推荐
 tags:
   - wordpress
-  - wordpress-theme
+  - wordpress theme
 ---
 
 [http://themes.wordpress.net/columns/1-column/1630/cli-20/](http://themes.wordpress.net/columns/1-column/1630/cli-20/ "http://themes.wordpress.net/columns/1-column/1630/cli-20/")

@@ -2,12 +2,13 @@
 title: 电竞赛事包装模式与流程
 date: 2018-08-24T00:00:00.000Z
 categories:
-  - 观点
+  - Insight
 tags:
-  - branding
+  - Branding
   - esports
   - 英雄联盟
-  - design
+  - Research
+  - 游戏设计
 coverImage: Worlds_2017_concept.jpg
 ---
 <div class="foreword">

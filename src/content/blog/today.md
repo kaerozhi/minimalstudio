@@ -2,9 +2,10 @@
 title: 今日
 date: 2006-11-21T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
   - 01media
+  - 工作
 ---
 
 其一：终于收到 [01Media](http://www.01media.cn) 的面试通知，非常令人激动而振奋的一天。爆发吧，你这个混蛋！

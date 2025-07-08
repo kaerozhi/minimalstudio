@@ -2,12 +2,9 @@
 title: 升级到了Firefox 3 RC1
 date: 2008-05-20T00:00:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - 软件
 tags:
-  - delicious-bookmark
-  - extension
-  - firefox
+  - Firefox
 ---
 
 周末把 Firefox 升级到了 3RC1，这个版本和之前的 beta 版本不一样，是不能和Firefox 2 共存的。犹豫了片刻，升就升吧。主要原因是 IETab 升级以后只支持Firefox 3，Firefox 2里面就不能使用了，这样子我必须经常打开 IE 来浏览一些网站，真是非常麻烦而且痛苦啊。不过这么一来有更多的扩展不能使用了，传说中的 Night Tester Tools 并非那么灵，强制打开某些扩展后经常令浏览器无故崩溃，尤其是在使用 Gmail 的时候，基本上进不去，无奈之下只好放弃了。

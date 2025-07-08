@@ -2,12 +2,9 @@
 title: 在 Hexo 中启用真正的高清视频
 date: 2024-09-01T10:12:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
   - hexo
-  - video
-  - 快手
   - OneDrive
 description: Bilibili 快走开，OneDrive 转过来。
 ---

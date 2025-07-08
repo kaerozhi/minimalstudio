@@ -2,11 +2,10 @@
 title: 端午北山塘
 date: 2025-06-01T01:46:00.000Z
 categories:
-  - 日常
+  - 苏州
 tags:
   - 苏州
   - 山塘街
-  - 老街区
   - 端午节
 photos:
   - 'https://media.kaerozhi.com/2025/06/6e8e641ca17e0b286fa30a72f8e3a5cc.png'

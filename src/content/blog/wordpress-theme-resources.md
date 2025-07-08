@@ -2,10 +2,10 @@
 title: Wordpress 主题资源
 date: 2008-04-13T00:00:00.000Z
 categories:
-  - 玩艺
+  - 推荐
 tags:
-  - wordpress
-  - wordpress-theme
+  - Wordpress
+  - Wordpress Theme
 coverImage: image-thumb.png
 ---
 

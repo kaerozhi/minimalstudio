@@ -2,7 +2,7 @@
 title: 凤蝶幼虫
 date: 2025-05-12T02:27:00.000Z
 categories:
-  - 日常
+  - 摄影
 tags:
   - 昆虫
 photos:

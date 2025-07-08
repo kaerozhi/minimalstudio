@@ -2,10 +2,10 @@
 title: 尼康第一款变焦镜头 ZOOM-NIKKOR 43-86mm F3.5
 date: 2025-05-18T11:43:00.000Z
 categories:
-  - 玩艺
-  - 器用
+  - 摄影
+  - 器材
 tags:
-  - 摄影设备
+  - 摄影器材
   - 镜头
   - 尼康
 photos:

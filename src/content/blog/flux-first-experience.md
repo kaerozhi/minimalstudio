@@ -2,7 +2,6 @@
 title: Flux 初体验
 date: 2024-10-28T02:08:00.000Z
 categories:
-  - 玩艺
   - AI
 tags:
   - AI

@@ -2,7 +2,7 @@
 title: 在 Astro 上展示 Strava 骑行数据
 date: 2025-06-30
 categories:
-  - 技术
+  - Coding
 tags:
   - Strava
   - Astro

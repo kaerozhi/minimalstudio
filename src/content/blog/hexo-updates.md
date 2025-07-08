@@ -2,8 +2,7 @@
 title: Hexo 后续补充
 date: 2023-05-28T13:36:07.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
   - Hexo
   - Hexo Plugins

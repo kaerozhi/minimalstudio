@@ -2,7 +2,7 @@
 title: Zoundry Raven：来自 Zoundry 的重磅更新
 date: 2008-03-22T00:00:00.000Z
 categories:
-  - 玩艺
+  - 软件
 tags:
   - Blog tools
   - zoundry

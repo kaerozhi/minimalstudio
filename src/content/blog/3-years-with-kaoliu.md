@@ -2,7 +2,7 @@
 title: 我们这三年
 date: 2006-12-31T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
   - 陶小婧
   - 感情

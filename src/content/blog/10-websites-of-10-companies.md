@@ -2,7 +2,7 @@
 title: 十个公司，十个网站
 date: 2006-03-02T00:00:00.000Z
 categories:
-  - 观点
+  - 推荐
 tags:
   - Web Design
 ---

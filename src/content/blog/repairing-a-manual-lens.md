@@ -2,10 +2,10 @@
 title: 拆装一支手动镜头
 date: 2024-08-04T10:28:00.000Z
 categories:
-  - 玩艺
-  - 器用
+  - 器材
 tags:
   - 镜头
+  - 拆修
 description: 事前不必犹豫，上手特别简单。
 photos:
   - 'https://media.kaerozhi.com/2025/06/21669a7beb156754dc3518603769e69f.webp'

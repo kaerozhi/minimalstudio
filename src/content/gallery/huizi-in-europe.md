@@ -2,11 +2,10 @@
 title: 慧子
 date: 2013-10-27T10:20:00.000Z
 categories:
-  - 日常
-tags:
-  - 人像
-  - 欧洲
   - 旅行
+  - 人像
+tags:
+  - 欧洲
 photos:
   - 'https://media.kaerozhi.com/2025/06/cbe9a43a7e647c9d59a0b96178cfb27c.jpg'
 ---

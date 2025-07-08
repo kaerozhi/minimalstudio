@@ -2,9 +2,9 @@
 title: iNewS Tags Manager V4.8 for Dreamweaver
 date: 2006-08-15T00:00:00.000Z
 categories:
-  - 案例
+  - Coding
 tags:
-  - dreamweaver扩展
+  - Dreamweaver 扩展
   - inews
 ---
 

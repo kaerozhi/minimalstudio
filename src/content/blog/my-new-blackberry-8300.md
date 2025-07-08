@@ -2,9 +2,9 @@
 title: 新手机入手
 date: 2008-07-12T00:00:00.000Z
 categories:
-  - 日常
+  - 手机
 tags:
-  - blackberry
+  - Blackberry
 ---
 
 真是个勉强的决定啊。

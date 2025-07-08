@@ -2,11 +2,10 @@
 title: 游戏排位系统的设计思路
 date: 2022-06-09T00:00:00.000Z
 categories:
-  - 观点
+  - Insight
 tags:
-  - 排位赛系统
-  - 段位图标
-  - game
+  - 游戏设计
+  - Research
 ---
 <div class="foreword">
 

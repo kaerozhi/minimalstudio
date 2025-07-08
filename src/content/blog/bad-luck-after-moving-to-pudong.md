@@ -2,9 +2,8 @@
 title: 出师不利
 date: 2009-03-02T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
-  - 地铁
   - 搬家
 ---
 

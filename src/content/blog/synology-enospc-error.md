@@ -2,11 +2,11 @@
 title: 群晖 ENOSPC 问题
 date: 2024-08-04T19:57:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - 器材
 tags:
   - Hexo
-  - 群晖
+  - 黑群晖
+  - 系统故障
 description: No space left on device...
 ---
 最近一直在持续微调 Hexo 的主题外观，免不了经常上官网查阅文档。今天偶然发现官方的最新版本号已经是 7.3，而我黑群晖上的 Hexo 还停留在 6.3。

@@ -2,7 +2,7 @@
 title: 杂言
 date: 2006-10-18T00:00:00.000Z
 categories:
-  - 日常
+  - 随笔
 tags:
   - 杂言
   - 猫

@@ -2,11 +2,9 @@
 title: 用 Stable Diffusion 尝试传统水墨画
 date: 2023-07-06T13:25:07.000Z
 categories:
-  - 玩艺
-  - Stable Diffusion
+  - AI
 tags:
-  - 竹子
-  - 中国水墨画
+  - 水墨画
   - AIGC
   - stable diffusion
 photos:

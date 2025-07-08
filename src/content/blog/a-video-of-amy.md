@@ -2,7 +2,7 @@
 title: 阿咪
 date: 2008-04-22T00:00:00.000Z
 categories:
-  - 日常
+  - VLOG
 tags:
   - video
   - 猫

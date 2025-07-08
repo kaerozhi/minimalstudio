@@ -2,12 +2,10 @@
 title: Twitter
 date: 2008-08-01T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
   - twitter
-  - 饭否
   - SNS
-  - Firefox
 ---
 
 开始用 [Twitter](http://twitter.com/) 了，就是右边那一排“最近发过的牢骚”。

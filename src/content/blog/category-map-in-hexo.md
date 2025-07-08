@@ -2,8 +2,8 @@
 title: Hexo 里面的 category_map
 date: 2024-07-24T13:36:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
+  - Coding
 tags:
   - Hexo
 ---

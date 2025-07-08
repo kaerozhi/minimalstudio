@@ -1,11 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { getCategories } from '@/utils/getCategories';
 import { slugify } from '@/utils/slugify';
-
-// 从 site.config 加载网站相关设置
-import { config } from '@/site.config';
-const SITE_TITLE = config.title;
-const postsPerPage = config.content.postPerPage; // 每页文章数
 
 // 加载 UI 组件
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -47,6 +43,9 @@ const regularEntries = allEntries.filter(entry => entry.data.featured !== true);
 if (featuredEntry) {
   regularEntries.unshift(featuredEntry);
 }
+
+// 获取分类
+const currentCategories = await getCategories(collection);
 ---
 
 <BaseLayout title={collection}>
@@ -54,6 +53,15 @@ if (featuredEntry) {
     <div class="mt-32"></div>
     <div>
       <h1 class="text-6xl font-bold mb-8 capitalize">{collection} <span class="text-base align-top">{totalEntries}</span></h1>
+    </div>
+    <div>
+      <ul class="flex flex-row gap-2 flex-wrap">
+        {currentCategories.map(cat => (
+          <li>
+            <a href={`/category/${cat.slug}`} class="chip">{cat.label} <sup>{cat.count}</sup></a>
+          </li>
+        ))}
+      </ul>
     </div>
     
     <div>

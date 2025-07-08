@@ -2,11 +2,10 @@
 title: 我承认自己重视形式更甚于内涵。
 date: 2006-06-13T00:00:00.000Z
 categories:
-  - 日常
   - 碎碎念
 tags:
-  - php
-  - learning
+  - PHP
+  - Learning
 ---
 
 在一个多小时艰苦卓绝的学习之后，我正式宣布放弃 PHP 的进一步研究。

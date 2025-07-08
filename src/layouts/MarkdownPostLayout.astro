@@ -12,7 +12,7 @@ const { entry, collection, toc, headings } = Astro.props;
   <link rel="stylesheet" href="/src/styles/entry.css">
 
   <article class="container-wide mt-32">
-    <div class="lg:text-center">
+    <div>
       <div class="text-text-muted uppercase text-sm">
         <time>{formatDate(entry.data.date)}</time> - 
         {
@@ -23,10 +23,10 @@ const { entry, collection, toc, headings } = Astro.props;
           ))
         }
       </div>
-      <h1 class="text-4xl/10 md:text-6xl/16 font-serif first-line:font-sans text-text-heading font-semibold my-4 tracking-tight">
+      <h1 class="md:w-3/4 text-4xl/10 md:text-6xl/16 font-serif first-line:font-sans first-line:font-semibold text-text-heading font-medium my-6 tracking-tight">
           {entry.data.title}
       </h1>
-      <p class="text-lg mx-auto mb-10 text-text-default/75">
+      <p class="md:w-3/4 text-lg mx-auto mb-10 text-text-default/60">
           {entry.data.description}
       </p>
 
@@ -45,17 +45,17 @@ const { entry, collection, toc, headings } = Astro.props;
     </div>
 
     { toc ? (
-      <div class="mt-0 md:mt-12 max-w-2xl mx-auto grid gap-6 justify-center grid-cols-1 md:grid-cols-[15em_minmax(_var(--container-2xl),_1fr)_15em]">
+      <div class="mt-0 md:mt-20 max-w-2xl mx-auto grid gap-6 justify-center grid-cols-1 md:grid-cols-[15em_minmax(_var(--container-2xl),_1fr)_15em]">
         <div></div>
         <div
-          class="entry mx-auto w-full text-lg/7 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+          class="entry mx-auto w-full text-lg/7 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
           <slot />
         </div>
         <TableOfContents headings={headings} />
       </div>
     ) : (
       <div
-        class="entry mt-12 mx-auto text-lg/6 md:text-xl/8 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+        class="entry mt-20 mx-auto text-lg/6 prose text-text-default prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
         <slot />
       </div>
     )}

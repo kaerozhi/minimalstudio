@@ -2,7 +2,7 @@
 title: 相城基督堂
 date: 2023-06-02T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
   - 公园
   - 教堂

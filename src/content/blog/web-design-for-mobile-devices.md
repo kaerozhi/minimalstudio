@@ -2,15 +2,11 @@
 title: 你的网站为移动设备准备好了吗？
 date: 2009-06-13T00:00:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - 推荐
 tags:
-  - iphone
-  - mobilepress
-  - plugin
-  - theme
-  - wordpress
-  - wp-t-wap
+  - Wordpress
+  - 移动端
+  - 设计趋势
 ---
 
 专门收集酷站的网站真的很多，不过今天要推荐的网站取材则比较特别：[CSSiPhone.com](http://cssiphone.com/)，该站收集的网站除了正常的桌面端网站之外，还专门为 iPhone 设计优化过了另外一个版本。在智能手机越来越普及的今天，这无疑有很强的前瞻性和参考意义。

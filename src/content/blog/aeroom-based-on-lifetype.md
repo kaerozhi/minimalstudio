@@ -2,10 +2,9 @@
 title: 'New aeroom, based on LifeType.'
 date: 2006-12-17T00:00:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
-  - 网站更新
+  - Lifetype
 photos:
   - https://media.kaerozhi.com/2025/07/9f9622ce66a08c1954591e5bb3adea62.webp
 ---

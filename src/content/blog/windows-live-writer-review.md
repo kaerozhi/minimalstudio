@@ -2,7 +2,6 @@
 title: Windows Live Writer 初上手体验
 date: 2007-08-04T00:00:00.000Z
 categories:
-  - 玩艺
   - 软件
 tags:
   - Blog Tools

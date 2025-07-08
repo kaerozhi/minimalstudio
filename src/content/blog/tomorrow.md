@@ -2,7 +2,7 @@
 title: 明日
 date: 2006-11-21T00:00:00.000Z
 categories:
-  - 日常
+  - 碎碎念
 tags:
   - 感情
 ---

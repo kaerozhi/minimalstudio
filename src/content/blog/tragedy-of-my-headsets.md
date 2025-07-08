@@ -2,10 +2,10 @@
 title: 耳机们悲惨的命运交响曲
 date: 2008-11-28T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
-  - for-fun
-  - headset
+  - 搞笑日常
+  - 耳机
 ---
 
 抬脚，踏步，PIA~

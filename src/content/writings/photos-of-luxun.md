@@ -2,11 +2,9 @@
 title: 鲁迅照相集
 date: 2020-07-12T00:00:00.000Z
 categories:
-  - 文字
   - 考据
 tags:
-  - 照片集
-  - 考证
+  - Album
   - 鲁迅
 photos:
   - 'https://media.kaerozhi.com/2025/06/baec0dd7589e5edfe19dee05d5104fb7.webp'

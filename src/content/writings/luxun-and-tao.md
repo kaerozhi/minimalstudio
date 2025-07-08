@@ -2,7 +2,6 @@
 title: 鲁迅与绍兴陶氏
 date: 2020-07-15T00:00:00.000Z
 categories:
-  - 文字
   - 考据
 tags:
   - 鲁迅

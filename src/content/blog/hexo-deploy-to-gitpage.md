@@ -2,8 +2,7 @@
 title: Hexo 同步 Github Page
 date: 2023-07-15T08:26:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
   - Hexo
   - Github

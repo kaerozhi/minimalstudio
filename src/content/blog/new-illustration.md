@@ -2,10 +2,9 @@
 title: 略有小成
 date: 2006-06-18T00:00:00.000Z
 categories:
-  - 玩艺
-  - 涂画
+  - 涂鸦
 tags:
-  - illustrator
+  - Aodbe illustrator
   - 插画
 ---
 

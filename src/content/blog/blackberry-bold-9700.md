@@ -2,7 +2,7 @@
 title: Blackberry Bold 9700
 date: 2010-03-09T00:00:00.000Z
 categories:
-  - 日常
+  - 手机
 tags:
   - blackberry
 ---

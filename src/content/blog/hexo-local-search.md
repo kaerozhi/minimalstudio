@@ -2,8 +2,8 @@
 title: 给 Hexo 添加搜索模块
 date: 2023-07-17T02:04:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
+  - Coding
 tags:
   - Hexo
 description: 即便是静态博客，站内搜索功能也是必须的。

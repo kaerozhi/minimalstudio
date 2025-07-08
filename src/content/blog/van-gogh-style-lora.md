@@ -2,11 +2,10 @@
 title: LORA 日推：梵高风格
 date: 2023-07-04T21:52:31.000Z
 categories:
-  - 玩艺
-  - Stable Diffusion
+  - AI
 tags:
-  - stable-diffusion
-  - van-gogh
+  - stable diffusion
+  - van gogh
   - AIGC
   - LORA
 photos:

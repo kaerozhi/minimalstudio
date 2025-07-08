@@ -2,7 +2,8 @@
 title: 在 Astro 上展示豆瓣电影
 date: 2025-07-01T00:00:00.000Z
 categories:
-  - 技术
+  - Coding
+  - Sitelog
 tags:
   - Astro
   - 豆瓣电影

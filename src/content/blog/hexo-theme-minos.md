@@ -2,15 +2,11 @@
 title: Hexo 的主题定制
 date: 2023-05-28T13:36:07.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
   - Hexo
-  - Theme
-  - minos
+  - Hexo Theme
   - SCSS
-  - Justified Gallery
-  - 中文字体
 photos:
   - 'https://media.kaerozhi.com/2025/06/da58218df67828b73fc106b7f7cfdfea.webp'
 ---

@@ -2,9 +2,9 @@
 title: 失眠
 date: 2009-04-02T00:00:00.000Z
 categories:
-  - 日常
+  - 碎碎念
 tags:
-  - sleepless
+  - 状态
   - 加班
 ---
 

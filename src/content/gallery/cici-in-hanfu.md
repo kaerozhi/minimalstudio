@@ -2,9 +2,9 @@
 title: 桃子
 date: 2018-03-24T12:20:00.000Z
 categories:
-  - 日常
-tags:
+  - 古风
   - 人像
+tags:
   - 深圳
   - 汉服
 photos:

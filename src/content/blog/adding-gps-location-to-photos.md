@@ -2,10 +2,11 @@
 title: 给照片添加 GPS 信息
 date: 2024-04-30T00:00:00.000Z
 categories:
-  - 玩艺
-  - 器用
-tags:
   - 摄影
+  - 软件
+tags:
+  - Lightroom
+  - GPS
 description: 让阉割的 GPS 信息重回相机！
 ---
 现在大多数的照片管理 App，都有根据位置自动归类的功能。最近启用的 Immich 就是如此，简单直观，尤其是出门旅游的照片，去过哪里拍过哪些，打开地图一目了然。

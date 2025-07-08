@@ -2,9 +2,10 @@
 title: 肥猫传
 date: 2020-06-11T00:00:00.000Z
 categories:
-  - 文字
+  - 杂记
 tags:
-  - friends
+  - 文言
+  - 戏作
   - 肥猫
 ---
 

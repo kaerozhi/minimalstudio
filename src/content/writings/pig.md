@@ -2,7 +2,7 @@
 title: 猪
 date: 2020-07-23T00:00:00.000Z
 categories:
-  - 日常
+  - 随笔
 tags:
   - 童年
 ---

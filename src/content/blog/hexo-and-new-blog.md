@@ -2,8 +2,7 @@
 title: Hexo 的安装与配置
 date: 2023-05-27T12:33:19.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Sitelog
 tags:
   - Hexo
   - Synology

@@ -2,10 +2,9 @@
 title: 在 Hexo 中分享 Bilibili 视频
 date: 2024-08-18T03:21:00.000Z
 categories:
-  - 玩艺
-  - 网站
+  - Coding
 tags:
-  - hexo
+  - Hexo
   - bilibili
 description: 一些可以改善体验的细节
 ---

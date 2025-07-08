@@ -2,11 +2,9 @@
 title: deviantART 的订阅真是令人遗憾……
 date: 2008-04-23T00:00:00.000Z
 categories:
-  - 日常
   - 碎碎念
 tags:
-  - devaintart
-  - rss
+  - DevaintArt
 ---
 
 真变态，居然只有一个标题，预览图片都没有-\_-

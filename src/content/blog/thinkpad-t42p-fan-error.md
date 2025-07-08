@@ -2,12 +2,12 @@
 title: 裸照
 date: 2009-04-11T00:00:00.000Z
 categories:
-  - 日常
+  - 器材
 tags:
-  - thinkpad
-  - 笔记本
-  - 电脑故障
-  - t42p
+  - Thinkpad
+  - 电脑
+  - 硬件故障
+  - 拆修
 ---
 
 没错，真的是裸照。速进。

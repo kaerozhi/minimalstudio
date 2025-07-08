@@ -2,11 +2,11 @@
 title: Eversunny
 date: 2009-06-17T00:00:00.000Z
 categories:
-  - 日常
+  - Life
 tags:
-  - one-piece
-  - photo
-  - friends
+  - 海贼王
+  - 玩偶
+  - Album
 photos:
   - 'https://media.kaerozhi.com/2025/06/17dc34583e7e9f59d7dfef80042f2817.png'
 ---

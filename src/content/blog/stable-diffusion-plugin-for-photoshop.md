@@ -2,12 +2,11 @@
 title: Auto Photoshop Stable Diffusion Plugin
 date: 2023-07-09T02:55:00.000Z
 categories:
-  - 玩艺
-  - Stable Diffusion
+  - AI
+  - 软件
 tags:
   - stable diffusion
-  - photoshop
-  - plugins
+  - Photoshop
 description: 给 Photoshop 准备的 Stable Diffusion 操作界面，虽然还称不上尽善尽美，但至少值得一试。
 photos:
   - 'https://media.kaerozhi.com/2025/06/9d06ecd52d0c15521ea075b30689b4d3.webp'

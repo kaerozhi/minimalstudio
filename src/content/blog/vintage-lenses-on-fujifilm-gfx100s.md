@@ -5,7 +5,8 @@ description: 目前持有的老镜头少说也有二十多支了，配合 GFX100
 draft: true
 toc: true
 categories:
-  - Gears
+  - 摄影
+  - 器材
 tags:
   - Fujifilm
   - GFX100S
