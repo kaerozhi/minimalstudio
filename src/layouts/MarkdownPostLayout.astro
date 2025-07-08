@@ -5,6 +5,7 @@ import { slugify } from "@/utils/slugify";
 import { config } from "@/site.config";
 import RelatedPosts from '@/components/entries/RealatedPosts.astro';
 import TableOfContents from "@/components/entries/TableOfContents.astro";
+import CommentsSection from "@/components/entries/CommentsSection.astro";
 
 const { entry, collection, toc, headings } = Astro.props;
 ---
@@ -71,6 +72,8 @@ const { entry, collection, toc, headings } = Astro.props;
         }
       </div>
     </div>
+
+    <CommentsSection />
 
     <!-- 相关文章 -->
     <RelatedPosts collection={collection} slug={entry.slug} />
