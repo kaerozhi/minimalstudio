@@ -1,32 +1,67 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getAllEntries } from '@/utils/getAllEntries';
+import { slugify } from '@/utils/slugify';
+import { getPathBySlug } from '@/utils/getPathBySlug';
+import BlogPost from '@/components/entries/BlogPost.astro';
+
+export const prerender = true;
 
 export async function getStaticPaths() {
-  const allPosts = Object.values(import.meta.glob('@/content/*/*.md', { eager: true }));
+  const allEntries = await getAllEntries();
+  const tagSet = new Set();
 
-  const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+  for (const entry of allEntries) {
+    const tags = entry.data.tags || [];
+    tags.forEach(tag => tagSet.add(slugify(tag)));
+  }
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
+  return Array.from(tagSet).map(tag => ({
+    params: { tag },
+  }));
 }
 
+// 当前参数
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const tagSlug = slugify(tag);
+
+// 所有文章
+const allEntries = await getAllEntries();
+
+// 过滤包含该标签的文章
+const posts = allEntries
+  .filter(entry => (entry.data.tags || []).some(t => slugify(t) === tagSlug))
+  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+const postsWithPaths = await Promise.all(
+  posts.map(async (post) => {
+    const href = await getPathBySlug(post.slug);
+    return { ...post, href };
+  })
+);
 ---
-<BaseLayout pageTitle={tag}>
-  <section class="py-24 2xl:max-w-screen-xl mx-auto" id="gallery">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-      <p>包含「{tag}」标签的文章</p>
-      <ul>
-        {posts.map((post: any) => (
-          <li></li>
-        ))}
-      </ul>
+
+<BaseLayout title={`Tag: ${posts}`}>
+  <section class="container-wide">
+    <div class="mt-32"></div>
+    <div>
+      <h1 class="text-4xl md:text-8xl/24 font-serif first-line:font-sans font-medium first-line:font-bold mb-8 uppercase tracking-tight">
+        Tag
+        <br>
+        {tag} <sup class="align-super font-sans text-4xl" title={`共有 ${posts.length} 篇文章`}>{posts.length}</sup>
+      </h1>
     </div>
+    
+    <div class="mt-8">
+      {postsWithPaths.map(post => (
+        <BlogPost
+          title={post.data.title}
+          href={post.href}
+          date={post.data.date}
+          description={post.data.description}
+        />
+      ))}
+    </div>
+    
   </section>
 </BaseLayout>

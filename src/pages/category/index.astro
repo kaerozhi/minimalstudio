@@ -1,37 +1,10 @@
 ---
-import { getAllEntries } from '@/utils/getAllEntries';
-import { slugify } from '@/utils/slugify';
 import { getCategoryMeta } from '@/utils/getCategoryMeta';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export const prerender = true;
 
 const categories = await getCategoryMeta();
-console.log(categories);
-
-const allEntries = await getAllEntries();
-
-// 分类计数 + 最新封面图（photo）
-const categoryMap = new Map();
-
-for (const entry of allEntries) {
-  const categories = entry.data.categories || [];
-  for (const cat of categories) {
-    const slug = slugify(cat);
-    const existing = categoryMap.get(slug);
-
-    if (!existing) {
-      categoryMap.set(slug, {
-        label: cat,
-        slug,
-        count: 1,
-        cover: entry.data.photos?.[0] || null,
-      });
-    } else {
-      existing.count++;
-    }
-  }
-}
 ---
 
 <BaseLayout title="所有分类">

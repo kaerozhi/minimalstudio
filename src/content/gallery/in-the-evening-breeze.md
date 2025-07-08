@@ -2,9 +2,8 @@
 title: 晚风中
 date: 2024-08-09T11:51:00.000Z
 categories:
-  - 影像
+  - Personal
 tags:
-  - 散步
   - 虎丘湿地公园
 photos:
   - 'https://media.kaerozhi.com/2025/06/926c30ca889d88571ec6a88de964c623.webp'
