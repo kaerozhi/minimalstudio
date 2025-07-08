@@ -2,7 +2,7 @@
 title: 厦门
 date: 2017-08-20T00:00:00.000Z
 categories:
-  - 游历
+  - 国内
 tags:
   - 厦门
   - 鼓浪屿

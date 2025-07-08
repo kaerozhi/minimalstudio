@@ -2,10 +2,10 @@
 title: 从东涌到西涌
 date: 2015-04-07T00:00:00.000Z
 categories:
-  - 游历
+  - 深圳
 tags:
   - tgideas
-  - team
+  - 团队
   - 深圳
   - 东涌
   - 西涌

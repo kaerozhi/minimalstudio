@@ -5,7 +5,7 @@ description: 一生心道苏州好，何事骑驴入相城。
 toc: true
 featured: true
 categories:
-  - 游历
+  - 苏州
 tags:
   - 苏州
   - 古城

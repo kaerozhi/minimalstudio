@@ -2,7 +2,7 @@
 title: 四川游记
 date: 2021-04-14T00:00:00.000Z
 categories:
-  - 游历
+  - 国内
 tags:
   - 四川
   - 九寨沟

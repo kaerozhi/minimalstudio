@@ -2,7 +2,7 @@
 title: 曲园的菖蒲
 date: 2023-06-04T07:31:52.000Z
 categories:
-  - 游历
+  - 苏州
 tags:
   - 苏州
   - 园林

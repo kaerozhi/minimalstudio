@@ -2,7 +2,7 @@
 title: 唐寅园
 date: 2025-05-12T06:12:00.000Z
 categories:
-  - 游历
+  - 苏州
 tags:
   - 园林
   - 名人墓地

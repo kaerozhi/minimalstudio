@@ -2,11 +2,10 @@
 title: 无锡南禅寺
 date: 2025-05-08T02:48:00.000Z
 categories:
-  - 游历
+  - 周边游
 tags:
   - 寺庙
   - 无锡
-  - 周边游
 photos:
   - 'https://media.kaerozhi.com/2025/06/8105fe8583c50a41cf5fbb8df84c8999.webp'
 ---

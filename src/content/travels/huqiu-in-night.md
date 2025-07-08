@@ -2,7 +2,7 @@
 title: 夜游虎丘
 date: 2024-07-16T00:00:00.000Z
 categories:
-  - 游历
+  - 苏州
 tags:
   - 苏州
   - 虎丘

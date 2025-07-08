@@ -2,10 +2,10 @@
 title: 安吉深溪峡谷漂流记
 date: 2024-08-22T13:56:00.000Z
 categories:
-  - 游历
+  - 周边游
 tags:
   - 景曦
-  - video
+  - VLOG
   - 漂流
 description: 每年一度的夏日漂流
 photos:
