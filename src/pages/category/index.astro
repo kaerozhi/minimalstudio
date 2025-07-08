@@ -1,9 +1,13 @@
 ---
 import { getAllEntries } from '@/utils/getAllEntries';
 import { slugify } from '@/utils/slugify';
+import { getCategoryMeta } from '@/utils/getCategoryMeta';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export const prerender = true;
+
+const categories = await getCategoryMeta();
+console.log(categories);
 
 const allEntries = await getAllEntries();
 
@@ -28,15 +32,13 @@ for (const entry of allEntries) {
     }
   }
 }
-
-const categories = Array.from(categoryMap.values()).sort((a, b) => b.count - a.count);
 ---
 
 <BaseLayout title="所有分类">
   <section class="container-wide">
     <div class="mt-32"></div>
     <div>
-      <h1 class="text-4xl md:text-8xl/24 font-serif first-line:font-sans font-medium first-line:font-bold mb-8 uppercase">
+      <h1 class="text-4xl md:text-8xl/24 font-serif first-line:font-sans font-medium first-line:font-bold mb-8 uppercase tracking-tight">
         All
         <br>
         Categories <sup class="align-super font-sans text-4xl" title={`共有 ${categories.length} 个分类`}>{categories.length}</sup>

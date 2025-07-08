@@ -3,7 +3,7 @@ title: 游戏官网进化论
 date: 2014-10-23T00:00:00.000Z
 categories:
   - Insight
-tags：
+tags:
   - Research
   - 设计趋势
   - Web Design
