@@ -15,7 +15,7 @@
 
   --color-text-heading: var(--color-text-heading);
   --color-text-default: var(--color-text-default);
-  --color-color-muted: var(--color-text-muted);
+  --color-text-muted: var(--color-text-muted);
 
   --color-base-50: oklch(96.74% 0.001 286.38);
   --color-base-100: oklch(93.73% 0.001 286.37);

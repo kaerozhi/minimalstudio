@@ -38,3 +38,18 @@
 .entry figure figcaption {
   margin-top: 0.5em;
 }
+
+.entry .contains-task-list {
+  padding-left: 0.5em;
+  list-style: none;  
+}
+
+.entry .contains-task-list li:has(:checked) {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.entry .contains-task-list input[type=checkbox] {
+  margin-right: 0.5em;
+  border-radius: 0.2em;
+}

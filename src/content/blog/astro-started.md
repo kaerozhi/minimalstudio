@@ -1,7 +1,7 @@
 ---
-title: Astro 启动全记录
+title: Astro 启动!
 date: 2025-06-28T00:00:00.000Z
-description: "你走上了歧途，白费周章永远没有结果！"
+description: "本站又又又一次巨大改版！"
 toc: true
 categories:
   - Sitelog
@@ -9,6 +9,8 @@ categories:
 tags:
   - astro
   - node.js
+photos:
+  - https://media.kaerozhi.com/2025/07/6a5a19aba6e534907f36be1e24ea9868.webp
 ---
 从 Wordpress 转到 Hexo 之后，至今已经两年多，本地写写 Markdown，生成静态文件再推送到 Github，流程非常简洁。但我的 Hexo 安装在黑群晖上，经常出现各种奇奇怪怪的问题，比如想升级到最新版没空间之类的，就算不是 Hexo 自身的原因，终究有一些恼人。
 
@@ -103,114 +105,31 @@ npm run dev
 
 Minimal Studio 除了一个设计框架，那真是一穷二白要啥没啥，只能白手起家。还好有万能的 ChatGPT，强大，宽容，即便是面对我这样的菜鸟，也从来没有表露出不耐烦的语气，永远专业且友善，以至于在它的强力辅助之下，感觉自己日益膨胀，脑子里满满都是自己编程很强的幻觉。来吧，区区 Astro 算什么？没有在下实现不了的奇思妙想！
 
-### 配置文件
-从 Wordpress 时代养成的好习惯，万物之先，先建立网站的基本配置文件，避免高频信息反复修改。
+以下是想实现的一些功能，进度随时更新，也有可能增加新的项目。
 
-Astro 有几个配置文件需要注意。
+- [x] 配置文件，0629 完成
+- [x] 动态路由，0706 完成
+- [x] 分类，0708 完成，列表未分页
+- [x] 标签，0708 完成，列表未分页
+- [x] 相关文章，0706 完成
+- [x] TOC，0707 完成
+- [x] 给图片增加 figcaption，0706 完成
+- [ ] 相册
+- [x] 评论系统，0708 完成
+- [ ] 搜索
+- [ ] RSS 订阅
+- [ ] Dark Mode
+- [ ] 尝试滚动动画
+- [ ] 豆瓣数据展示，因为豆瓣的反爬虫机制，目前还有一些问题。
+- [x] Strava 骑行展示，0702 完成
+- [ ] Spotify 音乐分享
+- [ ] 小宇宙播客分享
+- [ ] 预约功能，感觉难度较大，不如做一个独立 App
+- [ ] 首页信息完善
+- [ ] 旧体诗竖排
+- [ ] 影像重新排版
+- [ ] 设计作品重新排版
+- [ ] Deploy 至 Cloudflare Pages
+- [ ] 移动端兼容性全面检查
 
-系统根目录下有 `astro.config.mjs`，主要用于管理插件。
-
-然后是必要但系统并不默认生成的两个配置文件，一般会在 `/src/` 目录下新建 `site.config`，这个文件用于管理网站的基本信息，主要包括：
-
-- 网站的基本信息：网站名称，Slogan，url / favicon / logo 等；
-- SEO 相关信息：description / keywords / og:image 等；
-- 网站的导航配置：以及社交网站的链接。如果有友情链接的需要，也可以在这里配置；
-- 功能开关：列表页文章数 / 是否打开 TOC、评论系统、内置相册等等，根据自己的需要来。
-
-Astro 的 Markdown 文件一般放在 `/src/content/` 目录下，我们需要在此新建 `config.ts` 来配置 collection，这个文件范例如下：
-
-```javascript
-import { defineCollection, z } from 'astro:content';
-
-// 定义 'blog' 内容集合
-const blog = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string().max(128), // 标题，最长128字符
-    date: z.date(), // 日期，注意格式
-    description: z.string().max(256).optional(), // 描述，最长256字符，可选
-    author: z.string().default('Kaero Zhi'), // 作者，默认值为 '匿名作者'
-    tags: z.array(z.string()).default([]), // 标签数组，默认为空数组
-    categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
-    photos: z.array(z.string()).optional(), // 图片路径数组，可选
-    draft: z.boolean().default(false), // 是否为草稿，默认为 false
-    featured: z.boolean().default(false), // 是否为精选，默认为 false
-    toc: z.boolean().default(false), // 是否打开目录，默认为 false
-  }),
-});
-
-// 导出所有内容集合
-export const collections = { blog };
-```
-
-正常配置 blog 一个 collection 足矣，不太正常的人会配置五六七八个，自行复制修改即可。
-
-### 动态路由
-
-### 分类与标签页面
-
-### 相关文章
-
-### TOC
-
-### 给图片增加 figcaption
-
-我们写 Markdown 的时候，插入图片一般是这样的：
-
-```markdown
-![这是一张图片](/assets/a-photo.jpg)
-```
-
-但 Astro 默认渲染内容时，「这是一张图片」只是图片的 `alt` 属性，屏幕上并不显示。如果希望它作为 `<figcaption>` 出现在图片下方，渲染为：
-
-```html
-<figure>
-  <img src="/assets/a-photo.jpg" alt="这是一张图片" />
-  <figcaption>这是一张图片</figcaption>
-</figure>
-```
-
-那我们就需要用到 rehype-figure 插件。首先安装该插件：
-
-```bash
-npm install rehype-figure
-```
-
-然后在 `astro.config.mjs` 中配置 `rehype-figure`，改动请参考：
-
-```js
-import { defineConfig } from 'astro/config';
-import rehypeFigure from 'rehype-figure';
-
-export default defineConfig({
-  markdown: {
-    rehypePlugins: [
-      [rehypeFigure, { className: 'my-figure', figcaption: true }]
-    ]
-  }
-});
-```
-
-代码中可以修改的配置：
-
-- `className`: 给 `<figure>` 添加 CSS 类名，目前是 `my-figure`，之后就可以按照类名自行修改 CSS 的样式了；
-- `figcaption: true`: 自动将 `alt` 转为 `<figcaption>`。
-
-重启 Astro 就可以看到效果了。
-
-### 相册
-
-### 评论系统
-
-参考：[为你的 Astro 博客添加评论功能](https://liruifengv.com/posts/add-comments-to-astro/)
-
-### Dark Mode
-
-### CSS Tricks
-
-### 其他功能
-
-## 推送
-
-## 总结
-
+看看七月底能不能全部完工，加油！
