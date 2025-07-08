@@ -3,10 +3,11 @@ import { config } from '@/site.config';
 
 const currentPath = Astro.url.pathname;
 
-console.log(currentPath);
+// 定义导航宽度
+const { width = "container-wide" } = Astro.props;
 ---
 <div class="fixed top-4 inset-x-0 z-50 mix-blend-difference">
-  <div class="container-wide">
+  <div class={width}>
     <div>
       <div
         x-data="{ open: false }"
