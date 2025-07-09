@@ -6,12 +6,13 @@ import Spotify from "@/components/activities/Spotify.astro";
 import Podcast from "@/components/activities/Xiaoyuzhou.astro";
 ---
 <BaseLayout>
-    <section class="py-24 2xl:max-w-screen-xl mx-auto" id="gallery">
-        <div class="mt-16 px-8 pb-8 max-w-4xl mx-auto">
+    <section class="container-wide" id="gallery">
+        <div class="h-32"></div>
+        <div>
             <h2 class="text-8xl font-bold tracking-tighter uppercase">About</h2>
         </div>
 
-        <article class="flex flex-col md:flex-row px-8 pb-8 max-w-4xl mx-auto">
+        <article class="flex flex-col md:flex-row mt-8 pb-8 max-w-2xl mx-auto">
             <div class="basis-8/12 prose text-xl/8 font-serif font-normal">
                 <p>一个不务正业、兴趣广泛的视觉设计师，2022年从大厂离职，目前是自由职业，设计与摄影双修。</p>
 
@@ -38,23 +39,28 @@ import Podcast from "@/components/activities/Xiaoyuzhou.astro";
         </article>
     </section>
         
-    <section id="activities" class="mt-12 px-8 pb-8 max-w-4xl mx-auto">
-        <h3 class="text-3xl font-semibold uppercase">最近活动</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8">
-            <Strava />
-            <Douban />
-            <Spotify />
-            <Podcast />
+    <section id="activities" class="mt-12 container-wide">
+        <div>
+            <h3 class="text-3xl font-semibold uppercase">最近活动</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8">
+                <Strava />
+                <Douban />
+                <Spotify />
+                <Podcast />
+            </div>
         </div>
     </section>
 
-    <section id="resume" class="mt-12 px-8 pb-8 max-w-4xl mx-auto">
-        <h3 class="text-3xl font-semibold uppercase flex justify-between items-end">个人简历 <span class="text-sm font-normal text-zinc-500"><a href="/assets/resume.pdf"><svg class="inline h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /><path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /><path d="M17 18h2" /><path d="M20 15h-3v6" /><path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" /></svg> 您也可以下载 PDF 版本</a></span></h3>
+    <section id="resume" class="mt-24 container-wide">
+        <div>
+            <h3 class="text-3xl font-semibold uppercase flex justify-between items-end">个人简历 <span class="text-sm font-normal text-zinc-500"><a href="/assets/resume.pdf"><svg class="inline h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /><path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /><path d="M17 18h2" /><path d="M20 15h-3v6" /><path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" /></svg> 您也可以下载 PDF 版本</a></span></h3>
+        </div>
 
     </section>
 
-    <section id="gears" class="mt-12 px-8 pb-8 max-w-4xl mx-auto">
-        <h3 class="text-3xl font-semibold uppercase flex justify-between items-end">所持器材</h3>
-
+    <section id="gears" class="mt-24 container-wide">
+        <div>
+            <h3 class="text-3xl font-semibold uppercase flex justify-between items-end">所持器材</h3>
+        </div>
     </section>
 </BaseLayout>

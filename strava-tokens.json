@@ -1,5 +1,7 @@
 {
-  "access_token": "a68c1aca3954dcc418fdaecea0ddb0bae24d6048",
-  "refresh_token": "76ca0cf41a99080b37f7bbf08fddc81894d64412",
-  "expires_at": 1751998468
+  "token_type": "Bearer",
+  "access_token": "a8b0beeebcc56561b56000fe9b72d92c33e698cb",
+  "expires_at": 1752046552,
+  "expires_in": 21600,
+  "refresh_token": "76ca0cf41a99080b37f7bbf08fddc81894d64412"
 }

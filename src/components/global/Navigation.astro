@@ -1,88 +1,87 @@
 ---
-import { config } from '@/site.config';
+import { config } from "@/site.config";
 
 const currentPath = Astro.url.pathname;
 
 // 定义导航宽度
 const { width = "container-wide" } = Astro.props;
 ---
-<div class="fixed top-4 inset-x-0 z-50 mix-blend-difference">
-  <div class={width}>
-    <div>
-      <div
-        x-data="{ open: false }"
-        class="relative flex flex-col w-full alignfull mx-auto ring-1 uppercase rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row duration-300"
-      >
-        <div
-          class="flex flex-row items-center justify-between md:justify-start"
-        >
+
+<section x-data="{ atTop: true }" class="w-full">
+  <!-- Alpine.js initializes data properties for the component. `atTop` determines if the page is scrolled past a certain point. -->
+  <div
+    class="fixed z-50 px-4 py-2 transition-all duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 transform mx-auto"
+    :class="{ 'bg-black bg-opacity-90 backdrop-blur-xl max-w-2xl mx-4': !atTop, 'max-w-7xl': atTop }"
+    @scroll.window="atTop = (window.pageYOffset > 50 ? false : true)"
+  >
+    <!-- This div is styled to change its appearance based on the scroll position, toggling classes for background, opacity, blur, and width. -->
+    <div
+      x-data="{ open: false }"
+      class="flex flex-col w-full p-2 mx-auto md:items-center md:justify-between md:flex-row"
+    >
+      <!-- Another Alpine.js component for handling the navigation menu's open/close state. -->
+      <div class="flex flex-row items-center justify-between">
           <a
             class="text-current gap-4 items-center tracking-tighter inline-flex font-bold text-xl"
-            href="/" title="linke to main page"
-          >          
-          <img class="h-6" src={config.logo} alt={config.title} />
-            
-          </a><button
-            @click="open = !open"
-            class="inline-flex items-center justify-center p-2 text-zinc-400 hover:text-cyan-300 focus:outline-none focus:text-black md:hidden"
-            ><svg
-              class="w-6 h-6"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
-              ><path
-                :class="{'hidden': open, 'inline-flex': !open }"
-                class="inline-flex"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path><path
-                :class="{'hidden': !open, 'inline-flex': open }"
-                class="hidden"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"></path></svg
-            ></button
+            href="/"
+            title="linke to main page"
           >
-        </div>
-        <nav
-          :class="{'flex': open, 'hidden': !open}"
-          class="flex-col flex-grow hidden py-12 md:py-0 md:flex md:items-end justify-center md:flex-row"
-        >
-          <ul
-            class="space-y-2 list-none text-xs md:space-y-0 font-medium md:ml-auto items-center md:flex justify-center text-center md:text-left gap-3"
+            <img class="h-6" :class="{ 'invert': atTop, '': !atTop }" src={config.logo} alt={config.title} />
+          </a>
+        <button class="md:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            :class="{ 'stroke-current': atTop, 'stroke-white': !atTop }"
+            fill="none"
+            viewBox="0 0 24 24"
+            ><path
+              :class="{'hidden': open, 'inline-flex': !open }"
+              class="inline-flex"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path><path
+              :class="{'hidden': !open, 'inline-flex': open }"
+              class="hidden"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path></svg
           >
-          {
-            config.header.menu.map((item) => {
-              const isActive = currentPath.startsWith(item.link);
-              return (
-                <li>
-                  <a
-                    href={item.link}
-                    class={`text-white shrink-0 py-0.5 ${isActive ? 'border-b-2 border-white font-bold' : ''}`}
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              );
-            })
-          }
-          {
-            config.header.button.map((item) => (
-              <li class="shrink-0">
-                <a
-                href={item.link}
-                class="py-2 w-auto px-4 border-1 h-8 focus:ring-2 rounded-full border-white bg-white hover:bg-black text-black hover:text-white duration-200 focus:ring-offset-2 inline-flex items-center justify-center ring-2 focus:ring-black ring-transparent"
-              >
-                  {item.title}</a
-                >
-              </li>
-            ))          
-          }
-          </ul>
-        </nav>
+        </button>
       </div>
+      <nav
+        :class="{'flex': open, 'hidden': !open}"
+        class="flex-col flex-grow gap-8 hidden pb-4 md:pb-0 md:flex md:flex-row lg:ml-auto justify-end items-center text-sm"
+      >
+        <!-- This navigation changes its display based on the `open` state, showing on mobile when `open` is true. -->
+        {
+          config.header.menu.map((item) => {
+            const isActive = currentPath.startsWith(item.link);
+            return (
+              <a
+                href={item.link}
+                :class="{ 'text-black': atTop, 'text-white': !atTop }"
+                class={`text-white shrink-0 py-0.5 ${isActive ? "border-b-2 border-current font-bold" : ""}`}
+              >
+                {item.title}
+              </a>
+            );
+          })
+        }
+        {
+          config.header.button.map((item) => (
+            <a
+              href={item.link}
+              class="py-2 w-auto px-4 border-1 h-8 focus:ring-2 rounded-full  duration-300 focus:ring-offset-2 inline-flex items-center justify-center ring-2 focus:ring-black ring-transparent"
+              :class="{ 'border-black bg-black hover:bg-white text-white hover:text-black': atTop, 'border-white bg-white hover:bg-black text-black hover:text-white': !atTop }"
+
+            >
+              {item.title}
+            </a>
+          ))
+        }
+      </nav>
     </div>
   </div>
-</div>
+</section>

@@ -30,6 +30,10 @@
   --color-base-950: oklch(16.89% 0.002 286.18);
 }
 
+.container-full {
+  @apply relative w-screen mx-auto px-6;
+}
+
 .container-wide {
   @apply relative 2xl:max-w-screen-xl mx-auto px-6;
 }
