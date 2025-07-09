@@ -1,28 +1,24 @@
 ---
 import { getEntry, getCollection } from 'astro:content';
-import { collections } from '@/content/config';
 import MarkdownDesignLayout from '@/layouts/MarkdownDesignLayout.astro';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
   const paths = [];
-  const collectionNames = Object.keys(collections);
 
-  for (const collection of collectionNames) {
-    const entries = await getCollection(collection);
-    for (const entry of entries) {
-      paths.push({
-        params: {
-          collection,
-          slug: entry.slug,
-        },
-        props: {
-          collection,
-          slug: entry.slug,
-        },
-      });
-    }
+  const entries = await getCollection("design");
+  for (const entry of entries) {
+    paths.push({
+      params: {
+        collection,
+        slug: entry.slug,
+      },
+      props: {
+        collection,
+        slug: entry.slug,
+      },
+    });
   }
 
   return paths;
