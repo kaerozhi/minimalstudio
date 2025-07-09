@@ -7,9 +7,9 @@ const blog = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string().max(128), // 标题，最长128字符
+    date: z.date(),
     description: z.string().max(256).optional(), // 描述，最长256字符，可选
     // date 字段应为 Date 对象，脚本已确保
-    date: z.date(),
     author: z.string().default('Kaero Zhi'), // 作者，默认值为 '匿名作者'
     tags: z.array(z.string()).default([]), // 标签数组，默认为空数组
     categories: z.array(z.string()).default([]), // 分类数组，默认为空数组
