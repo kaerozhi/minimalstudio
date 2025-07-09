@@ -7,11 +7,11 @@ import RelatedPosts from '@/components/entries/RealatedPosts.astro';
 import TableOfContents from "@/components/entries/TableOfContents.astro";
 import CommentsSection from "@/components/entries/CommentsSection.astro";
 import Cover from "@/components/entries/Cover.astro";
+import "@/styles/entry.css";
 
 const { entry, collection, toc, headings } = Astro.props;
 ---
 <BaseLayout title={entry.data.title}>
-  <link rel="stylesheet" href="/src/styles/entry.css">
 
   <article class="container-wide mt-32">
     <div>

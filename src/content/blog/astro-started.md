@@ -130,7 +130,7 @@ Minimal Studio 除了一个设计框架，那真是一穷二白要啥没啥，�
 - [ ] 旧体诗竖排
 - [ ] 影像重新排版
 - [x] 设计作品重新排版，0709 完成
-- [x] 部署到 Cloudflare Pages，0708 完成，已经将 https://kaerozhi.com 指向至本项目，但是部署不成功……
+- [x] 部署到 Cloudflare Pages 不成功，跳船到 Vercel，0709 完成，已经将 https://kaerozhi.com 指向至本项目
 - [ ] 移动端兼容性全面检查
 
 看看七月底能不能全部完工，加油！
