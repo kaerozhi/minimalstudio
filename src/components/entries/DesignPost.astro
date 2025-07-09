@@ -1,13 +1,16 @@
 ---
 import { formatYear } from '@/utils/format';
 import { slugify } from '@/utils/slugify';
+import Cover from './Cover.astro';
 
 const { post } = Astro.props;
 ---
 <article class="group">
   <div class="w-full">
     <a href={`/design/${post.slug}`}>
-      <img src={post.data.photos[0]} class="group-hover:drop-shadow-2xl group-hover:brightness-110 will-change-auto duration-300 rounded-xl" />
+      {post.data.photos?.[0] && (
+        <Cover photos={post.data.photos} ratio="16/9" title={post.data.title}></Cover>
+      )}
     </a>
   </div>
   <div class="mt-4">

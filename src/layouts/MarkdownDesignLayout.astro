@@ -2,6 +2,7 @@
 import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/slugify";
 import BaseLayout from "./BaseLayout.astro";
+import Cover from "@/components/entries/Cover.astro";
 import RelatedDesign from '@/components/entries/RealatedDesign.astro';
 
 const { entry, collection, toc, headings } = Astro.props;
@@ -28,18 +29,9 @@ const { entry, collection, toc, headings } = Astro.props;
           {entry.data.description}
       </p>
 
-      { (entry.data.photos) &&
-      <div class="alignfull aspect-16/9 overflow-hidden rounded-xl">
-        {(entry.data.photos) &&
-        <img 
-            src={entry.data.photos[0]}
-            alt={entry.data.title}
-            class="w-full h-full object-cover object-center"
-            loading="eager"
-        />
-        }
-      </div>
-      }
+      {entry.data.photos?.[0] && (
+        <Cover photos={entry.data.photos} ratio="16/9" title={entry.data.title}></Cover>
+      )}
 
       <div class="flex justify-between items-center mt-2 text-left">
         <p class="text-text-default/75">

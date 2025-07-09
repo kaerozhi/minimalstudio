@@ -1,14 +1,13 @@
 ---
 import { formatDate } from "@/utils/format";
+import Cover from "./Cover.astro";
 const { post } = Astro.props;
 ---
 <article class="w-full bg-white group rounded-lg overflow-hidden hover:drop-shadow-2xl will-change-auto duration-300">
   <a href={post.slug} class="items-center h-auto">
-  {(post.data.photos) &&
-    <div class="aspect-16/9 overflow-hidden">
-      <img src={post.data.photos} class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500" />
-    </div>
-  }
+    {post.data.photos?.[0] && (
+      <Cover photos={post.data.photos} ratio="16/9" title={post.data.title}></Cover>
+    )}
     <div class="p-6">
       <h2 class="text-xl/7 font-semibold text-text-heading tracking-tight">{post.data.title}</h2>
       <p class="my-2 text-text-default/75">{post.data.description}</p>
