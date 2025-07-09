@@ -1,0 +1,97 @@
+---
+import { getCollection } from 'astro:content';
+import { formatYear } from '@/utils/format';
+import { slugify } from '@/utils/slugify';
+import { config } from '@/site.config';
+
+// 加载 UI 组件
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import DesignPost from '@/components/entries/DesignPost.astro';
+import Pagination from '@/components/global/Pagination.astro';
+import Categories from '@/components/entries/Categories.astro';
+
+const allBlogPosts = await getCollection('design');
+const visibleEntries = allBlogPosts
+  .filter((entry) => entry.data.draft !== true)
+  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+// 文章总数
+const page = 1;
+const perPage = config.content.postsPerPage || 10;
+const totalPages = Math.ceil(visibleEntries.length / perPage);
+const posts = visibleEntries.slice(0, perPage);
+---
+<BaseLayout title="蛙夏设计 Waxa Studio">
+  <section class="max-w-7xl mx-auto px-8">
+    <div class="mt-32"></div>
+    <div class="grid grid-cols-4 md:grid-cols-12 gap-8 mb-8 place-items-center">
+      <div class="col-span-4 md:col-span-8 flex w-full">
+        <h1 class="text-4xl text-[5rem]/18 md:text-[10rem]/32 uppercase text-text-heading font-bold tracking-tighter md:ml-8">
+            WAXA<span class="text-primary/75">.</span>
+            <br />
+            Studio
+            <div class="font-normal flex justify-between items-end font-serif">
+            <img src="https://media.kaerozhi.com/2025/07/b80da3656e48c2ef862b4d8ebfd0ad41.gif" class="h-16 md:h-26 -ml-8 mr-2 rounded-r-md md:rounded-lg" />
+            Create
+            </div>
+            <span class="font-normal font-serif">
+            Simply
+            </span>
+        </h1>
+      </div>
+      <div class="col-span-4 md:col-span-3 text-text-default">
+        Meet Kaero, a freelance designer & web developer, based in Suzhou.
+        <br />
+        自由设计师 / 前端，常驻苏州。
+        <br />
+        <a 
+          href="/about" 
+          class="inline-flex w-30 border border-current mt-2 py-1 px-4 rounded-full relative group">
+          About
+          <span class="stroke-current absolute top-0 -z-5 right-0 h-7 w-27 rounded-full flex justify-end items-center m-[2px] group-hover:aspect-square group-hover:h-7 group-hover:stroke-white group-hover:w-7 group-hover:bg-primary will-change-auto duration-300">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mr-[5px]" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 8H14M14 8L9 3M14 8L9 13" stroke-width="1.5"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="col-span-4 md:col-start-9 text-xl/8 font-medium text-text-default">
+        如您所见，这里是 Kaero 展示设计案例的地方。作为入行二十年以上的资深设计师，我为客户提供专业的设计意见与落地方案。期待与您的紧密合作。
+      </div>
+      <div class="col-span-4 w-full h-full flex items-end text-2xl">
+        <Categories collection="design" direction="col"></Categories>
+      </div>
+      <div class="col-span-4 md:col-span-8 md:col-start-5 md:text-right md:-mb-16">
+        {posts.slice(0,1).map((post, index) => (
+          <DesignPost post={post} />
+        ))}   
+      </div>
+    </div>
+  </section>
+
+  <hr class="w-full mt-12 md:mt-24 border-text-default/20" />
+
+  <section class="max-w-7xl mx-auto px-8 mt-12">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-semibold font-serif first-line:font-sans tracking-tight text-text-heading">
+        <span class="text-3xl font-medium">最近作品</span>
+        <br />
+        Latest Projects
+      </h2>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 place-content-between">
+        {posts.slice(1,5).map((post, index) => (
+          <DesignPost post={post} />
+        ))}
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 place-content-between">
+        {posts.slice(5).map(post => (
+          <DesignPost post={post} />
+        ))}
+      </div>
+
+      <Pagination collection="design" page={page} totalPages={totalPages} />
+    </div>
+  </section>
+</BaseLayout>

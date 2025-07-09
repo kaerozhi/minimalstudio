@@ -6,6 +6,12 @@ export function formatDate(dateString) {
   return year + " 年 " + month + " 月 " + day + " 日";
 }
 
+export function formatYear(dateString) {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  return year;
+}
+
 export function formatChineseDate(dateString) {
   const date = new Date(dateString);
   const year = date.getFullYear();

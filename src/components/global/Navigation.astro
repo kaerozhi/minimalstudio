@@ -10,7 +10,7 @@ const { width = "container-wide" } = Astro.props;
 <section x-data="{ atTop: true }" class="w-full">
   <!-- Alpine.js initializes data properties for the component. `atTop` determines if the page is scrolled past a certain point. -->
   <div
-    class="fixed z-50 px-4 py-2 transition-all duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 transform mx-auto"
+    class="fixed z-50 px-4 py-2 transition-all duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 transform md:mx-auto"
     :class="{ 'bg-black bg-opacity-90 backdrop-blur-xl max-w-2xl mx-4': !atTop, 'max-w-7xl': atTop }"
     @scroll.window="atTop = (window.pageYOffset > 50 ? false : true)"
   >
@@ -74,7 +74,7 @@ const { width = "container-wide" } = Astro.props;
             <a
               href={item.link}
               class="py-2 w-auto px-4 border-1 h-8 focus:ring-2 rounded-full  duration-300 focus:ring-offset-2 inline-flex items-center justify-center ring-2 focus:ring-black ring-transparent"
-              :class="{ 'border-black bg-black hover:bg-white text-white hover:text-black': atTop, 'border-white bg-white hover:bg-black text-black hover:text-white': !atTop }"
+              :class="{ 'border-black bg-black hover:bg-white text-white hover:text-black': atTop, 'border-white bg-white hover:border-primary hover:bg-primary text-black hover:text-white': !atTop }"
 
             >
               {item.title}

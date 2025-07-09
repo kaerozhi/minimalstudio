@@ -9,6 +9,7 @@ tags:
   - 游戏
   - Banner
 description: Launch Party Start!
+visit: https://teamfighttactics.leagueoflegends.com/
 photos:
   - 'https://media.kaerozhi.com/2025/06/7b3f082a54e9a14f2f632c3711460992.webp'
 ---

@@ -12,9 +12,10 @@ Hello~
 - 支持动态路由，请定位至 `/src/content/config.ts` 自定义版面设置，一般保留 blog 即可。
 - 支持 collection / category / tag，功能互有重叠，请自行采用。
 - 支持相关文章。
-- 支持 [Giscus](https://giscus.app/) 评论。
-- 支持 TOC。
-- 图片显示说明文字。
+- 内置 [Giscus](https://giscus.app/) 评论。
+- 内置 TOC 支持。
+- 默认显示 Makrdown 图片的说明文字。
+- 内置 Alpine.js。
 
 ## CSS 相关文件
 

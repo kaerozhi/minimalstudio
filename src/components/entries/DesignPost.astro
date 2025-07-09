@@ -1,0 +1,28 @@
+---
+import { formatYear } from '@/utils/format';
+import { slugify } from '@/utils/slugify';
+
+const { post } = Astro.props;
+---
+<article class="group">
+  <div class="w-full">
+    <a href={`/design/${post.slug}`}>
+      <img src={post.data.photos[0]} class="group-hover:drop-shadow-2xl group-hover:brightness-110 will-change-auto duration-300 rounded-xl" />
+    </a>
+  </div>
+  <div class="mt-4">
+    <h2 class="text-xl font-bold tracking-tight">
+      <a href={`/design/${post.slug}`}>{post.data.title}</a>
+    </h2>
+    <div class="mt-2 text-sm text-text-default/60">
+      <time>{formatYear(post.data.date)}</time> - 
+      {
+        post.data.categories.map((category) => (
+          <span class="mr-1">
+            <a href={`/category/${slugify(category)}`} class="text-current uppercase">{category}</a>
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</article>

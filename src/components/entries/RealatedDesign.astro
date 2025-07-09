@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import { slugify } from '@/utils/slugify';
+import DesignPost from '@/components/entries/DesignPost.astro';
+
+const { collection, slug } = Astro.props;
+
+// 获取所有文章
+const allPosts = await getCollection(collection);
+
+// 当前文章
+const currentEntry = allPosts.find(post => post.slug === slug);
+const currentTags = (currentEntry?.data.tags || []).map(slugify);
+
+// 相关文章筛选逻辑
+const relatedPosts = allPosts
+  .filter(post => post.slug !== slug)
+  .filter(post => {
+    const tags = (post.data.tags || []).map(slugify);
+
+    return tags.some(tag => currentTags.includes(tag));
+  })
+  .filter((entry) => entry.data.draft !== true)
+  .slice(0, 3);
+---
+
+{relatedPosts.length > 0 && (
+  <section class="related-posts mt-12">
+    <h2 class="text-2xl font-bold mb-8">你可能感兴趣 —</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {relatedPosts.map(post => {
+        const cover = post.data.photos?.[0] || null;
+        return (
+          <DesignPost post={post} />
+        );
+      })}
+    </div>
+  </section>
+)}

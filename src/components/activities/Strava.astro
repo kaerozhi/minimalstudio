@@ -17,7 +17,7 @@ const script = `<script>
     <label class="absolute z-10 top-6 left-6 rounded-full bg-white/75 text-black text-xs py-1 px-4">最近一次骑行</label>
     <div id="map" class="absolute z-5 inset-0 absolute w-full aspect-4/3"></div>
   </div>
-  <h2 class="text-xl font-semibold text-zinc-700">{activity.name}</h2>
+  <h2 class="text-lg font-semibold text-zinc-700">{activity.name}</h2>
   <p class="text-sm text-zinc-400 mt-1 mb-4">{formatDateV2(activity.start_date_local)} | {(activity.distance / 1000).toFixed(2)} KM | {Math.floor(activity.moving_time / 60)} mins</p>
   <div class="hidden" set:html={script}></div>
 </div>

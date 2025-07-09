@@ -17,6 +17,9 @@
   --color-text-default: var(--color-text-default);
   --color-text-muted: var(--color-text-muted);
 
+  --color-bg-page: var(--color-bg-page);
+  --color-bg-page-dark: var(--color-bg-page-dark);
+
   --color-base-50: oklch(96.74% 0.001 286.38);
   --color-base-100: oklch(93.73% 0.001 286.37);
   --color-base-200: oklch(87.31% 0.004 271.36);
@@ -34,7 +37,8 @@
   @apply relative w-screen mx-auto px-6;
 }
 
-.container-wide {
+.container-wide,
+.container-gallery {
   @apply relative 2xl:max-w-screen-xl mx-auto px-6;
 }
 
@@ -42,7 +46,8 @@
   @apply w-full mx-auto px-0;
 }
 
-.container-wide > .prose {
+.container-wide > .prose,
+.container-gallery > .prose {
   max-width: unset !important;
 }
 

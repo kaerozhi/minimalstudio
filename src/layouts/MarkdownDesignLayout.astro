@@ -1,0 +1,85 @@
+---
+import { formatDate } from "@/utils/format";
+import { slugify } from "@/utils/slugify";
+import BaseLayout from "./BaseLayout.astro";
+import RelatedDesign from '@/components/entries/RealatedDesign.astro';
+
+const { entry, collection, toc, headings } = Astro.props;
+---
+<BaseLayout title={entry.data.title}>
+  <link rel="stylesheet" href="/src/styles/entry.css">
+
+  <article class="container-gallery mt-32">
+    <div class="text-center">
+      <div class="text-text-muted uppercase text-sm">
+        <time>{formatDate(entry.data.date)}</time> - 
+        {
+          entry.data.categories.map((category) => (
+            <span class="text-text-default mr-1 font-semibold">
+              <a href={`/category/${slugify(category)}`}>{category}</a>
+            </span>
+          ))
+        }
+      </div>
+      <h1 class="text-4xl md:w-3/5 mx-auto md:text-6xl/16 font-serif first-line:font-sans first-line:font-semibold text-text-heading font-medium my-6 tracking-tight">
+          {entry.data.title}
+      </h1>
+      <p class="text-lg mx-auto mb-10 text-text-default/60">
+          {entry.data.description}
+      </p>
+
+      { (entry.data.photos) &&
+      <div class="alignfull aspect-16/9 overflow-hidden rounded-xl">
+        {(entry.data.photos) &&
+        <img 
+            src={entry.data.photos[0]}
+            alt={entry.data.title}
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+        />
+        }
+      </div>
+      }
+
+      <div class="flex justify-between items-center mt-2 text-left">
+        <p class="text-text-default/75">
+          Client:
+          <span class="font-semibold">{entry.data.client}</span>
+        </p>
+
+        {(entry.data.visit) && 
+          <a 
+            href={entry.data.visit} 
+            class="inline-flex w-35 border border-current mt-2 py-1 px-4 rounded-full relative group">
+            访问该项目
+            <span class="stroke-current absolute top-0 -z-5 right-0 h-7 w-27 rounded-full flex justify-end items-center m-[2px] group-hover:aspect-square group-hover:h-7 group-hover:stroke-white group-hover:w-7 group-hover:bg-primary will-change-auto duration-300">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mr-[5px]" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 8H14M14 8L9 3M14 8L9 13" stroke-width="1.5"></path>
+              </svg>
+            </span>
+          </a>
+        }
+      </div>
+    </div>
+    
+    <div
+      class="entry mt-12 mx-auto text-lg/7 prose text-text-default  prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+      <slot />
+    </div>
+      
+    <div>
+      <div class="flex gap-3 pb-4 mt-12 border-b border-zinc-300">
+        {
+          entry.data.tags.map((tag) => (
+            <span class="inline-flex items-center uppercase text-sm text-text-default/75">
+              <a href={`/tags/${slugify(tag)}`}>{tag}</a>
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- 相关文章 -->
+    <RelatedDesign collection={collection} slug={entry.slug} />
+  </article>
+</BaseLayout>
