@@ -13,9 +13,6 @@ export default defineConfig({
   },
   // Add your domain name here
   integrations: [ sitemap()],  
-  image: {
-    domains: ["media.kaerozhi.com"],
-  },
   markdown: {
     rehypePlugins: [
       [

@@ -10,6 +10,8 @@ tags:
 description: 别有所长「駄目玉」
 photos:
   - 'https://media.kaerozhi.com/2025/06/e3ff8b8ae073742ad9edbbe4a1a9fb53.png'
+  - 'https://media.kaerozhi.com/2025/06/c0031047b366c57f099509de162bd793.png'
+  - 'https://media.kaerozhi.com/2025/06/a3a0aae6c3139fa47cbeadea0063741d.png'
 ---
 这是一只非常小巧的镜头，只有 155g，作为对比，柯尼卡的小剃刀是 138.5g。不但重量轻，而且口径小，只有 47mm，所以特别配微单，装在诡称为「微单」的巨单上反而不太协调。
 

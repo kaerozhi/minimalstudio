@@ -2,7 +2,7 @@
 import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/slugify";
 import BaseLayout from "./BaseLayout.astro";
-import Cover from "@/components/entries/CoverPlus.astro";
+import Cover from "@/components/entries/Cover.astro";
 import RelatedDesign from '@/components/entries/RealatedDesign.astro';
 
 const { entry, collection, toc, headings } = Astro.props;
@@ -29,9 +29,11 @@ const { entry, collection, toc, headings } = Astro.props;
           {entry.data.description}
       </p>
 
-      {entry.data.photos?.[0] && (
-        <Cover photos={entry.data.photos} ratio="16/9" title={entry.data.title}></Cover>
-      )}
+      <div class="rounded-xl overflow-hidden">
+        {entry.data.photos?.[0] && (
+          <Cover photos={entry.data.photos} ratio="16/9" title={entry.data.title}></Cover>
+        )}
+      </div>
 
       <div class="flex justify-between items-center mt-2 text-left">
         <p class="text-text-default/75">

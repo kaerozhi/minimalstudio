@@ -9,6 +9,7 @@ tags:
   - 端午节
 photos:
   - 'https://media.kaerozhi.com/2025/06/6e8e641ca17e0b286fa30a72f8e3a5cc.png'
+video: 'https://media.kaerozhi.com/north-shantang.mp4'
 ---
 端午节下午，天气阴沉，气象局早几天就说暴雨即将来袭，吃完饭，看了看天色，查手机要三点才下雨，趁着还早，骑小电驴去山塘街北段溜了一圈。  
 

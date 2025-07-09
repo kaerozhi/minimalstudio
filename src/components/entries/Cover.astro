@@ -2,12 +2,12 @@
 const { photos, title, ratio } = Astro.props;
 
 // 合成 Tailwind 样式比例类（如 aspect-16/9）
-const coverRatio = ratio ? `aspect-${ratio}` : "aspect-video"; // 设置默认值
+const coverRatio = ratio ? `aspect-${ratio}` : "aspect-16/9"; // 设置默认值
 const cover = Array.isArray(photos) ? photos[0] : null;
 ---
 
-{cover && (
-  <div class={`alignfull overflow-hidden rounded-xl ${coverRatio} group-hover:drop-shadow-2xl duration-300 will-change-auto`}>
+{cover.length && (
+  <div class={`alignfull overflow-hidden ${coverRatio}`}>
     <img 
       src={cover}
       alt={title}
