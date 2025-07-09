@@ -4,35 +4,31 @@ import MarkdownDesignLayout from '@/layouts/MarkdownDesignLayout.astro';
 
 export const prerender = true;
 
-export async function getStaticPaths() {
-  const paths = [];
+const collection = 'design'; // 🔧 固定为 'design'
 
-  const entries = await getCollection("design");
-  for (const entry of entries) {
-    paths.push({
-      params: {
-        collection,
-        slug: entry.slug,
-      },
-      props: {
-        collection,
-        slug: entry.slug,
-      },
-    });
-  }
+export async function getStaticPaths() {  
+  const collection = 'design';
+  const entries = await getCollection(collection);
 
-  return paths;
+  return entries.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      slug: entry.slug,
+    },
+  }));
 }
 
-const { collection, slug } = Astro.props;
+const { slug } = Astro.props;
 
 const entry = await getEntry(collection, slug);
 if (!entry) throw new Error(`未找到 ${collection}/${slug}`);
 
 const toc = entry?.data.toc;
-
 const { Content, headings } = await entry.render();
 ---
+
 <MarkdownDesignLayout entry={entry} collection={collection} toc={toc} headings={headings}>
   <Content />
 </MarkdownDesignLayout>

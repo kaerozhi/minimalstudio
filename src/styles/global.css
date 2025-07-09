@@ -42,7 +42,8 @@
   @apply relative 2xl:max-w-screen-xl mx-auto px-6;
 }
 
-.container-wide > * {
+.container-wide > *,
+.container-gallery > * {
   @apply w-full mx-auto px-0;
 }
 

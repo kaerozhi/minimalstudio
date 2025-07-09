@@ -1,0 +1,47 @@
+---
+const { photos = [], title = '', ratio = '16/9', video = '' } = Astro.props;
+
+// 动态比例类名
+const aspectClass = `aspect-${ratio}`;
+const defaultImage = '/assets/z-in-black.svg';
+const hasVideo = Boolean(video);
+const coverImage = photos[0] || defaultImage;
+---
+
+<div class={`alignfull overflow-hidden rounded-xl relative ${aspectClass} group-hover:drop-shadow-2xl duration-300 will-change-auto`}>
+  {hasVideo ? (
+    <video
+      class="w-full h-full object-cover"
+      src={video}
+      poster={coverImage}
+      autoplay
+      muted
+      loop
+      playsinline
+    />
+  ) : (
+    <div class="w-full h-full relative">
+      {photos.length > 1 ? (
+        <div class="absolute inset-0 w-full h-full swiper">
+          {photos.map((photo, index) => (
+            <div class="swiper-slide w-full h-full">
+              <img
+                src={photo}
+                alt={title || `封面图 ${index + 1}`}
+                class="w-full h-full object-cover object-center group-hover:scale-105 duration-300 will-change-auto"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <img
+          src={coverImage}
+          alt={title}
+          class="w-full h-full object-cover object-center group-hover:scale-105 duration-300 will-change-auto"
+          loading="lazy"
+        />
+      )}
+    </div>
+  )}
+</div>
