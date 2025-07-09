@@ -60,7 +60,6 @@ export const GET: APIRoute = async () => {
       'https://www.douban.com/feed/people/2237229/interests'
     );
     const latest = feed.items?.[0];
-    console.log(latest);
 
     if (!latest) throw new Error('No entries found');
 

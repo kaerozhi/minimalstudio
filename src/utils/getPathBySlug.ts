@@ -8,7 +8,6 @@ export async function getPathBySlug(slug: string) {
     const posts = await getCollection(collection);
     const matched = posts.find(post => post.slug === slug);
     if (matched) {
-      console.log(`/${collection}/${matched.slug}`);
       return `/${collection}/${matched.slug}`;
     }
   }
