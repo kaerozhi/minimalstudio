@@ -1,7 +1,7 @@
 ---
 import "@/styles/strava.css";
 import { formatDateV2 } from "@/utils/format";
-const baseUrl = import.meta.env.PUBLIC_BASE_URL || 'http://localhost:4321';
+const baseUrl = import.meta.env.PUBLIC_BASE_URL || 'https://kaerozhi.com';
 const res = await fetch(`${baseUrl}/api/strava`);
 const activity = await res.json();
 
