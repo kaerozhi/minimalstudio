@@ -13,7 +13,7 @@ export const prerender = true;
 
 // Astro 需要在函数内部重新定义
 export async function getStaticPaths() {
-  const collectionNames = ["gallery", "writings", "travels", "blog"];
+  const collectionNames = ["writings", "travels", "blog"];
 
   return collectionNames.map((collection) => ({
     params: { collection },
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const collection = Astro.url.pathname.split('/')[1];
 
 // 再定义一次（页面运行时才需要）
-const collectionNames = ["gallery", "writings", "travels", "blog"];
+const collectionNames = ["writings", "travels", "blog"];
 
 if (!collectionNames.includes(collection)) {
   throw new Error(`Collection "${collection}" 不存在于 content/config.ts`);

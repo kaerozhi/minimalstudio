@@ -1,9 +1,10 @@
 ---
-const { photos, title, ratio } = Astro.props;
+const { photos, title, ratio, object } = Astro.props;
 
 // 合成 Tailwind 样式比例类（如 aspect-16/9）
 const coverRatio = ratio ? `aspect-${ratio}` : "aspect-16/9"; // 设置默认值
 const cover = Array.isArray(photos) ? photos[0] : null;
+const objectFit = object ? `object-${object}` : "object-cover";
 ---
 
 {cover.length && (
@@ -11,7 +12,7 @@ const cover = Array.isArray(photos) ? photos[0] : null;
     <img 
       src={cover}
       alt={title}
-      class="w-full h-full object-cover object-center group-hover:scale-105 duration-300 will-change-auto"
+      class={`w-full h-full ${objectFit} object-center group-hover:scale-105 duration-300 will-change-auto`}
       loading="eager"
     />
   </div>

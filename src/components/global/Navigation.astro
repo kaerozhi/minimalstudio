@@ -69,7 +69,7 @@ const { width = "container-wide" } = Astro.props;
         x-transition:leave="transition-all duration-200"
         x-transition:leave-start="opacity-100 scale-100"
         x-transition:leave-end="opacity-0 scale-95"
-        class="flex-col flex-grow gap-4 md:flex-row pb-4 md:pb-0 md:flex justify-end items-center text-sm"
+        class="flex-col flex-grow gap-4 md:flex-row pb-4 md:pb-0 hidden md:flex justify-end items-center text-sm"
         :class="{ 'flex': open || window.innerWidth >= 768, 'hidden': !open && window.innerWidth < 768 }"
       >
         {

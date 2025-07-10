@@ -1,8 +1,8 @@
 ---
-title: 桃子
+title: Taozi
 date: 2025-06-24T23:20:00.000Z
 categories:
-  - 人像
+  - Portrait
 tags:
   - Girl
   - 深圳

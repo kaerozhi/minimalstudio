@@ -12,7 +12,6 @@ description: QQ 飞车2024亚洲杯赛事包装概念稿
 photos:
   - 'https://media.kaerozhi.com/2025/06/7cef48119db1f54c382cf07a02d54292.webp'
 ---
-![](https://media.kaerozhi.com/2025/06/7cef48119db1f54c382cf07a02d54292.webp)
 ![](https://media.kaerozhi.com/2025/06/a8f71ba063c7242baf4e03732765b1c5.webp)
 ![](https://media.kaerozhi.com/2025/06/8cc257f020116ea3b1ca1cc57e092b5c.webp)
 ![](https://media.kaerozhi.com/2025/06/3e7afe941d6c5016fb6d311a60fd6c6e.webp)

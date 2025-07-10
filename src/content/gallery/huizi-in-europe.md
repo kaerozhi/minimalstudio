@@ -1,9 +1,9 @@
 ---
-title: 慧子
+title: Huizi
 date: 2013-10-27T10:20:00.000Z
 categories:
-  - 旅行
-  - 人像
+  - Portrait
+  - Travels
 tags:
   - 欧洲
 photos:

@@ -1,10 +1,10 @@
 ---
-title: 小白
+title: Mr.Bai
 date: 2025-06-24T23:20:00.000Z
 categories:
-  - 人像
-tags:
+  - Portrait
   - Studio Portrait
+tags:
   - 深圳
 photos:
   - 'https://media.kaerozhi.com/2025/06/1c0cc24cf614f9e89a1af9036711e251.jpg'

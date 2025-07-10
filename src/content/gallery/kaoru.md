@@ -1,8 +1,8 @@
 ---
-title: 陶小婧
+title: Kaoru
 date: 2025-06-24T23:20:00.000Z
 categories:
-  - 人像
+  - Portrait
 tags:
   - 深圳
 photos:

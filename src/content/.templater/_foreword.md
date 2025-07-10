@@ -1,5 +1,0 @@
-<div class="foreword">
-
-
-
-</div>

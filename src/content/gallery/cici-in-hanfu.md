@@ -1,9 +1,9 @@
 ---
-title: 桃子
+title: Cici
 date: 2018-03-24T12:20:00.000Z
 categories:
-  - 古风
-  - 人像
+  - Costume
+  - Portrait
 tags:
   - 深圳
   - 汉服

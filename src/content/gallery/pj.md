@@ -2,7 +2,7 @@
 title: "PJ"
 date: 2015-01-25T09:20:00.000Z
 categories:
-  - 人像
+  - Portrait
 tags:
   - Studio Portrait
   - 剧照

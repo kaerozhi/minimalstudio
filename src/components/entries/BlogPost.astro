@@ -4,11 +4,11 @@ const { title, href, description, date, category } = Astro.props;
 
 const dateFormated = formatDate(date);
 ---
-<article class="py-8 border-b grid grid-cols-1 md:grid-cols-4 items-center gap-2 border-zinc-300">
+<article class="py-8 border-b first:border-t grid grid-cols-1 md:grid-cols-4 items-center gap-2 border-zinc-300">
     <time class="col-span-1 text-sm text-zinc-700">{dateFormated}</time>
     <div class="col-span-3">
         <h2 class="font-bold text-xl">
-            <a class="" href={href}>{title}
+            <a href={href}>{title}
             </a>
         </h2>
         {(description) &&

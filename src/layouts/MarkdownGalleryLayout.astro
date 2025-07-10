@@ -1,46 +1,58 @@
 ---
+import { formatDate } from "@/utils/format";
+import { slugify } from "@/utils/slugify";
 import BaseLayout from "./BaseLayout.astro";
-const { frontmatter } = Astro.props;
----
+import Cover from "@/components/entries/Cover.astro";
+import RelatedDesign from '@/components/entries/RealatedDesign.astro';
+import "@/styles/entry.css";
 
-<BaseLayout>
-  <section>
-    <div class="relative h-screen max-w-screen">
-        <img
-          class="absolute inset-0 w-full h-full object-cover brightness-60"
-          src={frontmatter.image.url}
-          alt={frontmatter.image.alt} 
-        />
-        <div class="absolute inset-0 flex flex-col max-w-7xl px-8 mx-auto items-center justify-center">
-          <h1 class="text-8xl text-white uppercase font-thin">{frontmatter.title}</h1>
-          <p class="text-2xl text-white mt-4">{frontmatter.description}</p>
-        </div>          
-        <div class="absolute inset-0 bottom-4 max-w-7xl px-8 mx-auto flex flex-col items-center justify-end">
-          <div class="flex flex-col w-full mx-auto md:items-center md:justify-between md:flex-row">
-            <p class="text-xs text-white">
-              {
-                frontmatter.author
-              } 发表于 {frontmatter.pubDate.toString().slice(0, 10)} 
-            </p>
-            <div class="flex gap-3">
-              {
-                frontmatter.tags.map((tag) => (
-                  <span class="inline-flex items-center uppercase hover:text-blue-500   text-xs font-medium text-white">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                  </span>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="px-8 py-12 md:px-12 mx-auto lg:pt-24 max-w-7xl lg:px-32">
-      <div class="mt-12 max-w-2xl mx-auto">
-        <div
-          class="text-sm prose text-neutral-600 prose-a:font-normal prose-a:text-blue-400 hover:prose-a:text-black prose-h1:text-black prose-img:border-2 prose-img:bg-neutral-50 prose-img:border-transparent prose-h2:text-black prose-h2:font-semibold prose-p:text-sm prose-pre:font-mono max-w-none prose-pre:rounded-none prose-headings:font-display">
-          <slot />
-        </div>
+const { entry, collection, toc, headings } = Astro.props;
+---
+<BaseLayout title={entry.data.title}>
+  <article class="container-gallery mt-32">
+    <div class="text-center">
+      <div class="text-text-muted uppercase text-sm">
+        <time>{formatDate(entry.data.date)}</time> - 
+        {
+          entry.data.categories.map((category) => (
+            <span class="text-text-default mr-1 font-semibold">
+              <a href={`/category/${slugify(category)}`}>{category}</a>
+            </span>
+          ))
+        }
+      </div>
+      <h1 class="text-4xl md:w-3/5 mx-auto md:text-6xl/16 font-serif first-line:font-sans first-line:font-semibold text-text-heading font-medium my-6 tracking-tight">
+          {entry.data.title}
+      </h1>
+      <p class="text-lg mx-auto mb-10 text-text-default/60">
+          {entry.data.description}
+      </p>
+
+      <div class="rounded-xl overflow-hidden">
+        {entry.data.photos?.[0] && (
+          <Cover photos={entry.data.photos} ratio="auto" title={entry.data.title}></Cover>
+        )}
       </div>
     </div>
-  </section>
+    
+    <div
+      class="entry mt-12 mx-auto text-lg/7 prose text-text-default  prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+      <slot />
+    </div>
+      
+    <div>
+      <div class="flex gap-3 pb-4 mt-12 border-b border-zinc-300">
+        {
+          entry.data.tags.map((tag) => (
+            <span class="inline-flex items-center uppercase text-sm text-text-default/75">
+              <a href={`/tags/${slugify(tag)}`}>{tag}</a>
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- 相关文章 -->
+    <RelatedDesign collection={collection} slug={entry.slug} />
+  </article>
 </BaseLayout>
