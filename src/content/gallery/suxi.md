@@ -1,6 +1,8 @@
 ---
 title: Suxi
 date: 2013-04-06
+categories:
+  - Portrait
 tags:
   - 人像
   - 深圳

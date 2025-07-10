@@ -2,6 +2,7 @@
 title: 养龟记
 date: 2025-07-10T11:56:00.000Z
 description: "本来招聘的是鱼缸清洁工，没想到请了两位大爷。"
+draft: true
 categories:
   - Life
 tags:
