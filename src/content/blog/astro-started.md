@@ -134,3 +134,56 @@ Minimal Studio 除了一个设计框架，那真是一穷二白要啥没啥，�
 - [ ] 移动端兼容性全面检查
 
 看看七月底能不能全部完工，加油！
+
+## 部署到网络
+
+部署到网络需要提前安装适配器。注意，通常来说，Astro 只能部署到一个平台，如果配置的是 Cloudflare 的适配器，那在 Vercel 上是无法成功编译的，当然也有麻烦一点的办法可以解决这个问题。
+
+Astro 提供了非常详细的部署指南：
+
+- [部署你的 Astro 站点至 Cloudflare](https://docs.astro.build/zh-cn/guides/deploy/cloudflare/)
+- [部署你的 Astro 站点至 Vercel](https://docs.astro.build/zh-cn/guides/deploy/vercel/)
+
+我是按照以下步骤部署的：
+
+1. 安装对应的适配器，此处以 Vercel 为例：
+```bash
+npx astro add vercel
+```
+
+   修改 `astro.config.mjs`，指定适配器：
+   
+```javascript
+import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel';
+...
+export default defineConfig({  
+  output: 'server',
+  adapter: vercel(),
+  ...
+});
+```
+    
+2. 将代码推送到 Github。
+    
+3. 转到 Vercel 的项目管理界面，[导入你的项目](https://vercel.com/new) 至 Vercel。
+    
+4. Vercel 将自动检测 Astro 项目并自动为其配置正确的设置。
+    
+5. 部署完成！如果有独立域名，配置一下 DNS 替换 Vercel 的二级域名即可。
+
+一开始我想部署到 Cloudflare，但折腾了很久都莫名其妙不成功，编译时间长达 20m+，最后一次显示部署成功了，然而打开还是报错 `ERROR 522`，实在是没有办法了，只好试试 Vercel，结果一次就成功了，编译只花了45s。
+
+我能说什么呢？
+
+## 一些要注意的点
+
+成功部署到 Vercel 发现一些在本地预览时不会出现的小问题。
+
+1. 用 `<img src="/assets/logo.svg" />` 形式引用的 SVG 文件，在 Vercel 上不能正常显示，还是得直接写入代码。
+    
+2. 在 `.astro` 文件中引用 CSS 文件，`<link rel="stylesheet" href="xxx.css" />` 是不会生效的，要 `import "@/styles/xxx.css"` 才行。
+    
+3. 我在 `/src/content/config.ts` 配置了所有的版面，然后通过`/src/pages/[collection]/index.astro` 读取这些版面并动态路由。然后单独设计了「[设计](/design)」版面的样式，单独写了 `/src/pages/design/index.astro` 接管这部分的动态路由。
+   
+   如此，在本地自然显示正常，因为单独配置的动态路由比 `[collection]` 的全局路由优先级更高。但部署至 Vercel 之后，发现全部版面都是通用样式，设计的单独样式并没有生效，只好在 `/src/pages/[collection]/index.astro` 手动删除了 `design`，不知道是怎么回事，回头有空再研究一下。
