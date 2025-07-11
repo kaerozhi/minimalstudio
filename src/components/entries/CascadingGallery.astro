@@ -1,0 +1,26 @@
+---
+// props: images: string[]
+const { images = [] } = Astro.props;
+
+// 随机 span/offset 类
+function randomClass() {
+  const cols = ["col-span-4", "col-span-6", "col-span-6", "col-span-12", ];
+  const rows = ["row-span-1", "row-span-1", "row-span-1"];
+  const offsets = ["", "pt-12", "pb-12", "pl-12", "pr-12"];
+  return `${cols[Math.floor(Math.random() * cols.length)]} ${rows[Math.floor(Math.random() * rows.length)]} ${offsets[Math.floor(Math.random() * offsets.length)]}`;
+}
+---
+
+<div class="grid grid-cols-12 gap-24">
+  {
+    images.map((src) => (
+      <div class={`relative ${randomClass()}`}>
+        <img
+          src={src}
+          loading="lazy"
+          class="w-full h-full object-contain transition-transform duration-300 hover:scale-105 rounded-xl"
+        />
+      </div>
+    ))
+  }
+</div>

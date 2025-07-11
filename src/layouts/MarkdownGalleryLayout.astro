@@ -1,12 +1,17 @@
 ---
 import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/slugify";
+import { extractMarkdownImages } from "@/utils/extractImages";
 import BaseLayout from "./BaseLayout.astro";
 import Cover from "@/components/entries/Cover.astro";
 import RelatedDesign from '@/components/entries/RealatedDesign.astro';
 import "@/styles/entry.css";
 
 const { entry, collection, toc, headings } = Astro.props;
+
+let allImages: string[] = [];
+const images = extractMarkdownImages(entry.body);
+allImages = [...allImages, ...images];
 ---
 <BaseLayout title={entry.data.title}>
   <article class="container-gallery mt-32">

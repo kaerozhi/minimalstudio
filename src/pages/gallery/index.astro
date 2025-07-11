@@ -21,7 +21,7 @@ const perPage = config.content.postsPerPage || 10;
 const totalPages = Math.ceil(visibleEntries.length / perPage);
 const posts = visibleEntries.slice(0, perPage);
 ---
-<BaseLayout title="蛙夏设计 Waxa Studio">
+<BaseLayout title="蛙夏影像 Waxa pictures">
   <section class="max-w-7xl mx-auto px-8">
     <div class="mt-32"></div>
     <div class="grid grid-cols-4 md:grid-cols-12 gap-8 mb-8 place-items-end">
@@ -29,7 +29,7 @@ const posts = visibleEntries.slice(0, perPage);
         <h1 class="text-4xl text-[5rem]/18 md:text-[10rem]/32 uppercase text-text-heading font-bold tracking-tighter md:-mb-22">
             Filming      
             <sup class="font-serif text-[0.28em] tracking-normal align-middle text-text-heading/50">the</sup>RAW
-            beauty<span class="text-primary/75">.</span>
+            beauty<span class="text-secondary/75">.</span>
             <span class="block text-3xl font-normal mt-3 font-serif tracking-wide">
             RAW 之力 ⏤
             <br />
@@ -37,14 +37,14 @@ const posts = visibleEntries.slice(0, perPage);
             </span>
         </h1>
       </div>
-      <div class="col-span-4 md:col-span-3 md:col-start-9 text-text-default">
+      <div class="col-span-4 md:col-span-3 md:col-start-9 text-text-default/75">
         Do you know RAW? It's the original master file of photos. I always shooting RAW, And I believe everyone has their own unique raw beauty.
         <br />
         <a 
           href="/about" 
-          class="inline-flex w-30 border border-current mt-2 py-1 px-4 rounded-full relative group">
+          class="inline-flex w-30 border border-current hover:border-text-heading hover:text-text-heading hover:font-semibold mt-2 py-1 px-4 rounded-full relative group">
           预约拍摄
-          <span class="stroke-current absolute top-0 -z-5 right-0 h-7 w-27 rounded-full flex justify-end items-center m-[2px] group-hover:aspect-square group-hover:h-7 group-hover:stroke-white group-hover:w-7 group-hover:bg-primary will-change-auto duration-300">
+          <span class="stroke-current absolute top-0 -z-5 right-0 h-7 w-7 rounded-full flex justify-end items-center m-[2px] group-hover:aspect-square group-hover:h-7 group-hover:stroke-white group-hover:w-7 group-hover:bg-primary will-change-auto duration-300">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mr-[5px]" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 8H14M14 8L9 3M14 8L9 13" stroke-width="1.5"></path>
             </svg>
@@ -54,15 +54,15 @@ const posts = visibleEntries.slice(0, perPage);
       <div class="col-span-4 md:col-start-9 text-xl/8 font-medium text-text-default">
         你知道 RAW 吗？它是照片的原始母版，保存着所有未经处理的视觉信息。我偏爱拍 RAW，因为它捕捉最还原的画面，一如每个人都蕴藏着自己的 "本真之美"。
       </div>
-      <div class="col-span-4 w-full h-full flex items-end text-xl md:text-2xl md:mt-16 md:-mb-90 z-10">
+      <div class="col-span-4 w-full h-full flex items-end text-xl md:text-2xl md:-mt-8 md:-mb-32 z-10">
         <Categories collection="gallery" direction="col"></Categories>
       </div>
     </div>
   </section>
 
-  <section class="max-w-2xl mx-auto mt-12 px-8 md:px-0">
+  <section class="max-w-7xl mx-auto mt-12 px-8">
     <div>
-      <div class="mt-12 grid grid-cols-1 gap-8 place-content-between">
+      <div class="mt-12 grid grid-cols-12 gap-8 place-content-between">
         {posts.map((post, index) => (
           <GalleryPost post={post} />
         ))}
