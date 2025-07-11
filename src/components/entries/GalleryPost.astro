@@ -13,22 +13,13 @@ function randomClass() {
 }
 ---
 <article class={`group col-span-12 ${randomClass()}`}>
-  <div class="relative rounded-xl overflow-hidden" x-data="{ loaded: false }">
+  <div class="relative rounded-xl overflow-hidden">
     <a href={`/gallery/${post.slug}`}>
       {post.data.photos.map( photo =>
-        <!-- 加载中状态动画 -->
-        <div
-          x-show="!loaded"
-          class="absolute inset-0 flex items-center justify-center rounded-xl bg-gray-200 animate-pulse z-0"
-        >
-          <span class="text-sm text-gray-400">加载中...</span>
-        </div>
         <img
           src={photo} 
           loading="lazy"
           class="w-full h-full object-cover transition-opacity duration-500 z-10"
-          :class="{ 'opacity-0': !loaded, 'opacity-100': loaded }"
-          @load="loaded = true"
         />
       )}
     </a>
