@@ -132,6 +132,10 @@ export const GET: APIRoute = async ({ request }) => {
 
 点击授权之后，应该能看到「*Token 已保存，授权成功！*」的消息，如果看到的是 `missing code status: 400`，一般就是前文提及的原因，没有设置 `output: 'server'`。
 
+### 2025.07.13 更新
+
+把 Astro 部署在 Vercel 上面之后发现，把 Token 保存在 `strva-token.json` 是无法正常运作的，因为 Vercel 没有开通读写文件的权限。最后绕了个圈，在 [Supabase](https://supabase.com/) 上面建了个数据库才解决，供参考。
+
 ## 第三步：获取 Strava 数据
 
 `strava.ts` 代码：
