@@ -20,6 +20,7 @@
     "@fontsource-variable/playfair-display": "^5.2.6",
     "@fontsource-variable/rokkitt": "^5.2.6",
     "@mapbox/polyline": "^1.2.1",
+    "@supabase/supabase-js": "^2.50.5",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "astro": "^5.10.0",

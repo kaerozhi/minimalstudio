@@ -1,15 +1,11 @@
-// src/pages/api/strava-callback.ts
 import type { APIRoute } from 'astro';
-import fs from 'fs/promises';
-import path from 'path';
+import supabase from '@/lib/supabase';
 
 export const GET: APIRoute = async ({ request }) => {
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
 
-  if (!code) {
-    return new Response('Missing code', { status: 400 });
-  }
+  if (!code) return new Response('Missing code', { status: 400 });
 
   const res = await fetch('https://www.strava.com/oauth/token', {
     method: 'POST',
@@ -24,13 +20,15 @@ export const GET: APIRoute = async ({ request }) => {
 
   const data = await res.json();
 
-  // 保存到本地文件
-  const tokenFile = path.resolve('./strava-tokens.json');
-  await fs.writeFile(tokenFile, JSON.stringify({
+  if (!data.access_token) {
+    return new Response('获取 token 失败', { status: 500 });
+  }
+
+  await supabase.from('strava_tokens').insert({
     access_token: data.access_token,
     refresh_token: data.refresh_token,
     expires_at: data.expires_at,
-  }, null, 2));
+  });
 
-  return new Response('✅ Token 已保存，授权成功！');
+  return new Response('✅ Token 已保存到 Supabase');
 };

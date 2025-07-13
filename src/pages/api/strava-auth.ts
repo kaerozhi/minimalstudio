@@ -1,4 +1,3 @@
-// src/pages/api/strava-auth.ts
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
@@ -10,7 +9,8 @@ export const GET: APIRoute = async () => {
     approval_prompt: 'force',
   });
 
-  const authUrl = `https://www.strava.com/oauth/authorize?${params.toString()}`;
-
-  return Response.redirect(authUrl, 302);
+  return Response.redirect(
+    `https://www.strava.com/oauth/authorize?${params.toString()}`,
+    302
+  );
 };
