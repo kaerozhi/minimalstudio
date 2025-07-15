@@ -21,16 +21,37 @@ nvidia-smi
 
 ![显卡驱动信息](https://media.kaerozhi.com/2025/07/abfe7c5e0873bed7f10f675827a2a247.webp)
 
-我的显卡是 4090，当然显卡驱动能安装的 CUDA 版本是 12.9 。但考虑到 PyTorch 还没有兼容 CUDA 12.9，我们转到 NVIDIA 的官方网站，下载 [12.8](https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local) 就好了。
+我的显卡是 4090，当前显卡驱动能安装的 CUDA 版本是 12.9 。但考虑到 PyTorch 还没有兼容 CUDA 12.9，我们转到 NVIDIA 的官方网站，下载 [12.8](https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local) 就好了。
 
 安装好 CUDA 12.8 之后，我们选择手动下载 PyTorch 的相关文件。打开 https://download.pytorch.org/whl/cu128 ，分别打开其中的 torch / torchaudio / torchvision / xformers，找到我们要下载的文件。
 
-如果您的配置和我一样，CUDA 版本是 12.8，Python 版本是 3.10，那可以直接点击下载下面的四个文件。如果配置和版本不一样，那就只能自己找对应的版本了，建议直接以关键词 `cu128` 来搜索。Torch 和其他三个包的对应关系请参考 [PyTorch中torch、torchvision、torchaudio、torchtext版本对应关系](https://blog.csdn.net/shiwanghualuo/article/details/122860521)，xformers 请参考 [最新xformers/CUDA/pytorch版本关系对照表](https://nuowa.net/487)，一定要严格对应，非对应版本无法安装。
+如果您的配置和我一样，CUDA 版本是 12.8，Python 版本是 3.10，那可以直接点击下载下面的四个文件。如果配置和版本不一样，那就只能自己找对应的版本了，建议直接以关键词 `cu128` 来搜索。
 
 - [torch-2.7.0+cu128-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu128/torch-2.7.0%2Bcu128-cp310-cp310-win_amd64.whl#sha256=c52c4b869742f00b12cb34521d1381be6119fa46244791704b00cc4a3cb06850)
 - [torchaudio-2.7.0+cu128-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu128/torchaudio-2.7.0%2Bcu128-cp310-cp310-win_amd64.whl#sha256=f96c2be8aff6c827e76fd3a85e69a54ba5b9a37090853ed886f056ddfbca09a4)
 - [torchvision-0.22.0+cu128-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu128/torchvision-0.22.0%2Bcu128-cp310-cp310-win_amd64.whl#sha256=cdd90b768b01b0d638cb06a6c211b550b275c0c207b5210b7cbb5cea8dde11db)
 - [xformers-0.0.30-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu126/xformers-0.0.30-cp310-cp310-win_amd64.whl)
+
+Torch 和其他三个包的对应关系请参考下面的表格，一定要严格对应，非对应版本无法安装。
+
+| Cuda              | torch | torchaudio | torchvision | xformers                          | Python        |
+| ----------------- | ----- | ---------- | ----------- | --------------------------------- | ------------- |
+| cu118,cu126,cu128 | 2.7.0 | 2.7.0      | 0.22.0      | v0.0.30                           | >=3.9, <=3.12 |
+| cu118,cu124,cu126 | 2.6.0 | 2.6.0      | 0.21.0      | v0.0.29.post3, v0.0.29.post2      | >=3.9, <=3.12 |
+| cu118,cu124,cu126 | 2.5.1 | 2.5.1      | 0.20.1      | 0.0.29.post1, 0.0.29,0.0.28.post3 | >=3.9, <=3.12 |
+| cu118,cu121,cu124 | 2.5.0 | 2.5.0      | 0.20.0      | 0.0.28.post2                      | >=3.9, <=3.12 |
+| cu118,cu121,cu124 | 2.4.1 | 2.4.1      | 0.19.1      | 0.0.28.post1                      | >=3.9, <=3.12 |
+| cu118,cu121,cu124 | 2.4.0 | 2.4.0      | 0.19.0      | 0.0.27.post2                      | >=3.8, <=3.12 |
+| cu118,cu121       | 2.3.1 | 2.3.1      | 0.18.1      | 0.0.27.post1                      | >=3.8, <=3.12 |
+| cu118,cu121       | 2.3.0 | 2.3.0      | 0.18.0      | 0.0.27                            | >=3.8, <=3.12 |
+| cu118,cu121       | 2.2.2 | 2.2.2      | 0.17.2      | 0.0.26                            | >=3.8, <=3.11 |
+| cu118,cu121       | 2.2.1 | 2.2.1      | 0.17.1      | 0.0.25                            | >=3.8, <=3.11 |
+| cu118,cu121       | 2.2.0 | 2.2.0      | 0.17.0      | 0.0.24                            | >=3.8, <=3.11 |
+| cu118,cu121       | 2.1.2 | 2.1.2      | 0.16.2      | 0.0.23                            | >=3.8, <=3.11 |
+| cu118,cu121       | 2.1.1 | 2.1.1      | 0.16.1      | 0.0.23                            | >=3.8, <=3.11 |
+| cu118,cu121       | 2.1.0 | 2.1.0      | 0.16.0      | 0.0.22.post7                      | >=3.8, <=3.11 |
+|                   | 2.0.1 | 2.0.2      | 0.15.2      | 0.0.22, 0.0.21, 0.0.20            | >=3.8, <=3.11 |
+|                   | 2.0.0 | 2.0.1      | 0.15.1      | 0.0.18, 0.0.19                    | >=3.8, <=3.11 |
 
 把这四个文件放到 ComfyUI 启动器根目录下面的 python 文件夹，然后打开启动器，点「高级选项」菜单，打开右上角的「启动命令提示符」：
 
