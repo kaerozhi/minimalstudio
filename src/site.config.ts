@@ -28,8 +28,8 @@ export const config = {
     menu: [
       { title: '影像', link: '/gallery' },
       { title: '设计', link: '/design' },
-      { title: '文字', link: '/writings' },
       { title: '游历', link: '/travels' },
+      { title: '文字', link: '/writings' },
       { title: 'Blog', link: '/blog' },
       { title: '关于', link: '/about' }
     ],
@@ -76,7 +76,7 @@ export const config = {
   content: {
     externalLinksContent: ' ↗',
     /** Blog page size for pagination (optional) */
-    postsPerPage: 20,
+    postsPerPage: 12,
     externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
     share: ['weibo', 'x', 'bluesky']
