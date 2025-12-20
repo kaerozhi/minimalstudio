@@ -9,6 +9,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/BlogPost.astro';
 import Pagination from '@/components/global/Pagination.astro';
 import Categories from '@/components/entries/Categories.astro';
+import { getPathBySlug } from '@/utils/getPathBySlug';
 
 export const prerender = true;
 
@@ -38,11 +39,18 @@ const visibleEntries = allEntries
   .filter((entry) => entry.data.draft !== true)
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
+const postsWithPaths = await Promise.all(
+  visibleEntries.map(async (post) => {
+    const href = await getPathBySlug(post.slug);
+    return { ...post, href };
+  })
+);
+
 // 文章总数
 const page = 1;
 const perPage = config.content.postsPerPage || 10;
 const totalPages = Math.ceil(visibleEntries.length / perPage);
-const posts = visibleEntries.slice(0, perPage);
+const posts = postsWithPaths.slice(0, perPage);
 ---
 
 <BaseLayout title={collection}>
