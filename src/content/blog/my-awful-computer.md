@@ -1,6 +1,6 @@
 ---
 title: 命运多舛的电脑
-date: 2006-05-12T00:00:00.000Z
+date: "2006-05-12"
 categories:
   - Life
 tags:

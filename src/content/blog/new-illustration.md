@@ -1,6 +1,6 @@
 ---
 title: 略有小成
-date: 2006-06-18T00:00:00.000Z
+date: "2006-06-18"
 categories:
   - 涂鸦
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 失眠
-date: 2009-04-02T00:00:00.000Z
+date: "2009-04-02"
 categories:
   - 碎碎念
 tags:

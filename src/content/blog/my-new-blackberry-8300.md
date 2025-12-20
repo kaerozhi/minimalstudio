@@ -1,6 +1,6 @@
 ---
 title: 新手机入手
-date: 2008-07-12T00:00:00.000Z
+date: "2008-07-12"
 categories:
   - 手机
 tags:

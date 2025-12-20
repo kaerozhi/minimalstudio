@@ -1,6 +1,6 @@
 ---
 title: 罗技 K380 蓝牙键盘
-date: 2017-12-16T00:00:00.000Z
+date: "2017-12-16"
 categories:
   - 器材
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 姑苏环城漫步
-date: 2023-07-27T13:31:27.000Z
+date: "2023-07-27"
 description: 一生心道苏州好，何事骑驴入相城。
 toc: true
 featured: true

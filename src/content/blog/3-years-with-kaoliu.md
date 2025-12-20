@@ -1,6 +1,6 @@
 ---
 title: 我们这三年
-date: 2006-12-31T00:00:00.000Z
+date: "2006-12-31"
 categories:
   - Life
 tags:

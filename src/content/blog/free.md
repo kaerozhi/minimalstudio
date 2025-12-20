@@ -1,6 +1,6 @@
 ---
 title: 闲着
-date: 2008-02-18T00:00:00.000Z
+date: "2008-02-18"
 categories:
   - 碎碎念
 tags:

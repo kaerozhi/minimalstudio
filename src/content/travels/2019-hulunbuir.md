@@ -1,6 +1,6 @@
 ---
 title: 呼伦贝尔行记
-date: 2019-06-15T00:00:00.000Z
+date: "2019-06-15"
 categories:
   - 国内
 tags:

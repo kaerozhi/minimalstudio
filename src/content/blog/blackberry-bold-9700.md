@@ -1,6 +1,6 @@
 ---
 title: Blackberry Bold 9700
-date: 2010-03-09T00:00:00.000Z
+date: "2010-03-09"
 categories:
   - 手机
 tags:

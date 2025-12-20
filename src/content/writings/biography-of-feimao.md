@@ -1,6 +1,6 @@
 ---
 title: 肥猫传
-date: 2020-06-11T00:00:00.000Z
+date: "2020-06-11"
 categories:
   - 杂记
 tags:

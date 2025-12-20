@@ -77,8 +77,12 @@ const collectionName = collectionsMeta[collection].title;
     <div class="pt-12 grid gap-8 sm:grid-cols-2">
       {posts.map((post, index) => (
         <BlogPost
-          post = {post}
-          index = {index}
+          title={post.data.title}
+          href={post.href}
+          date={post.data.date}
+          description={post.data.description}
+          categories={post.data.categories}
+          photos={post.data.photos}
         />
       ))}
     </div>

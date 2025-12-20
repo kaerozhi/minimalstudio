@@ -1,6 +1,6 @@
 ---
 title: 故乡童谣
-date: 2018-02-26T00:00:00.000Z
+date: "2018-02-26"
 categories:
   - 随笔
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Makinon 24mm F2.8，名不见经传的广角遗珠
-date: 2025-06-07T02:16:00.000Z
+date: "2025-06-07"
 categories:
   - 器材
 tags:

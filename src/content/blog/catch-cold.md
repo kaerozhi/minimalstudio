@@ -1,6 +1,6 @@
 ---
 title: 感冒了好多天
-date: 2008-02-21T00:00:00.000Z
+date: "2008-02-21"
 categories:
   - Life
 tags:

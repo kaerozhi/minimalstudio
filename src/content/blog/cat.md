@@ -1,6 +1,6 @@
 ---
 title: 猫
-date: 2007-08-01T00:00:00.000Z
+date: "2007-08-01"
 categories:
   - 碎碎念
 tags:

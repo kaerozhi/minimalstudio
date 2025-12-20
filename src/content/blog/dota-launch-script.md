@@ -1,6 +1,6 @@
 ---
 title: Dota 启动脚本
-date: 2009-05-08T00:00:00.000Z
+date: "2009-05-08"
 categories:
   - 游戏
 tags:

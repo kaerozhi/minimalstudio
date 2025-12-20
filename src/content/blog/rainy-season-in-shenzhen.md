@@ -1,6 +1,6 @@
 ---
 title: 深圳的回南天
-date: 2016-03-19T00:00:00.000Z
+date: "2016-03-19"
 categories:
   - Life
 tags:

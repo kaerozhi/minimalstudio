@@ -1,6 +1,6 @@
 ---
 title: 一个牛B的问题
-date: 2008-12-13T00:00:00.000Z
+date: "2008-12-13"
 categories:
   - Life
 tags:

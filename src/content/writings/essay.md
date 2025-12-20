@@ -1,6 +1,6 @@
 ---
 title: 杂言
-date: 2006-10-18T00:00:00.000Z
+date: "2006-10-18"
 categories:
   - 随笔
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Suxi
-date: 2013-04-06
+date: "2013-04-06"
 categories:
   - Portrait
 tags:

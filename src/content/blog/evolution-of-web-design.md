@@ -1,6 +1,6 @@
 ---
 title: 网页设计理念的演变及其趋势 上篇
-date: 2016-06-28T00:00:00.000Z
+date: "2016-06-28"
 categories:
   - Insight
 tags:

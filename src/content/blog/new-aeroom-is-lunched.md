@@ -1,6 +1,6 @@
 ---
 title: "New aeroom is up and\_running."
-date: 2010-04-18T00:00:00.000Z
+date: "2010-04-18"
 categories:
   - Sitelog
 tags:

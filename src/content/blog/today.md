@@ -1,6 +1,6 @@
 ---
 title: 今日
-date: 2006-11-21T00:00:00.000Z
+date: "2006-11-21"
 categories:
   - Life
 tags:

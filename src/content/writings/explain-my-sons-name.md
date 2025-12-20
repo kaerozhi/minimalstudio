@@ -1,6 +1,6 @@
 ---
 title: 释儿名
-date: 2018-11-21T00:00:00.000Z
+date: "2018-11-21"
 categories:
   - 诗词
 tags:

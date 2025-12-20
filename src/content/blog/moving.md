@@ -1,6 +1,6 @@
 ---
 title: 搬家
-date: 2006-10-16T00:00:00.000Z
+date: "2006-10-16"
 categories:
   - Life
 tags:

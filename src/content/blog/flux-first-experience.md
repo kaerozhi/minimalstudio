@@ -1,6 +1,6 @@
 ---
 title: Flux 初体验
-date: 2024-10-28T02:08:00.000Z
+date: "2024-10-28"
 categories:
   - AI
 tags:

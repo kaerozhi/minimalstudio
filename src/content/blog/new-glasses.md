@@ -1,6 +1,6 @@
 ---
 title: 换了一副新眼镜
-date: 2008-12-04T00:00:00.000Z
+date: "2008-12-04"
 categories:
   - Life
 tags:

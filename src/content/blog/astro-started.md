@@ -1,6 +1,6 @@
 ---
 title: Astro 启动!
-date: 2025-06-28T00:00:00.000Z
+date: "2025-06-28"
 description: "本站又又又一次巨大改版！"
 toc: true
 featured: true

@@ -1,6 +1,6 @@
 ---
 title: 與巧
-date: 2008-04-05T00:00:00.000Z
+date: "2008-04-05"
 categories:
   - 诗词
 tags:

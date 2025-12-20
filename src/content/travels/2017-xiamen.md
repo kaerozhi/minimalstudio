@@ -1,6 +1,6 @@
 ---
 title: 厦门
-date: 2017-08-20T00:00:00.000Z
+date: "2017-08-20"
 categories:
   - 国内
 tags:

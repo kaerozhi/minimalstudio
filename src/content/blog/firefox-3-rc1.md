@@ -1,6 +1,6 @@
 ---
 title: 升级到了Firefox 3 RC1
-date: 2008-05-20T00:00:00.000Z
+date: "2008-05-20"
 categories:
   - 软件
 tags:

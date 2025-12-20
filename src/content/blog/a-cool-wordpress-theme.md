@@ -1,6 +1,6 @@
 ---
 title: 超酷的 Wordpress 主题
-date: 2008-04-14T00:00:00.000Z
+date: "2008-04-14"
 categories:
   - 推荐
 tags:

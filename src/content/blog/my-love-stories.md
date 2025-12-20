@@ -1,6 +1,6 @@
 ---
 title: 闲情与陈迹
-date: 2015-04-07T00:00:00.000Z
+date: "2015-04-07"
 categories:
   - Life
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 太白敬亭山诗
-date: 2018-04-12T00:00:00.000Z
+date: "2018-04-12"
 categories:
   - 杂记
 tags:

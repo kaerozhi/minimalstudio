@@ -1,6 +1,6 @@
 ---
 title: "PJ"
-date: 2015-01-25T09:20:00.000Z
+date: "2015-01-25"
 categories:
   - Portrait
 tags:

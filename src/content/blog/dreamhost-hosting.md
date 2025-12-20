@@ -1,6 +1,6 @@
 ---
 title: 真倒霉，该死的DreamHost
-date: 2007-07-30T00:00:00.000Z
+date: "2007-07-30"
 categories:
   - Sitelog
 tags:

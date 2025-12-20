@@ -1,6 +1,6 @@
 ---
 title: 幻世与冒险代言人海报
-date: 2023-09-30T11:40:00.000Z
+date: "2023-09-30"
 client: Mobile Legends Adventure
 color: orange
 categories:

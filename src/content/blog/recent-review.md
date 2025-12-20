@@ -1,6 +1,6 @@
 ---
 title: 近来
-date: 2006-06-09T00:00:00.000Z
+date: "2006-06-09"
 categories:
   - Life
 ---

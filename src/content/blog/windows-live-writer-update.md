@@ -1,6 +1,6 @@
 ---
 title: Windows Live Writer 更新
-date: 2007-08-04T00:00:00.000Z
+date: "2007-08-04"
 categories:
   - 软件
 tags:

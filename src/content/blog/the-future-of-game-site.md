@@ -1,6 +1,6 @@
 ---
 title: 游戏官网进化论
-date: 2014-10-23T00:00:00.000Z
+date: "2014-10-23"
 categories:
   - Insight
 tags:

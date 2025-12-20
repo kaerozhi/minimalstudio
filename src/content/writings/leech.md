@@ -1,6 +1,6 @@
 ---
 title: 蚂蟥
-date: 2020-06-01T00:00:00.000Z
+date: "2020-06-01"
 categories:
   - 随笔
 tags:

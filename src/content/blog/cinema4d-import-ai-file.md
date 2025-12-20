@@ -1,6 +1,6 @@
 ---
 title: Cinema 4D 导入 .ai 文件
-date: 2019-03-13T13:00:53.000Z
+date: "2019-03-13"
 categories:
   - 软件
 tags:

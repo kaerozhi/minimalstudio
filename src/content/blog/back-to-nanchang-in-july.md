@@ -1,6 +1,6 @@
 ---
 title: 七月南昌之行
-date: 2007-08-05T00:00:00.000Z
+date: "2007-08-05"
 categories:
   - Life
 tags:

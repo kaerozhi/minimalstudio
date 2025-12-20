@@ -1,6 +1,6 @@
 ---
 title: 好景不长
-date: 2009-10-30T00:00:00.000Z
+date: "2009-10-30"
 categories:
   - 软件
 tags:

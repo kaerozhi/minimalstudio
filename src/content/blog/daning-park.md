@@ -1,6 +1,6 @@
 ---
 title: 大宁公园
-date: 2008-11-29T00:00:00.000Z
+date: "2008-11-29"
 categories:
   - Life
 tags:

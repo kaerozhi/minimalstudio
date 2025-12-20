@@ -1,6 +1,6 @@
 ---
 title: 革新骂人之法
-date: 2006-01-25 20:04:37
+date: "2006-01-25"
 categories:
   - 游戏
 tags:

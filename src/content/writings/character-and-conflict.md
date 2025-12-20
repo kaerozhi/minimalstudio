@@ -1,6 +1,6 @@
 ---
 title: 业余编剧手札
-date: 2016-11-24T00:00:00.000Z
+date: "2016-11-24"
 categories:
   - 剧本
 tags:

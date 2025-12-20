@@ -1,6 +1,6 @@
 ---
 title: 无辜的 ScribeFire 与牛逼的 Zoundry
-date: 2007-08-02T00:00:00.000Z
+date: "2007-08-02"
 categories:
   - 软件
 tags:

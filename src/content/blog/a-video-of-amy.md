@@ -1,6 +1,6 @@
 ---
 title: 阿咪
-date: 2008-04-22T00:00:00.000Z
+date: "2008-04-22"
 categories:
   - VLOG
 tags:

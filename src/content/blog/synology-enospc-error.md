@@ -1,6 +1,6 @@
 ---
 title: 群晖 ENOSPC 问题
-date: 2024-08-04T19:57:00.000Z
+date: "2024-08-04"
 categories:
   - 器材
 tags:

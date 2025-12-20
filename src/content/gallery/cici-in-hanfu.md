@@ -1,6 +1,6 @@
 ---
 title: Cici
-date: 2018-03-24T12:20:00.000Z
+date: "2018-03-24"
 categories:
   - Costume
   - Portrait

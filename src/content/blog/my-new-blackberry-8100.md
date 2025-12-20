@@ -1,6 +1,6 @@
 ---
 title: 新手机：BlackBerry Pearl 8100
-date: 2007-12-13T00:00:00.000Z
+date: "2007-12-13"
 categories:
   - 手机
 tags:

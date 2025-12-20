@@ -1,6 +1,6 @@
 ---
 title: iNewS Tags Manager V4.8 for Dreamweaver
-date: 2006-08-15T00:00:00.000Z
+date: "2006-08-15"
 categories:
   - Coding
 tags:

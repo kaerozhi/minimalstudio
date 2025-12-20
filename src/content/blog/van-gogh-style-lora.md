@@ -1,6 +1,6 @@
 ---
 title: LORA 日推：梵高风格
-date: 2023-07-04T21:52:31.000Z
+date: "2023-07-04"
 categories:
   - AI
 tags:

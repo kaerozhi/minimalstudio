@@ -1,6 +1,6 @@
 ---
 title: 细雪
-date: 2006-01-05 00:51:15
+date: "2006-01-04"
 categories:
   - 碎碎念
 tags:

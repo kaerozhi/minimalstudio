@@ -1,6 +1,6 @@
 ---
 title: 肥猫与作诗机
-date: 2022-05-24T00:00:00.000Z
+date: "2022-05-24"
 categories:
   - 诗词
 tags:

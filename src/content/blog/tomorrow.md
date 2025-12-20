@@ -1,6 +1,6 @@
 ---
 title: 明日
-date: 2006-11-21T00:00:00.000Z
+date: "2006-11-21"
 categories:
   - 碎碎念
 tags:

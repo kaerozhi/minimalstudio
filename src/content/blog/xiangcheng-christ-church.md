@@ -1,6 +1,6 @@
 ---
 title: 相城基督堂
-date: 2023-06-02T00:00:00.000Z
+date: "2023-06-02"
 categories:
   - Life
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 关西自由行
-date: 2019-09-24T00:00:00.000Z
+date: "2019-09-24"
 categories:
   - 境外
 tags:

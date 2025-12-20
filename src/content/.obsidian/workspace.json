@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8518b2ce04ab68be",
+        "id": "1de1272d3b7f5a7c",
         "type": "tabs",
         "children": [
           {
-            "id": "3763482c3e2bfdc4",
+            "id": "aae32e928b356393",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/manage-mijia-suveillance-on-your-own-nas.md",
+                "file": "blog/we-have-two-turtles.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "manage-mijia-suveillance-on-your-own-nas"
+              "title": "we-have-two-turtles"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/manage-mijia-suveillance-on-your-own-nas.md",
+                "file": "blog/we-have-two-turtles.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "manage-mijia-suveillance-on-your-own-nas 的大纲"
+              "title": "we-have-two-turtles 的大纲"
             }
           }
         ],
@@ -169,36 +169,36 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3763482c3e2bfdc4",
+  "active": "aae32e928b356393",
   "lastOpenFiles": [
-    "travels/dongcun-and-tangli.md",
-    "blog/manage-mijia-suveillance-on-your-own-nas.md",
-    "travels/xiyuan-temple-and-the-cats-there-before-winter.md",
-    "travels/walk-around-the-ancient-gusu.md",
-    "podcasts/第一期.md",
-    "daily",
-    "podcasts",
-    "blog/how-to-start-a-podcast.md",
-    "gallery/live-like-an-ancient-chinese.md",
-    "gallery/lizishu-and-manshufang.md",
-    "gallery/suxi.md",
-    "blog/gears-list-2025.md",
-    "travels/canglangting-and-keyuan.md",
-    "blog/air2s-footage-color-grading.md",
-    "travels/miduishan.md",
-    "travels/dongshan-before-winter.md",
     "blog/update-pytorch-in-comfyui.md",
     "blog/remove-background-in-comfyui.md",
     "blog/unraid-network-config.md",
-    "blog/hiking-from-lingyan-to-baimajian.md",
     "blog/afs-nikkor-58mm-f1.4-g.md",
-    "blog/afs-nikkor-35mm-f1.4-g.md",
     "blog/natural-light-portraiture.md",
+    "blog/manage-mijia-suveillance-on-your-own-nas.md",
+    "blog/how-to-start-a-podcast.md",
+    "blog/gears-list-2025.md",
+    "blog/air2s-footage-color-grading.md",
     "blog/fujifilm-gfx100s-video-settings.md",
-    "travels/late-autumn-of-liuyuan.md",
-    "travels/feiying-tower.md",
-    "travels/donglin-temple-and-donglin-buddha.md",
-    "travels/the-garden-of-cats.md",
+    "blog/afs-nikkor-35mm-f1.4-g.md",
+    "blog/hiking-from-lingyan-to-baimajian.md",
+    "blog/strava-on-astro.md",
+    "blog/inews-tags-manager-released.md",
+    "gallery/pj.md",
+    "gallery/school-sports-day-of-kids.md",
+    "gallery/cici-in-hanfu.md",
+    "gallery/huizi-in-europe.md",
+    "gallery/kaoru.md",
+    "gallery/mr-bai-in-studio.md",
+    "gallery/taozi.md",
+    "gallery/xili-university-town.md",
+    "gallery/suxi-volume-2.md",
+    "gallery/in-the-evening-breeze.md",
+    "gallery/live-like-an-ancient-chinese.md",
+    "gallery/lizishu-and-manshufang.md",
+    "daily",
+    "podcasts",
     "collections.config.ts",
     "Clippings",
     "_templater",

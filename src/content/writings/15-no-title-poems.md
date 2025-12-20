@@ -1,6 +1,6 @@
 ---
 title: 無題十五首
-date: 2002-06-06T00:00:00.000Z
+date: "2002-06-06"
 categories:
   - 诗词
 tags:

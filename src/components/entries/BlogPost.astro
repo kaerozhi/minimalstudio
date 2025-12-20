@@ -1,44 +1,59 @@
 ---
 import { formatDate } from "@/utils/format";
-import { getPathBySlug } from '@/utils/getPathBySlug';
 import { slugify } from "@/utils/slugify";
+import Cover from "./Cover.astro";
 
-import Cover from './Cover.astro';
-const { post, index } = Astro.props;
+const {
+  title,
+  href,
+  date,
+  description,
+  photos = [],
+  categories = [],
+  index,
+} = Astro.props;
 
-const dateFormated = formatDate(post.data.date);
-const href = await getPathBySlug(post.slug);
+const dateFormated = date ? formatDate(date) : "";
 ---
-<article class="group">
-  
-    <div class="relative overflow-hidden aspect-16/9 bg-white">
-      {post.data.photos?.[0] && (
-        <a href={href} class="object-cover w-full"><Cover photos={post.data.photos} title={post.data.title}></Cover></a>
+<article class="group w-full">
+  <div class="relative overflow-hidden aspect-16/9 bg-white">
+    {photos[0] && (
+      <a href={href} class="block object-cover w-full h-full">
+        <Cover photos={photos} title={title} />
+      </a>
+    )}
+  </div>
+
+  <div class="p-4">
+    <div class="mt-2 w-3/4">
+      <h2 class="text-xl font-bold tracking-tight">
+        <a href={href}>
+          {title}
+          {description && (
+            <span class="font-normal text-zinc-500">
+              {" "}
+              {description}
+            </span>
+          )}
+        </a>
+      </h2>
+    </div>
+
+    <div class="mt-2 text-xs text-zinc-500 space-x-1">
+      {categories.map((category) => (
+        <a
+          class="font-bold"
+          href={`/category/${slugify(category)}`}
+        >
+          {category}
+        </a>
+      ))}
+      {dateFormated && (
+        <>
+          <span>–</span>
+          <time>{dateFormated}</time>
+        </>
       )}
     </div>
-    <div class="p-4">
-      <div class="mt-2 w-3/4">
-        <h2 class="text-xl font-bold tracking-tight">
-          <a href={href}>
-            {post.data.title}
-            {(post.data.description) &&
-              <span class="font-normal text-zinc-500">{post.data.description}</span>
-            }
-          </a>
-        </h2>
-      </div>
-      <div class="mt-2 text-xs text-zinc-500">
-        { post.data.categories.map((category) => (
-            <a
-              class="font-bold" 
-              href={`/category/${slugify(category)}`}>
-              {category}
-            </a>
-          )
-        )}
-         - 
-        <time class="">{dateFormated}</time>
-      </div>
-    </div>  
-  
+  </div>
 </article>

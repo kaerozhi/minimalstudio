@@ -1,6 +1,6 @@
 ---
 title: 四川游记
-date: 2021-04-14T00:00:00.000Z
+date: "2021-04-14"
 categories:
   - 国内
 tags:

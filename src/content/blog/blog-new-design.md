@@ -1,6 +1,6 @@
 ---
 title: aeroom 重装上线
-date: 2009-06-30T00:00:00.000Z
+date: "2009-06-30"
 categories:
   - Sitelog
 tags:

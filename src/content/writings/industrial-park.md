@@ -1,6 +1,6 @@
 ---
 title: 工业园赠肥困
-date: 2024-06-17T00:00:00.000Z
+date: "2024-06-17"
 categories:
   - 诗词
 tags:

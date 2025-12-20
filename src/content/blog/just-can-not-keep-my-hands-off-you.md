@@ -1,6 +1,6 @@
 ---
 title: 放不了手
-date: 2008-11-10T00:00:00.000Z
+date: "2008-11-10"
 categories:
   - Life
 tags:

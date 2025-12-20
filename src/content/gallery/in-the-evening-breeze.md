@@ -1,6 +1,6 @@
 ---
 title: In the breeze
-date: 2024-08-09T11:51:00.000Z
+date: "2024-08-09"
 categories:
   - Personal
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 巷角
-date: 2018-11-16T00:00:00.000Z
+date: "2018-11-16"
 categories:
   - 诗词
 tags:

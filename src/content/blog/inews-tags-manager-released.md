@@ -1,10 +1,10 @@
 ---
 title: "iNewS Tags Manager 发布"
-date: 2006-02-16 10:17:52
+date: "2006-02-16"
 categories:
   - Coding
 tags:
-- Dreamweaver 扩展
+- "Dreamweaver 扩展"
 - iNewS
 ---
 哈哈，现在向您介绍我的新产品：iNewS Tags Manager，该产品用蜂蜜、川贝、桔梗，再加上天山雪莲配制而成，无须冷藏，也没有防腐剂，除了毒性猛烈之外，味道还很好吃！

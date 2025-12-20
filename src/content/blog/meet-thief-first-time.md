@@ -1,6 +1,6 @@
 ---
 title: 第一次遭遇小偷
-date: 2007-12-14T00:00:00.000Z
+date: "2007-12-14"
 categories:
   - Life
 tags:

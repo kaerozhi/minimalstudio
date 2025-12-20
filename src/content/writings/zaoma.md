@@ -1,6 +1,6 @@
 ---
 title: 灶马
-date: 2018-11-14T00:00:00.000Z
+date: "2018-11-14"
 categories:
   - 随笔
 tags:

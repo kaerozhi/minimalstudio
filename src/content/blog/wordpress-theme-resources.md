@@ -1,6 +1,6 @@
 ---
 title: Wordpress 主题资源
-date: 2008-04-13T00:00:00.000Z
+date: "2008-04-13"
 categories:
   - 推荐
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 薛福成故居
-date: 2025-05-08T08:39:00.000Z
+date: "2025-05-08"
 photos:
   - 'https://media.kaerozhi.com/2025/06/87b8450baf4f8cc998f2cf451fae1537.webp'
 tags:

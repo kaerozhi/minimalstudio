@@ -1,6 +1,6 @@
 ---
 title: SWFObject.js 插入透明 SWF 文件
-date: 2006-12-13T00:00:00.000Z
+date: "2006-12-13"
 categories:
   - Coding
 tags:

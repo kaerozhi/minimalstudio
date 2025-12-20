@@ -1,6 +1,6 @@
 ---
 title: RSS 全文输出的格式问题
-date: 2009-04-14T00:00:00.000Z
+date: "2009-04-14"
 categories:
   - Sitelog
 tags:

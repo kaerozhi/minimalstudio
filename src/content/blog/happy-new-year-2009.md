@@ -1,6 +1,6 @@
 ---
 title: 新年好，民那！
-date: 2008-12-31T00:00:00.000Z
+date: "2008-12-31"
 categories:
   - Life
 tags:

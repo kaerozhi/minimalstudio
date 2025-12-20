@@ -1,6 +1,6 @@
 ---
 title: Huizi
-date: 2013-10-27T10:20:00.000Z
+date: "2013-10-27"
 categories:
   - Portrait
   - Travels

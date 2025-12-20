@@ -1,6 +1,6 @@
 ---
 title: 陈长方客里步谈
-date: 2008-12-27T00:00:00.000Z
+date: "2008-12-27"
 categories:
   - 杂记
 tags:

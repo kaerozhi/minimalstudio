@@ -1,6 +1,6 @@
 ---
 title: 用 Stable Diffusion 尝试传统水墨画
-date: 2023-07-06T13:25:07.000Z
+date: "2023-07-06"
 categories:
   - AI
 tags:

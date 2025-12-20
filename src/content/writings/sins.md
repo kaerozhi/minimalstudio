@@ -1,6 +1,6 @@
 ---
 title: 罪
-date: 2015-05-03T00:00:00.000Z
+date: "2015-05-03"
 categories:
   - 现代诗
 tags:

@@ -8,12 +8,24 @@ import BlogPost from '@/components/entries/BlogPost.astro';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const allEntries = await getAllEntries();
-  const tagSet = new Set();
+  const allEntries = (await getAllEntries()).filter(Boolean);
+
+  const tagSet = new Set<string>();
 
   for (const entry of allEntries) {
-    const tags = entry.data.tags || [];
-    tags.forEach(tag => tagSet.add(slugify(tag)));
+    if (!entry?.data) continue;
+
+    const tags = entry.data.tags;
+    if (!Array.isArray(tags)) continue;
+
+    for (const rawTag of tags) {
+      if (!rawTag) continue;
+
+      const slug = slugify(String(rawTag).trim());
+      if (!slug) continue;
+
+      tagSet.add(slug);
+    }
   }
 
   return Array.from(tagSet).map(tag => ({
@@ -22,15 +34,31 @@ export async function getStaticPaths() {
 }
 
 // 当前参数
-const { tag } = Astro.params;
+const tagParam = Astro.params.tag;
+
+if (!tagParam) {
+  throw new Error('[tag].astro rendered without tag param');
+}
+
+const tag = tagParam;
 const tagSlug = slugify(tag);
 
 // 所有文章
-const allEntries = await getAllEntries();
+const allEntries = (await getAllEntries()).filter(
+  (e): e is { data: any; slug: string } => Boolean(e && e.data)
+);
 
-// 过滤包含该标签的文章
+// DEBUG（现在这里应该永远是 []）
+console.log(
+  'INVALID ENTRIES:',
+  allEntries.filter(e => !e || !e.data)
+);
+
 const posts = allEntries
-  .filter(entry => (entry.data.tags || []).some(t => slugify(t) === tagSlug))
+  .filter(entry =>
+    Array.isArray(entry.data.tags) &&
+    entry.data.tags.some(t => slugify(String(t)) === tagSlug)
+  )
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
 const postsWithPaths = await Promise.all(
@@ -52,13 +80,15 @@ const postsWithPaths = await Promise.all(
       </h1>
     </div>
     
-    <div class="mt-24 columns-1 gap-8 sm:columns-2 md:columns-3 [&>article:not(:first-child)]:mt-8">
+    <div class="pt-12 grid gap-8 sm:grid-cols-3">
       {postsWithPaths.map(post => (
         <BlogPost
           title={post.data.title}
           href={post.href}
           date={post.data.date}
           description={post.data.description}
+          categories={post.data.categories}
+          photos={post.data.photos}
         />
       ))}
     </div>

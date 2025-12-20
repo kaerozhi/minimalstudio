@@ -1,6 +1,6 @@
 ---
 title: Teamfight Tactics 2023 Celebration Social Banners
-date: 2023-12-07T12:22:00.000Z
+date: "2023-12-07"
 color: orange
 client: Teamfight Tactics
 categories:

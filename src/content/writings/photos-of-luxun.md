@@ -1,6 +1,6 @@
 ---
 title: 鲁迅照相集
-date: 2020-07-12T00:00:00.000Z
+date: "2020-07-12"
 categories:
   - 考据
 tags:

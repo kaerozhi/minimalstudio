@@ -1,6 +1,6 @@
 ---
 title: 小红帽的故事
-date: 2008-11-14T00:00:00.000Z
+date: "2008-11-14"
 categories:
   - 涂鸦
 tags:

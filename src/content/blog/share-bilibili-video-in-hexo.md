@@ -1,6 +1,6 @@
 ---
 title: 在 Hexo 中分享 Bilibili 视频
-date: 2024-08-18T03:21:00.000Z
+date: "2024-08-18"
 categories:
   - Coding
 tags:

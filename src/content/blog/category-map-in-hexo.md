@@ -1,6 +1,6 @@
 ---
 title: Hexo 里面的 category_map
-date: 2024-07-24T13:36:00.000Z
+date: "2024-07-24"
 categories:
   - Sitelog
   - Coding

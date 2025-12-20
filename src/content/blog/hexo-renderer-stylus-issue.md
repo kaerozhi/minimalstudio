@@ -1,6 +1,6 @@
 ---
 title: Hexo Stylus 渲染的奇怪问题
-date: 2023-07-21T10:40:00.000Z
+date: "2023-07-21"
 categories:
   - Sitelog
   - Coding

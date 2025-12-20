@@ -1,6 +1,6 @@
 ---
 title: 裸照
-date: 2009-04-11T00:00:00.000Z
+date: "2009-04-11"
 categories:
   - 器材
 tags:

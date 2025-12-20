@@ -1,6 +1,6 @@
 ---
 title: 强烈的好感
-date: 2008-06-10T00:00:00.000Z
+date: "2008-06-10"
 categories:
   - 碎碎念
 tags:

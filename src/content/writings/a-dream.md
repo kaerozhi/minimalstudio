@@ -1,6 +1,6 @@
 ---
 title: 记梦
-date: 2018-09-05T00:00:00.000Z
+date: "2018-09-05"
 categories:
   - 诗词
 tags:

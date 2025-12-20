@@ -1,6 +1,6 @@
 ---
 title: 采桑子 地铁记事
-date: 2007-02-07T00:00:00.000Z
+date: "2007-02-07"
 categories:
   - 诗词
 tags:

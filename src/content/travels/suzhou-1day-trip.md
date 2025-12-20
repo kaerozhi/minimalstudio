@@ -1,6 +1,6 @@
 ---
 title: 苏州一日游图记
-date: 2008-04-07T00:00:00.000Z
+date: "2008-04-07"
 categories:
   - 苏州
 tags:

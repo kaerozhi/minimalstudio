@@ -1,6 +1,6 @@
 ---
 title: 浣溪沙
-date: 2018-11-19T00:00:00.000Z
+date: "2018-11-19"
 categories:
   - 诗词
 tags:

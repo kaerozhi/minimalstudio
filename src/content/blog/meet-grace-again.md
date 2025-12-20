@@ -1,6 +1,6 @@
 ---
 title: 重逢
-date: 2005-11-22 19:37:58
+date: "2005-11-22"
 categories:
   - Life
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 某女人生病了
-date: 2007-08-01T00:00:00.000Z
+date: "2007-08-01"
 categories:
   - Life
 tags:

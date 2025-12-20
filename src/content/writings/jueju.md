@@ -1,6 +1,6 @@
 ---
 title: 絕句
-date: 2008-04-26T00:00:00.000Z
+date: "2008-04-26"
 categories:
   - 诗词
 tags:

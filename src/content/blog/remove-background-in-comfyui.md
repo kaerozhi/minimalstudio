@@ -1,6 +1,6 @@
 ---
 title: ComfyUI 抠图横向对比 & 设计师操作指南
-date: 2025-07-26T09:37:51Z
+date: "2025-07-26"
 categories:
   - AI
 tags:

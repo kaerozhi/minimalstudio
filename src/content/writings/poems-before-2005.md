@@ -1,6 +1,6 @@
 ---
 title: 乙酉以前少作
-date: 2007-12-31T00:00:00.000Z
+date: "2007-12-31"
 categories:
   - 诗词
 tags:

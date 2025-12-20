@@ -1,6 +1,6 @@
 ---
 title: 父亲
-date: 2014-04-29T00:00:00.000Z
+date: "2014-04-29"
 categories:
   - 随笔
 tags:

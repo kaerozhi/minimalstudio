@@ -1,6 +1,6 @@
 ---
 title: 在白宫落成仪式上的总结致辞
-date: 2008-12-10T00:00:00.000Z
+date: "2008-12-10"
 categories:
   - Sitelog
 tags:

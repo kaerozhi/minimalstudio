@@ -1,6 +1,6 @@
 ---
 title: 小巧油润的德产标准镜，ISCO-GOTTINGEN ISCOTAR 50mm F2.8
-date: 2025-06-02T00:49:00.000Z
+date: "2025-06-02"
 categories:
   - 摄影
   - 器材

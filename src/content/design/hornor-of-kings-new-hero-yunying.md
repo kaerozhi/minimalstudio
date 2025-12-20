@@ -1,6 +1,6 @@
 ---
 title: 王者荣耀云缨系列海报
-date: 2021-07-03T00:00:00.000Z
+date: "2021-07-03"
 color: green
 client: Hornor of Kings
 categories:

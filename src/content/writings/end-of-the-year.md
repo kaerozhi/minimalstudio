@@ -1,6 +1,6 @@
 ---
 title: 歲暮
-date: 2008-12-18T00:00:00.000Z
+date: "2008-12-18"
 categories:
   - 诗词
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 自作聪明
-date: 2008-06-25T00:00:00.000Z
+date: "2008-06-25"
 categories:
   - Life
 tags:

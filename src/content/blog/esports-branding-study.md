@@ -1,6 +1,6 @@
 ---
 title: 电竞赛事包装模式与流程
-date: 2018-08-24T00:00:00.000Z
+date: "2018-08-24"
 categories:
   - Insight
 tags:

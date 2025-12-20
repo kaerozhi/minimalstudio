@@ -1,6 +1,6 @@
 ---
 title: 天涯之什
-date: 2007-08-07T00:00:00.000Z
+date: "2007-08-07"
 categories:
   - 诗词
 tags:

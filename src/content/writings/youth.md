@@ -1,6 +1,6 @@
 ---
 title: 少年
-date: 2008-03-20T00:00:00.000Z
+date: "2008-03-20"
 categories:
   - 诗词
 tags:

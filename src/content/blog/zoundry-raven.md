@@ -1,6 +1,6 @@
 ---
 title: Zoundry Raven：来自 Zoundry 的重磅更新
-date: 2008-03-22T00:00:00.000Z
+date: "2008-03-22"
 categories:
   - 软件
 tags:

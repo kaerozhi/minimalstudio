@@ -1,6 +1,6 @@
 ---
 title: 游戏品牌与世界观的整合包装
-date: 2017-01-06T00:00:00.000Z
+date: "2017-01-06"
 categories:
   - Insight
 tags:

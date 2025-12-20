@@ -1,6 +1,6 @@
 ---
 title: 曲园的菖蒲
-date: 2023-06-04T07:31:52.000Z
+date: "2023-06-04"
 categories:
   - 苏州
 tags:

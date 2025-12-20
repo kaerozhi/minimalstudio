@@ -1,6 +1,6 @@
 ---
 title: 草阁光明顶之什
-date: 2007-08-10T00:00:00.000Z
+date: "2007-08-10"
 categories:
   - 诗词
 tags:

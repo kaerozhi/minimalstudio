@@ -1,6 +1,6 @@
 ---
 title: 贝斯表演：我的悲伤是水做的
-date: 2024-08-18T02:56:00.000Z
+date: "2024-08-18"
 categories:
   - VLOG
 tags:

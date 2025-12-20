@@ -1,6 +1,6 @@
 ---
 title: Blackberry Blog 客户端：BBMetaBlog
-date: 2009-06-12T00:00:00.000Z
+date: "2009-06-12"
 categories:
   - 软件
 tags:

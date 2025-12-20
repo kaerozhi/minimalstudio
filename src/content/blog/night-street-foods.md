@@ -1,6 +1,6 @@
 ---
 title: 烧烤摊的风味人间
-date: 2020-06-15T00:00:00.000Z
+date: "2020-06-15"
 categories:
   - Life
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 主题的修正和补完工作也告一段落了
-date: 2008-12-12T00:00:00.000Z
+date: "2008-12-12"
 categories:
   - Sitelog
 tags:

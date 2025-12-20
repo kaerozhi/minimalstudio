@@ -1,6 +1,6 @@
 ---
 title: 学车记
-date: 2015-04-12T00:00:00.000Z
+date: "2015-04-12"
 categories:
   - Life
 tags:

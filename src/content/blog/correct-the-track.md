@@ -1,6 +1,6 @@
 ---
 title: 改变自己
-date: 2009-06-04T00:00:00.000Z
+date: "2009-06-04"
 categories:
   - 碎碎念
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 上海博物馆
-date: 2009-04-12T00:00:00.000Z
+date: "2009-04-12"
 categories:
   - 上海
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Mr.Bai
-date: 2025-06-24T23:20:00.000Z
+date: "2025-06-24"
 categories:
   - Portrait
   - Studio Portrait

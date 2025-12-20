@@ -1,6 +1,6 @@
 ---
 title: 猪
-date: 2020-07-23T00:00:00.000Z
+date: "2020-07-23"
 categories:
   - 随笔
 tags:

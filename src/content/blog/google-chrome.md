@@ -1,6 +1,6 @@
 ---
 title: Google Chrome
-date: 2008-09-03T00:00:00.000Z
+date: "2008-09-03"
 categories:
   - 软件
 tags:

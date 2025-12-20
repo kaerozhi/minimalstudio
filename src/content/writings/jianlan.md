@@ -1,6 +1,6 @@
 ---
 title: 减兰
-date: 2008-04-28T00:00:00.000Z
+date: "2008-04-28"
 categories:
   - 诗词
 tags:

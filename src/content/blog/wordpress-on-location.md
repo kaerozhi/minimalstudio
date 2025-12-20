@@ -1,6 +1,6 @@
 ---
 title: 本地搭建 WordPress
-date: 2006-11-21T00:00:00.000Z
+date: "2006-11-21"
 categories:
   - Sitelog
 tags:

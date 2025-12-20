@@ -1,6 +1,6 @@
 ---
 title: iPhone 1x 信号故障
-date: 2023-06-08T18:31:25.000Z
+date: "2023-06-08"
 categories:
   - 手机
 tags:

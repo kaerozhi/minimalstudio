@@ -1,6 +1,6 @@
 ---
 title: 作诗机纪念专集
-date: 2022-05-23T00:00:00.000Z
+date: "2022-05-23"
 categories:
   - 诗词
 tags:

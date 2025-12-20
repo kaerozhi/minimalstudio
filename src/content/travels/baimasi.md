@@ -1,6 +1,6 @@
 ---
 title: 白马寺
-date: 2023-05-04T00:00:00.000Z
+date: "2023-05-04"
 draft: true
 categories:
   - 苏州

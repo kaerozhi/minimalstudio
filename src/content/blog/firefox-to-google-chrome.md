@@ -1,6 +1,6 @@
 ---
 title: 从 Firefox 到 Google Chrome
-date: 2010-03-11T00:00:00.000Z
+date: "2010-03-11"
 categories:
   - 软件
 tags:

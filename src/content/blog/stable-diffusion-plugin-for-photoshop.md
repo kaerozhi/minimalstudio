@@ -1,6 +1,6 @@
 ---
 title: Auto Photoshop Stable Diffusion Plugin
-date: 2023-07-09T02:55:00.000Z
+date: "2023-07-09"
 categories:
   - AI
   - 软件

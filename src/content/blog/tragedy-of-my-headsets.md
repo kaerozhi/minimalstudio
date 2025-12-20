@@ -1,6 +1,6 @@
 ---
 title: 耳机们悲惨的命运交响曲
-date: 2008-11-28T00:00:00.000Z
+date: "2008-11-28"
 categories:
   - Life
 tags:

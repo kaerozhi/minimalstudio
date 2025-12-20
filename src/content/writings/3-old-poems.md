@@ -1,6 +1,6 @@
 ---
 title: 检得旧诗三首
-date: 2006-01-26T00:00:00.000Z
+date: "2006-01-26"
 categories:
   - 诗词
 tags:

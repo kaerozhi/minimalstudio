@@ -1,6 +1,6 @@
 ---
 title: 在 Astro 上展示豆瓣电影
-date: 2025-07-01T00:00:00.000Z
+date: "2025-07-01"
 categories:
   - Coding
   - Sitelog

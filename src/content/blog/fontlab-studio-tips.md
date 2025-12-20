@@ -1,6 +1,6 @@
 ---
 title: FontLab Studio 个人经验
-date: 2010-05-13T00:00:00.000Z
+date: "2010-05-13"
 categories:
   - 软件
 tags:

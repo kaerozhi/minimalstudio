@@ -1,6 +1,6 @@
 ---
 title: 亱坐
-date: 2008-11-25T00:00:00.000Z
+date: "2008-11-25"
 categories:
   - 诗词
 tags:

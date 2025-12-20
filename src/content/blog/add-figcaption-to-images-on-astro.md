@@ -1,6 +1,6 @@
 ---
 title: Astro 中让图片展示说明文字
-date: 2025-07-02T17:15:38.000Z
+date: "2025-07-02"
 description: 图片没有说明文字，就像逛景点没有导游——不对，没有导游好像更惬意……
 categories:
   - Sitelog

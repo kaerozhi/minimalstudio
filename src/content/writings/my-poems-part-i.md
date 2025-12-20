@@ -1,6 +1,6 @@
 ---
 title: 少作
-date: 2007-08-09T00:00:00.000Z
+date: "2007-08-09"
 categories:
   - 诗词
 tags:

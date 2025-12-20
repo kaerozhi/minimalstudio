@@ -1,6 +1,6 @@
 ---
 title: 读鲁迅日记
-date: 2020-07-07T00:00:00.000Z
+date: "2020-07-07"
 categories:
   - 杂记
 tags:

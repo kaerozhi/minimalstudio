@@ -1,6 +1,6 @@
 ---
 title: 给 Hexo 增加 Gitalk 评论系统
-date: 2023-07-16T10:42:00.000Z
+date: "2023-07-16"
 categories:
   - Sitelog
   - Coding

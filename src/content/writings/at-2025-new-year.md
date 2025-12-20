@@ -1,6 +1,6 @@
 ---
 title: 元旦戏笔
-date: 2025-01-01T10:15:00.000Z
+date: "2025-01-01"
 categories:
   - 诗词
 tags:

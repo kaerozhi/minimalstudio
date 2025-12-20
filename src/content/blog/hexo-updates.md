@@ -1,6 +1,6 @@
 ---
 title: Hexo 后续补充
-date: 2023-05-28T13:36:07.000Z
+date: "2023-05-28"
 categories:
   - Sitelog
 tags:

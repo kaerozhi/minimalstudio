@@ -1,6 +1,6 @@
 ---
 title: 去春一束
-date: 2008-04-07T00:00:00.000Z
+date: "2008-04-07"
 categories:
   - 诗词
 tags:

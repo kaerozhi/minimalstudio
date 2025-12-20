@@ -1,6 +1,6 @@
 ---
 title: Adobe Contribute CS3 测试
-date: 2007-08-02T00:00:00.000Z
+date: "2007-08-02"
 categories:
   - 软件
 tags:

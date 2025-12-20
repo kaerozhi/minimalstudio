@@ -1,6 +1,6 @@
 ---
 title: 怎样才能修复 Windows Live Writer？
-date: 2009-06-30T00:00:00.000Z
+date: "2009-06-30"
 categories:
   - 软件
 tags:

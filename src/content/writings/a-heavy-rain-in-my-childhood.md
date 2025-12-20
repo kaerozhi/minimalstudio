@@ -1,6 +1,6 @@
 ---
 title: 儿时大雨
-date: 2018-08-30T00:00:00.000Z
+date: "2018-08-30"
 categories:
   - 随笔
 tags:

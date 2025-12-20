@@ -1,6 +1,6 @@
 ---
 title: Astro 的配置文件
-date: 2025-06-29T10:02:41.000Z
+date: "2025-06-29"
 description: 从 Wordpress 时代养成的好习惯，建站的第一时间先搞定网站的基本配置文件，保证高频信息的一致性。
 categories:
   - Sitelog

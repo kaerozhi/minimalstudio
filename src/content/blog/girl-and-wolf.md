@@ -1,6 +1,6 @@
 ---
 title: 采蘑菇的小姑娘
-date: 2008-11-11T00:00:00.000Z
+date: "2008-11-11"
 categories:
   - 涂鸦
 tags:

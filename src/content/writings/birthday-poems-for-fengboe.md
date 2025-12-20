@@ -1,6 +1,6 @@
 ---
 title: 壽風波惡
-date: 2008-12-07T00:00:00.000Z
+date: "2008-12-07"
 categories:
   - 诗词
 tags:

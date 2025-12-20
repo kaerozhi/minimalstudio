@@ -1,6 +1,6 @@
 ---
 title: Hexo 新主题：基于 Acorn 定制
-date: 2023-07-13T11:30:00.000Z
+date: "2023-07-13"
 categories:
   - Sitelog
   - Coding

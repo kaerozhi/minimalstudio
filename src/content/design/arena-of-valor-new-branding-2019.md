@@ -1,6 +1,6 @@
 ---
 title: Arena of Valor 全球品牌刷新
-date: 2018-09-10T00:00:00.000Z
+date: "2018-09-10"
 color: orange
 client: Arena of Valor
 categories:

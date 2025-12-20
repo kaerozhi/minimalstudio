@@ -1,6 +1,6 @@
 ---
 title: 用 Synology Drive 同步 Obsidian 仓库
-date: 2023-05-31T11:36:27.000Z
+date: "2023-05-31"
 categories:
   - 软件
 tags:

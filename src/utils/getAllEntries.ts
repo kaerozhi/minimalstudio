@@ -3,13 +3,25 @@ import { collections } from '@/content/config';
 
 export async function getAllEntries() {
   const collectionNames = Object.keys(collections);
+  const all = [];
 
-  let all = [];
   for (const name of collectionNames) {
     const entries = await getCollection(name);
-    const visible = entries.filter((entry) => !entry.data.draft);
-    all.push(...visible.map((e) => ({ ...e, collection: name })));
+
+    for (const entry of entries) {
+      if (!entry?.data) continue;
+      if (entry.data.draft === true) continue;
+      if (!(entry.data.date instanceof Date)) continue;
+
+      all.push({
+        ...entry,
+        collection: name,
+      });
+    }
   }
 
-  return all.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+  return all.sort(
+    (a, b) =>
+      b.data.date.getTime() - a.data.date.getTime()
+  );
 }

@@ -1,6 +1,6 @@
 ---
 title: 游戏排位系统的设计思路
-date: 2022-06-09T00:00:00.000Z
+date: "2022-06-09"
 categories:
   - Insight
 tags:

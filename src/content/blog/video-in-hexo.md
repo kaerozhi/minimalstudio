@@ -1,6 +1,6 @@
 ---
 title: 在 Hexo 中启用真正的高清视频
-date: 2024-09-01T10:12:00.000Z
+date: "2024-09-01"
 categories:
   - Sitelog
 tags:

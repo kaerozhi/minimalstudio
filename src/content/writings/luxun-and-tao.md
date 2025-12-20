@@ -1,6 +1,6 @@
 ---
 title: 鲁迅与绍兴陶氏
-date: 2020-07-15T00:00:00.000Z
+date: "2020-07-15"
 categories:
   - 考据
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Something Hidden
-date: 2022-05-10T00:00:00.000Z
+date: "2022-05-10"
 categories:
   - 现代诗
 tags:

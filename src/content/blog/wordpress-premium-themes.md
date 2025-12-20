@@ -1,6 +1,6 @@
 ---
 title: 关于 WordPress 收费主题的一些想法
-date: 2010-05-09T00:00:00.000Z
+date: "2010-05-09"
 categories:
   - Insight
 tags:

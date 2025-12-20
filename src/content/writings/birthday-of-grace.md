@@ -1,6 +1,6 @@
 ---
 title: 臨江仙·H君生日
-date: 2008-11-20T00:00:00.000Z
+date: "2008-11-20"
 categories:
   - 诗词
 tags:

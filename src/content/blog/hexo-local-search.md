@@ -1,6 +1,6 @@
 ---
 title: 给 Hexo 添加搜索模块
-date: 2023-07-17T02:04:00.000Z
+date: "2023-07-17"
 categories:
   - Sitelog
   - Coding

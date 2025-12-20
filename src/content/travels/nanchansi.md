@@ -1,6 +1,6 @@
 ---
 title: 无锡南禅寺
-date: 2025-05-08T02:48:00.000Z
+date: "2025-05-08"
 categories:
   - 周边游
 tags:

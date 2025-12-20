@@ -1,6 +1,6 @@
 ---
 title: Eversunny
-date: 2009-06-17T00:00:00.000Z
+date: "2009-06-17"
 categories:
   - Life
 tags:
