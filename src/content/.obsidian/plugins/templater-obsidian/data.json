@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": ".templater",
+  "templates_folder": "_templater",
   "templates_pairs": [
     [
       "",
@@ -24,8 +24,8 @@
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    ".templater/_post.md",
-    ".templater/_page.md"
+    "_templater/_post.md",
+    "_templater/_page.md"
   ],
   "startup_templates": [
     ""

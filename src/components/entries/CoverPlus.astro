@@ -8,7 +8,7 @@ const hasVideo = Boolean(video);
 const coverImage = photos[0] || defaultImage;
 ---
 
-<div class={`alignfull overflow-hidden rounded-xl relative ${aspectClass} group-hover:drop-shadow-2xl duration-300 will-change-auto`}>
+<div class={`alignfull overflow-hidden rounded-xl relative ${aspectClass}`}>
   {hasVideo ? (
     <video
       class="w-full h-full object-cover"
@@ -20,7 +20,7 @@ const coverImage = photos[0] || defaultImage;
       playsinline
     />
   ) : (
-    <div class="w-full h-full relative">
+    <div class="w-full h-full relative object-cover object-center">
       {photos.length > 1 ? (
         <div class="absolute inset-0 w-full h-full swiper">
           {photos.map((photo, index) => (

@@ -45,8 +45,8 @@ const postsWithPaths = await Promise.all(
 );
 ---
 <BaseLayout title={`分类: ${category}`}>
-  <section class="container-wide">
-    <div class="mt-32"></div>
+  <section class="max-w-7xl mx-auto px-8">
+    <div class="mt-48"></div>
     <div>
       <h1 class="text-4xl md:text-8xl/24 font-serif first-line:font-sans font-medium first-line:font-bold mb-8 uppercase tracking-tight">
         Category
@@ -55,13 +55,10 @@ const postsWithPaths = await Promise.all(
       </h1>
     </div>
     
-    <div class="mt-8">
+    <div class="mt-24 columns-1 gap-8 sm:columns-2 md:columns-3 [&>article:not(:first-child)]:mt-8">
       {postsWithPaths.map(post => (
         <BlogPost
-          title={post.data.title}
-          href={post.href}
-          date={post.data.date}
-          description={post.data.description}
+          post={post}
         />
       ))}
     </div>

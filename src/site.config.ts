@@ -76,7 +76,7 @@ export const config = {
   content: {
     externalLinksContent: ' ↗',
     /** Blog page size for pagination (optional) */
-    postsPerPage: 12,
+    postsPerPage: 16,
     externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
     share: ['weibo', 'x', 'bluesky']

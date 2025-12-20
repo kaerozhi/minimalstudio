@@ -1,0 +1,66 @@
+---
+// props: photos[], video, title, ratio
+const { photos = [], video = '', title = '封面图', ratio = '16/9' } = Astro.props;
+
+const coverImage = photos?.[0] || '/assets/default-cover.png';
+const hasMultiple = photos.length > 1;
+---
+
+<div
+  x-data="{ active: 0 }"
+  class={`relative overflow-hidden alignfull aspect-${ratio} rounded-xl group`}
+>
+  {video ? (
+    <video
+      src={video}
+      poster={coverImage}
+      controls
+      preload="none"
+      class="w-full h-full object-cover rounded-xl"
+    ></video>
+  ) : hasMultiple ? (
+    <>
+      <template x-for="(photo, index) in [${photos.map((url) => `'${url}'`).join(', ')}]" :key="index">
+        <img
+          x-show="active === index"
+          :src="photo"
+          :alt="`${title} - 图 ${index + 1}`"
+          class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500"
+          :class="{ 'opacity-100': active === index, 'opacity-0': active !== index }"
+          loading="lazy"
+        />
+      </template>
+
+      {/* 左右按钮 */}
+      <button
+        @click="active = (active - 1 + ${photos.length}) % ${photos.length}"
+        class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 text-white px-2 py-1 text-sm rounded hover:bg-black/50"
+      >
+        ‹
+      </button>
+      <button
+        @click="active = (active + 1) % ${photos.length}"
+        class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 text-white px-2 py-1 text-sm rounded hover:bg-black/50"
+      >
+        ›
+      </button>
+
+      {/* 小圆点指示器 */}
+      <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+        <template x-for="(dot, i) in ${photos.length}" :key="i">
+          <div
+            class="w-2 h-2 rounded-full"
+            :class="active === i ? 'bg-white' : 'bg-white/40'"
+          ></div>
+        </template>
+      </div>
+    </>
+  ) : (
+    <img
+      src={coverImage}
+      alt={title}
+      class="w-full h-full object-cover object-center"
+      loading="lazy"
+    />
+  )}
+</div>

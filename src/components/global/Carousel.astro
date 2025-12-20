@@ -1,0 +1,152 @@
+---
+// src/components/PhotoCarousel.astro
+interface Props {
+  photos: string[];
+}
+
+const { photos } = Astro.props;
+
+// 为了简洁，这里只实现一个简单的图片展示，不包含完整的轮播逻辑
+// 如果需要完整的轮播功能，建议引入一个专业的轮播库
+// 这是一个示意图，假设你用JS实现了轮播逻辑
+---
+<div class="photo-carousel">
+  {photos.length === 1 ? (
+    <img src={photos[0]} alt="Single photo" />
+  ) : (
+    <div class="carousel-container">
+      {photos.map((photo, index) => (
+        <img src={photo} alt={`Photo ${index + 1}`} class="carousel-image" />
+      ))}
+      {/* 这里需要添加 JavaScript 来实现滑动、导航点等轮播功能 */}
+      <div class="carousel-nav">
+          <button class="carousel-prev">❮</button>
+          <button class="carousel-next">❯</button>
+      </div>
+      <div class="carousel-dots">
+          {photos.map((_, index) => (
+              <span class="dot" data-index={index}></span>
+          ))}
+      </div>
+    </div>
+  )}
+</div>
+
+<script>
+  // 这是一个简单的JS轮播示例，实际项目中请使用成熟的库
+  document.addEventListener('DOMContentLoaded', () => {
+    const containers = document.querySelectorAll('.carousel-container');
+    containers.forEach(container => {
+      const images = container.querySelectorAll('.carousel-image');
+      const prevBtn = container.querySelector('.carousel-prev');
+      const nextBtn = container.querySelector('.carousel-next');
+      const dotsContainer = container.querySelector('.carousel-dots');
+      let currentIndex = 0;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.style.display = i === index ? 'block' : 'none';
+        });
+        updateDots(index);
+      }
+
+      function updateDots(index) {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      if (images.length > 1) {
+        prevBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(currentIndex);
+        });
+        nextBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+        });
+        if (dotsContainer) {
+            dotsContainer.addEventListener('click', (e) => {
+                if ((e.target as HTMLElement).classList.contains('dot')) {
+                    const index = parseInt((e.target as HTMLElement).dataset.index || '0');
+                    currentIndex = index;
+                    showImage(currentIndex);
+                }
+            });
+        }
+        showImage(currentIndex); // Initial display
+      } else {
+          // Only one image, hide nav and dots
+          if (prevBtn) prevBtn.style.display = 'none';
+          if (nextBtn) nextBtn.style.display = 'none';
+          if (dotsContainer) dotsContainer.style.display = 'none';
+          if (images.length > 0) images[0].style.display = 'block';
+      }
+    });
+  });
+</script>
+
+<style>
+  .photo-carousel {
+    margin: 20px 0;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .photo-carousel img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+  }
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide images that are not currently displayed */
+  }
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    display: none; /* Hide all by default, JS will show one */
+    max-height: 500px; /* Optional: limit max height */
+    object-fit: contain; /* Keep image fully visible within bounds */
+  }
+  .carousel-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+  }
+  .carousel-nav button {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.5em;
+  }
+  .carousel-dots {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+  }
+  .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  .dot.active {
+      background: white;
+  }
+</style>

@@ -1,0 +1,34 @@
+---
+import { getEntry, getCollection } from 'astro:content';
+import MarkdownDesignLayout from '@/layouts/MarkdownDesignLayout.astro';
+
+export const prerender = true;
+
+const collection = 'travel'; // 🔧 固定为 'travel'
+
+export async function getStaticPaths() {  
+  const collection = 'travel';
+  const entries = await getCollection(collection);
+
+  return entries.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      slug: entry.slug,
+    },
+  }));
+}
+
+const { slug } = Astro.props;
+
+const entry = await getEntry(collection, slug);
+if (!entry) throw new Error(`未找到 ${collection}/${slug}`);
+
+const toc = entry?.data.toc;
+const { Content, headings } = await entry.render();
+---
+
+<MarkdownDesignLayout entry={entry} collection={collection} toc={toc} headings={headings}>
+  <Content />
+</MarkdownDesignLayout>

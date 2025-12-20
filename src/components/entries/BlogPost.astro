@@ -1,18 +1,44 @@
 ---
 import { formatDate } from "@/utils/format";
-const { title, href, description, date, category } = Astro.props;
+import { getPathBySlug } from '@/utils/getPathBySlug';
+import { slugify } from "@/utils/slugify";
 
-const dateFormated = formatDate(date);
+import Cover from './Cover.astro';
+const { post, index } = Astro.props;
+
+const dateFormated = formatDate(post.data.date);
+const href = await getPathBySlug(post.slug);
 ---
-<article class="py-8 border-b first:border-t grid grid-cols-1 md:grid-cols-4 items-center gap-2 border-zinc-300">
-    <time class="col-span-1 text-sm text-zinc-700">{dateFormated}</time>
-    <div class="col-span-3">
-        <h2 class="font-bold text-xl">
-            <a href={href}>{title}
-            </a>
+<article class="group">
+  
+    <div class="relative overflow-hidden aspect-16/9 bg-white">
+      {post.data.photos?.[0] && (
+        <a href={href} class="object-cover w-full"><Cover photos={post.data.photos} title={post.data.title}></Cover></a>
+      )}
+    </div>
+    <div class="p-4">
+      <div class="mt-2 w-3/4">
+        <h2 class="text-xl font-bold tracking-tight">
+          <a href={href}>
+            {post.data.title}
+            {(post.data.description) &&
+              <span class="font-normal text-zinc-500">{post.data.description}</span>
+            }
+          </a>
         </h2>
-        {(description) &&
-        <p class="text-zinc-700 text-sm mt-2">{description}</p>
-        }
-    </div>   
+      </div>
+      <div class="mt-2 text-xs text-zinc-500">
+        { post.data.categories.map((category) => (
+            <a
+              class="font-bold" 
+              href={`/category/${slugify(category)}`}>
+              {category}
+            </a>
+          )
+        )}
+         - 
+        <time class="">{dateFormated}</time>
+      </div>
+    </div>  
+  
 </article>

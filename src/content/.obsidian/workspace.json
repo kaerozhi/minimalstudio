@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "994bb5284cb6de55",
+        "id": "8518b2ce04ab68be",
         "type": "tabs",
         "children": [
           {
-            "id": "62b3ee08fe2cf23f",
+            "id": "3763482c3e2bfdc4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/isco-gottingen-iscotar-50mm-f28.md",
+                "file": "blog/manage-mijia-suveillance-on-your-own-nas.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "isco-gottingen-iscotar-50mm-f28"
+              "title": "manage-mijia-suveillance-on-your-own-nas"
             }
           }
         ]
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "strava",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 281.5
   },
   "right": {
     "id": "0838cf15b68b4c64",
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "blog/astro-started.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "astro-started 的反向链接列表"
             }
           },
           {
@@ -140,24 +141,25 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
+                "file": "blog/manage-mijia-suveillance-on-your-own-nas.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "manage-mijia-suveillance-on-your-own-nas 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 231.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -167,35 +169,43 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "62b3ee08fe2cf23f",
+  "active": "3763482c3e2bfdc4",
   "lastOpenFiles": [
-    "blog/show-your-latest-strava-activity-on-astro.md",
-    "blog/strange-problem.md",
-    "blog/zoundry-raven.md",
-    "blog/wordpress-theme-resources.md",
-    "blog/wordpress-premium-themes.md",
-    "blog/wordpress-on-location.md",
-    "blog/windows-live-writer-update.md",
-    "blog/windows-live-writer-review.md",
-    "blog/windows-live-writer-error.md",
-    "blog/web-design-for-mobile-devices.md",
-    "blog/video-in-hexo.md",
-    "blog/van-gogh-style-lora.md",
-    "blog/try-blackberry-themes-with-simulator.md",
-    "blog/traditional-chinese-ink-painting-by-stable-diffusion.md",
-    "blog/theme-update.md",
-    "blog/synology-enospc-error.md",
-    "blog/synology-decode-problem.md",
-    "blog/summary-for-theme-building.md",
-    "blog/stable-diffusion-plugin-for-photoshop.md",
-    "blog/snagit-small-regret.md",
-    "blog/share-bilibili-video-in-hexo.md",
-    "blog/scribefire-and-zoundry.md",
-    "blog/obsidian-sync-with-synology-drive.md",
-    "blog/new-illustration.md",
-    "blog/new-aeroom-is-lunched.md",
-    "blog/little-red-hood.md",
+    "travels/dongcun-and-tangli.md",
+    "blog/manage-mijia-suveillance-on-your-own-nas.md",
+    "travels/xiyuan-temple-and-the-cats-there-before-winter.md",
+    "travels/walk-around-the-ancient-gusu.md",
+    "podcasts/第一期.md",
+    "daily",
+    "podcasts",
+    "blog/how-to-start-a-podcast.md",
+    "gallery/live-like-an-ancient-chinese.md",
+    "gallery/lizishu-and-manshufang.md",
+    "gallery/suxi.md",
+    "blog/gears-list-2025.md",
+    "travels/canglangting-and-keyuan.md",
+    "blog/air2s-footage-color-grading.md",
+    "travels/miduishan.md",
+    "travels/dongshan-before-winter.md",
+    "blog/update-pytorch-in-comfyui.md",
+    "blog/remove-background-in-comfyui.md",
+    "blog/unraid-network-config.md",
+    "blog/hiking-from-lingyan-to-baimajian.md",
+    "blog/afs-nikkor-58mm-f1.4-g.md",
+    "blog/afs-nikkor-35mm-f1.4-g.md",
+    "blog/natural-light-portraiture.md",
+    "blog/fujifilm-gfx100s-video-settings.md",
+    "travels/late-autumn-of-liuyuan.md",
+    "travels/feiying-tower.md",
+    "travels/donglin-temple-and-donglin-buddha.md",
+    "travels/the-garden-of-cats.md",
+    "collections.config.ts",
+    "Clippings",
+    "_templater",
+    "schemas.js",
+    "schemas.ts",
     "config.ts",
+    "config.js",
     "writings/周福清.jpg",
     "writings/Qiu_jin.jpg",
     "writings/129155182.jpg",
@@ -206,11 +216,6 @@
     "design/magesbattle2.png",
     "design/logo-collections.png",
     "design/lines-1.png",
-    "travels/GPmpb3AbkAA3TJl-1.exif",
-    "travels/GPmpb3AbkAA3TJl.exif",
-    "travels/suzhou",
-    "travels/新建文件夹",
-    "posts",
-    "_templater"
+    "travels/GPmpb3AbkAA3TJl-1.exif"
   ]
 }

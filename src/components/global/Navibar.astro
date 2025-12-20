@@ -1,0 +1,120 @@
+---
+import { config } from "@/site.config";
+
+const currentPath = Astro.url.pathname;
+const { width = "container-wide" } = Astro.props;
+---
+<!-- Navigation Bar -->
+<nav x-data="{ open: false }" class="bg-neutral-primary fixed w-full bg-bg-page/90 backdrop-blur antialiased z-20 top-0 start-0">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 justify-between">
+      <!-- Left Side: Brand and Desktop Menu -->
+      <div class="flex items-center">
+        <!-- Logo -->
+        <div>
+          <a
+            class="text-current gap-4 items-center tracking-tighter inline-flex font-bold text-xl"
+            href="/"
+            title="返回首页"
+          >
+            <!-- SVG content remains the same -->          
+            <svg class="h-6" :class="{ 'fill-black': atTop && !open, 'fill-white': !atTop || open }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.21 20.78">
+              <g data-name="logo-group">
+                <path d="m19.89 15.43-4.98-.02 11.8-12.7L8.6 2.65 6.07 5.37l-4.98-.02L6.05 0h28.16L19.88 15.42z"/>
+                <path d="m14.26 5.34 4.98.02L7.41 18.08l18.11.06 2.52-2.72 4.98.02-4.95 5.34-26.47-.09H0L14.26 5.34z"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="items-center ml-4 hidden lg:ml-6 lg:flex">
+        <div class="flex space-x-4">
+        {
+          config.header.menu.map((item) => {
+            const isActive = currentPath.startsWith(item.link);
+            return (
+              <a 
+                href={item.link} 
+                class={`mx-6 py-2 text-sm font-medium text-gray-700 transition duration-150 hover:text-primary ${isActive ? "border-b-2 border-current font-bold" : ""}`}
+              >{item.title}</a>
+            );
+          })
+        }
+        </div>
+      </div>
+
+      <!-- Right Side: Search and User Account -->
+      <div class="flex items-center">
+        <!-- User Account Button - Hidden on tablets, shown on desktop -->
+        <div class="hidden lg:block">
+          <button class="flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white transition duration-150 hover:bg-primary">
+            预约拍摄
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button - Shown on mobile and tablet -->
+        <div class="flex items-center lg:hidden">
+          <button @click="open = !open" class="text-gray-700 transition duration-150 hover:text-primary focus:text-primary focus:outline-none">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu - Shown on mobile and tablet -->
+  <div x-show="open" class="fixed inset-0 z-40 bg-white lg:hidden" style="display: none;">
+    <!-- Mobile Menu Header -->
+    <div class="flex h-16 items-center justify-between border-b border-gray-200 px-4 sm:px-6 lg:px-8">
+      <!-- Brand -->
+      <div>
+        <a
+          class="text-current gap-4 items-center tracking-tighter inline-flex font-bold text-xl"
+          href="/"
+          title="link to main page"
+        >
+          <!-- SVG content remains the same -->          
+          <svg class="h-6" :class="{ 'fill-black': atTop && !open, 'fill-white': !atTop || open }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.21 20.78">
+            <g data-name="logo-group">
+              <path d="m19.89 15.43-4.98-.02 11.8-12.7L8.6 2.65 6.07 5.37l-4.98-.02L6.05 0h28.16L19.88 15.42z"/>
+              <path d="m14.26 5.34 4.98.02L7.41 18.08l18.11.06 2.52-2.72 4.98.02-4.95 5.34-26.47-.09H0L14.26 5.34z"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Close Button -->
+      <button @click="open = false" class="text-gray-700 transition duration-150 hover:text-primary focus:outline-none">
+        <i data-lucide="x" class="h-6 w-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Content -->
+    <div class="px-4 pb-6 pt-4 bg-white">
+
+      <!-- Mobile Menu -->
+      <div class="space-y-2">
+        {
+          config.header.menu.map((item) => {
+            const isActive = currentPath.startsWith(item.link);
+            return (
+              <a 
+                href={item.link}  
+                class={`block rounded-md px-3 py-3 text-base font-medium text-gray-700 transition duration-150 hover:bg-gray-100 hover:text-primary ${isActive ? "bg-zinc-50" : ""}`}
+              >{item.title}</a>
+            );
+          })
+        }
+      </div>
+
+      <!-- Mobile User Account Button -->
+      <div class="mt-6 border-t border-gray-200 pt-6">
+        <button class="flex w-full items-center justify-center rounded-md bg-primary px-4 py-3 text-base font-medium text-white transition duration-150 hover:bg-primary">
+          预约拍摄
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

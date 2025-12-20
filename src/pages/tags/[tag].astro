@@ -52,7 +52,7 @@ const postsWithPaths = await Promise.all(
       </h1>
     </div>
     
-    <div class="mt-8">
+    <div class="mt-24 columns-1 gap-8 sm:columns-2 md:columns-3 [&>article:not(:first-child)]:mt-8">
       {postsWithPaths.map(post => (
         <BlogPost
           title={post.data.title}

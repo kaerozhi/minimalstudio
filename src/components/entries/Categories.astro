@@ -9,7 +9,7 @@ const currentCategories = await getCategories(collection);
 <ul class={`flex flex-${direction} gap-2 flex-wrap uppercase`}>
   {currentCategories.map(cat => (
     <li>
-      <a href={`/category/${cat.slug}`} class="chip">{cat.label} <sup>{cat.count}</sup></a>
+      <a href={`/category/${cat.slug}`} class="text-lg chip font-bold">{cat.label} <sup class="font-normal">{cat.count}</sup></a>
     </li>
   ))}
 </ul>

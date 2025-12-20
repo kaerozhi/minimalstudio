@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import { formatYear } from '@/utils/format';
+import { slugify } from '@/utils/slugify';
+import { config } from '@/site.config';
+
+// 加载 UI 组件
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import DesignPost from '@/components/entries/DesignPost.astro';
+import Pagination from '@/components/global/Pagination.astro';
+import Categories from '@/components/entries/Categories.astro';
+
+const collection = Astro.url.pathname.split('/')[1];
+
+const allBlogPosts = await getCollection(collection);
+const visibleEntries = allBlogPosts
+  .filter((entry) => entry.data.draft !== true)
+  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+// 文章总数
+const page = 1;
+const perPage = config.content.postsPerPage || 10;
+const totalPages = Math.ceil(visibleEntries.length / perPage);
+const posts = visibleEntries.slice(0, perPage);
+---
+<BaseLayout title="游历">
+  <section class="container-wide pt-12 px-4">
+    <h1 class="mt-48 text-6xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] font-bold leading-[0.9] tracking-tighter animate-fade-in">
+      Explore 
+      <span class="font-serif">&</span> 
+      Experience.
+    </h1>
+
+    <div class="mt-24 flex flex-row">
+      <div class="w-1/4 pr-8">
+        游历
+      </div>
+      <div class="w-1/2">
+        Expert insights on web design, branding, and digital strategy to help your business stand out.
+      </div>
+      <div class="w-1/4 pl-8">
+        From design principles to technical optimizations—everything you need for digital success.
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 place-content-between">
+        {posts.slice(1,5).map((post, index) => (
+          <DesignPost post={post} />
+        ))}
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 place-content-between">
+        {posts.slice(5).map(post => (
+          <DesignPost post={post} />
+        ))}
+      </div>
+
+      <Pagination collection="design" page={page} totalPages={totalPages} />
+    </div>
+  </section>
+</BaseLayout>
