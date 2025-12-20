@@ -1,6 +1,7 @@
 ---
 title: 用一亿像素的富士中画幅相机拍视频是什么感受？以及 Fujifilm GFX100s 的视频设置
 date: "2025-12-11"
+draft: true
 categories:
   - 摄影
 tags:

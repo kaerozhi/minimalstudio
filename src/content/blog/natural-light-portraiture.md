@@ -1,6 +1,7 @@
 ---
 title: "自然光下的人像摄影"
 date: "2025-12-13"
+draft: true
 categories: 
   - "摄影"
 tags: 

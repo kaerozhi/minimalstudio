@@ -1,6 +1,7 @@
 ---
 title: "2025年器材清单，以及清理计划"
 date: "2025-12-17"
+draft: true
 categories: 
   - "摄影"
 tags: 

@@ -1,6 +1,7 @@
 ---
 title: "像古代中国人一样生活"
 date: "2025-11-06"
+draft: true
 categories: 
   - Events
 tags: 
