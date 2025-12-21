@@ -6,7 +6,7 @@ import { getCategories } from '@/utils/getCategories';
 
 // 加载 UI 组件
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import BlogPost from '@/components/entries/BlogPost.astro';
+import BlogPost from '@/components/entries/GalleryPost.astro';
 import Pagination from '@/components/global/Pagination.astro';
 import Categories from '@/components/entries/Categories.astro';
 import { getPathBySlug } from '@/utils/getPathBySlug';
@@ -79,15 +79,10 @@ const posts = postsWithPaths.slice(0, perPage);
       </div>
     </div>
     
-    <div class="pt-12 grid gap-8 sm:grid-cols-2">
+    <div class="pt-12 columns-1 sm:columns-2 lg:columns-3 gap-8 [&>article:not(:first-child)]:mt-8">
       {posts.map((post, index) => (
         <BlogPost
-          title={post.data.title}
-          href={post.href}
-          date={post.data.date}
-          description={post.data.description}
-          categories={post.data.categories}
-          photos={post.data.photos}
+          post={post}
         />
       ))}
     </div>
