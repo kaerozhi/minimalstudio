@@ -28,7 +28,7 @@ const { entry, collection, toc, headings } = Astro.props;
           {entry.data.description}
       </p>
 
-      <div class="rounded-xl overflow-hidden">
+      <div>
         {entry.data.photos?.[0] && (
           <Cover photos={entry.data.photos} ratio="auto" title={entry.data.title}></Cover>
         )}
@@ -36,7 +36,7 @@ const { entry, collection, toc, headings } = Astro.props;
     </div>
     
     <div
-      class="entry mt-12 mx-auto text-lg/7 prose text-text-default  prose-img:hover:drop-shadow-2xl prose-img:rounded-xl prose-img:duration-300 prose-pre:text-sm">
+      class="entry mt-12 mx-auto text-lg/7 prose text-text-default prose-pre:text-sm">
       <slot />
     </div>
       
@@ -55,4 +55,5 @@ const { entry, collection, toc, headings } = Astro.props;
     <!-- 相关文章 -->
     <RelatedDesign collection={collection} slug={entry.slug} />
   </article>
+
 </BaseLayout>

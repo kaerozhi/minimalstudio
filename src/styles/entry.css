@@ -48,8 +48,3 @@
   text-decoration: line-through;
   color: var(--color-text-muted);
 }
-
-.entry .contains-task-list input[type=checkbox] {
-  margin-right: 0.5em;
-  border-radius: 0.2em;
-}

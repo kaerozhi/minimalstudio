@@ -1,0 +1,179 @@
+---
+/**
+ * MediaEnhancer.astro - 极致画廊强制对齐版
+ * 功能：零裁切、全行两端对齐（含最后一行）、PhotoSwipe灯箱、动态Caption
+ */
+---
+
+<style is:global>
+  /* --- 1. 画廊容器 --- */
+  .media-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px !important; 
+    width: 100%;
+    /* 移除之前的 justify-content 限制，让 flex-grow 自然发挥 */
+  }
+
+  .media-gallery-container p { display: contents !important; }
+
+  /* --- 2. 图片包装层 --- */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    background-color: var(--color-zinc-100);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* flex-grow 为核心：它会确保每一行（包括最后一行）都填满 */
+    flex-shrink: 1;
+  }
+
+  .dark .gallery-item { background-color: var(--color-zinc-800); }
+
+  .gallery-item:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    z-index: 10;
+  }
+
+  .gallery-item img {
+    height: auto !important;
+    width: 100% !important;
+    display: block;
+    object-fit: contain !important;
+    margin: 0 !important;
+  }
+
+  /* --- 3. 动态标题 --- */
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 1.25rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- 移除 ::after 伪元素 --- */
+  /* 我们不再需要占位符，因为我们希望最后一行也拉伸填满宽度 */
+
+  /* --- 4. Lightbox & Mobile --- */
+  .pswp { --pswp-bg: rgba(12, 12, 13, 0.95); }
+
+  @media (max-width: 768px) {
+    .media-gallery-container { gap: 12px !important; }
+    .gallery-item { border-radius: 0.5rem; }
+  }
+</style>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/effect-fade';
+
+  function initMediaSystem() {
+    const galleryContainers = document.querySelectorAll('.media-gallery-container');
+    const BASE_HEIGHT = 420; 
+
+    galleryContainers.forEach(container => {
+      const images = container.querySelectorAll('img');
+      
+      images.forEach(img => {
+        if (img.parentElement?.classList.contains('pswp-link')) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'gallery-item not-prose';
+        
+        const anchor = document.createElement('a');
+        anchor.className = 'pswp-link';
+        anchor.href = (img as HTMLImageElement).src;
+
+        const altText = (img as HTMLImageElement).alt;
+        if (altText) {
+          const caption = document.createElement('div');
+          caption.className = 'gallery-caption';
+          caption.innerText = altText;
+          wrapper.appendChild(caption);
+        }
+
+        img.parentNode?.insertBefore(wrapper, img);
+        anchor.appendChild(img);
+        wrapper.appendChild(anchor);
+
+        const applyLayout = () => {
+          const { naturalWidth, naturalHeight } = img as HTMLImageElement;
+          if (naturalWidth && naturalHeight) {
+            const ratio = naturalWidth / naturalHeight;
+            // 比例作为权重
+            wrapper.style.flexGrow = ratio.toString();
+            // 基础宽度由比例决定
+            wrapper.style.flexBasis = (ratio * BASE_HEIGHT) + 'px';
+            
+            anchor.dataset.pswpWidth = naturalWidth.toString();
+            anchor.dataset.pswpHeight = naturalHeight.toString();
+          }
+        };
+
+        if ((img as HTMLImageElement).complete) applyLayout();
+        else img.addEventListener('load', applyLayout);
+      });
+    });
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.media-gallery-container',
+      children: '.pswp-link',
+      pswpModule: () => import('photoswipe'),
+      padding: { top: 20, bottom: 20, left: 20, right: 20 }
+    });
+    lightbox.init();
+
+    // Swiper 初始化 (保持不变)
+    document.querySelectorAll('.media-slider-container').forEach((el) => {
+      if (el.classList.contains('swiper-initialized')) return;
+      const imgs = el.querySelectorAll('img');
+      if (imgs.length === 0) return;
+      const swiperWrapper = document.createElement('div');
+      swiperWrapper.className = 'swiper-wrapper';
+      imgs.forEach(img => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.appendChild(img.cloneNode(true));
+        swiperWrapper.appendChild(slide);
+      });
+      el.innerHTML = '';
+      el.appendChild(swiperWrapper);
+      const pagination = document.createElement('div');
+      pagination.className = 'swiper-pagination';
+      el.appendChild(pagination);
+      new Swiper(el as HTMLElement, {
+        modules: [Navigation, Pagination, Autoplay, EffectFade],
+        loop: true,
+        effect: 'fade',
+        autoplay: { delay: 4000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: true,
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initMediaSystem);
+  initMediaSystem();
+</script>
