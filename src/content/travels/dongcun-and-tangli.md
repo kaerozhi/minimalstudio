@@ -36,6 +36,7 @@ photos:
 
 祠堂除了屋子，原本的陈设当然一空，管理方很聪明，在这里设了西山石刻展，细看下来，足以盘桓半日。话说王鏊老爷子挂冠后家居十六年，足迹遍布全苏州，「少傅王鏊」的大名，我印象中都见过四五处了。
 
+:::gallery
 ![迈过古老的门槛](https://media.kaerozhi.com/2025/12/67499ca849a792b2be7bf030deea8a82.webp)
 
 ![古墙之上的晴空](https://media.kaerozhi.com/2025/12/129d24951d5d272333c0381f6394a6e6.webp)
@@ -55,6 +56,7 @@ photos:
 ![二楼室内，当初应该是可以住人的](https://media.kaerozhi.com/2025/12/b3e4c02d83a7af6ffc1199c562ada4f2.webp)
 
 ![窗](https://media.kaerozhi.com/2025/12/f083a174acbdadd9332da858fdd5c108.webp)
+:::
 
 ## 敬修堂
 
@@ -70,6 +72,7 @@ photos:
 
 堂内基本上保持了居民迁出之后的本来模样，角落里堆了不少杂物，看上去比较乱。
 
+:::gallery
 ![开轩](https://media.kaerozhi.com/2025/12/f0f8cc7931bc63493ad9db94f211ab0a.webp)
 
 ![堂构维新](https://media.kaerozhi.com/2025/12/8ebbbb761d6cf0b7183cf94c49f25c18.webp)
@@ -105,9 +108,11 @@ photos:
 ![谢绝参观，非请莫入。看来当时的居民没少遭受访古爱好者的骚扰。](https://media.kaerozhi.com/2025/12/6b26bd30e75a839db06914b9896e0fef.webp)
 
 ![一线青空](https://media.kaerozhi.com/2025/12/2134e7855ec2cbf2551d84266b74a297.webp)
+:::
 
 最内一进另外收费，看小红书的游记，之前是5元，但阿姨说10元，两人一起15。我是后面进去的，据说还可以上楼，我没有去。
 
+:::gallery
 ![功崇业广。最后一进院落。](https://media.kaerozhi.com/2025/12/3540f997a411d4d851e06975a8b0f39c.webp)
 
 ![忠。西山岛的文革遗存不少。](https://media.kaerozhi.com/2025/12/249300c0e0587498abf86a59f404ee6a.webp)
@@ -125,6 +130,7 @@ photos:
 ![与岁月的深邃对视。](https://media.kaerozhi.com/2025/12/8c9c22ad22950091373ed8eeb6a7dd17.webp)
 
 ![阳光](https://media.kaerozhi.com/2025/12/e75b0bfa38492a936041710ec85ce324.webp)
+:::
 
 ## 横山岛观鸥
 
@@ -140,6 +146,7 @@ photos:
 
 不过当它是普通的古民宅来游览的话，此处倒也有可观之处。入门后的院落有池塘假山，相当有章法，池中有岛，且可以通过池上的石头走到假山下，钻过山洞，可以登上山顶的吟月亭，单说这个角落的布置，能胜过不少园林。
 
+:::gallery
 ![入门处](https://media.kaerozhi.com/2025/12/25d69df7543ff0ec8800378ce4384b49.webp)
 
 ![隔池观景](https://media.kaerozhi.com/2025/12/e45941460a84f4d995b07eb61d43c945.webp)
@@ -149,6 +156,7 @@ photos:
 ![逆光尤其明艳](https://media.kaerozhi.com/2025/12/c1e8611f2604c9408b4465f7a897169d.webp)
 
 ![吟月亭](https://media.kaerozhi.com/2025/12/646c73b6b6f63d25eee8fbfa50d6b7d7.webp)
+:::
 
 但居住部分就没那么喜欢了，宅子非常大，大部分二楼都能上去，上下左右，简直像个迷宫。东侧部分还好，采光好得多，西侧则大多光线暗淡，又没有几个游人，阴冷处甚至让人有些发毛，走了一圈就出来了。
 
@@ -160,6 +168,7 @@ photos:
 
 室内有不少家具，随意摆放，貌似旧物件，但维护状况也不太好，台面落满灰尘，角落里结着蛛网。但换一个角度，保留了比较多的原本生活面貌，可能也是看点。
 
+:::gallery
 ![柜](https://media.kaerozhi.com/2025/12/2e0228bd57b2e42680bf83051806aef0.webp)
 
 ![窗](https://media.kaerozhi.com/2025/12/68bd6d92908f9ae88ea03da78222a692.webp)
@@ -179,6 +188,7 @@ photos:
 ![看起来似是备餐的地方，但光线暗淡，不宜久处。](https://media.kaerozhi.com/2025/12/e1588eb6d7af77ecfcc0950c3da1427a.webp)
 
 ![灶间](https://media.kaerozhi.com/2025/12/8a35d26da4e1c99dc8901da258893dbf.webp)
+:::
 
 隔壁院子是一家民宿，淡季停业，和景点相通的月洞门随意开着，院子里立着巨大的木瓜树，枝头还缀着几颗黄澄澄的果实。一阵风吹过来，两只木瓜砰然落掉，滚落草丛边。拾起来看，皮都磕破了，闻起来有甜腻的果香，风味甚佳。
 

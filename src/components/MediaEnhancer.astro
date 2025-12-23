@@ -75,7 +75,6 @@
 
   @media (max-width: 768px) {
     .media-gallery-container { gap: 12px !important; }
-    .gallery-item { border-radius: 0.5rem; }
   }
 </style>
 
@@ -91,7 +90,7 @@
 
   function initMediaSystem() {
     const galleryContainers = document.querySelectorAll('.media-gallery-container');
-    const BASE_HEIGHT = 420; 
+    const BASE_HEIGHT = 300; 
 
     galleryContainers.forEach(container => {
       const images = container.querySelectorAll('img');

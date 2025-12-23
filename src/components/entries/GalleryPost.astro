@@ -18,10 +18,10 @@ const { post } = Astro.props;
     </a>
   </div>
   <div class="mt-2 md:mb-8 flex flex-row justify-between content-center">
-    <h2 class="text-md font-bold tracking-tight uppercase">
+    <h2 class="text-sm sm:text-md font-bold tracking-tight uppercase">
       <a href={`/gallery/${post.slug}`}>{post.data.title}</a>
     </h2>
-    <div class="text-md text-text-default/60">
+    <div class="text-sm sm:text-md text-text-default/60">
       <time>{formatYear(post.data.date)}</time> - 
       {
         post.data.categories.map((category) => (
