@@ -1,5 +1,5 @@
 ---
-title: "Project: Suzhou 2025"
+title: "Suzhou 2025"
 date: 2025-12-24
 categories: 
   - "Personal"

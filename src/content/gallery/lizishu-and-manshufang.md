@@ -8,7 +8,7 @@ tags:
   - 书店
   - 见面会
   - 苏州
-description: ""
+description: "流俗地读者见面会 feat 苏州慢书房"
 photos:
   - https://media.kaerozhi.com/2025/12/d20f8a4270ecb1c92481759751a6c48f.webp
 ---
