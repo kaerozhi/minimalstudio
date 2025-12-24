@@ -14,6 +14,7 @@ photos:
 
 工作日的沧浪亭游人不多，大门内一株红色山茶早已盛开，往年也早开的名花「抓破美人脸」，花苞还是小小的，看来还要再等几周。
 
+:::gallery
 ![一块普通的石头](https://media.kaerozhi.com/2025/12/ec10eb3a03d8a2423995904626185d71.webp)
 
 ![大门前](https://media.kaerozhi.com/2025/12/6fdad74c8e3dbfed68099929c87e48ab.webp)
@@ -23,6 +24,7 @@ photos:
 ![漏窗，据说沧浪亭的漏窗有一百种且不重样。](https://media.kaerozhi.com/2025/12/4a1d241b50f3283fc6758b4eb32621a3.webp)
 
 ![黄色与绿色透出不同的光感](https://media.kaerozhi.com/2025/12/fa107864180b8cc20046d2e87b0a7e06.webp)
+:::
 
 一只小狸花静静地蹲在五百名贤祠前的竹林里，等了十分钟都没有等到它转头，然后另外一只猫过来，小狸花就起身走了。
 
@@ -34,6 +36,7 @@ photos:
 
 晴空下的枝干，让我想起梵高的杏花。
 
+:::gallery
 ![枝](https://media.kaerozhi.com/2025/12/8057dd009d021eec9c65c737ef9fe41f.webp)
 
 ![看山楼上](https://media.kaerozhi.com/2025/12/d3641d363cd949df841c879eb44b9af1.webp)
@@ -65,22 +68,26 @@ photos:
 ![屋檐上](https://media.kaerozhi.com/2025/12/f21576bc6816df3fa88d92373de7619d.webp)
 
 ![沧浪胜迹](https://media.kaerozhi.com/2025/12/dea2c4674624f6d716382cbce1959863.webp)
+:::
 
 ## 可园
 
+天色尚早，又去对门的可园逛了一圈。园内有陶小沚先生遗像，之前有印象，这次搜索了一下资料。
+
+![陶小沚先生遗像](https://media.kaerozhi.com/2025/12/27ed5e7516b554bd95e37873f4b6aeae.webp)
+
+> 陶小沚先生遗像。元和孝廉陶先生于丁卯岁莅斯长馆，劬悴三载，遽焉捐舍，同侪慨念，镌石摹像，庸矢勿谖。辛未仲春玉山陈定祥述同人意识之。
+
+陶惟坻（1856.12.5-1930.9.13），清末民初人，字砥流，號小沚、筱沚。家中排行第八，江蘇元和縣周莊人。著述有《說文雜釋》和《陶小沚先生遺集》。<small>参见[師與生 -- 李超瓊與陶惟坻](https://campuswan.com/meow/zh-tw/myblog-cn-traditional/blog-teachers-and-students-005-tra)</small> 
+
+可园于嘉庆十年划归正谊书院，科举废止后，可园成为留学预备机构，改称“存古学堂”。民国时期，在此设立苏州图书馆，陶先生1927年任苏州图书馆馆长，1930年于任上去世。翌年，为纪念其对于图书馆的贡献，全体馆员捐资，邀请著名画家颜元 （颜文樑之父）绘像，陈定祥题跋，摹刻上石。
+
+:::gallery
 ![垂柳池塘](https://media.kaerozhi.com/2025/12/91563ca989b3714cc00374d5ccde6cb5.webp)
 
 ![水面](https://media.kaerozhi.com/2025/12/b8ea80e67d3bd0b6047226de41b78802.webp)
 
 ![南天竹](https://media.kaerozhi.com/2025/12/ce8b1180d648d524812d37c063a2a8ce.webp)
-
-> 陶小沚先生遗像。元和孝廉陶先生于丁卯岁莅斯长馆，劬悴三载，遽焉捐舍，同侪慨念，镌石摹像，庸矢勿谖。辛未仲春玉山陈定祥述同人意识之。
-
-![陶小沚先生遗像](https://media.kaerozhi.com/2025/12/27ed5e7516b554bd95e37873f4b6aeae.webp)
-
-陶惟坻（1856.12.5-1930.9.13），清末民初人，字砥流，號小沚、筱沚。家中排行第八，江蘇元和縣周莊人。著述有《說文雜釋》和《陶小沚先生遺集》。<small>参见[師與生 -- 李超瓊與陶惟坻](https://campuswan.com/meow/zh-tw/myblog-cn-traditional/blog-teachers-and-students-005-tra)</small> 
-
-可园于嘉庆十年划归正谊书院，科举废止后，可园成为留学预备机构，改称“存古学堂”。民国时期，在此设立苏州图书馆，陶先生1927年任苏州图书馆馆长，1930年于任上去世。翌年，为纪念其对于图书馆的贡献，全体馆员捐资，邀请著名画家颜元 （颜文樑之父）绘像，陈定祥题跋，摹刻上石。
 
 ![园内多种梅](https://media.kaerozhi.com/2025/12/38d36b79ca8781bfeb2bb90c80bdf2e4.webp)
 
@@ -91,4 +98,4 @@ photos:
 ![挹清堂内](https://media.kaerozhi.com/2025/12/8fa5a5830ae730bc2f56be2ffd4ebcb5.webp)
 
 ![树影](https://media.kaerozhi.com/2025/12/c0812bf3667f607e43e447f2c18f2573.webp)
-
+:::

@@ -32,9 +32,11 @@ const { entry, collection, toc, headings } = Astro.props;
           {entry.data.description}
       </p>
 
-      {entry.data.photos?.[0] && (
-        <Cover photos={entry.data.photos} ratio="16/9" title={entry.data.title} />
-      )}
+      <div class="alignfull">
+        {entry.data.photos?.[0] && (
+          <Cover photos={entry.data.photos} ratio="16/9" title={entry.data.title} />
+        )}
+      </div>
     </div>
 
     { toc ? (

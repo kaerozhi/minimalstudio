@@ -15,6 +15,7 @@ photos:
 
 留园的大门趁着淡季，正在维修，入口临时挪到出口一处去了，进去还有些陌生。转了几个门头，发现已在涵碧山房檐下。
 
+:::gallery
 ![曲溪](https://media.kaerozhi.com/2025/12/f49eb2437bf7b4263082e1d4ad81feb0.webp)
 
 ![紫藤垂秋阴，长廊覆叶黄。](https://media.kaerozhi.com/2025/12/6c73bcc8a664237d70cdbe25653b4b50.webp)
@@ -45,9 +46,7 @@ photos:
 
 ![古池](https://media.kaerozhi.com/2025/12/70d995bbf67156aa2d3ef5e349275099.webp)
 
-冠云峰前这个欧式置景未免太刻意，中国园林还是浑然一些更好。
-
-![冠云峰](https://media.kaerozhi.com/2025/12/4f13c3094580162a825bc084a13dff17.webp)
+![冠云峰前这个欧式置景未免太刻意，中国园林还是浑然一些更好。](https://media.kaerozhi.com/2025/12/4f13c3094580162a825bc084a13dff17.webp)
 
 ![贮云庵前的竹子](https://media.kaerozhi.com/2025/12/2bf649fc112f7f232e47bc4470823d11.webp)
 
@@ -60,6 +59,7 @@ photos:
 ![猫之假寐](https://media.kaerozhi.com/2025/12/131e8e4ef64a5e41a46efb6dd53d3268.webp)
 
 ![红叶将枯，已呈粉色](https://media.kaerozhi.com/2025/12/312202d452b5cb0a85acdbc55fd7e1f6.webp)
+:::
 
 就像上面这颗鸡爪槭一样，园子里几乎所有的枫叶都在转枯，但远翠阁外面的这颗却还是全盛之姿，完全是错峰出行，饱和度完爆其他所有。
 
@@ -69,6 +69,7 @@ photos:
 
 涵碧山房前的山水自然是留园最精华的地方，不过这个季节的西边大假山才是更好的。
 
+:::gallery
 ![黄叶](https://media.kaerozhi.com/2025/12/408eb5908b02d7d0936d1ea400c112c9.webp)
 
 ![陶小婧在盆景园](https://media.kaerozhi.com/2025/12/f4ff32e1b2fc5a0e3c1c626e154e5d3a.webp)
@@ -98,5 +99,6 @@ photos:
 ![出口的藤](https://media.kaerozhi.com/2025/12/0e7236e5b7df290dd2186462c426af4b.webp)
 
 ![门口的行道树](https://media.kaerozhi.com/2025/12/b55c353e2bf050470e7bd9fa9fb6d0ec.webp)
+:::
 
 感觉再过一周就看不到银杏了，焦枯状态的红叶没准还能再撑一段时间，不过也没什么好看。但冠云峰周围的山茶已经开了不少，也太早了。
