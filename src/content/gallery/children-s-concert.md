@@ -1,5 +1,5 @@
 ---
-title: 孩子们的音乐会
+title: Mini Concert
 date: "2025-12-21"
 categories:
   - Events
@@ -8,6 +8,7 @@ tags:
   - 演出
   - 音乐会
   - 苏州
+description: "小朋友在培训机构的最后一次参演。排练的次数比较少，孩子们的表演也稍显稚嫩，但他们的专注和热情却能打动每一个在场的观众。"
 photos:
   - 'https://media.kaerozhi.com/2025/12/2eb05c1502d8799e2b43ec14e3a75585.webp'
 ---

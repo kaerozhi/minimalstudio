@@ -1,80 +1,87 @@
 ---
 /**
- * MediaEnhancer.astro - 极致画廊强制对齐版
- * 功能：零裁切、全行两端对齐（含最后一行）、PhotoSwipe灯箱、动态Caption
+ * MediaEnhancer.astro - 最终稳定版
+ * 整合：Album, Gallery(Masonry), Slider, 单图自动 Caption, Lightbox(底端文字)
  */
 ---
 
 <style is:global>
-  /* --- 1. 画廊容器 --- */
-  .media-gallery-container {
+  /* --- 0. 基础：解决 Markdown 标签干扰 --- */
+  .media-album-container p, 
+  .media-gallery-masonry p,
+  .media-slider-container p { display: contents !important; }
+
+  /* --- 1. Album: 零裁剪自适应 --- */
+  .media-album-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px !important; 
-    width: 100%;
-    /* 移除之前的 justify-content 限制，让 flex-grow 自然发挥 */
+    gap: 12px !important;
+    margin: 2.5rem auto;
+    min-height: 100px; /* 防塌陷 */
   }
-
-  .media-gallery-container p { display: contents !important; }
-
-  /* --- 2. 图片包装层 --- */
-  .gallery-item {
+  .album-item {
+    flex-grow: 1;
     position: relative;
     overflow: hidden;
-    cursor: zoom-in;
-    background-color: var(--color-zinc-100);
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    /* flex-grow 为核心：它会确保每一行（包括最后一行）都填满 */
-    flex-shrink: 1;
   }
-
-  .dark .gallery-item { background-color: var(--color-zinc-800); }
-
-  .gallery-item:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-    z-index: 10;
-  }
-
-  .gallery-item img {
-    height: auto !important;
+  .album-item img {
     width: 100% !important;
-    display: block;
+    height: auto !important;
     object-fit: contain !important;
+    display: block;
     margin: 0 !important;
   }
 
-  /* --- 3. 动态标题 --- */
-  .gallery-caption {
+  /* --- 2. Masonry Gallery: 两列瀑布流 --- */
+  .media-gallery-masonry {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+    margin: 2.5rem auto;
+    align-items: start;
+  }
+  .masonry-item { display: flex; flex-direction: column; }
+  .masonry-item img { width: 100%; height: auto; display: block; margin: 0 !important; }
+  .masonry-caption {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #71717a;
+  }
+
+  /* --- 3. Single Image: 文章正文单图 --- */
+  .single-image-container {
+    margin: 2rem auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .single-image-caption {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #71717a;
+  }
+
+  /* --- 4. Slider: 图片在上文字在下 --- */
+  .media-slider-wrapper { margin: 3.5rem auto; display: flex; flex-direction: column; }
+  .media-slider-container { width: 100%; order: 1; overflow: hidden; position: relative; }
+  .slider-footer { order: 2; margin-top: 0.5em; text-align: center; }
+  .slider-caption-text { font-size: 0.95rem; color: #3f3f46; min-height: 1.2em; }
+  .swiper-pagination-custom { margin-top: 12px; }
+
+/* Lightbox 底部文字 */
+  .pswp__custom-caption {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2.5rem 1.25rem 1rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    left: 0; right: 0; bottom: 0;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
     color: white;
-    font-size: 0.95rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: all 0.4s ease;
-    pointer-events: none;
-    z-index: 2;
+    text-align: center;
   }
-
-  .gallery-item:hover .gallery-caption {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* --- 移除 ::after 伪元素 --- */
-  /* 我们不再需要占位符，因为我们希望最后一行也拉伸填满宽度 */
-
-  /* --- 4. Lightbox & Mobile --- */
-  .pswp { --pswp-bg: rgba(12, 12, 13, 0.95); }
 
   @media (max-width: 768px) {
-    .media-gallery-container { gap: 12px !important; }
+    .media-gallery-masonry { grid-template-columns: 1fr; }
+    .album-item { flex-basis: 100% !important; }
   }
 </style>
 
@@ -82,97 +89,166 @@
   import PhotoSwipeLightbox from 'photoswipe/lightbox';
   import 'photoswipe/style.css';
   import Swiper from 'swiper';
-  import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
   import 'swiper/css';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
-  import 'swiper/css/effect-fade';
 
   function initMediaSystem() {
-    const galleryContainers = document.querySelectorAll('.media-gallery-container');
-    const BASE_HEIGHT = 300; 
+    // 标记位：防止重复处理
+    const MARKER = 'data-media-enhanced';
 
-    galleryContainers.forEach(container => {
-      const images = container.querySelectorAll('img');
+    // 辅助函数：安全包装灯箱链接
+    function wrapLightbox(img, parent) {
+      if (img.hasAttribute(MARKER)) return;
       
-      images.forEach(img => {
-        if (img.parentElement?.classList.contains('pswp-link')) return;
+      const a = document.createElement('a');
+      a.className = 'pswp-link';
+      a.href = img.src;
+      
+      const updateSize = () => {
+        a.dataset.pswpWidth = img.naturalWidth.toString();
+        a.dataset.pswpHeight = img.naturalHeight.toString();
+      };
+      if (img.complete) updateSize(); else img.onload = updateSize;
+      
+      a.dataset.caption = img.alt || "";
+      img.setAttribute(MARKER, 'true');
+      
+      img.parentNode.insertBefore(a, img);
+      a.appendChild(img);
+      parent.appendChild(a);
+    }
 
-        const wrapper = document.createElement('div');
-        wrapper.className = 'gallery-item not-prose';
-        
-        const anchor = document.createElement('a');
-        anchor.className = 'pswp-link';
-        anchor.href = (img as HTMLImageElement).src;
+    // --- 1. 处理 Album ---
+    document.querySelectorAll('.media-album-container img').forEach(img => {
+      if (img.hasAttribute(MARKER)) return;
+      const container = img.closest('.media-album-container');
+      const item = document.createElement('div');
+      item.className = 'album-item';
+      
+      const setStyles = () => {
+        const ratio = img.naturalWidth / img.naturalHeight || 1.5;
+        item.style.flexGrow = ratio.toString();
+        item.style.flexBasis = (ratio * 280) + 'px';
+        wrapLightbox(img, item);
+      };
 
-        const altText = (img as HTMLImageElement).alt;
-        if (altText) {
-          const caption = document.createElement('div');
-          caption.className = 'gallery-caption';
-          caption.innerText = altText;
-          wrapper.appendChild(caption);
-        }
-
-        img.parentNode?.insertBefore(wrapper, img);
-        anchor.appendChild(img);
-        wrapper.appendChild(anchor);
-
-        const applyLayout = () => {
-          const { naturalWidth, naturalHeight } = img as HTMLImageElement;
-          if (naturalWidth && naturalHeight) {
-            const ratio = naturalWidth / naturalHeight;
-            // 比例作为权重
-            wrapper.style.flexGrow = ratio.toString();
-            // 基础宽度由比例决定
-            wrapper.style.flexBasis = (ratio * BASE_HEIGHT) + 'px';
-            
-            anchor.dataset.pswpWidth = naturalWidth.toString();
-            anchor.dataset.pswpHeight = naturalHeight.toString();
-          }
-        };
-
-        if ((img as HTMLImageElement).complete) applyLayout();
-        else img.addEventListener('load', applyLayout);
-      });
+      container.appendChild(item); // 移动到容器内
+      if (img.complete) setStyles(); else img.onload = setStyles;
     });
 
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '.media-gallery-container',
-      children: '.pswp-link',
-      pswpModule: () => import('photoswipe'),
-      padding: { top: 20, bottom: 20, left: 20, right: 20 }
+    // --- 2. 处理 Masonry ---
+    document.querySelectorAll('.media-gallery-masonry img').forEach(img => {
+      if (img.hasAttribute(MARKER)) return;
+      const container = img.closest('.media-gallery-masonry');
+      const item = document.createElement('div');
+      item.className = 'masonry-item';
+      
+      const cap = document.createElement('div');
+      cap.className = 'masonry-caption';
+      cap.innerText = img.alt || "";
+      
+      container.appendChild(item);
+      wrapLightbox(img, item);
+      item.appendChild(cap);
     });
-    lightbox.init();
 
-    // Swiper 初始化 (保持不变)
-    document.querySelectorAll('.media-slider-container').forEach((el) => {
+    // --- 3. 处理 Slider ---
+    document.querySelectorAll('.media-slider-container').forEach(el => {
       if (el.classList.contains('swiper-initialized')) return;
-      const imgs = el.querySelectorAll('img');
-      if (imgs.length === 0) return;
+      
+      const wrapper = document.createElement('div');
+      wrapper.className = 'media-slider-wrapper';
+      el.parentNode.insertBefore(wrapper, el);
+      wrapper.appendChild(el);
+
+      const images = Array.from(el.querySelectorAll('img'));
       const swiperWrapper = document.createElement('div');
       swiperWrapper.className = 'swiper-wrapper';
-      imgs.forEach(img => {
+      
+      images.forEach(img => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
-        slide.appendChild(img.cloneNode(true));
+        const a = document.createElement('a');
+        a.className = 'pswp-link';
+        a.href = img.src;
+        a.dataset.pswpWidth = (img.naturalWidth || 1200).toString();
+        a.dataset.pswpHeight = (img.naturalHeight || 800).toString();
+        a.dataset.caption = img.alt || "";
+        const newImg = img.cloneNode(true);
+        newImg.setAttribute(MARKER, 'true');
+        a.appendChild(newImg);
+        slide.appendChild(a);
         swiperWrapper.appendChild(slide);
       });
+
       el.innerHTML = '';
       el.appendChild(swiperWrapper);
-      const pagination = document.createElement('div');
-      pagination.className = 'swiper-pagination';
-      el.appendChild(pagination);
-      new Swiper(el as HTMLElement, {
-        modules: [Navigation, Pagination, Autoplay, EffectFade],
+
+      const footer = document.createElement('div');
+      footer.className = 'slider-footer';
+      footer.innerHTML = `<div class="slider-caption-text"></div><div class="swiper-pagination-custom"></div>`;
+      wrapper.appendChild(footer);
+
+      new Swiper(el, {
+        modules: [Navigation, Pagination, Autoplay],
         loop: true,
-        effect: 'fade',
-        autoplay: { delay: 4000 },
-        pagination: { el: '.swiper-pagination', clickable: true },
         navigation: true,
+        pagination: { el: footer.querySelector('.swiper-pagination-custom'), clickable: true },
+        on: {
+          init: (s) => { footer.querySelector('.slider-caption-text').innerText = images[s.realIndex]?.alt || ""; },
+          slideChange: (s) => { footer.querySelector('.slider-caption-text').innerText = images[s.realIndex]?.alt || ""; }
+        }
+      });
+      el.querySelectorAll('img').forEach(i => i.setAttribute(MARKER, 'true'));
+    });
+
+    // --- 4. 处理单图 ---
+    document.querySelectorAll('.prose img').forEach(img => {
+      if (img.hasAttribute(MARKER)) return;
+      
+      const container = document.createElement('div');
+      container.className = 'single-image-container not-prose';
+      const parentP = img.closest('p');
+      const target = parentP || img;
+      
+      target.parentNode.insertBefore(container, target);
+      wrapLightbox(img, container);
+      
+      if (img.alt) {
+        const cap = document.createElement('div');
+        cap.className = 'single-image-caption';
+        cap.innerText = img.alt;
+        container.appendChild(cap);
+      }
+      if (parentP && parentP.innerText.trim() === "") parentP.remove();
+    });
+
+    // --- 5. 初始化 PhotoSwipe ---
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.prose',
+      children: '.pswp-link',
+      pswpModule: () => import('photoswipe')
+    });
+    lightbox.on('uiRegister', function() {
+      lightbox.pswp.ui.registerElement({
+        name: 'custom-caption',
+        order: 9,
+        tagName: 'div',
+        alignment: 'bottom',
+        onInit: (el, pswp) => {
+          pswp.on('change', () => {
+            const curr = pswp.currSlide.data.element;
+            el.innerHTML = curr ? curr.dataset.caption : '';
+          });
+        }
       });
     });
+    lightbox.init();
   }
 
+  // 确保执行
   document.addEventListener('astro:page-load', initMediaSystem);
   initMediaSystem();
 </script>

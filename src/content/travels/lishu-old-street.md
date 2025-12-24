@@ -12,7 +12,7 @@ photos:
 ---
 慕名而去，街道萧条，除了街口巨大的楝树，处处弥漫着衰败的气息。红漆的「拆」字随处可见，有一些房子已经卸掉了门窗，仿佛在用空洞的眼神等待着最终命运的宣告。巷子里游荡着几只瘦狗，人们搬走了，它们留下来和老街为伴。
 
-:::gallery
+:::album
 ![苏州老街的布局和古镇一样，都形成于河道两侧。](https://media.kaerozhi.com/2025/12/1f4c4e7146170d6a215f484dfc290bb4.webp)
 ![楝树，当时还在花期。](https://media.kaerozhi.com/2025/12/f5cf3407d265cb9e24a0f10b4ffa378a.webp)
 ![假鹅在水面上随波浮沉。](https://media.kaerozhi.com/2025/12/f5f19c38c16acfba019b4f6983770f95.webp)
@@ -37,7 +37,7 @@ photos:
 
 ## 番外篇：一位帅气的理发师大叔
 
-:::gallery
+:::album
 ![随时可能被拆迁的房子](https://media.kaerozhi.com/2025/12/67f92ef21cb30126b0d6e1239d0c17af.webp)
 ![仍有人在此剪发](https://media.kaerozhi.com/2025/12/a3e76a7f45f92fc7ad9b01258f8d5fad.webp)
 ![客人走了，休息一下](https://media.kaerozhi.com/2025/12/3536abd211da7bb6249ef585662c880c.webp)
@@ -50,8 +50,8 @@ photos:
 ## 番外篇之二：公鸡受难记
 
 :::slider
-![image.png](https://media.kaerozhi.com/2025/12/0ed0179a1d2937c1fef84b962184498d.webp)
-![image.png](https://media.kaerozhi.com/2025/12/39a72cf564b6c2c3d5805f1add81b16d.webp)
-![image.png](https://media.kaerozhi.com/2025/12/26d04092cd0f3aca797c174d09e03e86.webp)
-![image.png](https://media.kaerozhi.com/2025/12/7901a054f58e5e178d0ca9cf1837fb80.webp)
+![公鸡的受难之地](https://media.kaerozhi.com/2025/12/0ed0179a1d2937c1fef84b962184498d.webp)
+![这么大的公鸡市场上可买不到！](https://media.kaerozhi.com/2025/12/39a72cf564b6c2c3d5805f1add81b16d.webp)
+![当时一位路人拍下了全过程](https://media.kaerozhi.com/2025/12/26d04092cd0f3aca797c174d09e03e86.webp)
+![呜呼！尚飨！](https://media.kaerozhi.com/2025/12/7901a054f58e5e178d0ca9cf1837fb80.webp)
 :::

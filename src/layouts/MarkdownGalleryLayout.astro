@@ -2,39 +2,24 @@
 import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/slugify";
 import BaseLayout from "./BaseLayout.astro";
-import Cover from "@/components/entries/Cover.astro";
+import Hero from "@/components/entries/Hero.astro";
 import RelatedDesign from '@/components/entries/RealatedDesign.astro';
 import "@/styles/entry.css";
 
 const { entry, collection, toc, headings } = Astro.props;
 ---
 <BaseLayout title={entry.data.title}>
-  <article class="container-gallery mt-32">
-    <div class="text-center">
-      <div class="text-text-muted uppercase text-sm">
-        <time>{formatDate(entry.data.date)}</time> - 
-        {
-          entry.data.categories.map((category) => (
-            <span class="text-text-default mr-1 font-semibold">
-              <a href={`/category/${slugify(category)}`}>{category}</a>
-            </span>
-          ))
-        }
-      </div>
-      <h1 class="text-4xl md:w-3/5 mx-auto md:text-6xl/16 font-serif first-line:font-sans first-line:font-semibold text-text-heading font-medium my-6 tracking-tight">
-          {entry.data.title}
-      </h1>
-      <p class="text-lg mx-auto mb-10 text-text-default/60">
-          {entry.data.description}
-      </p>
 
-      <div>
-        {entry.data.photos?.[0] && (
-          <Cover photos={entry.data.photos} ratio="auto" title={entry.data.title}></Cover>
-        )}
-      </div>
-    </div>
-    
+  <Hero
+    title={entry.data.title}
+    pubDate={entry.data.date}
+    description={entry.data.description}
+    categories={entry.data.categories}
+    tags={entry.data.tags}
+    heroImage={entry.data.photos}
+  /> 
+
+  <article class="container-gallery mt-24">
     <div
       class="entry mt-12 mx-auto text-lg/7 prose text-text-default prose-pre:text-sm">
       <slot />

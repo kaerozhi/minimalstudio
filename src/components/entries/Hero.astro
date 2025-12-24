@@ -1,0 +1,115 @@
+---
+import { slugify } from "@/utils/slugify";
+
+interface Props {
+  title: string;
+  description: string;
+  categories: string[];
+  tags: string[];
+  pubDate: Date;
+  heroImage: string;
+}
+
+const { title, description, categories, tags, pubDate, heroImage } = Astro.props;
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<section class="hero-wrapper relative h-[140vh] w-full bg-zinc-950 text-white">
+  <div class="sticky-container sticky top-0 h-screen w-full overflow-hidden">
+    
+    <div class="parallax-bg absolute inset-0 h-full w-full">
+      <img 
+        src={heroImage} 
+        alt={title}
+        class="hero-img h-[110%] w-full object-cover brightness-60" 
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-zinc-950/50"></div>
+    </div>
+
+    <div class="content-layer absolute inset-0 flex flex-col justify-end pb-4 px-8 md:px-20">
+      <div class="max-w-7xl w-full mx-auto">
+        
+        <div class="mb-8 sm:w-3/4">
+          <h1 class="hero-title text-6xl md:text-[10rem] leading-[1] tracking-tight">
+            {title}
+          </h1>
+        </div>
+
+        <div class="flex justify-between items-end pb-4 mb-6 text-xs uppercase tracking-[0.2em]">
+          <div class="flex gap-4">
+            {categories.map(cat => <span class="hover:text-zinc-400 transition-colors cursor-default">{cat}</span>)}
+          </div>
+          <time>{formattedDate}</time>
+        </div>
+
+        <div class="sm:w-1/2 my-8 sm:my-24">
+          <p class="text-lg md:text-xl leading-relaxed">
+            {description}
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          {tags.map(tag => (
+            <a href={`/tags/${slugify(tag)}`} class="px-3 py-1 rounded-full border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-zinc-950 transition-all">
+              {tag}
+            </a>
+          ))}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 基础抗锯齿 */
+  .hero-title {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- 视差魔法 (CSS Scroll Timeline) --- */
+  
+  .hero-wrapper {
+    view-timeline-name: --section-scroll;
+  }
+
+  /* 图片动画：缓慢缩小并上移 */
+  .hero-img {
+    animation: image-parallax linear both;
+    animation-timeline: --section-scroll;
+    animation-range: start 0% end 100%;
+    will-change: transform;
+  }
+
+  @keyframes image-parallax {
+    0% { transform: scale(1.2) translateY(0); }
+    100% { transform: scale(1.0) translateY(-10%); }
+  }
+
+  /* 文字内容动画：向上滑动的速度比图片快，产生错层感 */
+  .content-layer {
+    animation: content-parallax linear both;
+    animation-timeline: --section-scroll;
+    animation-range: start 0% end 80%;
+    will-change: transform, opacity;
+  }
+
+  @keyframes content-parallax {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-25vh); opacity: 1; }
+  }
+
+  /* 初始入场动画 (页面刷新时的惊艳感) */
+  .hero-title {
+    animation: title-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes title-reveal {
+    from { transform: translateY(100%) skewY(5deg); opacity: 0; }
+    to { transform: translateY(0) skewY(0); opacity: 1; }
+  }
+</style>

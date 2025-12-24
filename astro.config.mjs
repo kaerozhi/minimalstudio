@@ -15,17 +15,18 @@ function markdownMediaDirective() {
         const data = node.data || (node.data = {});
         const name = node.name;
         
-        if (name === 'gallery') {
+        if (name === 'album') { // 原 gallery 改名为 album
           data.hName = 'div';
-          data.hProperties = {
-            // 直接注入 Tailwind 类名：flex 布局，取消内边距，取消 prose 的图片限制
-            class: 'media-gallery-container not-prose flex flex-wrap gap-3 my-8'
-          };
+          data.hProperties = { class: 'media-album-container not-prose' };
+        }
+        if (name === 'gallery') { // 新的瀑布流 gallery
+          data.hName = 'div';
+          data.hProperties = { class: 'media-gallery-masonry not-prose' };
         }
         if (name === 'slider') {
           data.hName = 'div';
           data.hProperties = {
-            class: 'media-slider-container not-prose swiper my-8 rounded-2xl overflow-hidden'
+            class: 'media-slider-container not-prose swiper my-6 overflow-hidden'
           };
         }
       }
