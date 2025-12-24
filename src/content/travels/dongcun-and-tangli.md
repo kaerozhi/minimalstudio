@@ -36,7 +36,7 @@ photos:
 
 祠堂除了屋子，原本的陈设当然一空，管理方很聪明，在这里设了西山石刻展，细看下来，足以盘桓半日。话说王鏊老爷子挂冠后家居十六年，足迹遍布全苏州，「少傅王鏊」的大名，我印象中都见过四五处了。
 
-:::gallery
+:::album
 ![迈过古老的门槛](https://media.kaerozhi.com/2025/12/67499ca849a792b2be7bf030deea8a82.webp)
 
 ![古墙之上的晴空](https://media.kaerozhi.com/2025/12/129d24951d5d272333c0381f6394a6e6.webp)
@@ -72,7 +72,7 @@ photos:
 
 堂内基本上保持了居民迁出之后的本来模样，角落里堆了不少杂物，看上去比较乱。
 
-:::gallery
+:::album
 ![开轩](https://media.kaerozhi.com/2025/12/f0f8cc7931bc63493ad9db94f211ab0a.webp)
 
 ![堂构维新](https://media.kaerozhi.com/2025/12/8ebbbb761d6cf0b7183cf94c49f25c18.webp)
@@ -112,7 +112,7 @@ photos:
 
 最内一进另外收费，看小红书的游记，之前是5元，但阿姨说10元，两人一起15。我是后面进去的，据说还可以上楼，我没有去。
 
-:::gallery
+:::album
 ![功崇业广。最后一进院落。](https://media.kaerozhi.com/2025/12/3540f997a411d4d851e06975a8b0f39c.webp)
 
 ![忠。西山岛的文革遗存不少。](https://media.kaerozhi.com/2025/12/249300c0e0587498abf86a59f404ee6a.webp)
@@ -146,7 +146,7 @@ photos:
 
 不过当它是普通的古民宅来游览的话，此处倒也有可观之处。入门后的院落有池塘假山，相当有章法，池中有岛，且可以通过池上的石头走到假山下，钻过山洞，可以登上山顶的吟月亭，单说这个角落的布置，能胜过不少园林。
 
-:::gallery
+:::album
 ![入门处](https://media.kaerozhi.com/2025/12/25d69df7543ff0ec8800378ce4384b49.webp)
 
 ![隔池观景](https://media.kaerozhi.com/2025/12/e45941460a84f4d995b07eb61d43c945.webp)
@@ -168,7 +168,7 @@ photos:
 
 室内有不少家具，随意摆放，貌似旧物件，但维护状况也不太好，台面落满灰尘，角落里结着蛛网。但换一个角度，保留了比较多的原本生活面貌，可能也是看点。
 
-:::gallery
+:::album
 ![柜](https://media.kaerozhi.com/2025/12/2e0228bd57b2e42680bf83051806aef0.webp)
 
 ![窗](https://media.kaerozhi.com/2025/12/68bd6d92908f9ae88ea03da78222a692.webp)

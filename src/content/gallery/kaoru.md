@@ -1,6 +1,6 @@
 ---
 title: Kaoru
-date: "2025-06-24"
+date: "2015-05-01"
 categories:
   - Portrait
 tags:

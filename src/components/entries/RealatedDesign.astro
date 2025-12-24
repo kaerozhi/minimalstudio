@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { slugify } from '@/utils/slugify';
-import DesignPost from '@/components/entries/DesignPost.astro';
+import Card from '@/components/entries/CardDesign.astro';
 
 const { collection, slug } = Astro.props;
 
@@ -26,12 +26,12 @@ const relatedPosts = allPosts
 
 {relatedPosts.length > 0 && (
   <section class="related-posts mt-12">
-    <h2 class="text-2xl font-bold mb-8">你可能感兴趣 —</h2>
+    <h2 class="text-2xl font-bold mb-8">你可能会喜欢：</h2>
     <div class="grid md:grid-cols-3 gap-6">
       {relatedPosts.map(post => {
         const cover = post.data.photos?.[0] || null;
         return (
-          <DesignPost post={post} />
+          <Card post={post} />
         );
       })}
     </div>
