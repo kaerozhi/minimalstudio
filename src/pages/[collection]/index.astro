@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import { config } from '@/site.config';
 import { collectionsMeta } from '@/content/collections.config';
-import { getCategories } from '@/utils/getCategories';
 
 // 加载 UI 组件
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -10,6 +9,7 @@ import BlogPost from '@/components/entries/BlogPost.astro';
 import Pagination from '@/components/global/Pagination.astro';
 import Categories from '@/components/entries/Categories.astro';
 import { getPathBySlug } from '@/utils/getPathBySlug';
+import { getSmartExcerpt } from '@/utils/getExcerpt';
 
 export const prerender = true;
 
@@ -42,7 +42,8 @@ const visibleEntries = allEntries
 const postsWithPaths = await Promise.all(
   visibleEntries.map(async (post) => {
     const href = await getPathBySlug(post.slug);
-    return { ...post, href };
+    const smartExcerpt = getSmartExcerpt(post.body);
+    return { ...post, href, smartExcerpt };
   })
 );
 
@@ -86,8 +87,10 @@ const posts = postsWithPaths.slice(0, perPage);
           href={post.href}
           date={post.data.date}
           description={post.data.description}
+          excerpt={post.smartExcerpt}
           categories={post.data.categories}
           photos={post.data.photos}
+          tags={post.data.tags}
         />
       ))}
     </div>

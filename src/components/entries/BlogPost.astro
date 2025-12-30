@@ -10,16 +10,26 @@ const {
   description,
   photos = [],
   categories = [],
+  tags = [],
+  excerpt,
   index,
 } = Astro.props;
 
 const dateFormated = date ? formatDate(date) : "";
+const hasImage = photos && photos.length > 0;
 ---
 <article class="group w-full">
   <div class="relative overflow-hidden aspect-16/9 bg-white">
-    {photos[0] && (
+    {hasImage ? (
       <a href={href} class="block object-cover w-full h-full">
         <Cover photos={photos} title={title} />
+      </a>
+    ) : (
+      /* 纯文字文章的“虚拟封面”：采用极简主义的排版设计 */
+      <a href={href} class="block w-full h-full bg-white text-zinc-400 flex items-start justify-between p-8 transition-colors group-hover:bg-black group-hover:text-white">
+        <div class="text-2xl font-semiBold tracking-tight">
+          {excerpt}
+        </div>
       </a>
     )}
   </div>

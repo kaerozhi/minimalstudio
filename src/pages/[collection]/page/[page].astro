@@ -4,6 +4,7 @@ import { collections } from '@/content/config';
 import { collectionsMeta } from '@/content/collections.config';
 import { config } from '@/site.config';
 import { getCategories } from '@/utils/getCategories';
+import { getSmartExcerpt } from '@/utils/getExcerpt';
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/BlogPost.astro';
@@ -80,8 +81,10 @@ const collectionName = collectionsMeta[collection].title;
           href={`/${collection}/${post.slug}`}
           date={post.data.date}
           description={post.data.description}
+          excerpt={getSmartExcerpt(post.body)}
           categories={post.data.categories}
           photos={post.data.photos}
+          tags={post.data.tags}
         />
       ))}
     </div>
