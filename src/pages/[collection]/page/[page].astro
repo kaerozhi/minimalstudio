@@ -1,5 +1,4 @@
 ---
-// ✅ 合法代码结构
 import { getCollection } from 'astro:content';
 import { collections } from '@/content/config';
 import { collectionsMeta } from '@/content/collections.config';
@@ -78,7 +77,7 @@ const collectionName = collectionsMeta[collection].title;
       {posts.map((post, index) => (
         <BlogPost
           title={post.data.title}
-          href={post.href}
+          href={`/${collection}/${post.slug}`}
           date={post.data.date}
           description={post.data.description}
           categories={post.data.categories}
