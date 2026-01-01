@@ -10,6 +10,11 @@ description: "和「走遍苏州」的屈老师一起游曲园，玩长物，体
 photos:
   - "https://media.kaerozhi.com/2026/01/4a2b4ce1345ce403a2b1ac251a60793b.webp"
 ---
+<video controls class="video" poster="https://media.kaerozhi.com/2026/01/15a3b1d7053914d468869eb2bc61be08.png">  
+    <source src="https://media.kaerozhi.com/2026/01/7758c232cb3d1b4eb6af779c72111500.mp4" type="video/mp4">  
+    <img src="https://media.kaerozhi.com/2026/01/15a3b1d7053914d468869eb2bc61be08.png" />
+</video>
+
 :::gallery
 ![曲园桂花正浓](https://media.kaerozhi.com/2026/01/af9a7d7ddcfab3a11859e7559b53d481.webp)
 ![随团的前辈摄影师](https://media.kaerozhi.com/2026/01/4decf9fdc331d667983f98c4db208907.webp)
