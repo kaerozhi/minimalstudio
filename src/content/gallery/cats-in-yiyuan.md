@@ -1,6 +1,8 @@
 ---
 title: "怡园探猫"
 date: "2026-01-01"
+categories:
+  - "Personal"
 photos:
   - https://media.kaerozhi.com/2026/01/8eecfed3e7aa06a5399d6aa0cfdd1462.png
 tags:
