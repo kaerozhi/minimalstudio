@@ -8,7 +8,7 @@ tags:
   - "作者的话"
 description: "写在《大宋海贼王》两卷之后"
 photos:
-  - https://media.kaerozhi.com/2026/04/0fa28c5cec1f0300acafaee2d4c71522.png
+  - "https://media.kaerozhi.com/2026/04/0fa28c5cec1f0300acafaee2d4c71522.png"
 ---
 我正在写一本小说，目前已经完成两卷。
 
@@ -48,6 +48,8 @@ photos:
 
 需要预警的是，本书虽然发表在起点平台上，但并非网文的写法（虽然有穿越元素）：没有典型的打怪升级，没有真正的夺宝神装。如果说网文是用文字构建的升级通关之路，更像游戏，那我这本书更像一部英美单元剧集，主角就像每个平凡的我们一样，来到陌生的异乡，有迷惘，有战斗，有遗憾，也终会有落幕之时。
 
-希望大家喜欢：[https://www.qidian.com/book/1048565245/](https://www.qidian.com/book/1048565245/)
+![大宋海贼王](https://media.kaerozhi.com/2026/04/c44111f79988e14f04e534c1aece407f.jpg)
+
+衷心希望大家喜欢：[https://www.qidian.com/book/1048565245/](https://www.qidian.com/book/1048565245/)
 
 或起点搜索：**大宋海贼王决战亚历山大灯塔之巅**
