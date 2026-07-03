@@ -15,13 +15,13 @@ photos:
 
 大概还是有的吧？我想。
 
-没事还是会刷一刷的，毕竟尺度比较开放，Instagram 和小红书再好，但它尺度保守啊。虽然也有狂野的 Twitter，但如果只是想刷刷图的话，Twitter 的时间线未免过于凌乱了。所以 Tumblr 的生态位，虽然小小的，但也不是不存在，对吧？
+没事还是可以刷一刷的，毕竟尺度比较开放。Instagram 和小红书上面的摄影师拍得再好，但它尺度保守啊。虽然也有狂野的 Twitter，但如果只是想刷刷图，Twitter 的时间线未免过于杂乱了，容易干扰分心。所以 Tumblr 的生态位，就像书架最高的格子里那个藏着黄书黄碟的小盒子，小小的毫不起眼，但也不是不存在，对吧？
 
-这款插件就是刷图的时候嫌麻烦，把需要发给 Gemini 搓出来的，我基本上就是个 PM 角色，基本上只花了两天时间。
+这款插件就是刷图的时候嫌麻烦，即兴给 Gemini 发了个需求搓出来的，我基本上就是个 PM 角色，一边复制粘贴，一边测试完善，也就花了两天时间。
 
-插件尚未上传至 Eagle 官方社区，因为官方社区有规范，我正在学习相关的文档。目前可以通过 Github 下载：[https://github.com/kaerozhi/tumblr-downloader](https://github.com/kaerozhi/tumblr-downloader)
+插件尚未上传至 Eagle 官方社区，因为官方社区有规范，我正在学习相关的文档。目前暂时只能通过 Github 下载：[https://github.com/kaerozhi/tumblr-downloader](https://github.com/kaerozhi/tumblr-downloader)
 
-插件的安装非常简单，下载插件包，直接拖进 Eagle 就行了。下载之前需要自行申请 Tumblr 的 [API Key](https://www.tumblr.com/oauth/apps)。
+插件的安装非常简单，下载插件包，直接拖进 Eagle 就行了。开始下载之前需要自行申请 Tumblr 的 [API Key](https://www.tumblr.com/oauth/apps)。
 
 本插件支持以下功能：
 
