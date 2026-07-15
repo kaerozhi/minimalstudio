@@ -1,12 +1,12 @@
 ---
-title: Huggingface 国内镜像下载流程
+title: "Huggingface 国内镜像站下载流程"
 date: 2026-07-14
 categories:
   - "AI"
 tags:
   - "Huggingface"
   - 资源
-description: ""
+description: "再也不用耗费流量下模型了"
 photos:
   - https://media.kaerozhi.com/2026/07/76ae5f7d316281b0f7c8f24764307b22.png
 ---
