@@ -44,6 +44,8 @@ $env:HF_ENDPOINT = "https://hf-mirror.com"
 hf auth login
 ```
 
+按照提示输入之前获取的 token 即可登录。或者你也可以打开 `%USERPROFILE%\.cache\huggingface`，新建一个 .txt 文本文件，将其重命名为 `token`，不需要文件后缀名，然后将 token 粘贴在内，也同样可以保持登录状态。
+
 登录之后，就可以下载了。如果你想下载整个仓库：
 
 ```
