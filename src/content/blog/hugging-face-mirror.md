@@ -69,3 +69,9 @@ hf download darksidewalker/DaSiWa-WAN2.2-I2V DasiwaWAN22I2V14BLightspeed_snatchk
 之前的攻略中，`huggingface-cli` 已经被 `hf` 命令取代，新命令已经默认开启了断点续传，你不需要再附加任何多余参数，所以 `--resume-download` 参数也已经被取消了。
 
 另外一个镜像站 https://hf-cdn.sufy.com/ 对 token 的支持好像有些问题，使用同样的命令行下载会失败。
+
+## 替代方案
+
+这两天发现有个替代方案，去B站搜索模型或者工作流，除了日常向 Runninghub 引流之外，讲究一些的UP主还会打包一份工作流上传到网盘，主流是夸克，百度网盘也有，扒了几份 LTX Director 的资源包，模型节点都包括在内，除了版本可能落后一些之外，用起来已经足够方便了。
+
+如果强迫症一定要最新版，那也没法子，无论如何，总比翻墙上 Huggingface 手动拖模型来得便捷吧？
