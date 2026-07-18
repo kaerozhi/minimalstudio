@@ -58,17 +58,45 @@ hf download meta-llama/Llama-3.2-1B-Instruct --local-dir .
 hf download meta-llama/Llama-3.2-1B-Instruct --include "*.safetensors" --local-dir .
 ```
 
-如果你只想下载指定的模型文件：
+当然，大部分时候我们只会下载自己需要的模型文件，按照下面的格式即可：
 
 ```
-hf download darksidewalker/DaSiWa-WAN2.2-I2V DasiwaWAN22I2V14BLightspeed_snatchkissHighV11-Q8_0.gguf --local-dir .
+hf download Qwen/Qwen3-VL-4B-Instruct README.md --local-dir .
 ```
+
+有些仓库的文件夹路径比较深，如果你不确定自己应该输入什么，直接复制是最稳妥的。
+
+![Hugging Face 模型下载页面](https://media.kaerozhi.com/2026/07/e8bfa069c944af261c1af0d83f52c030.png)
+
+点击上面那条红线最后的复制图标，得到仓库名称，下面红线点击复制，得到模型的路径。
+
+当然，还有更简单的方式，相信你也注意到了，Download with hf CLI:
+
+![Download with hf CLI](https://media.kaerozhi.com/2026/07/4d843f32c30f028c10b1a2319077537c.png)
+
+只需复制一次，比复制两次省事。
+
+## 通过 CivArchive 找到模型的 Hugging Face 下载点
+
+如果你和我一样比较贫穷，对流量很敏感，打通 Hugging Face 的国内镜像下载流程之后，接下来的烦恼恐怕就是很多模型只有 CivitAI 才有，Hugging Face 很难找到。研究之后我发现一个神奇的网站，就是 [CivArchive](https://civitaiarchive.com/)。
+
+这个网站很神奇，主打的功能是 CivitAI 的备份，也就是说几乎所有在 CivitAI 下架的模型都可以在这里找到。比如 [Anima 的模型页](https://civitaiarchive.com/models/2458426?modelVersionId=3126581)：
+
+![Anima - CivArchive (CivitAI Archive)](https://media.kaerozhi.com/2026/07/48c43c1c68ca5fec81a87dea7226a4bb.png)
+
+注意右下角的 Mirros 列表，轻松找到 HuggingFace 的多个镜像，不要直接点击（点击就直接下载了，不要浪费流量！）选择右键「复制链接地址」，然后你会得到一个这样的路径：
+
+```
+https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-aesthetic-v1.1.safetensors
+```
+
+复制 `/resolve/...` 前面就可以进入 Hugging Face 仓库，接下来按照前面的流程来下载模型就 OK 了。
 
 ## 注意
 
-之前的攻略中，`huggingface-cli` 已经被 `hf` 命令取代，新命令已经默认开启了断点续传，你不需要再附加任何多余参数，所以 `--resume-download` 参数也已经被取消了。
+按照我的经验，另一个镜像站 https://hf-cdn.sufy.com/ 对 token 的支持好像有些问题，使用同样的命令行下载会失败。
 
-另外一个镜像站 https://hf-cdn.sufy.com/ 对 token 的支持好像有些问题，使用同样的命令行下载会失败。
+如果下载失败，请尝试关闭系统代理。
 
 ## 替代方案
 
