@@ -1,5 +1,5 @@
 ---
-title: "巧用 Wildcard 制作写真集"
+title: "巧用 AI 制作虚拟写真集"
 date: 2026-07-27
 categories: 
   - "AI"
@@ -44,18 +44,43 @@ masterpiece, 8K resolution, perfect lighting, soft light, pure white background
 
 我们写了四行，那么点击一次就会运行四次，输出四张不同的照片。
 
+<!-- swiper start -->
+<div class="swiper oneSwiper">  
+<div class="swiper-wrapper">  
+<div class="swiper-slide">  
+  
 ![第一行的输出结果](https://media.kaerozhi.com/2026/07/9e252ca58c24c4e0a480b580bdf13de2.png)
 ![第二行的输出结果](https://media.kaerozhi.com/2026/07/15df40ab2b8fb289490c4fcfc711f384.png)
 ![第三行的输出结果](https://media.kaerozhi.com/2026/07/00e03856dd37998202dfc8ef96d80c80.png)
 ![第四行的输出结果](https://media.kaerozhi.com/2026/07/fe7e18e2e12f7de26495c4fd5990fb43.png)
+  
+</div>  
+</div>  
+<div class="swiper-pagination"></div>  
+</div>
+<!-- swiper finish -->
 
 理论上只要我们一行接一行地把提示词写下去，一次性出一百张照片也没问题。写真集？一次搞定！
 
 ## 二、引入 Wildcards 打造流水线模式
 
-理论上到上面一步，写真已经出完了，没问题了吧？
+理论上到上面一步，写真已经出完了，没问题了吧？要复用也很简单：在输出文件夹里找到写真集里的某一章，拖进 Comfyui，工作流就回来了。
 
-不行，咱们必须精益求精，要进一步解决复用性的问题。我想到的解决方案是
+但我们雄心勃勃，写真集怎么能出一本就完事呢？必须 Vol.01 / Vol.02 / Vol.03 不间断输出啊……
+
+那这种手动模式可就比较麻烦了。
+
+如果写真的思路不多，像日本写真偶像那样，夏日泳装，海边沙滩，雪国冬日，欧洲旅拍，其实套路也非常有限，那大可以写好几个模板，放在旁边候选，其实也足够方便，还能随时修改：
+
+![候选模板](https://media.kaerozhi.com/2026/07/c778dbfcd0eed189a2fb19f418edea52.png)
+
+只是人的阈值都是水涨船高的，我们不但要有场景，还要有故事……
+
+引入故事那可就千变万化，不是几个现成模板就能满足的了，最好有个文件夹，里面都是一行行提前写好，几十上百行的剧本，简直就是视觉小说生产线啊。
+
+当时我就灵机一动，这玩意不就是 wildcard 吗？
+
+wildcard 还是 SD 1.0 时代就出现的远古技术，它最早只不过是简单的变量，玩家生成一张美女图，但不确定衣服是红色、绿色还是蓝色好看，发型是长发、短发还是大波浪更好看，所以导入 wildcard 作为变量。在安装好 wildcard 的相关节点之后，在提示词里用 `__color__` 或 `__hairstyle__` 替换原本固定的颜色和发型，就能随机或者遍历所有变量了。
 
 ## 三、用 AI 生成写真集模板
 
