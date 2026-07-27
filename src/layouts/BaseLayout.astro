@@ -8,7 +8,7 @@ const { title, width } = Astro.props;
 ---
 
 <html lang="en" class="scroll-smooth selection:bg-primary selection:text-white">
-  <head>
+  <header x-data="{ atTop: true, open: false }">
     <BaseHead title={title} />
   </head>
   <body class="bg-bg-page flex flex-col min-h-screen mx-auto relative">

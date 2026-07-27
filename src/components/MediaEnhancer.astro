@@ -1,6 +1,6 @@
 ---
 /**
- * MediaEnhancer.astro - 最终稳定版
+ * MediaEnhancer.astro - 健壮修复版
  * 整合：Album, Gallery(Masonry), Slider, 单图自动 Caption, Lightbox(底端文字)
  */
 ---
@@ -69,7 +69,7 @@
   .slider-caption-text { font-size: 0.95rem; color: #3f3f46; min-height: 1.2em; }
   .swiper-pagination-custom { margin-top: 12px; }
 
-/* Lightbox 底部文字 */
+  /* Lightbox 底部文字 */
   .pswp__custom-caption {
     position: absolute;
     left: 0; right: 0; bottom: 0;
@@ -95,46 +95,53 @@
   import 'swiper/css/pagination';
 
   function initMediaSystem() {
-    // 标记位：防止重复处理
     const MARKER = 'data-media-enhanced';
 
-    // 辅助函数：安全包装灯箱链接
+    // 安全防御包装灯箱
     function wrapLightbox(img, parent) {
-      if (img.hasAttribute(MARKER)) return;
+      if (!img || img.hasAttribute(MARKER)) return;
       
+      const parentNode = img.parentNode;
+      if (!parentNode) return; // 容错防御：缺失父级节点时跳过，避免 insertBefore 崩溃
+
       const a = document.createElement('a');
       a.className = 'pswp-link';
       a.href = img.src;
       
       const updateSize = () => {
-        a.dataset.pswpWidth = img.naturalWidth.toString();
-        a.dataset.pswpHeight = img.naturalHeight.toString();
+        a.dataset.pswpWidth = (img.naturalWidth || 1200).toString();
+        a.dataset.pswpHeight = (img.naturalHeight || 800).toString();
       };
       if (img.complete) updateSize(); else img.onload = updateSize;
       
       a.dataset.caption = img.alt || "";
       img.setAttribute(MARKER, 'true');
       
-      img.parentNode.insertBefore(a, img);
+      // 安全插入节点
+      parentNode.insertBefore(a, img);
       a.appendChild(img);
-      parent.appendChild(a);
+      if (parent && parent !== parentNode) {
+        parent.appendChild(a);
+      }
     }
 
     // --- 1. 处理 Album ---
     document.querySelectorAll('.media-album-container img').forEach(img => {
       if (img.hasAttribute(MARKER)) return;
       const container = img.closest('.media-album-container');
+      if (!container) return;
+
       const item = document.createElement('div');
       item.className = 'album-item';
       
       const setStyles = () => {
-        const ratio = img.naturalWidth / img.naturalHeight || 1.5;
+        const ratio = (img.naturalWidth / img.naturalHeight) || 1.5;
         item.style.flexGrow = ratio.toString();
         item.style.flexBasis = (ratio * 280) + 'px';
         wrapLightbox(img, item);
       };
 
-      container.appendChild(item); // 移动到容器内
+      container.appendChild(item);
       if (img.complete) setStyles(); else img.onload = setStyles;
     });
 
@@ -142,6 +149,8 @@
     document.querySelectorAll('.media-gallery-masonry img').forEach(img => {
       if (img.hasAttribute(MARKER)) return;
       const container = img.closest('.media-gallery-masonry');
+      if (!container) return;
+
       const item = document.createElement('div');
       item.className = 'masonry-item';
       
@@ -158,9 +167,12 @@
     document.querySelectorAll('.media-slider-container').forEach(el => {
       if (el.classList.contains('swiper-initialized')) return;
       
+      const parentNode = el.parentNode;
+      if (!parentNode) return;
+
       const wrapper = document.createElement('div');
       wrapper.className = 'media-slider-wrapper';
-      el.parentNode.insertBefore(wrapper, el);
+      parentNode.insertBefore(wrapper, el);
       wrapper.appendChild(el);
 
       const images = Array.from(el.querySelectorAll('img'));
@@ -208,12 +220,16 @@
     document.querySelectorAll('.prose img').forEach(img => {
       if (img.hasAttribute(MARKER)) return;
       
-      const container = document.createElement('div');
-      container.className = 'single-image-container not-prose';
       const parentP = img.closest('p');
       const target = parentP || img;
+      const targetParent = target.parentNode;
+
+      if (!targetParent) return; // 防御空节点
+
+      const container = document.createElement('div');
+      container.className = 'single-image-container not-prose';
       
-      target.parentNode.insertBefore(container, target);
+      targetParent.insertBefore(container, target);
       wrapLightbox(img, container);
       
       if (img.alt) {
@@ -248,7 +264,11 @@
     lightbox.init();
   }
 
-  // 确保执行
+  // 防重复挂载执行：仅依赖 Astro View Transitions 页面加载事件或普通 DOM 就绪
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMediaSystem);
+  } else {
+    initMediaSystem();
+  }
   document.addEventListener('astro:page-load', initMediaSystem);
-  initMediaSystem();
 </script>
