@@ -9,9 +9,9 @@ tags:
   - Workflow
 description: "只需一张照片，就能一键输出写真集"
 ---
-在大佬群里潜水，看别人发图，一发就是八九张一组的，而且彼此都大同小异，感觉应该有方法可以批量生产。于是就研究了一下，花了差不多一整天时间，终于排除万难达成了。
+在大佬群里潜水，看别人发图，一发就是八九张一组的，而且彼此都大同小异，感觉应该有方法批量生产。于是就研究了一下，花了差不多一整天时间，终于排除万难达成了。
 
-目前我的工作流以 Krea 2 为主，但思路应该都是差不多的，移植别的模型应该不会很麻烦，以下就从几个关键点开始讲。
+目前我的工作流以 Krea 2 为主，但思路应该大同小异，移植别的模型也不会很麻烦，以下就从几个关键点开始讲。
 
 ## 一、批量文生图
 
@@ -43,22 +43,11 @@ masterpiece, 8K resolution, perfect lighting, soft light, pure white background
 ![工作流核心节点，其实只要看左边三列即可。](https://media.kaerozhi.com/2026/07/7196e2120e7025bd848923fbcc4755ef.png)
 
 我们写了四行，那么点击一次就会运行四次，输出四张不同的照片。
-
-<!-- swiper start -->
-<div class="swiper oneSwiper">  
-<div class="swiper-wrapper">  
-<div class="swiper-slide">  
   
 ![第一行的输出结果](https://media.kaerozhi.com/2026/07/9e252ca58c24c4e0a480b580bdf13de2.png)
 ![第二行的输出结果](https://media.kaerozhi.com/2026/07/15df40ab2b8fb289490c4fcfc711f384.png)
 ![第三行的输出结果](https://media.kaerozhi.com/2026/07/00e03856dd37998202dfc8ef96d80c80.png)
 ![第四行的输出结果](https://media.kaerozhi.com/2026/07/fe7e18e2e12f7de26495c4fd5990fb43.png)
-  
-</div>  
-</div>  
-<div class="swiper-pagination"></div>  
-</div>
-<!-- swiper finish -->
 
 理论上只要我们一行接一行地把提示词写下去，一次性出一百张照片也没问题。写真集？一次搞定！
 
@@ -74,13 +63,50 @@ masterpiece, 8K resolution, perfect lighting, soft light, pure white background
 
 ![候选模板](https://media.kaerozhi.com/2026/07/c778dbfcd0eed189a2fb19f418edea52.png)
 
+如果你觉得上述的方案已经可以满足你的需求，那不妨[**点击下载现阶段的工作流**](https://media.kaerozhi.com/2026/07/66ef0220757d9f3d5b535d814f0c0e6c.json)。毕竟搞得做大做强都得付出时间和精力，自定义节点多折腾人。
+
 只是人的阈值都是水涨船高的，我们不但要有场景，还要有故事……
 
 引入故事那可就千变万化，不是几个现成模板就能满足的了，最好有个文件夹，里面都是一行行提前写好，几十上百行的剧本，简直就是视觉小说生产线啊。
 
 当时我就灵机一动，这玩意不就是 wildcard 吗？
 
-wildcard 还是 SD 1.0 时代就出现的远古技术，它最早只不过是简单的变量，玩家生成一张美女图，但不确定衣服是红色、绿色还是蓝色好看，发型是长发、短发还是大波浪更好看，所以导入 wildcard 作为变量。在安装好 wildcard 的相关节点之后，在提示词里用 `__color__` 或 `__hairstyle__` 替换原本固定的颜色和发型，就能随机或者遍历所有变量了。
+wildcard 是远在 SD 1.0 时代就出现的 ~~落后~~ 成熟技术，它最早只不过是简单的变量，玩家生成一张美女图，但不确定衣服是红色绿色还是蓝色好看，发型是长发短发还是卷发大波浪更好看，所以就考虑导入测试变量。安装好 wildcard 的相关节点之后，提示词里用 `__color__` 或 `__hairstyle__` 替换原本固定的颜色和发型，就能随机或者遍历所有变量了。
+
+支持 wildcard 的节点包并不少。我们之前已经用到了 EasyUse 的提示词行节点，正好它也支持 wildcard，所以就不必他求，英文环境在节点库搜索 `wildcard`，中文环境搜索「通配符提示词矩阵」，这名字看上去是有点东西的。
+
+![通配符提示词矩阵](https://media.kaerozhi.com/2026/07/4fad089f5dd548aff66a128f65ea4464.png)
+
+我们在 EasyUse 的路径下，一般是 `ComfyUI\custom_nodes\ComfyUI-Easy-Use\`，会发现里面已经有一个 `wildcards` 文件夹，通常里面已经有一个 `example.txt` 文件，不必理会，直接在里面新建一个 photobook.txt，将之前写好的提示词粘贴进去，保存文件，然后重启 ComfyUI。
+
+重启之后，重新组合我们的工作流，现在的工作流核心应该是这样的：
+
+![工作流核心部分](https://media.kaerozhi.com/2026/07/8d5ec7bec9a1d81e201eafcfa1454f5d.png)
+
+在「通配符提示词矩阵」节点点击下方的「选择添加通配符」，就能看到之前放进去的 photobook，点击之后会发现输入框内多了一个 `__photobook__`，这样就会逐行调取我们的提示词了。
+
+上面的「选择添加Lora」我们不用管它。
+
+第三行是「生成后控制」，一共有四个选项，分别是：
+
+- **fixed** - 固定选取；
+- **increment** - 递增选取，即按顺序读取。
+- **decrement** - 递减选取，即倒序读取。
+- **randomize** - 随机选取。
+
+如果我们的写真集是有一点故事性的，比如一个雪国旅行的写真集，就差不多会有一个列车中、车站、街道、酒店、旅馆、温泉、居酒屋这么一个简单的流程，所以最好不要随机，`increment` 是最合适的安排。
+
+最后还有一个「输出个数限制」，一般我们填 `-1` 全部输出即可，但一开始我们肯定要先抽几张看看品质调参数，所以第一波先填个 `4` 张看看。
+
+然后跑起来，就会一次性输出全部的照片了。
+
+![我扩充过提示词，所以一次性会输出16张](https://media.kaerozhi.com/2026/07/21d446b6cf450476bdfa93faf43eff63.png)
+
+流程跑通了就好办了，我们只要在 `wildcards`  文件夹里添加新的提示词模板，以后就可以随心所欲地一键生成写真集了。
+
+唯一的烦恼就是每次增加新的提示词都要重启 ComfyUI，调试起来会有点麻烦。
+
+你可以[**点击此处下载使用 wildcards 的新工作流**](https://media.kaerozhi.com/2026/07/cdab5b168a02850d4ba8a8d8e3f5241a.json)。
 
 ## 三、用 AI 生成写真集模板
 
