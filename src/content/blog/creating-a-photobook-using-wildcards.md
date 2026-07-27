@@ -7,9 +7,7 @@ tags:
   - "ComfyUI"
   - "Wildcards"
   - Workflow
-description: "只需一张照片，一键输出写真集"
-photos:
-  - 
+description: "只需一张照片，就能一键输出写真集"
 ---
 在大佬群里潜水，看别人发图，一发就是八九张一组的，而且彼此都大同小异，感觉应该有方法可以批量生产。于是就研究了一下，花了差不多一整天时间，终于排除万难达成了。
 
@@ -52,3 +50,19 @@ masterpiece, 8K resolution, perfect lighting, soft light, pure white background
 ![第四行的输出结果](https://media.kaerozhi.com/2026/07/fe7e18e2e12f7de26495c4fd5990fb43.png)
 
 理论上只要我们一行接一行地把提示词写下去，一次性出一百张照片也没问题。写真集？一次搞定！
+
+## 二、引入 Wildcards 打造流水线模式
+
+理论上到上面一步，写真已经出完了，没问题了吧？
+
+不行，咱们必须精益求精，要进一步解决复用性的问题。我想到的解决方案是
+
+## 三、用 AI 生成写真集模板
+
+## 四、解决分辨率单一的问题
+
+## 五、保持角色一致性
+
+### 5.1 Lora
+
+### 5.2 换脸工作流
