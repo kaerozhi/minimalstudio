@@ -1,6 +1,7 @@
 ---
 title: "巧用 AI 制作虚拟写真集"
 date: 2026-07-27
+toc: true
 categories: 
   - "AI"
 tags: 
@@ -44,7 +45,7 @@ masterpiece, 8K resolution, perfect lighting, soft light, pure white background
 
 我们写了四行，那么点击一次就会运行四次，输出四张不同的照片。
 
-:::album
+:::gallery
 ![第一行的输出结果](https://media.kaerozhi.com/2026/07/9e252ca58c24c4e0a480b580bdf13de2.png)
 ![第二行的输出结果](https://media.kaerozhi.com/2026/07/15df40ab2b8fb289490c4fcfc711f384.png)
 ![第三行的输出结果](https://media.kaerozhi.com/2026/07/00e03856dd37998202dfc8ef96d80c80.png)
@@ -236,7 +237,7 @@ Ending shot, sunrise beyond snowy peaks viewed from balcony
 
 你可以先运行一遍文本预览节点，看看效果是否满意，不满意可以返回用户指令中调整，等调整到满意再运行整个工作流。
 
-:::gallery
+:::album
 ![雪国之旅 车站篇](https://media.kaerozhi.com/2026/07/ef3daa88f260a0f1cb334b89fe983f95.png)
 ![雪国之旅 车站篇](https://media.kaerozhi.com/2026/07/47e77f0e0f0c06f5a580f11a628ebe5b.png)
 ![雪国之旅 车站篇](https://media.kaerozhi.com/2026/07/000c83bfb8bbcda46fac6284c6945fd2.png)
@@ -290,6 +291,17 @@ ar-(\d{1,2})/(\d{1,2})
 
 ## 六、保持角色一致性的两个方法
 
+当然，无论你是想给自己做一个写真集，还是纯粹满足自己的幻想，写真集最重要的仍然是唯一的主角，也就是说，最少那张脸要保持前后一致性，才能让人觉得这有那么一点像模像样。
+
 ### 6.1 Lora
 
+最简单的办法自然是角色 Lora，现在炼制角色 Lora 已经很简单，魔搭网上提供了免费的渠道，只要上传一组照片即可，质量足够高的话，三十张就能得到不错的效果。照片越多，效果自然也越好，但还是建议选择质量好、多样性丰富的照片作为素材。素材的质量有好坏，最终生成的 Lora 素质也是有天壤之别的。
+
+炼制 Lora [请从这里进入](https://modelscope.cn/aigc/model-training)，界面非常直观，选择图形大模型，设置中英文名称，然后上传图片素材，一般八个小时左右就完成了。
+
+但需要注意的是，用自己的素材炼制 lora 有隐私暴露的风险，炼制完成下载到本地之后请记得及时删除魔搭网上的模型。
+
+如果你感兴趣，也可以先到魔搭网的 AIGC 广场下载自己感兴趣的 Lora：[AIGC 模型库](https://modelscope.cn/aigc/models?modelType=LoRA)，看了一下，目前的角色Lora总数已经达到了一万五千多，本文生成的照片大部分来源于此，如有侵权，请告知下线。
+
 ### 6.2 换脸工作流
+
