@@ -5,11 +5,11 @@ const { headings = [] } = Astro.props;
   <aside class="hidden lg:block sticky top-24 self-start not-prose">
     <nav class="toc">
       <h3 class="mb-4 text-lg font-semibold">目录</h3>
-      <ul class="text-text-default/50 text-sm list-inside list-disc" id="toc">
+      <ul class="text-text-default/50 text-sm list-inside list-none" id="toc">
         {headings
           .filter(h => h.depth === 2 || h.depth === 3)
           .map(h => (
-            <li class={`pl-${(h.depth - 2) * 4} my-2`}>
+            <li class={`ml-${(h.depth - 2) * 4} my-2`}>
               <a href={`#${h.slug}`} class="text-text-default/50 hover:text-text-default [&.active]:font-bold">
                 {h.text}
               </a>
