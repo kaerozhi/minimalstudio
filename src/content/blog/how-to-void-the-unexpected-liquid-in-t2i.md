@@ -8,7 +8,7 @@ tags:
   - 经验
 description: "失节事小，湿身事大！"
 photos:
-  - https://media.kaerozhi.com/2026/07/9d2e786c949bb9808a84b889d0a233a8.png
+  - https://media.kaerozhi.com/2026/07/31c41902d1142b3e78384d7696916ab4.png
 ---
 我们在文生图的时候经常碰到一种情况，就是人物身上出现奇怪的液体，可能是水滴、汗液，也可能是白色不明液体，非常令人不适。
 

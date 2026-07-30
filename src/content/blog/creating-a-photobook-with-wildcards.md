@@ -9,6 +9,8 @@ tags:
   - "Wildcards"
   - Workflow
 description: "只需一张照片，就能一键输出写真集"
+photos:
+  - "https://media.kaerozhi.com/2026/07/9d2e786c949bb9808a84b889d0a233a8.png"
 ---
 在大佬群里潜水，看别人发图，一发就是八九张一组的，而且彼此都大同小异，感觉应该有方法批量生产。于是就研究了一下，花了差不多一整天时间，终于排除万难达成了。
 
@@ -277,7 +279,7 @@ ar-(\d{1,2})/(\d{1,2})
 \1:\2
 ```
 
-但 ComfyUI 自带的「分辨率选择器节点」的分辨率数据类型是 COMBO，管你是 string、int 还是 float 都无法接受。在节点库一搜，正好找到 [ControlAltAI-Nodes] (https://github.com/gseth/ControlAltAI-Nodes) 里面有一个 Flux Resolution Calc 节点，有一个 `custom_aspect_ratio` 选项，把线拉过去一试，嘿嘿，顺利连上！
+但 ComfyUI 自带的「分辨率选择器节点」的分辨率数据类型是 COMBO，管你是 string、int 还是 float 都无法接受。在节点库一搜，正好找到 [ControlAltAI-Nodes](https://github.com/gseth/ControlAltAI-Nodes) 里面有一个 Flux Resolution Calc 节点，有一个 `custom_aspect_ratio` 选项，把线拉过去一试，嘿嘿，顺利连上！
 
 ![控制比例的核心节点组](https://media.kaerozhi.com/2026/07/ce184f0a71151911f97c2575d9d46571.png)
 
@@ -303,5 +305,5 @@ ar-(\d{1,2})/(\d{1,2})
 
 如果你感兴趣，也可以先到魔搭网的 AIGC 广场下载自己感兴趣的 Lora：[AIGC 模型库](https://modelscope.cn/aigc/models?modelType=LoRA)，看了一下，目前的角色Lora总数已经达到了一万五千多，本文生成的照片大部分来源于此，如有侵权，请告知下线。
 
-### 6.2 换脸工作流
+### 6.2 集成换脸工作流
 
