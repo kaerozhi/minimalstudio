@@ -11,7 +11,7 @@ tags:
 description: 誓言清算之日
 visit: https://kaerozhi.com/
 photos:
-  - 'https://media.kaerozhi.com/2026/08/efdede65138a7d89f1a2aa88177b0c73.png'
+  - 'https://media.kaerozhi.com/2026/09/bfcea838525448fdd0394a535176dfbb.png'
 ---
 ![主海报](https://media.kaerozhi.com/2026/08/1999d0ab1dfe526794b629d3edf07935.png)
 
