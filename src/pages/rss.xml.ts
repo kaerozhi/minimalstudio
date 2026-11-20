@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 
 export async function GET() {
   // 所有 collection
-  const collections = ['blog', 'design', 'travels', 'writings', 'gallery'];
+  const collections = ['blog', 'design', 'writing', 'photography'];
 
   const allEntries = [];
 

@@ -37,19 +37,15 @@ const design = defineCollection({
   }),
 });
 
-const gallery = defineCollection({
-  loader: glob({ pattern: ['**/[^_]*.{md,mdx}', '!**/.*'], base: './src/content/gallery' }),
+const photography = defineCollection({
+  loader: glob({ pattern: ['**/[^_]*.{md,mdx}', '!**/.*'], base: './src/content/photography' }),
   schema: z.object(baseSchema),
 });
 
-const travels = defineCollection({
-  loader: glob({ pattern: ['**/[^_]*.{md,mdx}', '!**/.*'], base: './src/content/travels' }),
+const writing = defineCollection({
+  loader: glob({ pattern: ['**/[^_]*.{md,mdx}', '!**/.*'], base: './src/content/writing' }),
   schema: z.object(baseSchema),
 });
 
-const writings = defineCollection({
-  loader: glob({ pattern: ['**/[^_]*.{md,mdx}', '!**/.*'], base: './src/content/writings' }),
-  schema: z.object(baseSchema),
-});
-
-export const collections = { blog, design, gallery, travels, writings };
+// travels 已并入 blog 作为分类（54 篇物理移动至 src/content/blog）
+export const collections = { blog, design, photography, writing };

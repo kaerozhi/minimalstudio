@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-const allGalleries = await getCollection("gallery");
+const allGalleries = await getCollection("photography");
 const visibleGalleries = allGalleries
   .filter((entry) => entry.data.draft !== true)
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));

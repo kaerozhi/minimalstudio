@@ -7,15 +7,11 @@ export const collectionsMeta = {
     title: "设计",
     description: "Create Simply.",
   },
-  travels: {
-    title: "游历",
-    description: "欲买桂花重载酒，终不似、少年游。",
-  },
-  gallery: {
+  photography: {
     title: "影像",
     description: "RAW 之力 ⏤ 本真之美。",
   },
-  writings: {
+  writing: {
     title: "文字",
     description: "花底有人眠锦帐，瞳中何事黯霓虹。",
   }

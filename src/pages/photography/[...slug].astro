@@ -4,10 +4,10 @@ import MarkdownLayout from '@/layouts/MarkdownGalleryLayout.astro';
 
 export const prerender = true;
 
-const collection = 'gallery'; 
+const collection = 'photography';
 
 export async function getStaticPaths() {  
-  const collection = 'gallery';
+  const collection = 'photography';
   const entries = await getCollection(collection);
 
   return entries.map((entry) => ({
