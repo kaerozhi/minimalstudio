@@ -37,5 +37,5 @@ Cookie 的获取稍微麻烦一点，不知道是不是 Chrome 的版本更新�
 1. 在豆瓣页面上按 `F12` 打开浏览器检查器，最上面一排标签，选择「网络」；
     ![检查器的「网络」页签](https://media.kaerozhi.com/2026/07/711cecda820fe0ae383b373b677e713b.png)
 2. 第二排有个搜索小图标，点击会进入一个搜索界面，输入 `cookie`，会出来一串结果，拖到下方，就能找到好几个 cookie 字符串，理论上复制哪个都行。
-    ![image.png](https://media.kaerozhi.com/2026/07/d7db9f316db28ea22e8c3e5389da59c6.png)
+    ![操作流程应该不要标注顺序了吧？](https://media.kaerozhi.com/2026/07/d7db9f316db28ea22e8c3e5389da59c6.png)
 3. 填好 cookie，然后设置好页数（不要太贪杯），就可以愉快地下载了。

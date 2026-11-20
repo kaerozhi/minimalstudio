@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1de1272d3b7f5a7c",
+        "id": "36aa150bdce5eb14",
         "type": "tabs",
         "children": [
           {
-            "id": "aae32e928b356393",
+            "id": "0496115f24a26228",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/we-have-two-turtles.md",
+                "file": "blog/making-a-music-video-with-ai.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "we-have-two-turtles"
+              "title": "making-a-music-video-with-ai"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byModifiedTime",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "strava",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/we-have-two-turtles.md",
+                "file": "blog/making-a-music-video-with-ai.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "we-have-two-turtles 的大纲"
+              "title": "大纲"
             }
           }
         ],
@@ -159,7 +161,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -169,43 +171,44 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aae32e928b356393",
+  "active": "0496115f24a26228",
   "lastOpenFiles": [
-    "blog/update-pytorch-in-comfyui.md",
-    "blog/remove-background-in-comfyui.md",
-    "blog/unraid-network-config.md",
-    "blog/afs-nikkor-58mm-f1.4-g.md",
-    "blog/natural-light-portraiture.md",
-    "blog/manage-mijia-suveillance-on-your-own-nas.md",
-    "blog/how-to-start-a-podcast.md",
-    "blog/gears-list-2025.md",
-    "blog/air2s-footage-color-grading.md",
-    "blog/fujifilm-gfx100s-video-settings.md",
-    "blog/afs-nikkor-35mm-f1.4-g.md",
-    "blog/hiking-from-lingyan-to-baimajian.md",
-    "blog/strava-on-astro.md",
-    "blog/inews-tags-manager-released.md",
-    "gallery/pj.md",
-    "gallery/school-sports-day-of-kids.md",
-    "gallery/cici-in-hanfu.md",
-    "gallery/huizi-in-europe.md",
-    "gallery/kaoru.md",
-    "gallery/mr-bai-in-studio.md",
-    "gallery/taozi.md",
-    "gallery/xili-university-town.md",
-    "gallery/suxi-volume-2.md",
-    "gallery/in-the-evening-breeze.md",
-    "gallery/live-like-an-ancient-chinese.md",
-    "gallery/lizishu-and-manshufang.md",
+    "blog/qwen-image-2.1.md",
+    "blog/making-a-music-video-with-ai.md",
+    "blog/dji-air-3s.md",
+    "blog/minolta-mc-macro-rokkor-qf-50mm-3.5.md",
+    "blog/training-krea2-lora-with-fizgig.md",
+    "blog/qwen-image-edit-out-of-memory-issue.md",
+    "blog/ltx-2.3-with-ltx-director.md",
+    "writings/辘轳体.md",
+    "writings/before-2026-new-year.md",
+    "travels/seeking-the-plum-blossoms-at-zhaolingguan.md",
+    "travels/nanxun-ancient-town.md",
+    "gallery/dnf-female-crusader.md",
+    "blog/adapted-lenses-testing-on-fujifilm-gfx100s.md",
+    "writings/sandy's-dream.md",
+    "writings/old-songs-in-a-dark-room.md",
+    "writings/late-summer.md",
+    "design/burn-to-ashes.md",
+    "design/tft-2023-celebration.md",
+    "gallery/a-play-of-ink.md",
+    "gallery/cats-in-yiyuan.md",
+    "blog/how-to-void-the-unexpected-liquid-in-t2i.md",
+    "blog/creating-a-photobook-with-wildcards.md",
+    "blog/douban-images-importer-for-eagle.md",
+    "travels/walking-in-dongyuan.md",
+    "blog/hugging-face-mirror.md",
+    "blog/edit-ebooks-using-regular-expressions.md",
+    "知乎",
+    "像古人一样生活-1080p.mp4",
+    "gallery/kaoru-at-huqiu",
+    "未命名.base",
+    "未命名 1.base",
     "daily",
     "podcasts",
     "collections.config.ts",
     "Clippings",
     "_templater",
-    "schemas.js",
-    "schemas.ts",
-    "config.ts",
-    "config.js",
     "writings/周福清.jpg",
     "writings/Qiu_jin.jpg",
     "writings/129155182.jpg",
@@ -215,7 +218,6 @@
     "design/map2-1380x776.png",
     "design/magesbattle2.png",
     "design/logo-collections.png",
-    "design/lines-1.png",
-    "travels/GPmpb3AbkAA3TJl-1.exif"
+    "design/lines-1.png"
   ]
 }

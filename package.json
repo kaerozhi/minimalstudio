@@ -9,7 +9,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cleanup-frontmatter": "node cleanup-frontmatter.js"
+    "cleanup-frontmatter": "node cleanup-frontmatter.js",
+    "check:fm": "node scripts/check-frontmatter.mjs",
+    "check:fm:changed": "node scripts/check-frontmatter.mjs --changed"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
