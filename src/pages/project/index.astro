@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import { collectionsMeta } from '@/content/collections.config';
+import { getEntryPath } from '@/utils/getEntryPath';
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@/components/entries/BlogPost.astro';
+import { getSmartExcerpt } from '@/utils/getExcerpt';
+
+export const prerender = true;
+
+// Project 区：摄影 / 设计（aigc、novel 有作品后再加入）
+const projectCollections = ['photography', 'design'] as const;
+
+const sections = [];
+for (const name of projectCollections) {
+  const entries = await getCollection(name);
+  const visible = entries
+    .filter((entry) => entry.data.draft !== true)
+    .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+  sections.push({
+    collection: name,
+    meta: collectionsMeta[name],
+    count: visible.length,
+    latest: visible.slice(0, 2).map((post) => ({
+      title: post.data.title,
+      href: getEntryPath(post.collection, post.id),
+      date: post.data.date,
+      description: post.data.description,
+      excerpt: getSmartExcerpt(post.body),
+      categories: post.data.categories,
+      photos: post.data.photos,
+      tags: post.data.tags,
+    })),
+  });
+}
+---
+
+<BaseLayout title="Project">
+  <main class="max-w-7xl mx-auto px-8">
+    <div class="mt-32 lg:mt-64"></div>
+    <div>
+      <h1 class="text-4xl md:text-8xl/24 uppercase font-bold mb-0 lg:mb-8 tracking-tighter">
+        Project
+      </h1>
+    </div>
+    <div class="mt-4 lg:mt-12 lg:w-1/2">
+      <p class="font-serif">作品与项目：影像、设计，以及正在生长的东西。</p>
+    </div>
+
+    {sections.map((section) => (
+      <section class="pt-12 lg:pt-20">
+        <div class="flex flex-row justify-between items-baseline">
+          <h2 class="text-2xl md:text-4xl font-bold tracking-tight uppercase">
+            {section.meta.title}
+          </h2>
+          <a href={`/project/${section.collection}`} class="text-sm text-text-default/60 hover:text-primary">
+            查看全部 {section.count} 件 →
+          </a>
+        </div>
+        <p class="mt-2 font-serif text-text-default/70">{section.meta.description}</p>
+        <div class="pt-8 grid gap-8 sm:grid-cols-2">
+          {section.latest.map((post) => (
+            <BlogPost
+              title={post.title}
+              href={post.href}
+              date={post.date}
+              description={post.description}
+              excerpt={post.excerpt}
+              categories={post.categories}
+              photos={post.photos}
+              tags={post.tags}
+            />
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+</BaseLayout>

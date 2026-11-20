@@ -3,10 +3,13 @@ export interface Props {
   page: number;
   totalPages: number;
   collection?: string;
+  /** 覆盖默认的 /{collection} 前缀（如 /project/photography） */
+  basePath?: string;
 }
 import { getPaginationRange } from "@/utils/getPaginationRange";
 
-const { page, totalPages, collection = "blog" } = Astro.props;
+const { page, totalPages, collection = "blog", basePath } = Astro.props;
+const prefix = basePath ?? `/${collection}`;
 const pages = getPaginationRange(page, totalPages);
 ---
 
@@ -15,7 +18,7 @@ const pages = getPaginationRange(page, totalPages);
     typeof p === "number" ? (
       <a
         class={`px-3 py-1 rounded-xl duration-300 ${p === page ? 'bg-black text-white' : ' hover:bg-white'}`}
-        href={`/${collection}${p === 1 ? '' : `/page/${p}`}`}
+        href={`${prefix}${p === 1 ? '' : `/page/${p}`}`}
       >
         {p}
       </a>

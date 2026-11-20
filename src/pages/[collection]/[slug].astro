@@ -1,13 +1,13 @@
 ---
 import { getEntry, getCollection, render } from 'astro:content';
-import { collections } from '@/content.config';
 import MarkdownPostLayout from '@/layouts/MarkdownPostLayout.astro';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
+  // 通用详情路由只服务 writing / blog；photography、design 走 /project/ 专属路由
+  const collectionNames = ['writing', 'blog'];
   const paths = [];
-  const collectionNames = Object.keys(collections);
 
   for (const collection of collectionNames) {
     const entries = await getCollection(collection);

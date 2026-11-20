@@ -4,5 +4,18 @@
       "path": "/api/strava-sync",
       "schedule": "0 8 * * *"
     }
+  ],
+  "redirects": [
+    { "source": "/photography/:match*", "destination": "/project/photography/:match*", "permanent": true },
+    { "source": "/photography", "destination": "/project/photography", "permanent": true },
+    { "source": "/gallery/:match*", "destination": "/project/photography/:match*", "permanent": true },
+    { "source": "/gallery", "destination": "/project/photography", "permanent": true },
+    { "source": "/design/:match*", "destination": "/project/design/:match*", "permanent": true },
+    { "source": "/design", "destination": "/project/design", "permanent": true },
+    { "source": "/writings/recommend-a-novel-I-wrote-myself", "destination": "/writing/recommend-a-novel-i-wrote-myself", "permanent": true },
+    { "source": "/writings/:match*", "destination": "/writing/:match*", "permanent": true },
+    { "source": "/writings", "destination": "/writing", "permanent": true },
+    { "source": "/travels/:match*", "destination": "/blog/:match*", "permanent": true },
+    { "source": "/travels", "destination": "/blog", "permanent": true }
   ]
 }

@@ -1,6 +1,7 @@
 // src/pages/rss.xml.ts
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { getEntryPath } from '@/utils/getEntryPath';
 
 export async function GET() {
   // 所有 collection
@@ -28,7 +29,7 @@ export async function GET() {
       title: entry.data.title,
       pubDate: entry.data.date,
       description: entry.data.description,
-      link: `/${entry.collection}/${entry.id}`, // Content Layer: id 取代旧 slug
+      link: getEntryPath(entry.collection, entry.id), // project 区集合映射到 /project/ 下
     })),
   });
 }

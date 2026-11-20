@@ -1,23 +1,21 @@
 ---
-import { collections } from '@/content.config';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/BlogPost.astro';
 import { slugify } from '@/utils/slugify';
 import { getAllEntries } from '@/utils/getAllEntries';
+import { getEntryPath } from '@/utils/getEntryPath';
 import { config } from '@/site.config';
 
 export const prerender = true;
 
-const collectionNames = Object.keys(collections);
-
 export async function getStaticPaths() {
   const posts = await getAllEntries();
 
-  // 提取所有分类，去重
-  const categories = [...new Set(posts.flatMap(p => p.data.categories ?? []))];
+  // 提取所有分类，按 slugify 后的值去重（避免 "Poster"/"poster" 之类变体生成同名页面）
+  const categories = [...new Set(posts.flatMap(p => p.data.categories ?? []).map(c => slugify(c)))].filter(Boolean);
 
   return categories.map(category => ({
-    params: { category: slugify(category) }
+    params: { category }
   }));
 }
 
@@ -35,10 +33,10 @@ const filteredPosts = allPosts.filter(post =>
 
 filteredPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
-// Content Layer: entry 自带 collection，直接拼 URL（替代 getPathBySlug 线性扫描）
+// Content Layer: entry 自带 collection，统一走 getEntryPath 映射（project 区挂 /project/ 下）
 const postsWithPaths = filteredPosts.map((post) => ({
   ...post,
-  href: `/${post.collection}/${post.id}`,
+  href: getEntryPath(post.collection, post.id),
 }));
 ---
 <BaseLayout title={`分类: ${category}`}>

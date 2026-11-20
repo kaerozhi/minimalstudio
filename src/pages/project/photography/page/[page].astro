@@ -2,9 +2,7 @@
 import { getCollection } from 'astro:content';
 import { config } from '@/site.config';
 import { collectionsMeta } from '@/content/collections.config';
-import { getCategories } from '@/utils/getCategories';
 
-// 加载 UI 组件
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@/components/entries/GalleryPost.astro';
 import Pagination from '@/components/global/Pagination.astro';
@@ -12,52 +10,44 @@ import Categories from '@/components/entries/Categories.astro';
 
 export const prerender = true;
 
-// Astro 需要在函数内部重新定义
 export async function getStaticPaths() {
-  const collectionNames = ["writing", "blog", "design", "photography"];
+  const allEntries = await getCollection('photography');
+  const visibleEntries = allEntries
+    .filter((entry) => entry.data.draft !== true)
+    .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
-  return collectionNames.map((collection) => ({
-    params: { collection },
-  }));
+  const perPage = config.content.postsPerPage || 10;
+  const totalPages = Math.ceil(visibleEntries.length / perPage);
+
+  const paths = [];
+  for (let i = 2; i <= totalPages; i++) {
+    paths.push({
+      params: { page: i.toString() },
+      props: {
+        page: i,
+        totalPages,
+        posts: visibleEntries.slice((i - 1) * perPage, i * perPage),
+        counts: visibleEntries.length,
+      },
+    });
+  }
+  return paths;
 }
 
-const collection = Astro.url.pathname.split('/')[1];
+const { page = 1, posts = [], totalPages = 1, counts } = Astro.props;
+
+const collection = 'photography';
+const basePath = '/project/photography';
 const desc = collectionsMeta[collection].description;
 const collectionName = collectionsMeta[collection].title;
-
-// 再定义一次（页面运行时才需要）
-const collectionNames = ["writing", "blog", "design", "photography"];
-
-if (!collectionNames.includes(collection)) {
-  throw new Error(`Collection "${collection}" 不存在于 content.config.ts`);
-}
-
-// 所有文章
-const allEntries = await getCollection(collection);
-const visibleEntries = allEntries
-  .filter((entry) => entry.data.draft !== true)
-  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
-
-// Content Layer: entry 自带 collection，直接拼 URL（替代 getPathBySlug 线性扫描）
-const postsWithPaths = visibleEntries.map((post) => ({
-  ...post,
-  href: `/${post.collection}/${post.id}`,
-}));
-
-// 文章总数
-const page = 1;
-const perPage = config.content.postsPerPage || 10;
-const totalPages = Math.ceil(visibleEntries.length / perPage);
-const posts = postsWithPaths.slice(0, perPage);
 ---
-
 <BaseLayout title={collection}>
   <main class="max-w-7xl mx-auto px-8">
     <div class="mt-32 lg:mt-64"></div>
     <div>
       <h1 class="text-4xl md:text-8xl/24 uppercase font-bold mb-0 lg:mb-8 tracking-tighter">
-        {collection} 
-        <span class="text-base align-top tracking-normal">{visibleEntries.length}</span>
+        {collection}
+        <span class="text-base align-top tracking-normal">{counts}</span>
       </h1>
     </div>
     <div class="mt-4 lg:mt-12 flex flex-col lg:flex-row">
@@ -76,7 +66,7 @@ const posts = postsWithPaths.slice(0, perPage);
         <p class="font-serif">{desc}</p>
       </div>
     </div>
-    
+
     <div class="pt-12 columns-1 sm:columns-2 lg:columns-3 gap-8 [&>article:not(:first-child)]:mt-8">
       {posts.map((post, index) => (
         <BlogPost
@@ -84,6 +74,6 @@ const posts = postsWithPaths.slice(0, perPage);
         />
       ))}
     </div>
-    <Pagination collection={collection} page={page} totalPages={totalPages} />
+    <Pagination collection={collection} basePath={basePath} page={page} totalPages={totalPages} />
   </main>
 </BaseLayout>

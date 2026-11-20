@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getAllEntries } from '@/utils/getAllEntries';
 import { slugify } from '@/utils/slugify';
+import { getEntryPath } from '@/utils/getEntryPath';
 import BlogPost from '@/components/entries/BlogPost.astro';
 
 export const prerender = true;
@@ -47,12 +48,6 @@ const allEntries = (await getAllEntries()).filter(
   (e): e is { data: any; id: string; collection: string } => Boolean(e && e.data)
 );
 
-// DEBUG（现在这里应该永远是 []）
-console.log(
-  'INVALID ENTRIES:',
-  allEntries.filter(e => !e || !e.data)
-);
-
 const posts = allEntries
   .filter(entry =>
     Array.isArray(entry.data.tags) &&
@@ -60,10 +55,10 @@ const posts = allEntries
   )
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
-// Content Layer: entry 自带 collection，直接拼 URL（替代 getPathBySlug 线性扫描）
+// Content Layer: entry 自带 collection，统一走 getEntryPath 映射（project 区挂 /project/ 下）
 const postsWithPaths = posts.map((post) => ({
   ...post,
-  href: `/${post.collection}/${post.id}`,
+  href: getEntryPath(post.collection, post.id),
 }));
 ---
 

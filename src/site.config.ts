@@ -26,11 +26,10 @@ export const config = {
   /** Configure the header of your site. */
   header: {
     menu: [
-      { title: '影像', link: '/photography' },
-      { title: '设计', link: '/design' },
-      { title: '游历', link: '/category/travels' },
-      { title: '文字', link: '/writing' },
+      { title: 'Project', link: '/project' },
+      { title: '写作', link: '/writing' },
       { title: 'Blog', link: '/blog' },
+      { title: '游历', link: '/category/travels' },
       { title: '关于', link: '/about' }
     ],
     button: [

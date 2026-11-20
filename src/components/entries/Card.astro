@@ -1,10 +1,11 @@
 ---
 import { formatDate } from "@/utils/format";
+import { getEntryPath } from "@/utils/getEntryPath";
 import Cover from "./Cover.astro";
 const { post } = Astro.props;
 ---
 <article class="w-full bg-white group rounded-lg overflow-hidden hover:drop-shadow-2xl will-change-auto duration-300">
-  <a href={`/${post.collection}/${post.id}`} class="items-center h-auto">
+  <a href={getEntryPath(post.collection, post.id)} class="items-center h-auto">
     {post.data.photos?.[0] && (
       <Cover photos={post.data.photos} ratio="16/9" title={post.data.title}></Cover>
     )}

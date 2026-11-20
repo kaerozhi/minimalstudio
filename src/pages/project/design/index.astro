@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content';
+import { config } from '@/site.config';
+import { collectionsMeta } from '@/content/collections.config';
+import { getEntryPath } from '@/utils/getEntryPath';
+
+// 加载 UI 组件
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@/components/entries/BlogPost.astro';
+import Pagination from '@/components/global/Pagination.astro';
+import Categories from '@/components/entries/Categories.astro';
+import { getSmartExcerpt } from '@/utils/getExcerpt';
+
+export const prerender = true;
+
+const collection = 'design';
+const basePath = '/project/design';
+
+const desc = collectionsMeta[collection].description;
+const collectionName = collectionsMeta[collection].title;
+
+// 所有文章
+const allEntries = await getCollection(collection);
+const visibleEntries = allEntries
+  .filter((entry) => entry.data.draft !== true)
+  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+const postsWithPaths = visibleEntries.map((post) => ({
+  ...post,
+  href: getEntryPath(post.collection, post.id),
+  smartExcerpt: getSmartExcerpt(post.body),
+}));
+
+// 文章总数
+const page = 1;
+const perPage = config.content.postsPerPage || 10;
+const totalPages = Math.ceil(visibleEntries.length / perPage);
+const posts = postsWithPaths.slice(0, perPage);
+---
+
+<BaseLayout title={collection}>
+  <main class="max-w-7xl mx-auto px-8">
+    <div class="mt-32 lg:mt-64"></div>
+    <div>
+      <h1 class="text-4xl md:text-8xl/24 uppercase font-bold mb-0 lg:mb-8 tracking-tighter">
+        {collection}
+        <span class="text-base align-top tracking-normal">{visibleEntries.length}</span>
+      </h1>
+    </div>
+    <div class="mt-4 lg:mt-12 flex flex-col lg:flex-row">
+      <div class="hidden lg:order-1 lg:block w-1/4 pr-12 flex">
+        <span class="bg-black inline-block text-center rounded-full w-4 h-4 mr-2 mt-1">
+          <svg viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg" class="fill-white">
+            <path clip-rule="evenodd" d="M10 5C10.5523 5 11 5.44772 11 6V9L14 9C14.5523 9 15 10C15 10.5523 14.5523 11 14 11H11V14C11 14.5523 10.5523 15 10 15C9.44771 15 9 14.5523 9 14V11H6C5.44772 11 5 10.5523 5 10C5 9.44771 5 9 6 9L9 9V6C9 5.44772 9 5.44771 10 5Z" fill-rule="evenodd"/>
+          </svg>
+        </span>
+        {collectionName}
+      </div>
+      <div class="order-2 mt-4 lg:mt-0 lg:order-2 lg:w-1/2">
+        <Categories collection={collection}></Categories>
+      </div>
+      <div class="order-1 lg:order-3 lg:w-1/4 lg:pl-12">
+        <p class="font-serif">{desc}</p>
+      </div>
+    </div>
+
+    <div class="pt-12 grid gap-8 sm:grid-cols-2">
+      {posts.map((post, index) => (
+        <BlogPost
+          title={post.data.title}
+          href={post.href}
+          date={post.data.date}
+          description={post.data.description}
+          excerpt={post.smartExcerpt}
+          categories={post.data.categories}
+          photos={post.data.photos}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+    <Pagination collection={collection} basePath={basePath} page={page} totalPages={totalPages} />
+  </main>
+</BaseLayout>

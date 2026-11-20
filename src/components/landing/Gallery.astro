@@ -1,15 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
+import { getEntryPath } from '@/utils/getEntryPath';
 
 const allGalleries = await getCollection("photography");
 const visibleGalleries = allGalleries
   .filter((entry) => entry.data.draft !== true)
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
-// Content Layer: entry 自带 collection，直接拼 URL（替代 getPathBySlug 线性扫描）
 const postsWithPaths = visibleGalleries.map((post) => ({
   ...post,
-  href: `/${post.collection}/${post.id}`,
+  href: getEntryPath(post.collection, post.id),
 }));
 --- 
  
