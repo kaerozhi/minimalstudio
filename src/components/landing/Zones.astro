@@ -1,0 +1,38 @@
+---
+// 首页三区入口：Project / 写作 / Blog
+const zones = [
+  {
+    title: 'Project',
+    href: '/project',
+    desc: '摄影 / 设计 / AIGC / 小说 —— 正在生长的作品。',
+  },
+  {
+    title: '写作',
+    href: '/writing',
+    desc: '花底有人眠锦帐，瞳中何事黯霓虹。',
+  },
+  {
+    title: 'Blog',
+    href: '/blog',
+    desc: '無復臨歧孤往意，有時被酒萬夫雄。',
+  },
+];
+---
+<section class="container-wide my-16">
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl px-4 md:px-8">
+    {zones.map((zone) => (
+      <a
+        href={zone.href}
+        class="group bg-white rounded-3xl p-8 flex flex-col justify-between transition duration-300 hover:shadow-lg hover:shadow-zinc-500/10"
+      >
+        <div>
+          <h3 class="text-2xl tracking-tighter font-bold text-black">{zone.title}</h3>
+          <p class="mt-4 text-sm text-zinc-500">{zone.desc}</p>
+        </div>
+        <span class="mt-8 text-sm text-zinc-500 group-hover:text-black transition-colors">
+          进入 <span aria-hidden="true">&rarr;</span>
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

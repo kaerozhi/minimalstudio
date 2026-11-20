@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import { getEntryPath } from '@/utils/getEntryPath';
+import BlogPost from '@/components/entries/BlogPost.astro';
+import { getSmartExcerpt } from '@/utils/getExcerpt';
+
+// 首页「最新」：blog + writing 混排，各取最新若干篇
+const collections = ['blog', 'writing'];
+const latest = await Promise.all(
+  collections.map(async (name) => {
+    const entries = await getCollection(name);
+    return entries
+      .filter((entry) => entry.data.draft !== true)
+      .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date))
+      .slice(0, 3)
+      .map((post) => ({
+        title: post.data.title,
+        href: getEntryPath(post.collection, post.id),
+        date: post.data.date,
+        description: post.data.description,
+        excerpt: getSmartExcerpt(post.body),
+        categories: post.data.categories,
+        photos: post.data.photos,
+        tags: post.data.tags,
+        collection: post.collection,
+      }));
+  })
+);
+
+// 交替排列两个集合，保证 Blog 与 写作 都有曝光
+const interleave = [];
+const [a, b] = latest;
+for (let i = 0; i < Math.max(a.length, b.length); i++) {
+  if (b[i]) interleave.push(b[i]);
+  if (a[i]) interleave.push(a[i]);
+}
+---
+<section class="container-wide my-16">
+  <div class="mx-auto max-w-7xl px-4 md:px-8">
+    <div class="flex flex-row justify-between items-baseline mb-8">
+      <h2 class="w-full text-4xl tracking-tight">最新</h2>
+      <div class="flex gap-4 text-sm text-zinc-500 whitespace-nowrap">
+        <a href="/blog" class="hover:text-black underline">Blog</a>
+        <a href="/writing" class="hover:text-black underline">写作</a>
+      </div>
+    </div>
+    <div class="grid gap-8 sm:grid-cols-2">
+      {interleave.map((post) => (
+        <BlogPost
+          title={post.title}
+          href={post.href}
+          date={post.date}
+          description={post.description}
+          excerpt={post.excerpt}
+          categories={post.categories}
+          photos={post.photos}
+          tags={post.tags}
+        />
+      ))}
+    </div>
+  </div>
+</section>

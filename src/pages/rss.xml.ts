@@ -3,6 +3,8 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { getEntryPath } from '@/utils/getEntryPath';
 
+export const prerender = true;
+
 export async function GET() {
   // 所有 collection
   const collections = ['blog', 'design', 'writing', 'photography'];

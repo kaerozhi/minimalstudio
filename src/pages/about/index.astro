@@ -3,6 +3,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Strava from "@/components/activities/Strava.astro";
 import Douban from "@/components/activities/DoubanMovie.astro";
 import Github from "@/components/activities/Github.astro";
+
+export const prerender = true;
 ---
 <BaseLayout>
     <section class="container-wide" id="gallery">

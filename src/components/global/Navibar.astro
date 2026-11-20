@@ -49,9 +49,9 @@ const { width = "container-wide" } = Astro.props;
       <div class="flex items-center">
         <!-- User Account Button - Hidden on tablets, shown on desktop -->
         <div class="hidden lg:block">
-          <button class="flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white transition duration-150 hover:bg-primary">
+          <a href="/booking" class="flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white transition duration-150 hover:bg-primary">
             预约拍摄
-          </button>
+          </a>
         </div>
 
         <!-- Mobile Menu Button - Shown on mobile and tablet -->
@@ -111,9 +111,9 @@ const { width = "container-wide" } = Astro.props;
 
       <!-- Mobile User Account Button -->
       <div class="mt-6 border-t border-gray-200 pt-6">
-        <button class="flex w-full items-center justify-center rounded-md bg-primary px-4 py-3 text-base font-medium text-white transition duration-150 hover:bg-primary">
+        <a href="/booking" class="flex w-full items-center justify-center rounded-md bg-primary px-4 py-3 text-base font-medium text-white transition duration-150 hover:bg-primary">
           预约拍摄
-        </button>
+        </a>
       </div>
     </div>
   </div>

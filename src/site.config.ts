@@ -6,7 +6,7 @@ export const config = {
   author: 'Kaero Zhi',
   /** Description metadata for your website. Can be used in page metadata. */
   slogan: 'Flaming in the dark.',
-  description: '摄影师 / 短片导演 / 视觉设计师，定居苏州，活动范围覆盖长三角，擅长人像、活动拍摄。',
+  description: '摄影师 / 视觉设计师 / 写作者，定居苏州。Project 收录摄影、设计与 AIGC 作品，写作与 Blog 记录思考与日常。',
   keywords: '设计师, designer, web designer, 摄影师, photographer, portrait photography, based in suzhou, 苏州, 江浙沪摄影师',
   website: "https://kaerozhi.com",
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
@@ -33,7 +33,7 @@ export const config = {
       { title: '关于', link: '/about' }
     ],
     button: [
-      { title: '预约拍照', link: '/#pricing' }
+      { title: '预约拍照', link: '/booking' }
     ]
   },
 

@@ -1,22 +1,36 @@
 ---
 import { config } from '@/site.config'
 import Branding from "@/components/global/Branding.astro";
+
+// portal：个人门户（首页）；booking：预约落地页
+const { variant = 'booking' } = Astro.props;
 ---
 <section class="relative container-wide mt-12 md:mt-0">
   <Branding />
 
   <div class="px-8 md:-mt-22 md:px-12 py-12 max-w-2xl mx-auto relative">
     <div>
-      <span
-        class="inline-flex items-center justify-center gap-2 rounded-full px-3 py-1 text-sm leading-6 text-black ring-1 ring-zinc-200 bg-white ring-inset"
-      >
-        <p>2025年仍有档期可约</p>
-        <div class="h-2 w-2 rounded-full bg-black border-2 border-black"></div>
+      {variant === 'booking' ? (
+        <span
+          class="inline-flex items-center justify-center gap-2 rounded-full px-3 py-1 text-sm leading-6 text-black ring-1 ring-zinc-200 bg-white ring-inset"
+        >
+          <p>2025年仍有档期可约</p>
+          <div class="h-2 w-2 rounded-full bg-black border-2 border-black"></div>
 
-        <div class="h-2 w-2 rounded-full border-black border-2"></div>
-      </span>
+          <div class="h-2 w-2 rounded-full border-black border-2"></div>
+        </span>
+      ) : (
+        <span
+          class="inline-flex items-center justify-center gap-2 rounded-full px-3 py-1 text-sm leading-6 text-black ring-1 ring-zinc-200 bg-white ring-inset"
+        >
+          <p>Project · 写作 · Blog 持续更新</p>
+          <div class="h-2 w-2 rounded-full bg-black border-2 border-black"></div>
+
+          <div class="h-2 w-2 rounded-full border-black border-2"></div>
+        </span>
+      )}
       <h2 class="text-5xl mt-12 tracking-tighter font-bold text-black">
-        {config.slogan} 
+        {config.slogan}
         <span class="block text-3xl font-normal mt-3 font-serif tracking-wide">
           望见你 ⏤
           <br />
@@ -31,9 +45,15 @@ import Branding from "@/components/global/Branding.astro";
         <p>{config.description}</p>
       </div>
       <div>
-        <p>
-          愿意尝试任何感兴趣的事情，如果您在我的 <a class="underline" href="/blog">Blog</a> 找到任何共同话题，欢迎留言探讨。
-        </p>
+        {variant === 'booking' ? (
+          <p>
+            愿意尝试任何感兴趣的事情，如果您在我的 <a class="underline" href="/blog">Blog</a> 找到任何共同话题，欢迎留言探讨。
+          </p>
+        ) : (
+          <p>
+            想约拍请移步 <a class="underline" href="/booking">预约页面</a>；如果您在我的 <a class="underline" href="/blog">Blog</a> 找到任何共同话题，欢迎留言探讨。
+          </p>
+        )}
       </div>
       <em class="col-span-full text-sm mt-8">
         <p>
