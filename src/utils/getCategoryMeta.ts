@@ -39,7 +39,7 @@ export async function getCategoryMeta(): Promise<CategoryMeta[]> {
           slug,
           count: 1,
           coverCandidates: firstPhoto
-            ? [{ date, photo: firstPhoto, slug: entry.slug }]
+            ? [{ date, photo: firstPhoto, slug: entry.id }]
             : [],
         });
       } else {
@@ -48,7 +48,7 @@ export async function getCategoryMeta(): Promise<CategoryMeta[]> {
           existing.coverCandidates.push({
             date,
             photo: firstPhoto,
-            slug: entry.slug,
+            slug: entry.id,
           });
         }
       }

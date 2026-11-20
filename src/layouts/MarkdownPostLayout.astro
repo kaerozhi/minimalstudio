@@ -70,7 +70,7 @@ const { entry, collection, toc, headings } = Astro.props;
     <CommentsSection />
 
     <!-- 相关文章 -->
-    <RelatedPosts collection={collection} slug={entry.slug} />
+    <RelatedPosts collection={collection} slug={entry.id} />
   </article>
 
 </BaseLayout>

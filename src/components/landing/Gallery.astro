@@ -1,18 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
-import { getPathBySlug } from '@/utils/getPathBySlug';
 
 const allGalleries = await getCollection("gallery");
 const visibleGalleries = allGalleries
   .filter((entry) => entry.data.draft !== true)
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
-const postsWithPaths = await Promise.all(
-  visibleGalleries.map(async (post) => {
-    const href = await getPathBySlug(post.slug);
-    return { ...post, href };
-  })
-);
+// Content Layer: entry 自带 collection，直接拼 URL（替代 getPathBySlug 线性扫描）
+const postsWithPaths = visibleGalleries.map((post) => ({
+  ...post,
+  href: `/${post.collection}/${post.id}`,
+}));
 --- 
  
  <section class="container-wide my-16" id="gallery">

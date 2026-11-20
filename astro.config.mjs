@@ -34,7 +34,8 @@ function markdownMediaDirective() {
   };
 }
 
-export default defineConfig({  
+export default defineConfig({
+  site: 'https://kaerozhi.com', // 修复：sitemap 此前因缺 site 一直被跳过
   output: 'server',
   adapter: vercel(),
   vite: {

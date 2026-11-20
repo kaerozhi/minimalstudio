@@ -1,6 +1,6 @@
 ---
-import { getEntry, getCollection } from 'astro:content';
-import { collections } from '@/content/config';
+import { getEntry, getCollection, render } from 'astro:content';
+import { collections } from '@/content.config';
 import MarkdownPostLayout from '@/layouts/MarkdownPostLayout.astro';
 
 export const prerender = true;
@@ -15,11 +15,11 @@ export async function getStaticPaths() {
       paths.push({
         params: {
           collection,
-          slug: entry.slug,
+          slug: entry.id, // Content Layer: id 取代旧 slug
         },
         props: {
           collection,
-          slug: entry.slug,
+          slug: entry.id,
         },
       });
     }
@@ -35,7 +35,7 @@ if (!entry) throw new Error(`未找到 ${collection}/${slug}`);
 
 const toc = entry?.data.toc;
 
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 ---
 <MarkdownPostLayout entry={entry} collection={collection} toc={toc} headings={headings}>
   <Content />

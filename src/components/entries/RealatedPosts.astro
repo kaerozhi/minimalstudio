@@ -10,12 +10,12 @@ const { collection, slug } = Astro.props;
 const allPosts = await getCollection(collection);
 
 // 当前文章
-const currentEntry = allPosts.find(post => post.slug === slug);
+const currentEntry = allPosts.find(post => post.id === slug);
 const currentTags = (currentEntry?.data.tags || []).map(slugify);
 
 // 相关文章筛选逻辑
 const relatedPosts = allPosts
-  .filter(post => post.slug !== slug)
+  .filter(post => post.id !== slug)
   .filter(post => {
     const tags = (post.data.tags || []).map(slugify);
 

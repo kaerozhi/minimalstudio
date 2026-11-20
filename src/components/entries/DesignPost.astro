@@ -7,7 +7,7 @@ const { post } = Astro.props;
 ---
 <article class="group">
   <div>
-    <a href={`/design/${post.slug}`} class="">
+    <a href={`/design/${post.id}`} class="">
       {post.data.photos?.[0] && (
         <Cover photos={post.data.photos} ratio="16/9" title={post.data.title}></Cover>
       )}
@@ -15,7 +15,7 @@ const { post } = Astro.props;
   </div>
   <div class="mt-4">
     <h2 class="text-xl font-bold tracking-tight">
-      <a href={`/design/${post.slug}`}>{post.data.title}</a>
+      <a href={`/design/${post.id}`}>{post.data.title}</a>
     </h2>
     <div class="mt-2 text-sm text-text-default/60">
       <time>{formatYear(post.data.date)}</time> - 

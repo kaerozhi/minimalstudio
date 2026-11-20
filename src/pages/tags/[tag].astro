@@ -2,7 +2,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getAllEntries } from '@/utils/getAllEntries';
 import { slugify } from '@/utils/slugify';
-import { getPathBySlug } from '@/utils/getPathBySlug';
 import BlogPost from '@/components/entries/BlogPost.astro';
 
 export const prerender = true;
@@ -45,7 +44,7 @@ const tagSlug = slugify(tag);
 
 // 所有文章
 const allEntries = (await getAllEntries()).filter(
-  (e): e is { data: any; slug: string } => Boolean(e && e.data)
+  (e): e is { data: any; id: string; collection: string } => Boolean(e && e.data)
 );
 
 // DEBUG（现在这里应该永远是 []）
@@ -61,12 +60,11 @@ const posts = allEntries
   )
   .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
-const postsWithPaths = await Promise.all(
-  posts.map(async (post) => {
-    const href = await getPathBySlug(post.slug);
-    return { ...post, href };
-  })
-);
+// Content Layer: entry 自带 collection，直接拼 URL（替代 getPathBySlug 线性扫描）
+const postsWithPaths = posts.map((post) => ({
+  ...post,
+  href: `/${post.collection}/${post.id}`,
+}));
 ---
 
 <BaseLayout title={`Tag: ${tag}`}>

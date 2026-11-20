@@ -28,7 +28,7 @@ export async function GET() {
       title: entry.data.title,
       pubDate: entry.data.date,
       description: entry.data.description,
-      link: `/${entry.collection}/${entry.slug}`,
+      link: `/${entry.collection}/${entry.id}`, // Content Layer: id 取代旧 slug
     })),
   });
 }

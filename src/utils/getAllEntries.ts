@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import { collections } from '@/content/config';
+import { collections } from '@/content.config';
 
 export async function getAllEntries() {
   const collectionNames = Object.keys(collections);
